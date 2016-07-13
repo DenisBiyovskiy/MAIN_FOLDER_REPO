@@ -76,6 +76,11 @@ function(resources, GeneralDetails, ilayCConst) {
 				"filter": {
 					"detailColumn": "ilayMedDoc",
 					"masterColumn": "Id"
+				},
+				subscriber: function(cfg) {
+					if (cfg && cfg.rows && (cfg.action == "edit")) {
+						this.onMedDocSpecEdit(cfg.rows);
+					}
 				}
 			},
 		}/**SCHEMA_DETAILS*/,
@@ -548,6 +553,12 @@ function(resources, GeneralDetails, ilayCConst) {
 		},
 		methods: {
 			//Den>>
+			/*
+			* Проверяет заполнены ли все обязательные поля в детали, и показывает кнопку печати.
+			*/
+			onMedDocSpecEdit: function (rows) {
+				console.log("onMedDocSpecEdit");
+			},
 			isCancelServiceButtonVisible: function() {
 				if(this.get("State")){
 					//Підготовка
@@ -786,7 +797,7 @@ function(resources, GeneralDetails, ilayCConst) {
 			},
 			//Мне не понятно на кой ляд это тут нужно. Дублирование кода из базовых схем.
 			//Андрей сказал для работы сабскрайбера в детали, но он работает и так.. пока оставим закоменченым.
-			/*subscribeDetailEvents: function(detailConfig, detailName) {
+			subscribeDetailEvents: function(detailConfig, detailName) {
 				this.callParent(arguments);
 				var detailId = this.getDetailId(detailName);
 				var detail = this.Terrasoft.deepClone(detailConfig);
@@ -805,7 +816,7 @@ function(resources, GeneralDetails, ilayCConst) {
 						this[methodName](args);
 					}
 				}
-			},*/
+			},
 			copyRecomendation: function(arr) {
 				if(arr) {
 					this.showBodyMask();
