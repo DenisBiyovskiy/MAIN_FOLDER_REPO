@@ -87,7 +87,7 @@ function(resources, GeneralDetails, ilayCConst) {
 			"ServButtVisible": {
 				mode: Terrasoft.MessageMode.PTP,
 				direction: Terrasoft.MessageDirectionType.PUBLISH
-			},
+			}
 		},
 		diff: /**SCHEMA_DIFF*/[
 	{
@@ -784,13 +784,15 @@ function(resources, GeneralDetails, ilayCConst) {
 				this.Terrasoft.ComparisonType.EQUAL, "ilayRecomendType", "93368f47-8d7d-4de4-a54f-9a65d67cbe0d"));
 				return filterGroup;
 			},
-			subscribeDetailEvents: function(detailConfig, detailName) {
+			//Мне не понятно на кой ляд это тут нужно. Дублирование кода из базовых схем.
+			//Андрей сказал для работы сабскрайбера в детали, но он работает и так.. пока оставим закоменченым.
+			/*subscribeDetailEvents: function(detailConfig, detailName) {
 				this.callParent(arguments);
 				var detailId = this.getDetailId(detailName);
 				var detail = this.Terrasoft.deepClone(detailConfig);
 				var sandbox = this.sandbox;
 				sandbox.subscribe("DetailChanged", function(args) {
-				return this.onDetailChanged(detail, args);
+					return this.onDetailChanged(detail, args);
 				}, this, [detailId]);
 			},
 			onDetailChanged: function(detail, args) {
@@ -803,7 +805,7 @@ function(resources, GeneralDetails, ilayCConst) {
 						this[methodName](args);
 					}
 				}
-			},
+			},*/
 			copyRecomendation: function(arr) {
 				if(arr) {
 					this.showBodyMask();

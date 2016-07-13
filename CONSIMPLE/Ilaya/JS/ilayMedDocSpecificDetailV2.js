@@ -18,37 +18,9 @@ define("ilayMedDocSpecificDetailV2", ["BusinessRulesApplierV2", "ConfigurationGr
 						this.callParent(arguments);
 						//debugger;
 					},
+
 					getFilterDefaultColumnName: function() {
 						return "Specification";
-					},
-					changeRow: function(config) {
-						var oldId = config.oldId;
-						if (!oldId) {
-							return;
-						}
-						var gridData = this.getGridData();
-						if (!gridData.contains(oldId)) {
-							return;
-						}
-						var activeRow = gridData.get(oldId);
-						var activeRowChanged = this.getIsRowChanged(activeRow);
-						if (activeRowChanged) {
-							this.Terrasoft.chain(
-								function(next) {
-									this.saveRowChanges(activeRow, next);
-								},
-								function() {
-									this.set("ActiveRow", config.newId || null);
-								},
-								this
-							);
-							config.success = false;
-						}
-						/*this.updateDetail({
-							detail: "ilayMedDocSpecificDetailV2",
-							reloadAll: true
-						});*/
-						
 					},
 
 					generateActiveRowControlsConfig: function(id, columnsConfig, rowConfig) {
