@@ -4,25 +4,12 @@ define("DocumentSectionV2", ["VisaHelper", "BaseFiltersGenerateModule",	"Documen
 			entitySchemaName: "Document",
 			methods: {
 				/**
-				 * Событие на изменение значения ActiveRow.
-				 * from GridUtilitiesV2
+				 * По нажатию на кнопку печать Документы с типом Медицинский и Бухгалтерский
+				 * переводятся в состояние "Підписан"
 				 */
-				onActiveRowChange: function() {
-					if (this.isAnySelected()) {
-						//var sectionPrintMenuItems = this.get("SectionPrintMenuItems");
-						var sectionPrintMenuItems = this.get("CardPrintMenuItems");
-						var items = [];
-						/*sectionPrintMenuItems.each(function(item){
-							item.set("Visible", false);
-							items.push(item.get("Id"));
-						},this);*/
-						for (var i = sectionPrintMenuItems.getCount() - 1; i >= 0; i--) {
-							sectionPrintMenuItems.getByIndex(i).set("Visible", false);
-							sectionPrintMenuItems.getByIndex(i).set("Enabled", false);
-							items.push(sectionPrintMenuItems.getByIndex(i).get("Id"));
-						}
-						this.filtrateCollection(items, sectionPrintMenuItems);
-					}
+				downloadReport: function(caption, key) {
+					this.callParent(arguments);
+					this.sandbox.publish("PrintButtonPressed", null, [this.getCardModuleSandboxId()]);
 				},
 				/**
 				 * Обрабатывает сообщение о завершении отрисовки страницы редактирования.
@@ -31,10 +18,10 @@ define("DocumentSectionV2", ["VisaHelper", "BaseFiltersGenerateModule",	"Documen
 				 */
 				onCardRendered: function() {
 					this.callParent(arguments);
-					this.refreshCardValuesCollection(this.initCardPrintForms(), this);
+					this.refreshCardValuesCollection(this.initCardPrintForms, this);
 				},
 				/**
-				 *Метод получения данных карточки.
+				 * Синхронный метод обновления атрибута ilayCardValuesCollection.
 				 * @param {Function} callback Функция обратного вызова.
 				 * @param {Terrasoft.BaseViewModel} scope Контекст вызова функции обратного вызова.
 				 */
@@ -69,13 +56,15 @@ define("DocumentSectionV2", ["VisaHelper", "BaseFiltersGenerateModule",	"Documen
 				 * @param {Function} callback Функция обратного вызова.
 				 * @param {Terrasoft.BaseViewModel} scope Контекст вызова функции обратного вызова.
 				 */
-				initCardPrintForms: function(callback, scope, docType, docCategory, docModel) {
+				initCardPrintForms: function(callback, scope) {
 					var reportsEsq = this.getModulePrintFormsESQ();
 					var reportsEsq = this.getModulePrintFormsESQ();
-					
-					var	docType = this.get("ilayCardValuesCollection").value;
-					var	docCategory = this.get("ilayCategory") ? this.get("ilayCategory").value : null;
-					var	docModel = this.get("ilayModelName") ? this.get("ilayModelName").value : null;
+					if(!this.get("ilayCardValuesCollection")) {
+						return;
+					}
+					var	docType = this.get("ilayCardValuesCollection").Type;
+					var	docCategory = this.get("ilayCardValuesCollection").ilayCategory;
+					var	docModel = this.get("ilayCardValuesCollection").ilayModelName;
 					
 					//*****************************************************************
 					var filterGroupByCategory = this.Terrasoft.createFilterGroup();
@@ -122,93 +111,17 @@ define("DocumentSectionV2", ["VisaHelper", "BaseFiltersGenerateModule",	"Documen
 							this.set(this.moduleCardPrintFormsCollectionName, printMenuItems);
 							this.getCardPrintButtonVisible();
 						}
+						if(result.collection.isEmpty()){
+							this.set("IsCardPrintButtonVisible", false);
+						}
 						if (callback) {
 							callback.call(scope || this);
 						}
 					}, this);
 				},
-				filtrateCollection: function(items, sectionPrintMenuItems) {
-					Terrasoft.chain(
-						function(next) {
-							var rowId = this.getActiveRow().get("Id");
-							var esq = Ext.create("Terrasoft.EntitySchemaQuery", {
-								rootSchemaName: "Document"
-							});
-							esq.addColumn("Type");
-							esq.addColumn("ilayCategory");
-							esq.addColumn("ilayModelName");
-							esq.filters.add("LeadFilter", esq.createColumnFilterWithParameter(
-							this.Terrasoft.ComparisonType.EQUAL, "Id", rowId));
-							esq.getEntityCollection(function(result) {
-								if(result.success){
-									var DocValues = [];
-									DocValues.push(result.collection.getByIndex(0).get("Type") != "" ?
-													result.collection.getByIndex(0).get("Type"): null);
-									DocValues.push(result.collection.getByIndex(0).get("ilayCategory") != "" ? 
-													result.collection.getByIndex(0).get("ilayCategory"): null);
-									DocValues.push(result.collection.getByIndex(0).get("ilayModelName") != "" ? 
-													result.collection.getByIndex(0).get("ilayModelName"): null);
-								}
-								next(DocValues);
-							}, this);
-						},
-						function(next, DocValues) {
-							var reportsEsq = Ext.create("Terrasoft.EntitySchemaQuery", {
-								rootSchemaName: "SysModuleReport"
-							});
-							
-							//*****************************************************************
-							var filterGroupByCategory = this.Terrasoft.createFilterGroup();
-								filterGroupByCategory.logicalOperation = Terrasoft.LogicalOperatorType.OR;
-								
-							var byCategoryFilter = Terrasoft.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL,
-								"=[ilayDocReports:ilayPrintForm:Id].ilayCategory", DocValues[1] ? DocValues[1].value : null);
-								filterGroupByCategory.add('byCategoryFilter', byCategoryFilter);
-								
-							var byCategoryNullFilter = 
-								this.Terrasoft.createColumnIsNullFilter("=[ilayDocReports:ilayPrintForm:Id].ilayCategory");
-								filterGroupByCategory.add('byCategoryNullFilter', byCategoryNullFilter);
-							//*****************************************************************	
-							var filterGroupByDocModel = this.Terrasoft.createFilterGroup();
-								filterGroupByDocModel.logicalOperation = Terrasoft.LogicalOperatorType.OR;
-							
-							var byDocModelFilter = Terrasoft.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL,
-								"=[ilayDocReports:ilayPrintForm:Id].ilayDocModel", DocValues[2] ? DocValues[2].value : null);
-								filterGroupByDocModel.add('byDocModelFilter', byDocModelFilter);
-								
-							var byDocModelNullFilter = 
-								this.Terrasoft.createColumnIsNullFilter("=[ilayDocReports:ilayPrintForm:Id].ilayDocModel");
-								filterGroupByDocModel.add('byDocModelNullFilter', byDocModelNullFilter);
-							//*****************************************************************	
-							reportsEsq.filters.addItem(Terrasoft.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL,
-								"ShowInCard", true));
-							reportsEsq.filters.addItem(Terrasoft.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL,
-								"=[ilayDocReports:ilayPrintForm:Id].ilayDocType", DocValues[0] ? DocValues[0].value : null));
-							reportsEsq.filters.addItem(filterGroupByCategory);
-							reportsEsq.filters.addItem(filterGroupByDocModel);
-							reportsEsq.getEntityCollection(function(result) {
-								if (this.destroyed) {
-									return;
-								}
-								if (result.success && !result.collection.isEmpty()) {
-									for (var i = result.collection.getCount() - 1; i >= 0; i--) {
-										if(items.indexOf(result.collection.getByIndex(i).get("Id")) != -1) 
-										{
-											sectionPrintMenuItems.get(result.collection.getByIndex(i).get("Id")).set("Visible", true);
-											sectionPrintMenuItems.get(result.collection.getByIndex(i).get("Id")).set("Enabled", true);
-										}
-									}
-									/*result.collection.each(function(item) {
-										if(items.indexOf(item.get("Id")) != -1) 
-											sectionPrintMenuItems.get(item.get("Id")).set("Visible", true);
-									},this);*/
-								}
-							}, this);
-							next();
-						},
-					this);
-					
-				},
+				/**
+				 * Возвращает признак отображения кнопки "Скасувати"
+				 */
 				isCancelServiceButtonVisible: function() {
 					return this.get("isCSButtonVisible");
 				},
@@ -257,6 +170,13 @@ define("DocumentSectionV2", ["VisaHelper", "BaseFiltersGenerateModule",	"Documen
 				"ServButtVisible": {
 					mode: this.Terrasoft.MessageMode.PTP,
 					direction: this.Terrasoft.MessageDirectionType.SUBSCRIBE
+				},
+				/**
+				 * Нажата кнопка печать.
+				 */
+				"PrintButtonPressed": {
+					mode: Terrasoft.MessageMode.PTP,
+					direction: Terrasoft.MessageDirectionType.PUBLISH
 				}
 			},
 			diff: /**SCHEMA_DIFF*/[
