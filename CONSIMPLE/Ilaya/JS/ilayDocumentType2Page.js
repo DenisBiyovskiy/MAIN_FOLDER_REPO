@@ -548,16 +548,6 @@ function(resources, GeneralDetails, ilayCConst) {
 		},
 		methods: {
 			//Den>>
-			generatePrintForm: function () {
-				this.callParent(arguments);
-				var type = this.get("Type") ? this.get("Type").value : null,
-					medDoc = "".toLowerCase();
-					buhDoc = "".toLowerCase();
-
-				if( type === ) {
-
-				}
-			},
 			isCancelServiceButtonVisible: function() {
 				if(this.get("State")){
 					//Підготовка
