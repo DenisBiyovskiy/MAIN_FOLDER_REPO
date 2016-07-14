@@ -7,10 +7,45 @@ define("DocumentSectionV2", ["VisaHelper", "BaseFiltersGenerateModule",	"Documen
 				 * По нажатию на кнопку печать Документы с типом Медицинский и Бухгалтерский
 				 * переводятся в состояние "Підписан"
 				 */
-				downloadReport: function(caption, key) {
-					this.callParent(arguments);
-					this.sandbox.publish("PrintButtonPressed", null, [this.getCardModuleSandboxId()]);
+				generatePrintForm: function(printForm) {
+					this.checkRequiredFieldsFilled(function(requiredFieldsFilled) {
+						if(requiredFieldsFilled) {
+							this.callParent();
+						} else {
+							Terrasoft.utils.showMessage({
+								caption: this.get("Resources.Strings.RequiredFieldsNotFilled"),
+								buttons: ["cancel"],
+								style: Terrasoft.MessageBoxStyles.RED
+							});
+						}
+					}, this);
 				},
+				
+				/**
+				* Проверяет заполнены ли все обязательные поля в детали, и показывает кнопку печати.
+				*/
+				checkRequiredFieldsFilled: function (callback, scope) {
+					var esq = Ext.create("Terrasoft.EntitySchemaQuery", {
+						rootSchemaName: "ilayMedDocSpecific"
+					});
+					esq.addColumn("ilayFactValueForEditableGrid");
+					esq.filters.addItem(esq.createColumnFilterWithParameter(
+						this.Terrasoft.ComparisonType.EQUAL, "ilayMedDoc", this.get("Id")));
+					esq.filters.addItem(esq.createColumnFilterWithParameter(
+						this.Terrasoft.ComparisonType.EQUAL, "ilayIsRequired", true));
+					esq.getEntityCollection(function(result) {
+						if(result.success){
+							var requiredFieldsFilled = true;
+							for (var i = 0; i < result.collection.getCount(); i++) {
+								if(result.collection.getByIndex(i).get("ilayFactValueForEditableGrid") === "") {
+									requiredFieldsFilled = false;
+								}
+							}
+							callback.call(scope || this, requiredFieldsFilled);
+						}
+					}, this);
+				},
+				
 				/**
 				 * Обрабатывает сообщение о завершении отрисовки страницы редактирования.
 				 * from BaseSectionV2
@@ -20,6 +55,7 @@ define("DocumentSectionV2", ["VisaHelper", "BaseFiltersGenerateModule",	"Documen
 					this.callParent(arguments);
 					this.refreshCardValuesCollection(this.initCardPrintForms, this);
 				},
+				
 				/**
 				 * Синхронный метод обновления атрибута ilayCardValuesCollection.
 				 * @param {Function} callback Функция обратного вызова.
@@ -109,7 +145,13 @@ define("DocumentSectionV2", ["VisaHelper", "BaseFiltersGenerateModule",	"Documen
 							var printMenuItems = this.preparePrintButtonCollection(this.moduleCardPrintFormsCollectionName);
 							printMenuItems.loadAll(printFormsMenuCollection);
 							this.set(this.moduleCardPrintFormsCollectionName, printMenuItems);
-							this.getCardPrintButtonVisible();
+							//this.getCardPrintButtonVisible();
+							//Если Мед.Док. скрываем кнопку печати.
+							if(this.get("ilayCardValuesCollection").Type === "2F3F339E-7A37-4772-8C87-C4DFF260B341".toLowerCase()) {
+								this.set("IsCardPrintButtonVisible", false);	
+							} else {
+								this.getCardPrintButtonVisible();
+							}
 						}
 						if(result.collection.isEmpty()){
 							this.set("IsCardPrintButtonVisible", false);

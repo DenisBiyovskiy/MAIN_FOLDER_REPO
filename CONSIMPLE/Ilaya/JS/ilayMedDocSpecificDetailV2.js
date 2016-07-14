@@ -14,51 +14,47 @@ define("ilayMedDocSpecificDetailV2", ["BusinessRulesApplierV2", "ConfigurationGr
 					 * @inheritdoc Terrasoft.GridUtilitiesV2#getFilterDefaultColumnName
 					 * @overridden
 					 */
-							init: function() {
-								this.callParent(arguments);
-								//debugger;
-							},
+					init: function() {
+						this.callParent(arguments);
+						//debugger;
+					},
 
-							getFilterDefaultColumnName: function() {
-								return "Specification";
-							},
+					getFilterDefaultColumnName: function() {
+						return "Specification";
+					},
 
-							changeRow: function(config) { 
-								var oldId = config.oldId; 
-								if (!oldId) { 
-									return; 
-								} 
-								var gridData = this.getGridData(); 
-								if (!gridData.contains(oldId)) { 
-									return; 
-								} 
-								var activeRow = gridData.get(oldId); 
-								var activeRowChanged = this.getIsRowChanged(activeRow); 
-								if (activeRowChanged) { 
-									this.Terrasoft.chain( 
-										function(next) { 
-											this.saveRowChanges(activeRow, next); 
-										}, 
-										function() { 
-											this.set("ActiveRow", config.newId || null); 
-										}, 
-									this 
-									); 
-									config.success = false; 
-								} 
-								/*this.updateDetail({ 
-									detail: "ilayMedDocSpecificDetailV2", 
-									reloadAll: true 
-								});*/
-								this.sandbox.publish("DetailChanged", 
-									{
-										action: "edit",
-										rows: [config.oldId]
-									},
-									[this.sandbox.id]
-								);
-							}, 
-
+					/**
+					 * Сохраняет изменения на редактируемом гриде детали, меняет фокус,
+					 * публикует сообщение для работы сабскрайбера.
+					 */
+					changeRow: function(config) { 
+						var oldId = config.oldId; 
+						if (!oldId) { 
+							return; 
+						} 
+						var gridData = this.getGridData(); 
+						if (!gridData.contains(oldId)) { 
+							return; 
+						} 
+						var activeRow = gridData.get(oldId); 
+						var activeRowChanged = this.getIsRowChanged(activeRow); 
+						if (activeRowChanged) { 
+							this.Terrasoft.chain( 
+								function(next) { 
+									this.saveRowChanges(activeRow, next);
+								}, 
+								function() { 
+									this.set("ActiveRow", config.newId || null); 
+								}, 
+							this 
+							); 
+							config.success = false;
+						} 
+						this.updateDetail({
+							detail: "ilayMedDocSpecificDetailV2",
+							reloadAll: true
+						});
+					},
 
 					generateActiveRowControlsConfig: function(id, columnsConfig, rowConfig) {
 						// + vlad

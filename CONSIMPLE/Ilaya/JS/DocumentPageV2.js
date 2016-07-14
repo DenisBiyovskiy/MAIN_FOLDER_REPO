@@ -27,7 +27,7 @@ define("DocumentPageV2", ["BaseFiltersGenerateModule", "VisaHelper", "BusinessRu
 				 * По нажатию на кнопку печать Документы с типом Медицинский и Бухгалтерский
 				 * переводятся в состояние "Підписан"
 				 */
-				downloadReport: function(caption, key) {
+				generatePrintForm: function(printForm) {
 					this.callParent(arguments);
 					this.setDocSigned();
 				},
