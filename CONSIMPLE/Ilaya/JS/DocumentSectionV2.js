@@ -3,24 +3,7 @@ define("DocumentSectionV2", ["VisaHelper", "BaseFiltersGenerateModule",	"Documen
 		return {
 			entitySchemaName: "Document",
 			methods: {
-				/**
-				 * По нажатию на кнопку печать Документы с типом Медицинский и Бухгалтерский
-				 * переводятся в состояние "Підписан"
-				 */
-				generatePrintForm: function(printForm) {
-					this.checkRequiredFieldsFilled(function(requiredFieldsFilled) {
-						if(requiredFieldsFilled) {
-							this.callParent();
-						} else {
-							Terrasoft.utils.showMessage({
-								caption: this.get("Resources.Strings.RequiredFieldsNotFilled"),
-								buttons: ["cancel"],
-								style: Terrasoft.MessageBoxStyles.RED
-							});
-						}
-					}, this);
-				},
-				
+				//Den>
 				/**
 				* Проверяет заполнены ли все обязательные поля в детали, и показывает кнопку печати.
 				*/
@@ -34,16 +17,101 @@ define("DocumentSectionV2", ["VisaHelper", "BaseFiltersGenerateModule",	"Documen
 					esq.filters.addItem(esq.createColumnFilterWithParameter(
 						this.Terrasoft.ComparisonType.EQUAL, "ilayIsRequired", true));
 					esq.getEntityCollection(function(result) {
-						if(result.success){
+						if (result.success) {
 							var requiredFieldsFilled = true;
 							for (var i = 0; i < result.collection.getCount(); i++) {
-								if(result.collection.getByIndex(i).get("ilayFactValueForEditableGrid") === "") {
+								if (result.collection.getByIndex(i).get("ilayFactValueForEditableGrid") === "") {
 									requiredFieldsFilled = false;
 								}
 							}
-							callback.call(scope || this, requiredFieldsFilled);
+							if (requiredFieldsFilled) {
+								callback.call(scope || this);
+							} else {
+								Terrasoft.utils.showMessage({
+									caption: this.get("Resources.Strings.RequiredFieldsNotFilled"),
+									buttons: ["ok"],
+									style: Terrasoft.MessageBoxStyles.RED
+								});
+							}
 						}
 					}, this);
+				},
+				//Den<
+				
+				/**
+				 * По нажатию на кнопку печать Документы с типом Медицинский и Бухгалтерский
+				 * переводятся в состояние "Підписан"
+				 * Генерирует отчет.
+				 * @protected
+				 * @param {Terrasoft.BaseViewModel} printForm Конфигурационный объект.
+				 */
+				generatePrintForm: function(printForm) {
+					//Den>
+					Terrasoft.chain(
+						function(next) {
+							if (this.get("ilayCardValuesCollection").Type === "2F3F339E-7A37-4772-8C87-C4DFF260B341".toLowerCase()) {
+								this.checkRequiredFieldsFilled(next, this);
+							} else {
+								next();
+							}
+						},
+						function(next) {
+					//Den<
+							this.showBodyMask();
+							var filters = this.getReportFilters();
+							var reportParameters;
+							if (filters instanceof Terrasoft.FilterGroup) {
+								reportParameters = {Filters: filters.serialize()};
+							} else {
+								reportParameters = filters;
+							}
+							var selectedRows = this.getPrimaryColumnValue() || this.getSelectedItems() || Terrasoft.GUID_EMPTY;
+							var data = {
+								reportParameters: Ext.JSON.encode(reportParameters),
+								reportSchemaUId: printForm.getReportSchemaUId(),
+								templateId: printForm.getTemplateId(),
+								recordId: this.getPrimaryColumnValue() || Terrasoft.GUID_EMPTY,
+				
+								entitySchemaUId: this.getEntitySchemaUId(), //TODO !!!!!!!!!!
+				
+								caption: printForm.getCaption(),
+								convertInPDF: printForm.get("ConvertInPDF")
+							};
+							var serviceConfig = {
+								serviceName: "ReportService",
+								methodName: "CreateReport",
+								data: data,
+								timeout: 20 * 60 * 1000
+							};
+							var callback = this.Terrasoft.emptyFn;
+							if (Ext.isArray(selectedRows) && selectedRows.length > 1) {
+								delete data.recordId;
+								data.recordIds = selectedRows;
+								serviceConfig.methodName = "CreateReportsList";
+								callback = function(response) {
+									var keys = response.CreateReportsListResult;
+									for (var i = 0; i < keys.length; i++) {
+										this.downloadReport(printForm.getCaption(), keys[i]);
+									}
+								};
+							} else {
+								callback = function(response) {
+									var key = response.CreateReportResult;
+									this.downloadReport(printForm.getCaption(), key);
+								};
+							}
+							this.callService(serviceConfig, function(response) {
+								this.hideBodyMask();
+								callback.call(this, response);
+							}, this);
+					//Den>
+							this.sandbox.publish("PrintButtonPressed", null, [this.getCardModuleSandboxId()]); 
+							this.set("isCSButtonVisible", false);
+							next();
+						},
+					this
+					);
+					//Den<
 				},
 				
 				/**
@@ -145,15 +213,9 @@ define("DocumentSectionV2", ["VisaHelper", "BaseFiltersGenerateModule",	"Documen
 							var printMenuItems = this.preparePrintButtonCollection(this.moduleCardPrintFormsCollectionName);
 							printMenuItems.loadAll(printFormsMenuCollection);
 							this.set(this.moduleCardPrintFormsCollectionName, printMenuItems);
-							//this.getCardPrintButtonVisible();
-							//Если Мед.Док. скрываем кнопку печати.
-							if(this.get("ilayCardValuesCollection").Type === "2F3F339E-7A37-4772-8C87-C4DFF260B341".toLowerCase()) {
-								this.set("IsCardPrintButtonVisible", false);	
-							} else {
-								this.getCardPrintButtonVisible();
-							}
+							this.getCardPrintButtonVisible();
 						}
-						if(result.collection.isEmpty()){
+						if (result.collection.isEmpty()) {
 							this.set("IsCardPrintButtonVisible", false);
 						}
 						if (callback) {

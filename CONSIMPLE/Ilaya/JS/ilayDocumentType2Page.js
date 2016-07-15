@@ -544,68 +544,28 @@ function(resources, GeneralDetails, ilayCConst) {
 		},
 		methods: {
 			//Den>>
-			/**
-			 * По нажатию на кнопку печать Документы с типом Медицинский и Бухгалтерский
-			 * переводятся в состояние "Підписан"
-			 */
-			generatePrintForm: function(printForm) {
-				this.checkRequiredFieldsFilled(function(requiredFieldsFilled) {
-					if(requiredFieldsFilled) {
-						this.callParent();
-					} else {
-						Terrasoft.utils.showMessage({
-							caption: this.get("Resources.Strings.RequiredFieldsNotFilled"),
-							buttons: ["cancel"],
-							style: Terrasoft.MessageBoxStyles.RED
-						});
-					}
-				}, this);
-			},
-			
-			/**
-			* Проверяет заполнены ли все обязательные поля в детали, и показывает кнопку печати.
-			*/
-			checkRequiredFieldsFilled: function (callback, scope) {
-				var esq = Ext.create("Terrasoft.EntitySchemaQuery", {
-					rootSchemaName: "ilayMedDocSpecific"
-				});
-				esq.addColumn("ilayFactValueForEditableGrid");
-				esq.filters.addItem(esq.createColumnFilterWithParameter(
-					this.Terrasoft.ComparisonType.EQUAL, "ilayMedDoc", this.get("Id")));
-				esq.filters.addItem(esq.createColumnFilterWithParameter(
-					this.Terrasoft.ComparisonType.EQUAL, "ilayIsRequired", true));
-				esq.getEntityCollection(function(result) {
-					if(result.success){
-						var requiredFieldsFilled = true;
-						for (var i = 0; i < result.collection.getCount(); i++) {
-							if(result.collection.getByIndex(i).get("ilayFactValueForEditableGrid") === "") {
-								requiredFieldsFilled = false;
-							}
-						}
-						callback.call(scope || this, requiredFieldsFilled);
-					}
-				}, this);
-			},
-			
 			isCancelServiceButtonVisible: function() {
 				if(this.get("State")){
 					//Підготовка
 					return this.get("State").value === "1FCD639A-E581-4E2E-815B-7A7EE341BAC1".toLowerCase();
 				}
 			},
+			
 			/**
 			 * Выполняет подписки на сообщения, которые понадобятся разделу.
 			 * @protected
 			 */
 			SetServButtVisible: function() {
-				this.sandbox.publish("ServButtVisible", null, [this.sandbox.id]);
-			},
-			onEntityInitialized: function() {
-				this.callParent(arguments);
-				if(this.isCancelServiceButtonVisible()){
-					this.SetServButtVisible();
+				if (this.isCancelServiceButtonVisible()) {
+						this.sandbox.publish("ServButtVisible", null, [this.sandbox.id]);
 				}
 			},
+			
+			onEntityInitialized: function() {
+				this.callParent(arguments);
+				this.SetServButtVisible();
+			},
+			
 			updateServAndDocs: function() {
 				console.log("Let's play whith some sql queries!");
 				
