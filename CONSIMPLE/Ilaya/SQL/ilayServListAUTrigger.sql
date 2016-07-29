@@ -35,7 +35,7 @@ BEGIN
 	DECLARE @performStatus uniqueidentifier =  '2E0AFD6B-B528-482A-9F00-52CCCB14B3BA' --на виконаннi
 	DECLARE @activityState uniqueidentifier = '6627B0F3-BC5F-44DD-923D-59565B8CEEAD' --йде прийом
 	
-	DECLARE @MyCursor CURSOR SET @MyCursor = CURSOR FAST_FORWARD
+	DECLARE @MyCursor CURSOR SET @MyCursor = CURSOR LOCAL FAST_FORWARD
 	FOR 
 		SELECT Id, ilayPerform, ilayPerfomStatusId, ilayPatientId, ilayDoctorId, ilayCourseId FROM DELETED
 	OPEN @MyCursor

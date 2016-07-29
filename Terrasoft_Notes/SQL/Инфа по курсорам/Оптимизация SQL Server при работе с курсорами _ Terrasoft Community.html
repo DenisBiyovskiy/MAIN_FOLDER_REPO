@@ -1,0 +1,1039 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0044)http://www.community.terrasoft.ua/blogs/4821 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>
+      Оптимизация SQL Server при работе с курсорами | Terrasoft Community    </title>
+    
+<link rel="shortcut icon" href="http://www.community.terrasoft.ua/favicon.ico" type="image/x-icon">
+<meta name="robots" content="noindex,nofollow"><link rel="search" href="http://www.community.terrasoft.ua/sites/all/themes/terrasoft/img/content/browsersearch_ua.xml" title="Terrasoft Community" type="application/opensearchdescription+xml">    <link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/node.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/poll.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/defaults.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/system.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/system-menus.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/user.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/content-module.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/date.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/datepicker.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/jquery.timeentry.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/filefield.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/genpass.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/geshifilter.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/hidden_captcha.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/logintoboggan.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/tagadelic.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/thickbox.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/thickbox_ie.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/forum.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/views.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/comment.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/style.css">
+<link type="text/css" rel="stylesheet" media="print" href="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/print.css">
+    <script async="" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/analytics.js"></script><script src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/cb=gapi.loaded_1" async=""></script><script src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/jquery.min.js"></script>
+<script type="text/javascript" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/drupal.js"></script>
+<script type="text/javascript" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/ru_55d8ced0f971413c4e921c71f1660df6.js"></script>
+<script type="text/javascript" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/thickbox_login.js"></script>
+<script type="text/javascript" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/thickbox.js"></script>
+<script type="text/javascript" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/jquery.easing.min.1.3.js"></script>
+<script type="text/javascript" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/jquery.validate.min.js"></script>
+<script type="text/javascript" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/aop.pack.js"></script>
+<script type="text/javascript" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/jquery.requireScript-1.2.1.js"></script>
+<script type="text/javascript" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/cusel-min-2.3.1.js"></script>
+<script type="text/javascript" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/jquery.fancybox-1.3.4.pack.js"></script>
+<script type="text/javascript" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/main.js"></script>
+<script type="text/javascript" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/jquery.cookie.js"></script>
+<script type="text/javascript" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/activepathmenu.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "thickbox": { "close": "", "next": "Next \x3e", "prev": "\x3c Prev", "esc_key": "", "next_close": "Next / Close on last", "image_count": "Image !current of !total" } });
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+$(document).ready(function() {
+  $("a[href^=http:]").not($("a").find("img").parents("a")).not($("#block-block-23 a")).not($(".social_links a")).not($(".not_add_img a")).each(function() {
+    if (this.host!="www.community.terrasoft.ua") {
+      $(this).after("<img src=/sites/all/themes/terrasoft/img/icons/link.gif>");
+    }
+  });
+  $("a[href^=/training]").not($("a").find("img").parents("a")).not($("#block-block-23 a")).not($(".not_add_img a")).each(function() {
+    $(this).after("<img src=/sites/all/themes/terrasoft/img/icons/link.gif>");
+  });
+  $("a[href^=/terrasoft]").not($("a").find("img").parents("a")).not($("#block-block-23 a")).not($(".not_add_img a")).each(function() {
+    $(this).after("<img src=/sites/all/themes/terrasoft/img/icons/link.gif>");
+  });
+  $("a[href^=http:], a[href^=https:]").each(function() {
+    if (this.host!="www.community.terrasoft.ua") {
+      $(this).attr("target","_blank");
+    }
+  });
+  $("a[href^=/training]").each(function() {
+    $(this).attr("target","_blank");
+  });
+  $("a[href^=/terrasoft]").each(function() {
+    $(this).attr("target","_blank");
+  });
+});
+
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+    $(document).ready(function() {
+      user_vote_anonimos(4821);
+    });
+//--><!]]>
+</script>
+    <noscript>
+      &lt;link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/terrasoft/css/style_no_js.css" /&gt;
+    </noscript>    
+  <script type="text/javascript" charset="utf-8" async="" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/button.1813ea3f78757294e1ba1cea21b068a0.js"></script></head>
+  <body class="not-front not-logged-in node-type-blog one-sidebar sidebar-right page-blogs-4821 section-blogs jquery-webkit jquery-webkit-537.36">
+    <div id="page">
+      <div id="page-inner">
+        <div id="header">
+          <div id="header-inner" class="clear-block">
+                          <div id="logo-title">
+                                  <div id="logo">
+                    <a href="http://www.community.terrasoft.ua/" title="Главная" rel="home">
+                      <!--[if gte IE 9]><!--><img src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/TC_logo.svg" alt="Главная" id="logo-image"><!--<![endif]-->
+                      <!--[if lt IE 9]><img src="/sites/all/themes/terrasoft/img/attribute/logo.gif" alt="Главная" id="logo-image" /><![endif]-->
+                    </a>
+                  </div>
+                                                              </div>
+                                      <div id="header-blocks" class="region region-header">
+                <div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1"><div class="block-inner">
+  <div class="bg_top">
+    <div class="bg_bottom">
+      
+      <div class="content">
+         <div class="main_links_community"><a href="http://www.community.terrasoft.ua/terrasoft" target="_blank">Terrasoft</a></div>
+<div class="main_links_training"><a href="http://www.community.terrasoft.ua/academy" target="_blank" style="padding: 0 24px 0 18px;">Академия</a></div>
+<div class="main_links_chat" style="min-width: 180px;text-align:center;"><!-- OK.kolobiz.com button Code 1 -->
+<script language="javascript" type="text/javascript">
+  if (typeof(klBIZ) == 'undefined' || klBIZ == null) {
+    var klBIZ = {}; 
+    klBIZ.url_page = window.location.href; 
+    if (document.title) klBIZ.page_title = escape(document.title.substring(0,255)); 
+    klBIZ.setParam = "&ttl=" + klBIZ.page_title; 
+    klBIZ.url_referrer = escape(document.referrer); 
+    klBIZ.setReloadIMG = false; 
+    klBIZ.setParam += "&url="+escape(klBIZ.url_page) + "&referrer="+escape(klBIZ.url_referrer); klBIZ.setParam += '&cd=' + window.screen.colorDepth + '&rh=' + screen.height + '&rw='+screen.width; 
+  }; 
+  klBIZ.time = 60*1000;  klBIZ.stDT_On = new Array();  klBIZ.stDT_Off = new Array(); klBIZ.stDT_Def = new Array();
+  klBIZ.page_time = new Date().getTime(); klBIZ.prts = (("https:" == document.location.protocol) ? "https://" : "http://"); 
+  klBIZ.srcMain = 'vrsn=2.3&lang=ru&style=terra&agid=23&group=41&hash=8rGdFq9jCW7CGnVe3ZYXJnXMcTw=';
+  klBIZ.srcOpen = klBIZ.prts+'ok.kolobiz.com/client/?'+klBIZ.srcMain+klBIZ.setParam; 
+  klBIZ.srcTXT = klBIZ.prts+"btn.kolobiz.com/?out=fnc&"+klBIZ.srcMain;
+  klBIZ.srcIMG = klBIZ.prts+'btn.kolobiz.com/?out=img&img=on24call&'+klBIZ.srcMain;
+
+  if (typeof klBIZ.updateCode !== 'function') {
+   klBIZ.updateCode = function (_action) {  var desHTML = '';
+   for(i=1;  i<=2; i++ ) {
+     if(( typeof document.getElementById("btn.klb_btncont_"+i) == "undefined") )  continue;
+     if ( typeof(klBIZ.stDT_On[i]) == 'undefined' || klBIZ.stDT_On[i] == null ) continue;
+      switch(_action) { 
+       case 'on':  desHTML = klBIZ.stDT_On[i];  break; 
+       case 'off': desHTML = klBIZ.stDT_Off[i]; break;
+       default:    desHTML = klBIZ.stDT_Def[i]; break;
+     }
+      document.getElementById("btn.klb_btncont_"+i).innerHTML = desHTML;
+     } // for
+    return true;
+    };
+  }
+
+  if (typeof klBIZ.reloadTXT !== 'function') {
+    klBIZ.reloadTXT = function () {
+    if (typeof(klBIZ) == 'undefined' || klBIZ == null) { klBIZ = {};  klBIZ.time = 60*1000;  }; 
+    src = klBIZ.srcTXT+klBIZ.setParam; var prmArr = src.split('&');  var getVal = prmArr[0]; for (var i = 1; i < prmArr.length; i++) getVal = getVal+'&'+prmArr[i]; getVal += klBIZ.setParam; if (klBIZ.act == 'btn_load') {  getVal += '&act='+act+'&upimg=on'+ '&rand=' + new Date().getTime(); }; 
+var KLBStatus = document.getElementById("btn.klb_jscr");  KLBStatus.innerHTML = '';  klBIZ.scBTN=document.createElement("script"); klBIZ.scBTN.charset="utf-8";  klBIZ.scBTN.type="text/javascript"; klBIZ.scBTN.src=src;  KLBStatus.appendChild(klBIZ.scBTN); klBIZ.time += 1000;  klBIZ.scBTN = ''; klBIZ.act == 'btn_reload'; };
+  }
+
+  klBIZ.stDT_On[1] = '<a id="kolobiz_abt" href="javascript:void(0);" target="_blank" onclick="if(navigator.userAgent.toLowerCase().indexOf(\'opera\') != -1 &amp;&amp; window.event.preventDefault) window.event.preventDefault();this.KLBWin5360 = window.open(klBIZ.srcOpen, \'ok_kolobiz5360\', \'toolbar=0,scrollbars=0,location=0,status=1,menubar=0,width=620,height=490,resizable=1\');this.KLBWin5360.focus();this.KLBWin5360.opener=window;return false;">Чат с технической поддержкой<\/a>';
+  klBIZ.stDT_Off[1] = '<a   href="javascript:void(0);" target="_blank" onclick="if(navigator.userAgent.toLowerCase().indexOf(\'opera\') != -1 &amp;&amp; window.event.preventDefault) window.event.preventDefault();this.KLBWin5360 = window.open(klBIZ.srcOpen, \'ok_kolobiz5360\', \'toolbar=0,scrollbars=0,location=0,status=1,menubar=0,width=620,height=490,resizable=1\');this.KLBWin5360.focus();this.KLBWin5360.opener=window;return false;">Чат с технической поддержкой<\/a>';
+  klBIZ.stDT_Def[1] = '<a   href="/company/feedback/question">Чат с технической поддержкой<\/a>';
+
+  document.write('<span id="btn.klb_btncont_1">'+klBIZ.stDT_Def[1]+'</span>');
+ if ( typeof klBIZ.btn_timer == 'undefined' || klBIZ.btn_timer == null ) {
+    document.write('<div id="btn.klb_jscr" style="display: none"></div>'); 
+    klBIZ.act == 'btn_load';  klBIZ.reloadTXT(); 
+    klBIZ.btn_timer  = setInterval( function (){ klBIZ.reloadTXT()}, klBIZ.time); 
+ }
+
+ </script><span id="btn.klb_btncont_1"><a href="javascript:void(0);" target="_blank" onclick="if(navigator.userAgent.toLowerCase().indexOf(&#39;opera&#39;) != -1 &amp;&amp; window.event.preventDefault) window.event.preventDefault();this.KLBWin5360 = window.open(klBIZ.srcOpen, &#39;ok_kolobiz5360&#39;, &#39;toolbar=0,scrollbars=0,location=0,status=1,menubar=0,width=620,height=490,resizable=1&#39;);this.KLBWin5360.focus();this.KLBWin5360.opener=window;return false;">Чат с технической поддержкой</a></span><div id="btn.klb_jscr" style="display: none"><script charset="utf-8" type="text/javascript" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/saved_resource"></script></div>
+ <!-- OK.koloBIZ button Code 1 /-->
+</div>
+       </div>
+
+          </div>
+  </div>
+</div></div> <!-- /block-inner, /block -->
+              </div>
+                      </div>
+        </div>
+                  <div id="navbar">
+            <div id="navbar-inner" class="clear-block region region-navbar">
+                                                        <div id="block-ts_menu-0" class="block block-ts_menu region-odd odd region-count-1 count-3"><div class="block-inner">
+  <div class="bg_top">
+    <div class="bg_bottom">
+      
+      <div class="content">
+        
+    <div id="main_menu_drop">
+      <div class="left menu main"><a href="http://www.community.terrasoft.ua/resources" id="m_item_0" class="has_children">
+        <div class="menu-item-tl">
+        </div>
+        <div class="menu-item-tr">
+          <div></div>
+        </div>
+        <div class="menu-item-tc">
+          <div></div>
+        </div>
+        <div class="menu-item-bc">
+        </div>
+        <span>Ресурсы</span></a><a href="http://www.community.terrasoft.ua/forum" id="m_item_1" class="">
+        <div class="menu-item-tl">
+        </div>
+        <div class="menu-item-tr">
+          <div></div>
+        </div>
+        <div class="menu-item-tc">
+          <div></div>
+        </div>
+        <div class="menu-item-bc">
+        </div>
+        <span>Форум</span></a><a href="http://www.community.terrasoft.ua/blogs" id="m_item_2" class="">
+        <div class="menu-item-tl">
+        </div>
+        <div class="menu-item-tr">
+          <div></div>
+        </div>
+        <div class="menu-item-tc">
+          <div></div>
+        </div>
+        <div class="menu-item-bc">
+        </div>
+        <span>Блоги</span></a><a href="http://www.community.terrasoft.ua/ideas" id="m_item_3" class="">
+        <div class="menu-item-tl">
+        </div>
+        <div class="menu-item-tr">
+          <div></div>
+        </div>
+        <div class="menu-item-tc">
+          <div></div>
+        </div>
+        <div class="menu-item-bc">
+        </div>
+        <span>Идеи</span></a><a href="http://www.community.terrasoft.ua/catalog" id="m_item_4" class="last ">
+        <div class="menu-item-tl">
+        </div>
+        <div class="menu-item-tr">
+          <div></div>
+        </div>
+        <div class="menu-item-tc">
+          <div></div>
+        </div>
+        <div class="menu-item-bc">
+        </div>
+        <span>Каталог расширений</span></a>
+    </div>
+  </div>
+  <div class="dropdown-menu">
+    <div class="dropdown-menu-tl"></div>
+    <div class="dropdown-menu-tr">
+      <div></div>
+    </div>
+    <div class="dropdown-menu-bl">
+      <div></div>
+    </div>
+    <div class="dropdown-menu-br">
+      <div></div>
+    </div>
+    <div class="dropdown-menu-tc">
+      <div></div>
+    </div>
+    <div class="dropdown-menu-bc">
+      <div></div>
+    </div>
+    <div class="dropdown-menu-cl">
+      <div></div>
+    </div>
+    <div class="dropdown-menu-cr">
+      <div></div>
+    </div>
+    <div class="dropdown-menu-cc"></div>
+        <div class="dropdown-menu-item " id="dm_item_0" style="width:679px">
+            <table class="menu_first first_level" width="679">
+            <tbody><tr><td><div class="list-title point_id_76"><a href="http://www.community.terrasoft.ua/usr">Пользователю</a>
+                </div>
+                <div class="list-items"><div class="br"><a href="http://www.community.terrasoft.ua/usr/demo">Демо-версии</a></div><div class="br"><a href="http://www.community.terrasoft.ua/academy">Документация</a></div><div class="br"><a href="http://www.community.terrasoft.ua/academy">Видео уроки</a></div><div class="br"><a href="https://www.youtube.com/playlist?list=PLC7FE9AF66450C057" target="_blank">Вебинары</a></div><div class="br"><a href="http://www.community.terrasoft.ua/academy/test">Обучающее тестирование</a></div>
+              </div>
+                </td><td><div class="list-title point_id_78"><a href="http://www.community.terrasoft.ua/ic">Консультанту</a>
+                </div>
+                <div class="list-items"><div class="br"><a href="http://www.community.terrasoft.ua/pm/solutions">Описания проектов</a></div><div class="br"><a href="http://www.community.terrasoft.ua/bc/practice">CRM-практика</a></div><div class="br"><a href="http://www.community.terrasoft.ua/terrasoft/products/impguide/" target="_blank">Руководство по внедрению</a><img src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/link.gif"></div><div class="br"><a href="http://www.community.terrasoft.ua/bc/instrument">Инструментарий консультанта</a></div><div class="br"><a href="http://www.community.terrasoft.ua/ic/solutions">Примеры решений</a></div><div class="br"><a href="http://www.community.terrasoft.ua/training/business" target="_blank">Бизнес-тренинги</a><img src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/link.gif"></div>
+              </div>
+                </td>
+                  <td class="last"><div class="list-title point_id_88"><a href="http://www.community.terrasoft.ua/developer">Разработчику</a>
+                </div>
+                <div class="list-items"><div class="br"><a href="http://www.community.terrasoft.ua/developer/advice">Рекомендации по разработке</a></div><div class="br"><a href="http://www.community.terrasoft.ua/developer/faq">FAQ, примеры решений</a></div><div class="br"><a href="http://www.community.terrasoft.ua/developer/integration">Информация по интеграции</a></div><div class="br"><a href="http://www.community.terrasoft.ua/academy">Техническая документация</a></div>
+              </div>
+                </td>
+            </tr>
+          </tbody></table></div>
+    </div>      </div>
+
+          </div>
+  </div>
+</div></div> <!-- /block-inner, /block -->
+            </div>
+          </div>
+                
+      </div>
+    </div>
+        <div id="page_header">
+      <div id="block-ts_custom-4" class="block block-ts_custom region-odd even region-count-1 count-2"><div class="block-inner">
+  <div class="bg_top">
+    <div class="bg_bottom">
+      
+      <div class="content">
+        <div class="left">
+              <div id="headData">
+                <div class="arrow"><div class="bg"></div></div><form action="http://www.community.terrasoft.ua/blogs/4821" accept-charset="UTF-8" method="post" id="ts-custom-main-search-form">
+<div><div class="bg_search"><div class="form-item" id="edit-ts-custom-search-text-wrapper">
+ <input type="text" maxlength="128" name="ts_custom_search_text" id="edit-ts-custom-search-text" size="60" value="" class="form-text">
+</div>
+<input type="submit" name="op" id="edit-ts-custom-search-submit" value="" class="form-submit">
+<div class="search_prompt">Поиск</div></div><div class="radio"><div class="form-radios"><div class="form-item" id="edit-ts-custom-search-choose-0-wrapper">
+ <label class="option" for="edit-ts-custom-search-choose-0"><input type="radio" id="edit-ts-custom-search-choose-0" name="ts_custom_search_choose" value="0" checked="checked" class="form-radio"> Везде<span>Отдельно в:</span></label>
+</div>
+<div class="form-item" id="edit-ts-custom-search-choose-1-wrapper">
+ <label class="option" for="edit-ts-custom-search-choose-1"><input type="radio" id="edit-ts-custom-search-choose-1" name="ts_custom_search_choose" value="1" class="form-radio"> Форумах</label>
+</div>
+<div class="form-item" id="edit-ts-custom-search-choose-2-wrapper">
+ <label class="option" for="edit-ts-custom-search-choose-2"><input type="radio" id="edit-ts-custom-search-choose-2" name="ts_custom_search_choose" value="2" class="form-radio"> Блогах</label>
+</div>
+<div class="form-item" id="edit-ts-custom-search-choose-3-wrapper">
+ <label class="option" for="edit-ts-custom-search-choose-3"><input type="radio" id="edit-ts-custom-search-choose-3" name="ts_custom_search_choose" value="3" class="form-radio"> Идеях</label>
+</div>
+</div></div><input type="hidden" name="form_build_id" id="form-5bkwooZSvpC4XZUs0s0hzC8PQd9HmafQbUq5bxxvYBE" value="form-5bkwooZSvpC4XZUs0s0hzC8PQd9HmafQbUq5bxxvYBE">
+<input type="hidden" name="form_id" id="edit-ts-custom-main-search-form" value="ts_custom_main_search_form">
+
+</div></form>
+</div></div>      </div>
+
+          </div>
+  </div>
+</div></div> <!-- /block-inner, /block -->
+    </div>
+        <div id="page_content">
+      <div id="page-inner">  
+        <div id="main">
+                
+                              <noscript>
+            &lt;div class="noscript"&gt;Внимание! В настройках браузера отключена возможность «Использовать JavaSсript», 
+            поэтому не весь функционал интерфейса доступен.&lt;br&gt;
+            Пожалуйста, активируйте данную настройку для корректной работы с сайтом.
+            &lt;/div&gt;
+          </noscript>
+          <div id="main-inner" class="clear-block with-navbar">
+            <div id="content">
+              <div id="content-inner">
+                                
+                <div id="content-area">
+                                      <div class="active_path inwardly">
+                      <div id="block-ts_menu-1" class="block block-ts_menu region-odd even region-count-1 count-4"><div class="block-inner">
+  <div class="bg_top">
+    <div class="bg_bottom">
+      
+      <div class="content">
+        
+      <div class="active_path_menu_third_level senior argument"><div class="path_arrow"></div>
+    <div class="closed level2" myself="1"><div class="icon_plus"></div><div class="container1">
+    <div class="round-borders"><span>
+      <a href="http://www.community.terrasoft.ua/blogs">Все блоги</a></span>
+    </div>
+      </div>
+    </div>
+    <div class="opened level2" myself="1" style="display:none;"><div class="icon_minus"></div><div class="container2">
+    <div class="round-borders"><div class="content">
+          <div class="inner" tg="2"><a href="http://www.community.terrasoft.ua/blogs" class="link active_parents">Все блоги</a></div>
+          <div class="inner" tg="2"><a href="http://www.community.terrasoft.ua/blogs/%D0%94%D0%BB%D1%8F%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82%D0%B0" class="link">Для программиста</a></div>
+          <div class="inner" tg="2"><a href="http://www.community.terrasoft.ua/blogs/%D0%94%D0%BB%D1%8F%20%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8F" class="link">Для пользователя</a></div>
+          <div class="inner" tg="2"><a href="http://www.community.terrasoft.ua/blogs/%D0%94%D0%BB%D1%8F%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D0%BD%D1%82%D0%B0" class="link">Для консультанта</a></div>
+          <div class="inner" tg="2"><a href="http://www.community.terrasoft.ua/blogs/%D0%9E%D0%B1%D0%BE%20%D0%B2%D1%81%D0%B5%D0%BC%20%D0%BD%D0%B0%20%D1%81%D0%B2%D0%B5%D1%82%D0%B5" class="link">Обо всем на свете</a></div></div>
+    </div>
+    </div>
+  </div>
+    </div>      </div>
+
+          </div>
+  </div>
+</div></div> <!-- /block-inner, /block -->
+                    </div>
+                    <div class="clear"> </div>
+                                                                        <div id="node-4821" class="node node-type-blog"><div class="node-inner">
+      <div class="round-borders">
+
+    
+    
+  <h2 class="title">
+    Оптимизация SQL Server при работе с курсорами  </h2>
+
+  <div class="picture">
+  <img src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/picture-11466.jpg" alt="Изображение пользователя Репко Артём." title="Изображение пользователя Репко Артём."></div>
+    <div class="ts_page_header">
+      <div class="node_rate">
+                <div class="points-count"><div class="node-rate-text">49</div><div></div></div><div id="4821" class="vote-button"><a title="Голосовать" href="http://www.community.terrasoft.ua/user_vote_vote/node/4821/up">Голосовать</a></div>              </div>
+  
+            <div class="info no_top_padding">
+          Создано:          <span class="submitted-date">11 апреля 2010 – 14:06</span>
+          <span class="submitted-user">Репко Артём</span>
+        </div>
+          
+          <div class="meta no_top_padding ts_node_content">
+        <table>
+          <tbody><tr>
+            <td class="marks_record"><div class="marks">Метки записи:</div></td>
+            <td><div class="terms terms-inline"><ul class="links inline"><li class="taxonomy_term_1931 first"><a href="http://www.community.terrasoft.ua/tags/1931" rel="tag" title="">DECLARE CURSOR</a></li>
+<li class="taxonomy_term_1930"><a href="http://www.community.terrasoft.ua/tags/1930" rel="tag" title="">FORWARD_ONLY</a></li>
+<li class="taxonomy_term_1928"><a href="http://www.community.terrasoft.ua/tags/1928" rel="tag" title="">MSSQL</a></li>
+<li class="taxonomy_term_1932"><a href="http://www.community.terrasoft.ua/tags/1932" rel="tag" title="">SQL Server</a></li>
+<li class="taxonomy_term_1929"><a href="http://www.community.terrasoft.ua/tags/1929" rel="tag" title="">STATIC</a></li>
+<li class="taxonomy_term_428"><a href="http://www.community.terrasoft.ua/taxonomy/term/428" rel="tag" title="">Всем</a></li>
+<li class="taxonomy_term_1927"><a href="http://www.community.terrasoft.ua/tags/1927" rel="tag" title="">курсоры</a></li>
+<li class="taxonomy_term_218"><a href="http://www.community.terrasoft.ua/tags/218" rel="tag" title="">оптимизация</a></li>
+<li class="taxonomy_term_859 last"><a href="http://www.community.terrasoft.ua/tags/859" rel="tag" title="">скорость</a></li>
+</ul></div></td>
+          </tr>
+        </tbody></table>
+      </div>
+    
+  <div class="ts_blog_user"><a href="http://www.community.terrasoft.ua/blog/11466">Все блоги автора</a></div>    </div>
+    <div class="clear"> </div>
+  
+           <div class="content">
+         <p>Здравствуй, человек-читатель блогов на Community.</p>
+<p>Хочу рассказать о своем недавнем опыте оптимизации курсора в SQL Server.<br>
+Первое, что нужно знать, <strong>курсор – это не хорошо, а плохо</strong>. Где есть возможность заменить курсор на INSERT SELECT или на использование временной таблицы, там нужно это сделать (за редким исключением). Курсор – это почти всегда дополнительные ресурсы сервера и резкое падение производительности по сравнению с другими решениями.<br>
+Второе, иногда без курсора не обойтись – там где не обойтись без построчного прохода по результату выборки. Вот в таких случаях очень важно правильно создать нужный тип курсора – тот, который соответствует решаемой задаче. Общий синтаксис объявления курсора имеет вид:</p>
+<p></p><div class="geshifilter"><div class="sql geshifilter-sql" style="font-family:monospace;">DECLARE cursor_name CURSOR <br>
+<span style="color: #66cc66;">[</span> <span style="color: #993333; font-weight: bold;">LOCAL</span> <span style="color: #66cc66;">|</span> GLOBAL <span style="color: #66cc66;">]</span> <br>
+<span style="color: #66cc66;">[</span> FORWARD_ONLY <span style="color: #66cc66;">|</span> SCROLL <span style="color: #66cc66;">]</span><br>
+<span style="color: #66cc66;">[</span> STATIC <span style="color: #66cc66;">|</span> KEYSET <span style="color: #66cc66;">|</span> DYNAMIC <span style="color: #66cc66;">|</span> FAST_FORWARD <span style="color: #66cc66;">]</span> <br>
+<span style="color: #66cc66;">[</span> READ_ONLY <span style="color: #66cc66;">|</span> SCROLL_LOCKS <span style="color: #66cc66;">|</span> OPTIMISTIC <span style="color: #66cc66;">]</span> <br>
+<span style="color: #66cc66;">[</span> TYPE_WARNING <span style="color: #66cc66;">]</span> <br>
+<span style="color: #993333; font-weight: bold;">FOR</span> select_statement <br>
+<span style="color: #66cc66;">[</span> <span style="color: #993333; font-weight: bold;">FOR</span> <span style="color: #993333; font-weight: bold;">UPDATE</span> <span style="color: #66cc66;">[</span> OF column_name <span style="color: #66cc66;">[</span> <span style="color: #66cc66;">,...</span>n <span style="color: #66cc66;">]</span> <span style="color: #66cc66;">]</span> <span style="color: #66cc66;">]</span> <span style="color: #66cc66;">[</span>;<span style="color: #66cc66;">]</span></div></div><p></p>
+<p>Остановлюсь на первых трех строчках ключевых параметров.<br>
+&nbsp;&nbsp;&nbsp; LOCAL или GLOBAL:&nbsp;&nbsp;&nbsp; если хотим, чтобы курсор был доступен другим процедурам, функциям, пакетам в рамках нашей сессии, то GLOBAL – в этом случае за удалением курсора следим сами (команда DEALLOCATE). Во всех остальных случаях (т.е. в подавляющем своем большинстве) – <strong>LOCAL</strong>. Внимание, по умолчанию создается именно GLOBAL курсор!<br>
+&nbsp;&nbsp;&nbsp; FORWARD_ONLY или SCROLL: если хотим ходить по курсору, как ненормальные, туда-сюда, то SCROLL, иначе – <strong>FORWARD_ONLY</strong>. Внимание, по умолчанию создается SCROLL курсор!<br>
+&nbsp;&nbsp;&nbsp; STATIC или KEYSET, DYNAMIC, FAST_FORWARD: если хотим, чтобы при проходе по курсору отображалась актуальная информация из таблицы (т.е., если после открытия курсора, мы поменяли информацию в одном из полей таблицы и хотим, чтобы при проходе по курсору в нужной строчке курсора была уже обновленная информация), то используем или KEYSET (если КАЖДАЯ таблица, участвующая в выборке, имеет уникальный индекс) или DYNAMIC (самый медленный тип). Если же нам нужен снимок результата выборки после открытия курсора – <strong>STATIC</strong> (самый быстрый тип – копия результата выборки копируется в базу tempdb и работаем уже с ней). FAST_FORWARD = KEYSET+FORWARD_ONLY+READ_ONLY – пацаны из инета пишут, что STATIC дольше открывается (т.к. создается копия в tempdb), но быстрее работает, а FAST_FORWARD – наоборот. Так что если количество записей велико (насколько большое показывает практика), то применяем STATIC, иначе – FAST_FORWARD. Внимание, по умолчанию создается DYNAMIC курсор.</p>
+<p>Таким образом, для большого кол-ва записей в большинстве случаев мой выбор:<br>
+<strong>DECLARE cursor_name CURSOR LOCAL FORWARD_ONLY STATIC FOR<br>
+select_statemen</strong>t</p>
+<p>для небольшого кол-ва записей:<br>
+<strong>DECLARE cursor_name CURSOR LOCAL FAST_FORWARD FOR<br>
+select_statement</strong></p>
+<p>Теперь перейдем к практике (что собственно и подтолкнуло меня к писанине сего).<br>
+Испокон веков при объявлении курсора я применял конструкцию DECLARE ... CURSOR LOCAL&nbsp;FOR...<br>
+При разработке интеграции с одной очень нехорошей базой, в которой нет ни одного индекса и не одного ключа, я применил тот же подход при объявлении курсоров, что и всегда. Выборка одного курсора содержала 225 000 записей. В результате процесс импорта данных из такой базы занял <strong>15 часов 14 минут</strong> !!! И хотя импорт и был первичный (т.е. одноразовый), но даже для нормального тестирования такого импорта потребовалось бы несколько суток! После замены вышеназванной конструкции при объявлении курсора на DECLARE .. CURSOR LOCAL FORWARD_ONLY STATIC FOR.. весь процесс импорта занял ... внимание ... <strong>10 минут 5 секунд</strong> !!! Так что игра точно стоит свеч.<br>
+Хочу повториться, что идеальный вариант - это все же не использовать курсоры вообще - для СУБД MS&nbsp;SQL намного роднее реляционный, а не навигационный подход.</p>
+       </div>
+      
+  
+  
+      <div class="social_links">
+      <div class="social_links_twitter">
+        <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/tweet_button.a9003d9964444592507bbb36b98c709b.ru.html" style="position: static; visibility: visible; width: 78px; height: 20px;"></iframe><script type="text/javascript" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/widgets.js"></script>
+        <script type="text/javascript">
+          twttr.events.bind('tweet', function(event) {
+            if (event) {
+              var targetUrl;
+              if (event.target && event.target.nodeName == 'IFRAME') {
+                targetUrl = extractParamFromUri(event.target.src, 'url');
+              }
+              _gaq.push(['_trackSocial', 'twitter', 'tweet', targetUrl]);
+            }
+          });
+          function extractParamFromUri(uri, paramName) {
+            if (!uri) {
+              return;
+            }
+            var uri = uri.split('#')[0];  // Remove anchor.
+            var parts = uri.split('?');  // Check for query params.
+            if (parts.length == 1) {
+              return;
+            }
+            var query = decodeURI(parts[1]);
+
+            // Find url param.
+            paramName += '=';
+            var params = query.split('&');
+            for (var i = 0, param; param = params[i]; ++i) {
+              if (param.indexOf(paramName) === 0) {
+                return unescape(param.split('=')[1]);
+              }
+            }
+          }
+        </script>
+      </div>
+      <div class="social_links_gplusone">
+        <!-- Place this tag where you want the +1 button to render -->
+        <div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1469699019091" name="I0_1469699019091" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/fastbutton.html" data-gapiattached="true" title="+1"></iframe></div>
+        <!-- Place this tag in your head or just before your close body tag -->
+        <script type="text/javascript" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/plusone.js" gapi_processed="true"></script>
+      </div>
+      <div class="social_links_facebook">
+        <iframe src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/like.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowtransparency="true"></iframe>
+      </div>
+    </div>
+    <div class="ts_links">
+      <ul class="links inline"><li class="comment_forbidden first last"><span><a href="http://www.community.terrasoft.ua/user/login/thickbox?height=230&amp;width=250&amp;destination=node%2F4821%23comment-form" class="thickbox initThickbox-processed">Войдите</a> или <a href="http://www.community.terrasoft.ua/user/register?destination=node%2F4821%23comment-form">зарегистрируйтесь</a>, чтобы комментировать</span></li>
+</ul>    </div>
+  
+                      <div class="clear"> </div>
+
+  </div>
+  </div></div> <!-- /node-inner, /node -->
+<div id="comments">
+      <h2 class="comment_header">Комментарии</h2>
+    <a id="comment-19935"></a>
+<div class="comment comment-published clear-block">
+  <div class="comment_container">
+    <div class="comment_container_picture"><table class="comment_picture"><tbody><tr><td align="center" valign="middle"><img src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/picture-3149.png" alt="Осауленко Александр" title="Осауленко Александр" class="imagecache imagecache-small_avatar" width="35" height="47"></td></tr></tbody></table></div>
+    <div class="comment_content">
+      <div class="submitted_comment">
+        <span class="comment_number"><a href="http://www.community.terrasoft.ua/blogs/4821#comment-19935">#1</a></span> Осауленко Александр <span class="comment_time">11 апреля 2010 – 22:08</span>      </div>
+      <div class="content">
+         <p>Артем, классно, сколько пишу на T-SQL почти никогда не применял данные типы курсоров - всегда считал что это медленно и все старался заменить на insert select и декартово произведение, но оказывается эти параметры сильно ускоряют! Интересно! Надо будет запомнить. Есть правда еще один способ который ускоряет. Как известно если явно не стартовать транзакцию, то все запросы выполняются в рамках неявных транзакций, что сильно "бьет" по производительности, так вот если завести счетчик и стартовать транзакцию и коммитить после каждой 1000-й вставки, то скорость возрастает на порядки. Интересно попробовать это в случае с LOCAL FORWARD_ONLY STATIC :)<br>
+Только для надежности надо установить<br>
+SET CURSOR_CLOSE_ON_COMMIT OFF<br>
+А то курсор закроется после коммита...</p>
+               </div>
+    </div>
+  </div>
+  <div class="clear"> </div>
+
+  <div class="ts_links">
+    <ul class="links"><li class="comment_forbidden first last"><span><a href="http://www.community.terrasoft.ua/user/login/thickbox?height=230&amp;width=250&amp;destination=node%2F4821%23comment-form" class="thickbox initThickbox-processed">Войдите</a> или <a href="http://www.community.terrasoft.ua/user/register?destination=node%2F4821%23comment-form">зарегистрируйтесь</a>, чтобы комментировать</span></li>
+</ul>  </div>
+</div>
+<a id="comment-19938"></a>
+<div class="comment comment-published clear-block">
+  <div class="comment_container">
+    <div class="comment_container_picture"><table class="comment_picture"><tbody><tr><td align="center" valign="middle"><img src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/picture-8585.jpg" alt="Александр Кудряшов" title="Александр Кудряшов" class="imagecache imagecache-small_avatar" width="47" height="47"></td></tr></tbody></table></div>
+    <div class="comment_content">
+      <div class="submitted_comment">
+        <span class="comment_number"><a href="http://www.community.terrasoft.ua/blogs/4821#comment-19938">#2</a></span> Александр Кудряшов <span class="comment_time">12 апреля 2010 – 9:07</span>      </div>
+      <div class="content">
+         <p>Полезно, спасибо!</p>
+<p><a href="http://www.twitter.com/lineservice" rel="nofollow" target="_blank"><img src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/t_small-a.png"></a>&nbsp;  <a href="http://lineservice.ru/" rel="nofollow" target="_blank"><img width="110" height="45" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/logo.gif"></a></p>
+               </div>
+    </div>
+  </div>
+  <div class="clear"> </div>
+
+  <div class="ts_links">
+    <ul class="links"><li class="comment_forbidden first last"><span><a href="http://www.community.terrasoft.ua/user/login/thickbox?height=230&amp;width=250&amp;destination=node%2F4821%23comment-form" class="thickbox initThickbox-processed">Войдите</a> или <a href="http://www.community.terrasoft.ua/user/register?destination=node%2F4821%23comment-form">зарегистрируйтесь</a>, чтобы комментировать</span></li>
+</ul>  </div>
+</div>
+<a id="comment-19939"></a>
+<div class="comment comment-published clear-block">
+  <div class="comment_container">
+    <div class="comment_container_picture"><table class="comment_picture"><tbody><tr><td align="center" valign="middle"><img src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/picture-11428.jpg" alt="Лабьяк Олег Игоревич" title="Лабьяк Олег Игоревич" class="imagecache imagecache-small_avatar" width="45" height="47"></td></tr></tbody></table></div>
+    <div class="comment_content">
+      <div class="submitted_comment">
+        <span class="comment_number"><a href="http://www.community.terrasoft.ua/blogs/4821#comment-19939">#3</a></span> Лабьяк Олег Игоревич <span class="comment_time">12 апреля 2010 – 9:07</span>      </div>
+      <div class="content">
+         <p>Артем, спасибо! Очень полезная информация.</p>
+<p>Олег Лабьяк,<br>
+разработчик,<br>
+3-я линия Службы поддержки Terrasoft.</p>
+                   <div class="user-signature">
+             <p>С уважением,</p>
+<p>Олег Лабьяк,<br>
+инженер-программист,<br>
+группа компаний Terrasoft.</p>
+           </div>
+              </div>
+    </div>
+  </div>
+  <div class="clear"> </div>
+
+  <div class="ts_links">
+    <ul class="links"><li class="comment_forbidden first last"><span><a href="http://www.community.terrasoft.ua/user/login/thickbox?height=230&amp;width=250&amp;destination=node%2F4821%23comment-form" class="thickbox initThickbox-processed">Войдите</a> или <a href="http://www.community.terrasoft.ua/user/register?destination=node%2F4821%23comment-form">зарегистрируйтесь</a>, чтобы комментировать</span></li>
+</ul>  </div>
+</div>
+<a id="comment-19940"></a>
+<div class="comment comment-published clear-block">
+  <div class="comment_container">
+    <div class="comment_container_picture"><table class="comment_picture"><tbody><tr><td align="center" valign="middle"><img src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/picture-21902.png" alt="Раловец Ольга" title="Раловец Ольга" class="imagecache imagecache-small_avatar" width="47" height="47"></td></tr></tbody></table></div>
+    <div class="comment_content">
+      <div class="submitted_comment">
+        <span class="comment_number"><a href="http://www.community.terrasoft.ua/blogs/4821#comment-19940">#4</a></span> Раловец Ольга <span class="comment_time">12 апреля 2010 – 9:22</span>      </div>
+      <div class="content">
+         <div class="bb-quote"><b>Репко Артём пишет:</b><br>
+<blockquote class="bb-quote-body">если хотим ходить по курсору, как ненормальные, туда-сюда, то SCROLL</blockquote>
+</div>
+<p>Артем, объясни, пожалуйста, как это понимать?</p>
+               </div>
+    </div>
+  </div>
+  <div class="clear"> </div>
+
+  <div class="ts_links">
+    <ul class="links"><li class="comment_forbidden first last"><span><a href="http://www.community.terrasoft.ua/user/login/thickbox?height=230&amp;width=250&amp;destination=node%2F4821%23comment-form" class="thickbox initThickbox-processed">Войдите</a> или <a href="http://www.community.terrasoft.ua/user/register?destination=node%2F4821%23comment-form">зарегистрируйтесь</a>, чтобы комментировать</span></li>
+</ul>  </div>
+</div>
+<a id="comment-19941"></a>
+<div class="comment comment-published clear-block">
+  <div class="comment_container">
+    <div class="comment_container_picture"><table class="comment_picture"><tbody><tr><td align="center" valign="middle"><img src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/picture-11466(1).jpg" alt="Репко Артём" title="Репко Артём" class="imagecache imagecache-small_avatar" width="32" height="47"></td></tr></tbody></table></div>
+    <div class="comment_content">
+      <div class="submitted_comment">
+        <span class="comment_number"><a href="http://www.community.terrasoft.ua/blogs/4821#comment-19941">#5</a></span> Репко Артём <span class="comment_time">12 апреля 2010 – 9:27</span>      </div>
+      <div class="content">
+         <div class="bb-quote"><b>Раловец Ольга пишет:</b><br>
+<blockquote class="bb-quote-body">как это понимать?</blockquote>
+</div>
+<p>Ольга, простите за вольный стиль. Я имел ввиду, что если курсор SCROLL, то по нему можно двигаться как вперед, так и назад, а если FORWARD_ONLY - только вперед.</p>
+               </div>
+    </div>
+  </div>
+  <div class="clear"> </div>
+
+  <div class="ts_links">
+    <ul class="links"><li class="comment_forbidden first last"><span><a href="http://www.community.terrasoft.ua/user/login/thickbox?height=230&amp;width=250&amp;destination=node%2F4821%23comment-form" class="thickbox initThickbox-processed">Войдите</a> или <a href="http://www.community.terrasoft.ua/user/register?destination=node%2F4821%23comment-form">зарегистрируйтесь</a>, чтобы комментировать</span></li>
+</ul>  </div>
+</div>
+<a id="comment-19942"></a>
+<div class="comment comment-published clear-block">
+  <div class="comment_container">
+    <div class="comment_container_picture"><table class="comment_picture"><tbody><tr><td align="center" valign="middle"><img src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/picture-11428.jpg" alt="Лабьяк Олег Игоревич" title="Лабьяк Олег Игоревич" class="imagecache imagecache-small_avatar" width="45" height="47"></td></tr></tbody></table></div>
+    <div class="comment_content">
+      <div class="submitted_comment">
+        <span class="comment_number"><a href="http://www.community.terrasoft.ua/blogs/4821#comment-19942">#6</a></span> Лабьяк Олег Игоревич <span class="comment_time">12 апреля 2010 – 9:30</span>      </div>
+      <div class="content">
+         <p>Думаю, Артём имел в виду использование не только с начала и до конца FETCH NEXT, а и таких возможностей, как FETCH FIRST, FETCH LAST, FETCH PRIOR, FETCH ABSOLUTE n, FETCH RELATIVE n.</p>
+<p>Если коротко, цитата из хелпа по SQL:</p>
+<p>Cursor Classifications<br>
+A cursor can be classified by the fetch options it supports: </p>
+<p>Forward-only<br>
+Rows must be fetched serially from the first row to the last row. FETCH NEXT is the only fetch operation allowed.</p>
+<p>Scrollable<br>
+Rows can be randomly fetched from anywhere in the cursor. All the fetch operations are allowed (except that dynamic cursors do not support fetch absolute).</p>
+<p>Scrollable cursors are especially useful for supporting online applications. A cursor can be mapped to a grid or list box in the application. As the user scrolls up and down and all around the grid, the application uses scroll fetches to retrieve the rows from the cursor the user wants to see.</p>
+<p>Олег Лабьяк,<br>
+разработчик,<br>
+3-я линия Службы поддержки Terrasoft.</p>
+                   <div class="user-signature">
+             <p>С уважением,</p>
+<p>Олег Лабьяк,<br>
+инженер-программист,<br>
+группа компаний Terrasoft.</p>
+           </div>
+              </div>
+    </div>
+  </div>
+  <div class="clear"> </div>
+
+  <div class="ts_links">
+    <ul class="links"><li class="comment_forbidden first last"><span><a href="http://www.community.terrasoft.ua/user/login/thickbox?height=230&amp;width=250&amp;destination=node%2F4821%23comment-form" class="thickbox initThickbox-processed">Войдите</a> или <a href="http://www.community.terrasoft.ua/user/register?destination=node%2F4821%23comment-form">зарегистрируйтесь</a>, чтобы комментировать</span></li>
+</ul>  </div>
+</div>
+<a id="comment-19943"></a>
+<div class="comment comment-published clear-block">
+  <div class="comment_container">
+    <div class="comment_container_picture"><table class="comment_picture"><tbody><tr><td align="center" valign="middle"><img src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/picture-21902.png" alt="Раловец Ольга" title="Раловец Ольга" class="imagecache imagecache-small_avatar" width="47" height="47"></td></tr></tbody></table></div>
+    <div class="comment_content">
+      <div class="submitted_comment">
+        <span class="comment_number"><a href="http://www.community.terrasoft.ua/blogs/4821#comment-19943">#7</a></span> Раловец Ольга <span class="comment_time">12 апреля 2010 – 9:33</span>      </div>
+      <div class="content">
+         <p>Спасибо, Артем, спасибо, Олег. :)</p>
+<div class="bb-quote"><b>Репко Артём пишет:</b><br>
+<blockquote class="bb-quote-body">Ольга, простите за вольный стиль</blockquote>
+</div>
+<p>Ваш стиль кажется мне приемлемым.</p>
+               </div>
+    </div>
+  </div>
+  <div class="clear"> </div>
+
+  <div class="ts_links">
+    <ul class="links"><li class="comment_forbidden first last"><span><a href="http://www.community.terrasoft.ua/user/login/thickbox?height=230&amp;width=250&amp;destination=node%2F4821%23comment-form" class="thickbox initThickbox-processed">Войдите</a> или <a href="http://www.community.terrasoft.ua/user/register?destination=node%2F4821%23comment-form">зарегистрируйтесь</a>, чтобы комментировать</span></li>
+</ul>  </div>
+</div>
+<a id="comment-19956"></a>
+<div class="comment comment-published clear-block">
+  <div class="comment_container">
+    <div class="comment_container_picture"><table class="comment_picture"><tbody><tr><td align="center" valign="middle"><img src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/picture-2919.jpg" alt="Гамора Дмитрий" title="Гамора Дмитрий" class="imagecache imagecache-small_avatar" width="47" height="47"></td></tr></tbody></table></div>
+    <div class="comment_content">
+      <div class="submitted_comment">
+        <span class="comment_number"><a href="http://www.community.terrasoft.ua/blogs/4821#comment-19956">#8</a></span> Гамора Дмитрий <span class="comment_time">13 апреля 2010 – 11:54</span>      </div>
+      <div class="content">
+         <p>Коллеги, если всем понравилось, голосуем! +1<br>
+Артёму большое спасибо!</p>
+               </div>
+    </div>
+  </div>
+  <div class="clear"> </div>
+
+  <div class="ts_links">
+    <ul class="links"><li class="comment_forbidden first last"><span><a href="http://www.community.terrasoft.ua/user/login/thickbox?height=230&amp;width=250&amp;destination=node%2F4821%23comment-form" class="thickbox initThickbox-processed">Войдите</a> или <a href="http://www.community.terrasoft.ua/user/register?destination=node%2F4821%23comment-form">зарегистрируйтесь</a>, чтобы комментировать</span></li>
+</ul>  </div>
+</div>
+<a id="comment-19957"></a>
+<div class="comment comment-published clear-block">
+  <div class="comment_container">
+    <div class="comment_container_picture"><table class="comment_picture"><tbody><tr><td align="center" valign="middle"><img src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/avatar.gif" alt="Романенко Роман" title="Романенко Роман" class="imagecache imagecache-small_avatar" width="47" height="47"></td></tr></tbody></table></div>
+    <div class="comment_content">
+      <div class="submitted_comment">
+        <span class="comment_number"><a href="http://www.community.terrasoft.ua/blogs/4821#comment-19957">#9</a></span> Романенко Роман <span class="comment_time">13 апреля 2010 – 11:59</span>      </div>
+      <div class="content">
+         <p><img src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/icon_twisted.png" title=":twisted:" alt=":twisted:"></p>
+               </div>
+    </div>
+  </div>
+  <div class="clear"> </div>
+
+  <div class="ts_links">
+    <ul class="links"><li class="comment_forbidden first last"><span><a href="http://www.community.terrasoft.ua/user/login/thickbox?height=230&amp;width=250&amp;destination=node%2F4821%23comment-form" class="thickbox initThickbox-processed">Войдите</a> или <a href="http://www.community.terrasoft.ua/user/register?destination=node%2F4821%23comment-form">зарегистрируйтесь</a>, чтобы комментировать</span></li>
+</ul>  </div>
+</div>
+<a id="comment-41117"></a>
+<div class="comment comment-published clear-block">
+  <div class="comment_container">
+    <div class="comment_container_picture"><table class="comment_picture"><tbody><tr><td align="center" valign="middle"><img src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/picture-49799.jpg" alt="Наталия П." title="Наталия П." class="imagecache imagecache-small_avatar" width="38" height="47"></td></tr></tbody></table></div>
+    <div class="comment_content">
+      <div class="submitted_comment">
+        <span class="comment_number"><a href="http://www.community.terrasoft.ua/blogs/4821#comment-41117">#10</a></span> Наталия П. <span class="comment_time">6 августа 2013 – 16:52</span>      </div>
+      <div class="content">
+         <p>Огромнейшее спасибо! На "раскидывание" импортированных данных по таблицам (на 30 000 записей) вместо почти 5 часов ушло 50 минут.</p>
+               </div>
+    </div>
+  </div>
+  <div class="clear"> </div>
+
+  <div class="ts_links">
+    <ul class="links"><li class="comment_forbidden first last"><span><a href="http://www.community.terrasoft.ua/user/login/thickbox?height=230&amp;width=250&amp;destination=node%2F4821%23comment-form" class="thickbox initThickbox-processed">Войдите</a> или <a href="http://www.community.terrasoft.ua/user/register?destination=node%2F4821%23comment-form">зарегистрируйтесь</a>, чтобы комментировать</span></li>
+</ul>  </div>
+</div>
+</div>
+                </div>
+                                                  <div id="content-bottom" class="region region-content_bottom">
+                    <div id="block-tagadelic-5" class="block block-tagadelic region-odd even region-count-1 count-10"><div class="block-inner">
+  <div class="bg_top">
+    <div class="bg_bottom">
+              <h2 class="title">Популярные темы</h2>
+      
+      <div class="content">
+        <a href="http://www.community.terrasoft.ua/tags/721" class="tagadelic level2" rel="tag">БП</a> 
+<a href="http://www.community.terrasoft.ua/tags/277" class="tagadelic level4" rel="tag">Деталь</a> 
+<a href="http://www.community.terrasoft.ua/tags/3622" class="tagadelic level5" rel="tag">Программные Технологии</a> 
+<a href="http://www.community.terrasoft.ua/tags/4866" class="tagadelic level3" rel="tag">ЦРВ Террасофт Поволжье</a> 
+<a href="http://www.community.terrasoft.ua/tags/595" class="tagadelic level4" rel="tag">айти-сфера</a> 
+<a href="http://www.community.terrasoft.ua/tags/204" class="tagadelic level3" rel="tag">бизнес-процесс</a> 
+<a href="http://www.community.terrasoft.ua/tags/330" class="tagadelic level2" rel="tag">импорт</a> 
+<a href="http://www.community.terrasoft.ua/tags/24" class="tagadelic level5" rel="tag">интеграция</a> 
+<a href="http://www.community.terrasoft.ua/tags/25" class="tagadelic level4" rel="tag">отчет</a> 
+<a href="http://www.community.terrasoft.ua/tags/186" class="tagadelic level2" rel="tag">ошибка</a> 
+<a href="http://www.community.terrasoft.ua/tags/135" class="tagadelic level4" rel="tag">права доступа</a> 
+<a href="http://www.community.terrasoft.ua/tags/90" class="tagadelic level2" rel="tag">раздел</a> 
+<a href="http://www.community.terrasoft.ua/tags/20" class="tagadelic level2" rel="tag">скрипт</a> 
+<a href="http://www.community.terrasoft.ua/tags/111" class="tagadelic level2" rel="tag">справочник</a> 
+<a href="http://www.community.terrasoft.ua/tags/208" class="tagadelic level3" rel="tag">фильтр</a> 
+<a href="http://www.community.terrasoft.ua/tags/107" class="tagadelic level1" rel="tag">шаблон</a> 
+<a href="http://www.community.terrasoft.ua/tags/288" class="tagadelic level3" rel="tag">1С</a> 
+<a href="http://www.community.terrasoft.ua/tags/2813" class="tagadelic level5" rel="tag">bpm</a> 
+<a href="http://www.community.terrasoft.ua/tags/4698" class="tagadelic level1" rel="tag">bpm 5.4</a> 
+<a href="http://www.community.terrasoft.ua/tags/2337" class="tagadelic level6" rel="tag">BPMonline</a> 
+<a href="http://www.community.terrasoft.ua/tags/210" class="tagadelic level3" rel="tag">crm</a> 
+<a href="http://www.community.terrasoft.ua/tags/143" class="tagadelic level1" rel="tag">email</a> 
+<a href="http://www.community.terrasoft.ua/tags/397" class="tagadelic level1" rel="tag">excel</a> 
+<a href="http://www.community.terrasoft.ua/tags/1362" class="tagadelic level1" rel="tag">FastReport</a> 
+<a href="http://www.community.terrasoft.ua/tags/847" class="tagadelic level1" rel="tag">javascript</a> 
+<a href="http://www.community.terrasoft.ua/tags/378" class="tagadelic level1" rel="tag">oktell</a> 
+<a href="http://www.community.terrasoft.ua/tags/361" class="tagadelic level1" rel="tag">Outlook</a> 
+<a href="http://www.community.terrasoft.ua/tags/450" class="tagadelic level2" rel="tag">SQL</a> 
+<a href="http://www.community.terrasoft.ua/tags/237" class="tagadelic level3" rel="tag">Terrasoft</a> 
+<a href="http://www.community.terrasoft.ua/tags/2897" class="tagadelic level3" rel="tag">Terrasoft 3.x</a> 
+<div class="more-link"><a href="http://www.community.terrasoft.ua/tagadelic/chunk/5">Мета теги</a></div>      </div>
+
+          </div>
+  </div>
+</div></div> <!-- /block-inner, /block -->
+                  </div>
+                              </div>
+            </div>
+                          <div id="sidebar-right">
+                <div id="sidebar-right-inner" class="region region-right">
+                  <div id="block-user-0" class="block block-user region-odd odd region-count-1 count-5">
+  <div class="block-inner">
+    <div class="login">
+      <div class="bg_top_first">
+        <div class="bg_bottom_first">
+                      <h2 class="title">Вход на сайт</h2>
+          
+          <div class="content">
+            <form action="http://www.community.terrasoft.ua/blogs/4821?destination=node%2F4821" accept-charset="UTF-8" method="post" id="user-login-form">
+<div><div class="form-item" id="edit-name-wrapper">
+ <input type="text" maxlength="60" name="name" id="edit-name" size="15" value="" class="form-text required">
+<div class="login_name_prompt">Логин</div></div>
+<div class="login_pass"><div class="form-item" id="edit-pass-wrapper">
+ <input type="password" name="pass" id="edit-pass" maxlength="60" size="15" class="form-text required">
+<div class="login_pass_prompt">Пароль</div></div>
+<input type="submit" name="op" id="edit-submit" value="" class="form-submit">
+</div><div class="clear"> </div>
+      <div class="item-list">
+        <ul>
+          <li class="first"><a title="Запросить новый пароль по электронной почте." href="http://www.community.terrasoft.ua/user/password">Забыли пароль?</a></li>
+          <li class="last"><a title="Создать новую учетную запись пользователя." href="http://www.community.terrasoft.ua/user/register">Регистрация</a></li>
+        </ul>
+      </div><input type="hidden" name="form_build_id" id="form-H7ZEOP4JYmy3yN6lu-8lRdhFqSPPAcSrdJouC7g3490" value="form-H7ZEOP4JYmy3yN6lu-8lRdhFqSPPAcSrdJouC7g3490">
+<input type="hidden" name="form_id" id="edit-user-login-block" value="user_login_block">
+
+</div></form>
+          </div>
+
+                  </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- /block-inner, /block -->
+<div id="block-blogger-0" class="block block-blogger region-even even region-count-2 count-6"><div class="block-inner">
+  <div class="bg_top">
+    <div class="bg_bottom">
+              <h2 class="title">Блоги по авторам</h2>
+      
+      <div class="content">
+        <div id="blogger"><table><tbody><tr class="odd"><td><a href="http://www.community.terrasoft.ua/blogs/%D0%B2%D0%B8%D1%82%D0%B0%D0%BB%D0%B8%D0%B9-%D0%BA%D0%BE%D0%B2%D0%B0%D0%BB%D0%B8%D1%88%D0%B8%D0%BD">Виталий Ковалишин (72)</a></td></tr><tr class="even"><td><a href="http://www.community.terrasoft.ua/blogs/%D0%B7%D0%B0%D0%B9%D1%87%D0%B8%D0%BA%D0%BE%D0%B2-%D0%B8%D0%BB%D1%8C%D1%8F-%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B5%D0%B2%D0%B8%D1%87">Зайчиков Илья Алексеевич (52)</a></td></tr><tr class="odd"><td><a href="http://www.community.terrasoft.ua/blog/35356">Alimova Anna (48)</a></td></tr><tr class="even"><td><a href="http://www.community.terrasoft.ua/blogs/kristina-zagorulko">Kristina Zagorulko (47)</a></td></tr><tr class="odd"><td><a href="http://www.community.terrasoft.ua/blog/35574">sorokinmp (45)</a></td></tr><tr class="even"><td><a href="http://www.community.terrasoft.ua/blogs/%D0%B7%D0%B2%D0%B5%D1%80%D0%B5%D0%B2-%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80">Зверев Александр (35)</a></td></tr><tr class="odd"><td><a href="http://www.community.terrasoft.ua/blogs/%D0%B0%D0%BB%D1%8B%D0%BD%D0%BA%D0%B8%D0%BD%D0%B0-%D0%B4%D0%B8%D0%BD%D0%B0%D1%80%D0%B0">Алынкина Динара (34)</a></td></tr><tr class="even"><td><a href="http://www.community.terrasoft.ua/blog/21616">Мельникова Екатерина (32)</a></td></tr><tr class="odd"><td><a href="http://www.community.terrasoft.ua/blogs/%D0%B3%D0%BB%D0%BE%D0%B2%D0%B0-%D1%81%D0%B5%D1%80%D0%B3%D0%B5%D0%B9">Глова Сергей (30)</a></td></tr><tr class="even"><td><a href="http://www.community.terrasoft.ua/blog/18060">S.Kalishenko (26)</a></td></tr></tbody></table></div><div class="more-link"><a href="http://www.community.terrasoft.ua/blogger/list">Все авторы</a></div>      </div>
+
+          </div>
+  </div>
+</div></div> <!-- /block-inner, /block -->
+<div id="block-ts_custom-7" class="block block-ts_custom region-odd odd region-count-3 count-7"><div class="block-inner">
+  <div class="bg_top">
+    <div class="bg_bottom">
+              <h2 class="title">Новое на Community</h2>
+      
+      <div class="content">
+        <div id="new_community">
+    <div class="new_forum new_community_management active"><div>Форум</div></div>
+    <div class="new_blog new_community_management"><div>Блог</div></div>
+    <div class="new_ideas new_community_management"><div>Идеи</div></div></div>
+  <div class="clear"> </div>  <div id="top_users_content"><div id="new_forum" class="new_communitys_container new_communitys_active"><div class="view view-forum-list-block view-id-forum_list_block view-display-id-block_1 view-dom-id-fcf6b347a9e159edacdce45b8af79043">
+    
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.community.terrasoft.ua/forum/topic/21955">Лид: исходные данные </a></span>  </div></li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.community.terrasoft.ua/forum/topic/22115">Ход задачи </a></span>  </div></li>
+          <li class="views-row views-row-3 views-row-odd">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.community.terrasoft.ua/forum/topic/22101">Подключение сторонних JS-библиотек</a></span>  </div></li>
+          <li class="views-row views-row-4 views-row-even">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.community.terrasoft.ua/forum/topic/22089">Параметры в сценарии</a></span>  </div></li>
+          <li class="views-row views-row-5 views-row-odd views-row-last">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.community.terrasoft.ua/forum/topic/21811">Создание бизнес процесса по событию после добавления записи</a></span>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+       <div class="links">
+<ul class="links">
+<li class="first"><noindex><a href="http://www.community.terrasoft.ua/node/add/forum" class="add-node-link" rel="nofollow">Добавить тему на форуме</a></noindex></li>
+<li class="last"><noindex><a href="http://www.community.terrasoft.ua/forum" rel="nofollow">Все форумы</a></noindex></li>
+</ul>
+</div>
+     </div>
+  
+  
+</div></div><div id="new_blog" class="new_communitys_container"><div class="view view-blogs-list-block view-id-blogs_list_block view-display-id-block_1 view-dom-id-df08b3171e0b78c6434c54fa15652b00">
+    
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.community.terrasoft.ua/blogs/22077">Настройка интеграции объектов с типом «Перечисления» и строк в справочную колонку в продукте PT 1C Connector</a></span>  </div></li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.community.terrasoft.ua/blogs/21480">Новый видеоурок "Настройка обработки обращений по каналу Email в bpm'online"</a></span>  </div></li>
+          <li class="views-row views-row-3 views-row-odd">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.community.terrasoft.ua/blogs/21479">Новый видеоурок "Настройка обработки обращений по каналу Email в bpm'online"</a></span>  </div></li>
+          <li class="views-row views-row-4 views-row-even">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.community.terrasoft.ua/blogs/21475">Обновление документации по разработке (SDK) для версии 7.8</a></span>  </div></li>
+          <li class="views-row views-row-5 views-row-odd views-row-last">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.community.terrasoft.ua/blogs/20894">Новый видеоурок «Мастер разделов bpm'online»</a></span>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+       <div class="links">
+<ul class="links">
+<li class="first"><noindex><a href="http://www.community.terrasoft.ua/node/add/blog" class="add-node-link" rel="nofollow">Добавить запись  в блоге</a></noindex></li>
+<li class="last"><noindex><a href="http://www.community.terrasoft.ua/blog" rel="nofollow">Все блоги</a></noindex></li>
+</ul>
+</div>
+     </div>
+  
+  
+</div></div><div id="new_ideas" class="new_communitys_container"><div class="view view-ideas-list-block view-id-ideas_list_block view-display-id-block_1 view-dom-id-cdb7d33f63d31e4ec7cf7836605a7d86">
+    
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.community.terrasoft.ua/ideas/21477">Добавление новых значений в справочники на мини-карточке</a></span>  </div></li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.community.terrasoft.ua/ideas/18209">Последние просметренные</a></span>  </div></li>
+          <li class="views-row views-row-3 views-row-odd">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.community.terrasoft.ua/ideas/17972">Вернуть кнопки "Да" и "Нет" на свои места</a></span>  </div></li>
+          <li class="views-row views-row-4 views-row-even">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.community.terrasoft.ua/ideas/17534">Управление аудиторией Facebook из bpm'online marketing</a></span>  </div></li>
+          <li class="views-row views-row-5 views-row-odd views-row-last">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.community.terrasoft.ua/ideas/17436">Решение инцидента</a></span>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+       <div class="links">
+  <ul class="links">
+    <li class="first"><a href="http://www.community.terrasoft.ua/node/add/idea">Добавить идею</a></li>
+    <li class="last"><a class="add-node-link" href="http://www.community.terrasoft.ua/ideas">Все идеи</a></li>
+  </ul>
+</div>     </div>
+  
+  
+</div></div><div id="new_materials" class="new_communitys_container"></div></div>      </div>
+
+          </div>
+  </div>
+</div></div> <!-- /block-inner, /block -->
+<div id="block-ts_seoblock-1" class="block block-ts_seoblock region-even even region-count-4 count-8"><div class="block-inner">
+  <div class="bg_top">
+    <div class="bg_bottom">
+              <h2 class="title">Рекомендуем</h2>
+      
+      <div class="content">
+        <div class="seoblock_content not_add_img"><div class="seoblock_children"><ul>
+ <li><a href="http://www.terrasoft.ru/demo" target="_blank">Ознакомиться с демо-версиями продуктов Terrasoft</a></li>
+ <li><a href="http://www.terrasoft.ru/autologin" target="_blank">Ознакомиться с демо-версиями продуктов BPMonline</a></li>
+</ul>
+</div></div>      </div>
+
+          </div>
+  </div>
+</div></div> <!-- /block-inner, /block -->
+<div id="block-ts_custom-5" class="block block-ts_custom region-odd odd region-count-5 count-9"><div class="block-inner">
+  <div class="bg_top">
+    <div class="bg_bottom">
+              <h2 class="title">Сейчас на сайте</h2>
+      
+      <div class="content">
+        <div class="online_header">15 гостей и <span class="authenticated_user">8 пользователей</span></div><div class="ts_custom_user_online"></div>      </div>
+
+          </div>
+  </div>
+</div></div> <!-- /block-inner, /block -->
+                </div>
+              </div>
+                      </div>
+          <div class="clear"> </div>
+          <div id="block-block-24" class="block block-block region-odd odd region-count-1 count-11"><div class="block-inner">
+  <div class="bg_top">
+    <div class="bg_bottom">
+      
+      <div class="content">
+         <div class="footer_links">
+ © 2002-2016 Terrasoft<br>
+  Дизайн: <a href="http://isd-group.com/" rel="nofollow" target="_blank">ISD Group</a><img src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/link.gif">
+</div>
+<div class="logo_bottom">
+<noindex><a href="http://www.community.terrasoft.ua/blogs/4821#" rel="nofollow"> </a></noindex>
+</div>
+       </div>
+
+          </div>
+  </div>
+</div></div> <!-- /block-inner, /block -->
+        </div>
+      </div>
+      <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-580630-5', 'auto');
+  ga('send', 'pageview');
+
+</script><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+  jQuery(document).ready(function() {
+    var klbHashusr = $('#klb_hashusr');
+    $.ajax({
+      type: 'POST',
+      url: '/ts/kolobiz/user/js',
+      data: 'data=userkolobizget',
+      dataType: 'json',
+      success: function(msg){
+        if (msg['xml']) {
+          //alert(msg['xml']);
+          klbHashusr.text(msg['xml']);
+        }
+      }
+    });
+  });
+  
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+    var id = "";
+    var i = 0;
+    $("select").each(function (i) {
+      if (!$(this).attr("multiple") && $(this).is(":visible")) {
+        if (!i) {
+          id += "#" + $(this).attr("id");
+          i++;
+        }
+        else {
+          id += ", #" + $(this).attr("id");
+        }
+      }
+    });
+    var params = {
+      changedEl: id,
+      visRows: 5,
+      scrollArrows: true
+    }
+    cuSel(params);
+    $("legend").click(function() {
+      cuSelRefresh(params);
+    });
+  
+//--><!]]>
+</script>
+    </div>
+      
+<noindex>
+<!-- OK.koloBIZ.com Tracking Code --><div id="ok.kolobiz_content" style="display: none; visibility: hidden; position: fixed; z-index:1001;  width: 302px; height: 220px; bottom: -36px; right: 41px; border:0;"></div><div id="ok.kolobiz_tracking" style="display: none"></div><div id="klb_hashusr" style="display:none"></div> <script language="javascript" type="text/javascript"><!--
+  if (typeof(klBIZ) == 'undefined' || klBIZ == null) { klBIZ = {}; klBIZ.url_page  = window.location.href; if (document.title) klBIZ.page_title = escape(document.title.substring(0,100)); klBIZ.setParam = "&ttl=" + klBIZ.page_title; klBIZ.url_referrer  = escape(document.referrer.substring(0,150)); klBIZ.setParam += "&url="+escape(klBIZ.url_page) + "&referrer="+escape(klBIZ.url_referrer); } 
+  klBIZ.trackData = ''; (function fnklb_track(klBIZ){ klBIZ.sc=document.createElement("script");klBIZ.sc.charset="utf-8";
+klBIZ.sc.type="text/javascript";
+klBIZ.sc.src=(document.location.protocol=='https:'?"https:":"http:")+"//"+"track.kolobiz.com/?act=request&output=jcrpt&vrsn=2.3&agid=23&group=41&style=terra&isfloat=0&lang=ru&hash=8rGdFq9jCW7CGnVe3ZYXJnXMcTw="+klBIZ.setParam+"&rnd="+Math.floor(Math.random()*10000000);
+document.body.appendChild(klBIZ.sc); })(klBIZ);
+//--></script><!-- OK.koloBIZ.com Tracking Code /--> </noindex><script charset="utf-8" type="text/javascript" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/saved_resource(1)"></script>
+  
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><iframe name="oauth2relay507399642" id="oauth2relay507399642" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/postmessageRelay.html" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" src="./Оптимизация SQL Server при работе с курсорами _ Terrasoft Community_files/saved_resource.html"></iframe></body></html>

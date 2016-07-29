@@ -1,0 +1,69 @@
+/* $Id: print.css,v 1.1.2.1 2009/02/13 06:40:02 johnalbin Exp $ */
+
+/* underline all links */
+a:link, a:visited {
+  text-decoration: underline !important;
+}
+/* Don't underline header */
+#site-name a:link,  #site-name a:visited {
+  text-decoration: none !important;
+}
+/* CSS2 selector to add visible href after links */
+#content a:link:after,  #content a:visited:after {
+  content: " (" attr(href) ") ";
+  font-size: 0.8em;
+  font-weight: normal;
+}
+/* Un-float the content */
+#content,  #content-inner {
+  float: none;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+/* Turn off any background colors or images */
+body,  #page, #page-inner,  #main, #main-inner,  #content, #content-inner {
+  color: #000;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+/* Hide sidebars and nav elements */
+#skip-to-nav, #navbar, #sidebar-left, #sidebar-right, #footer,  .breadcrumb, div.tabs, .links, .taxonomy,  
+.book-navigation, .forum-topic-navigation, .pager, .feed-icons {
+  visibility: hidden;
+  display: none;
+}
+/* Otherwise, Firefox clips the content after the first page. */
+#page {
+  overflow-y: visible;
+  display:none !important;
+}
+#block-block-3,
+#block-ts_menu-1,
+#page_content_front,
+#closure-blocks,
+#page_header,
+#content-bottom,
+#header-block,
+#comments .box,
+.active_path,
+.tabs,
+.slider {
+  display:none !important;
+}
+.detail_info {
+  display: block !important;
+  opacity: 1;
+}
+.txt_collapse {
+  display: block !important;
+  opacity: 1;
+}
+.plus_collapse {
+  background-image: url("../img/background/minus.gif")  !important;
+}
+.sidebar-right #page_content .with-navbar #content {
+  float: none !important;
+  margin: 0 !important;
+  width: 950px !important;
+}
