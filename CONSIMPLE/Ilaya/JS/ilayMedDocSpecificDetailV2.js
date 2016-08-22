@@ -97,8 +97,16 @@ define("ilayMedDocSpecificDetailV2", ["BusinessRulesApplierV2", "ConfigurationGr
 						});
 						// + vlad
 						// TODO забиндить конфиги для типов int, float
+						//Den>
+						for (var i = 0; i < gridLayoutConfig.items.length; i++) {
+							gridLayoutConfig.items[i].item.items[0].items[0].enabled = false;
+						}
+						//Den<
 						if (changeConfig) {
 							var editedConfig = gridLayoutConfig.items[columnNumber].item.items[0].items[0];
+							//Den>
+							editedConfig.enabled = true;
+							//Den<
 							switch (activeRow.values.ilaySpecificType.value.toUpperCase()) {
 								case "ECF578A0-4B4D-40E6-909C-39AF2A798D32":
 									// lookup type

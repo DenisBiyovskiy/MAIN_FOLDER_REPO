@@ -733,7 +733,14 @@ function(resources, GeneralDetails, ilayCConst) {
 					
 					batchQuery.add(insert);
 				}, this);
-				batchQuery.execute(this.onInsertedMedDocSpecific(next), this);
+				//batchQuery.execute(this.onInsertedMedDocSpecific(next), this);
+				//Den>
+				batchQuery.execute(function(result) {
+					if (result.success) {
+						this.onInsertedMedDocSpecific(next);
+					}
+				}, this);
+				//Den<
 			},
 			onInsertedMedDocSpecific : function(next) {
 				this.updateDetail(

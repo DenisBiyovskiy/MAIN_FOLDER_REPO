@@ -1,10 +1,13 @@
 USE [Ilaya(7.7)]
 GO
-/****** Object:  Trigger [dbo].[AUTrigger]    Script Date: 12.07.2016 17:17:33 ******/
+
+/****** Object:  Trigger [dbo].[AUTrigger]    Script Date: 08.08.2016 14:50:25 ******/
 SET ANSI_NULLS ON
 GO
+
 SET QUOTED_IDENTIFIER ON
 GO
+
 -- =============================================
 -- Author:		Denis Biyovskit
 -- Create date: 21.06.2016
@@ -35,7 +38,7 @@ BEGIN
 	DECLARE @performStatus uniqueidentifier =  '2E0AFD6B-B528-482A-9F00-52CCCB14B3BA' --на виконаннi
 	DECLARE @activityState uniqueidentifier = '6627B0F3-BC5F-44DD-923D-59565B8CEEAD' --йде прийом
 	
-	DECLARE @MyCursor CURSOR SET @MyCursor = CURSOR LOCAL FAST_FORWARD
+	DECLARE @MyCursor CURSOR SET @MyCursor = CURSOR FAST_FORWARD
 	FOR 
 		SELECT Id, ilayPerform, ilayPerfomStatusId, ilayPatientId, ilayDoctorId, ilayCourseId FROM DELETED
 	OPEN @MyCursor
@@ -44,11 +47,11 @@ BEGIN
 		BEGIN
 			SET @iPerfIns = ISNULL((
 								select ilayPerform from INSERTED 
-								where Id = @ColGuid AND(ilayPerfomStatusId = @perfStat1 OR ilayPerfomStatusId = @perfStat2)
+								where Id = @ColGuid AND (ilayPerfomStatusId = @perfStat1 OR ilayPerfomStatusId = @perfStat2)
 							), 0)
 			if(@iPerfIns != @iPerfDel AND (@iPerfIns = 1))
 			BEGIN
-				SET @visit = (select top 1 Id from [Ilaya(7.7)].dbo.Activity as a
+				SET @visit = (select top 1 Id from Activity as a
 								where 
 								a.ilayCourseId = @ilayCourseId
 								AND
@@ -60,15 +63,32 @@ BEGIN
 								AND
 								a.ilayPatientId = @pat
 							)
-					update [Ilaya(7.7)].dbo.ilayServList
+					update ilayServList
 					SET ilayPerfomStatusId = @performStatus,
 						ilayVisittoDoctorId = @visit
 					where Id = @ColGuid
+			END
+
+			ELSE 
+			BEGIN
+				SET @iPerfIns = ISNULL((select ilayPerform from INSERTED where Id = @ColGuid), @iPerfDel)
+				if(@iPerfIns != @iPerfDel AND (@iPerfIns = 0))
+				begin
+				
+					update ilayServList
+					SET ilayPerfomStatusId = @perfStat1,
+						ilayVisittoDoctorId = null
+					where Id = @ColGuid
+				end
 			END
 			FETCH NEXT FROM @MyCursor INTO @ColGuid, @iPerfDel, @performStatusId, @pat, @doc, @ilayCourseId
 		END
 	CLOSE @MyCursor
 	DEALLOCATE @MyCursor
 END
+
+
+
+GO
 
 
