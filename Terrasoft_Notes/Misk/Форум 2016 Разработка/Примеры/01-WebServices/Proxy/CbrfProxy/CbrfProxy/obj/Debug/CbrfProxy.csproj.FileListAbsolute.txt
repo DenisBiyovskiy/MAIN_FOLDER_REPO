@@ -1,0 +1,5 @@
+C:\Users\Sergey\Desktop\Examples\01-WebServices\Proxy\CbrfProxy\CbrfProxy\bin\Debug\CbrfProxy.dll
+C:\Users\Sergey\Desktop\Examples\01-WebServices\Proxy\CbrfProxy\CbrfProxy\bin\Debug\CbrfProxy.pdb
+C:\Users\Sergey\Desktop\Examples\01-WebServices\Proxy\CbrfProxy\CbrfProxy\obj\Debug\CbrfProxy.csprojResolveAssemblyReference.cache
+C:\Users\Sergey\Desktop\Examples\01-WebServices\Proxy\CbrfProxy\CbrfProxy\obj\Debug\CbrfProxy.dll
+C:\Users\Sergey\Desktop\Examples\01-WebServices\Proxy\CbrfProxy\CbrfProxy\obj\Debug\CbrfProxy.pdb

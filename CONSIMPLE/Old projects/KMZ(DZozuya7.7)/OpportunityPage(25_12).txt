@@ -1,0 +1,334 @@
+define("OpportunityPageV2", ["BaseFiltersGenerateModule", "BusinessRuleModule", "ConfigurationConstants",
+		"ProcessModuleUtilities"],
+	function(BaseFiltersGenerateModule, BusinessRuleModule, ConfigurationConstants, ProcessModuleUtilities) {
+		return {
+		entitySchemaName: "Opportunity",
+		details: /**SCHEMA_DETAILS*/{
+	"Activities": {
+		"schemaName": "ActivityDetailV2",
+		"filter": {
+			"masterColumn": "Id",
+			"detailColumn": "Opportunity"
+		},
+		"defaultValues": {
+			"Account": {
+				"masterColumn": "Account"
+			},
+			"Contact": {
+				"masterColumn": "Contact"
+			}
+		}
+	},
+	"StageInOpportunity": {
+		"schemaName": "StageInOpportunityDetailV2",
+		"filter": {
+			"masterColumn": "Id",
+			"detailColumn": "Opportunity"
+		}
+	},
+	"OpportunityProduct": {
+		"schemaName": "OpportunityProductDetailV2",
+		"filter": {
+			"masterColumn": "Id",
+			"detailColumn": "Opportunity"
+		}
+	},
+	"OpportunityCompetitor": {
+		"schemaName": "OpportunityCompetitorDetailV2",
+		"filter": {
+			"masterColumn": "Id",
+			"detailColumn": "Opportunity"
+		}
+	},
+	"Documents": {
+		"schemaName": "DocumentDetailV2",
+		"filter": {
+			"masterColumn": "Id",
+			"detailColumn": "Opportunity"
+		},
+		"defaultValues": {
+			"Account": {
+				"masterColumn": "Account"
+			},
+			"Contact": {
+				"masterColumn": "Contact"
+			}
+		}
+	},
+	"Files": {
+		"schemaName": "FileDetailV2",
+		"entitySchemaName": "OpportunityFile",
+		"filter": {
+			"masterColumn": "Id",
+			"detailColumn": "Opportunity"
+		}
+	},
+	"ContactsAccount": {
+		"schemaName": "AccountContactsDetailV2",
+		"defaultValues": {
+			"Account": {
+				"masterColumn": "Account"
+			}
+		},
+		"filterMethod": "contactAccountFilter"
+	},
+	"OpportunityAccount": {
+		"schemaName": "OpportunityDetailV2",
+		"filter": {
+			"masterColumn": "Account",
+			"detailColumn": "Account"
+		},
+		"filterMethod": "opportunityAccountFilter",
+		"captionName": "AccountOpportunitiesCaption"
+	},
+	"OpportunityContact": {
+		"schemaName": "OpportunityContactDetailV2",
+		"filter": {
+			"masterColumn": "Id",
+			"detailColumn": "Opportunity"
+		}
+	},
+	"OpportunityTacticHistory": {
+		"schemaName": "OpportunityTacticHistoryDetailV2",
+		"filter": {
+			"masterColumn": "Id",
+			"detailColumn": "Opportunity"
+		}
+	},
+	"ActivitiesAccount": {
+		"schemaName": "ActivityDetailV2",
+		"filter": {
+			"masterColumn": "Account",
+			"detailColumn": "Account"
+		},
+		"captionName": "AccountActivitiesCaption",
+		"filterMethod": "contactAccountFilter"
+	},
+	"FilesAccount": {
+		"schemaName": "FileDetailV2",
+		"entitySchemaName": "AccountFile",
+		"filter": {
+			"masterColumn": "Account",
+			"detailColumn": "Account"
+		},
+		"captionName": "AccountFilesCaption",
+		"filterMethod": "contactAccountFilter"
+	},
+	"OpportunityTeam": {
+		"schemaName": "OpportunityTeamDetailV2New",
+		"filter": {
+			"masterColumn": "Id",
+			"detailColumn": "Opportunity"
+		},
+		"defaultValues": {
+			"Campaign": {
+				"masterColumn": "Id"
+			}
+		}
+	},
+	"UsrEquipInOpportunity": {
+		"schemaName": "Schema2Detail",
+		"entitySchemaName": "UsrEquipInOpportunity",
+		"filter": {
+			"detailColumn": "UsrOpportunity",
+			"masterColumn": "Id"
+		}
+	}
+}/**SCHEMA_DETAILS*/,
+	attributes: {
+	//Denis  
+	/*Поле Потенциал должно рассчитываться автоматически при изменении значения поля Вероятность или Сумма продажи.
+	  Расчет  путем умножения Суммы продажи на Вероятность*/
+		"UsrPotential":{
+			dependencies:[
+				{
+					columns:["Probability", "Amount"],
+					methodName:"updateUsrPotential"
+				}
+			]
+		},
+		"Probability":{
+			dependencies:[
+				{
+					columns: ["Probability"],
+					methodName: "UsrProbabilityValidator"
+				},
+				{
+					columns:["Stage"],
+					methodName:"onStageChange"
+				}
+			]
+		}
+		
+	//Denis/
+	},
+	diff: /**SCHEMA_DIFF*/[
+	//Денис
+	{
+		"operation": "remove",
+		"name": "Probability"
+	},
+	{
+		"operation": "insert",
+		"name": "Probability",
+		"values": {
+			"layout": {
+				"column": 0,
+				"row": 1,
+				"colSpan": 12,
+				"rowSpan": 1
+			},
+			"isRequired": {"bindTo": "UsrProbabilityValidator"},
+			"bindTo": "Probability",
+			"caption": {
+				"bindTo": "Resources.Strings.ProbabilityCaption"
+			},
+			"enabled": true,
+			"controlConfig": {
+				"enabled": {
+					"bindTo": "IsProbabilityenabled"
+				}
+			}
+		},
+		"parentName": "group1_gridLayout",
+		"propertyName": "items",
+		"index": 2
+	},
+	{
+		"operation": "insert",
+		"name": "UsrEquipInOpportunity",
+		"values": {
+			"itemType": 2
+		},
+		"parentName": "GeneralInfoTab",
+		"propertyName": "items"
+	},
+	/*{
+		"operation": "merge",
+		"parentName": "OpportunityPageGeneralBlock",
+		"propertyName": "items",
+		"name": "Probability",
+		"values": {
+			"layout": {"column": 0, "row": 4, "colSpan": 12},
+			"isRequired": {"bindTo": "UsrProbabilityValidator"}
+		}
+	},*/
+	//Денис
+	{
+		"operation": "remove",
+		"name": "group3"
+	},
+	{
+		"operation": "remove",
+		"name": "group3_gridLayout"
+	},
+	{
+		"operation": "remove",
+		"name": "Burner"
+	},
+	{
+		"operation": "remove",
+		"name": "UsrStorage"
+	},
+	{
+		"operation": "remove",
+		"name": "UsrHeatSource"
+	},
+	{
+		"operation": "remove",
+		"name": "SteamCons"
+	},
+	{
+		"operation": "remove",
+		"name": "UsrDrying"
+	},
+	{
+		"operation": "remove",
+		"name": "HeatExchanger"
+	},
+	//Denis
+	{
+		"operation": "move",
+		"name": "NotesControlGroup",
+		"parentName": "GeneralInfoTab",
+		"propertyName": "items",
+		"index": 0
+	},
+	{
+		"operation": "merge",
+		"name": "NotesControlGroup",
+		"values": {
+			"controlConfig": {"collapsed": true}
+		}
+	}
+	//Denis
+]/**SCHEMA_DIFF*/,
+		methods: {
+		//Denis
+				onEntityInitialized: function () {
+                    this.updateUsrPotential();
+					this.UsrProbabilityValidator();
+                    this.callParent(arguments);
+                },
+                updateUsrPotential: function () {
+					if(this.get("Probability") && this.get("Amount")){
+                    	var result = this.get("Probability") * (this.get("Amount") / 100);
+                    	this.set("UsrPotential", result);
+					}
+					else{this.set("UsrPotential", null);}
+                },
+				/*При открытии карточки продажи при переходе между стадиями поле вероятность должно
+				автоматически обнуляться и  становиться обязательным для заполнения*/
+				onStageChange: function() {
+					var stage = this.get("Stage");
+					if (!Ext.isEmpty(stage) && !Ext.isEmpty(stage.End)) {
+						if (stage.End && Ext.isEmpty(this.get("DueDate"))) {
+							var dateTime = this.getSysDefaultValue(this.Terrasoft.SystemValueType.CURRENT_DATE_TIME);
+							this.set("DueDate", dateTime);
+						}
+						if (!stage.End && !Ext.isEmpty(this.get("DueDate"))) {
+							this.set("DueDate", null);
+							this.set("CloseReason", null);
+							this.set("Winner", null);
+						}
+						this.set("Probability", null);
+					}
+				},
+				UsrProbabilityValidator: function() {
+					if (!this.get("Probability")) {
+						if(this.get("Probability") == 0){
+							return false;
+						}
+						else {
+							return true;
+						}
+					} 
+					else 
+					{
+						return true;
+					}
+				},
+				save: function() {
+					if (!this.get("Probability")) {
+						if(this.get("Probability") == 0){
+							this.callParent(arguments);
+						}
+						else {
+							Terrasoft.utils.showMessage({
+								caption: this.get("Resources.Strings.InputProbabilityError"),
+								buttons: ["cancel"],
+								style: Terrasoft.MessageBoxStyles.BLUE
+							});
+						}
+					} 
+					else 
+					{
+						this.callParent(arguments);
+					}
+				}
+		//Denis.
+		},
+		rules: {},
+		userCode: {}
+	};
+});

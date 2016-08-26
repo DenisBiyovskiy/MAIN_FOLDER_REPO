@@ -1,0 +1,286 @@
+define("LeadPageV2", ["BusinessRuleModule", "ConfigurationConstants", "LeadPageV2Resources", "GeneralDetails"],
+function(BusinessRuleModule, ConfigurationConstants, resources, GeneralDetails) {
+	return {
+		entitySchemaName: "Lead",
+		details: /**SCHEMA_DETAILS*/{
+	"UsrEquipInOpportunity": {
+		"schemaName": "Schema3Detail",
+		"entitySchemaName": "UsrEquipInOpportunity",
+		"filter": {
+			"detailColumn": "UsrLead",
+			"masterColumn": "Id"
+		}
+	}
+}/**SCHEMA_DETAILS*/,
+		diff: /**SCHEMA_DIFF*/[
+	{
+		"operation": "merge",
+		"name": "LeadTypeStatus",
+		"values": {
+			"layout": {
+				"column": 0,
+				"row": 1,
+				"colSpan": 12,
+				"rowSpan": 1
+			}
+		}
+	},
+	{
+		"operation": "merge",
+		"name": "CreatedOn",
+		"values": {
+			"layout": {
+				"column": 0,
+				"row": 2,
+				"colSpan": 12,
+				"rowSpan": 1
+			}
+		}
+	},
+	{
+		"operation": "merge",
+		"name": "QualifiedContact",
+		"values": {
+			"layout": {
+				"column": 12,
+				"row": 1,
+				"colSpan": 12,
+				"rowSpan": 1
+			}
+		}
+	},
+	{
+		"operation": "merge",
+		"name": "QualifiedAccount",
+		"values": {
+			"layout": {
+				"column": 12,
+				"row": 2,
+				"colSpan": 12,
+				"rowSpan": 1
+			}
+		}
+	},
+	{
+		"operation": "merge",
+		"name": "QualifyStatus",
+		"values": {
+			"layout": {
+				"column": 12,
+				"row": 0,
+				"colSpan": 12,
+				"rowSpan": 1
+			}
+		}
+	},
+	{
+		"operation": "merge",
+		"name": "LeadDisqualifyReason",
+		"values": {
+			"layout": {
+				"column": 12,
+				"row": 3,
+				"colSpan": 12,
+				"rowSpan": 1
+			}
+		}
+	},
+	{
+		"operation": "merge",
+		"name": "LeadType",
+		"values": {
+			"layout": {
+				"column": 0,
+				"row": 3,
+				"colSpan": 12,
+				"rowSpan": 1
+			}
+		}
+	},
+	{
+		"operation": "move",
+		"name": "LeadType",
+		"parentName": "Header",
+		"propertyName": "items",
+		"index": 6
+	},
+	{
+		"operation": "insert",
+		"name": "LeadName",
+		"values": {
+			"layout": {
+				"column": 0,
+				"row": 0,
+				"colSpan": 12,
+				"rowSpan": 1
+			},
+			"bindTo": "LeadName",
+			"caption": {
+				"bindTo": "Resources.Strings.LeadNameCaption"
+			},
+			"enabled": true
+		},
+		"parentName": "Header",
+		"propertyName": "items",
+		"index": 7
+	},
+	{
+		"operation": "insert",
+		"name": "Owner1",
+		"values": {
+			"layout": {
+				"column": 0,
+				"row": 4,
+				"colSpan": 12,
+				"rowSpan": 1
+			},
+			"bindTo": "Owner",
+			"caption": {
+				"bindTo": "Resources.Strings.OwnerCaption"
+			},
+			"enabled": true
+		},
+		"parentName": "Header",
+		"propertyName": "items",
+		"index": 8
+	},
+	//Denis
+	{
+		"operation": "insert",
+		"name": "UsrEquipInOpportunity",
+		"values": {
+			"itemType": 2
+		},
+		"parentName": "GeneralInfoTab",
+		"propertyName": "items",
+		"index": 3
+	},
+	{
+		"operation": "move",
+		"name": "LeadNotesControlGroup",
+		"parentName": "LeadPageGeneralTabContainer",
+		"propertyName": "items",
+		"index": 0
+	},
+	{
+		"operation": "merge",
+		"name": "LeadNotesControlGroup",
+		"values": {
+			"controlConfig": {"collapsed": true}
+		}
+	}
+	//Denis
+]/**SCHEMA_DIFF*/,
+		attributes: {},
+		methods: {
+				onEntityInitialized: function() {
+					this.callParent(arguments);
+					//methods for transfer information from Contact and Account cards to Lead
+					this.initializeContactFieldsGroup();
+					this.initializeAccountFieldsGroup();
+				},
+		//Денис. добавление кнопки "Запустить процесс управления лидом" на карточку лида.
+				getActions: function() {
+					 var actionMenuItems = this.callParent(arguments);
+					 actionMenuItems.addItem(this.getActionsMenuItem({
+					  Type: "Terrasoft.MenuSeparator",
+					  Caption: ""
+					 }));
+					 actionMenuItems.addItem(this.getActionsMenuItem({
+					  Caption: "Запустить процесс управления лидом",
+					  Click: {bindTo: "startProcess"},
+					  Enabled: {bindTo: "isSingleSelected"}
+					 }));
+					 return actionMenuItems;
+				},
+				startProcess: function() {
+						var leadID = this.get("Id");
+						var processArgs = {
+							sysProcessName: 'UsrLeadManagement',
+							parameters: {						
+								"UsrLeadId": leadID
+							}
+						};
+						ProcessModuleUtilities.runProcess(processArgs.sysProcessName, processArgs.parameters, this);
+						   this.hideBodyMask();
+				},
+				save: function() {
+					this.callParent(arguments);
+				},
+				initializeContactFieldsGroup: function() {
+					if(this.get("QualifiedContact")) {
+						var esq = Ext.create("Terrasoft.EntitySchemaQuery", {
+							rootSchemaName: "Contact"
+						});
+						esq.addColumn("Id");
+						esq.addColumn("Name");
+						esq.addColumn("Gender");
+						esq.addColumn("Job");
+						esq.addColumn("Department");
+						esq.addColumn("JobTitle");
+						esq.addColumn("DecisionRole");
+						esq.filters.add("LeadFilter", esq.createColumnFilterWithParameter(
+								this.Terrasoft.ComparisonType.EQUAL, "Id", this.get("QualifiedContact").value));
+						esq.getEntityCollection(function(result) {
+							if(result.success){
+								for (var i = 0; i < result.collection.getCount(); i++) {
+									this.set("Contact", result.collection.getByIndex(i).get("Name"));
+									this.set("Gender", result.collection.getByIndex(i).get("Gender"));
+									this.set("Job", result.collection.getByIndex(i).get("Job"));
+									this.set("FullJobTitle", result.collection.getByIndex(i).get("JobTitle"));
+									this.set("Department", result.collection.getByIndex(i).get("Department"));
+									this.set("DecisionRole", result.collection.getByIndex(i).get("DecisionRole"));
+								}
+							}
+						}, this);
+					}
+				},
+				initializeAccountFieldsGroup: function() {
+					if(this.get("QualifiedAccount")) {
+						var esq = Ext.create("Terrasoft.EntitySchemaQuery", {
+							rootSchemaName: "Account"
+						});
+						esq.addColumn("Id");
+						esq.addColumn("Name");
+						esq.addColumn("Industry");
+						esq.addColumn("AnnualRevenue");
+						esq.addColumn("EmployeesNumber");
+						esq.addColumn("Ownership");
+						esq.addColumn("AccountCategory");
+						esq.filters.add("LeadFilter", esq.createColumnFilterWithParameter(
+								this.Terrasoft.ComparisonType.EQUAL, "Id", this.get("QualifiedAccount").value));
+						esq.getEntityCollection(function(result) {
+							if(result.success){
+								for (var i = 0; i < result.collection.getCount(); i++) {
+									this.set("Account", result.collection.getByIndex(i).get("Name"));
+									this.set("Industry", result.collection.getByIndex(i).get("Industry").value);
+									this.set("AnnualRevenue", result.collection.getByIndex(i).get("AnnualRevenue"));
+									this.set("EmployeesNumber", result.collection.getByIndex(i).get("EmployeesNumber"));
+									this.set("Ownership", result.collection.getByIndex(i).get("Ownership"));
+									this.set("AccountCategory", result.collection.getByIndex(i).get("AccountCategory"));
+								}
+							}
+						}, this);
+					}
+				}
+		//Denis
+		},
+		//Denis  При выборе Контакта на странице
+		//Лида должен отображаться список вариантов, сформированый из контактов Контрагента
+		rules: {
+			"QualifiedContact": {
+				"FiltrationContactByAccount": {
+					ruleType: BusinessRuleModule.enums.RuleType.FILTRATION,
+					autocomplete: true,
+					autoClean: true,
+					baseAttributePatch: "Account",
+					comparisonType: Terrasoft.ComparisonType.EQUAL,
+					type: BusinessRuleModule.enums.ValueType.ATTRIBUTE,
+					attribute: "QualifiedAccount"
+				}
+			}
+		},
+		//Denis
+		userCode: {}
+	};
+});

@@ -1,0 +1,127 @@
+define("Schema3Detail", ["ConfigurationGrid", "ConfigurationGridGenerator", "ConfigurationGridUtilities"], function() {
+	return {
+		entitySchemaName: "UsrEquipInOpportunity",
+		details: /**SCHEMA_DETAILS*/{}/**SCHEMA_DETAILS*/,
+		diff: /**SCHEMA_DIFF*/[
+			{
+				"operation": "merge",
+				"name": "DataGrid",
+				"values": {
+					"className": "Terrasoft.ConfigurationGrid",
+					"generator": "ConfigurationGridGenerator.generatePartial",
+					"type": "listed",
+					"generateControlsConfig": {"bindTo": "generateActiveRowControlsConfig"},
+					"changeRow": {"bindTo": "changeRow"},
+					"unSelectRow": {"bindTo": "unSelectRow"},
+					"onGridClick": {"bindTo": "onGridClick"},
+					"listedZebra": true,
+					"initActiveRowKeyMap": {"bindTo": "initActiveRowKeyMap"},
+					"activeRowAction": {"bindTo": "onActiveRowAction"}
+				}
+			}
+		]/**SCHEMA_DIFF*/,
+		methods: {
+			onActiveRowAction: function() {
+				this.mixins.ConfigurationGridUtilities.onActiveRowAction.apply(this, arguments);
+				this.callParent(arguments);
+			},
+			isArrayContainsValue: function(arr, usrEquip){
+		  	if(arr.length != 0){
+			  	for(var i = 0; i < arr.length; i++){
+					if(arr[i].UsrEquip == usrEquip){
+						return arr[i];
+					}
+				}
+			}else{
+				return null;
+			}
+		  },
+			addRecord: function(editPageUId) {
+			var mySet = new Set();
+			var arr = [];
+			for(var i = 0; i < this.getGridData().collection.items.length; i++){
+				mySet.add(this.getGridData().collection.items[i].get("UsrEquipType").value);
+			}
+			var setIter = mySet.values();
+			for(var i = 0; i < mySet.size; i++){
+				arr[i] = setIter.next().value;
+			}
+		    var config = {
+		     entitySchemaName: "UsrEquipmentType",
+		     multiSelect: true,
+			 selectedValues: arr
+		    };
+		    this.openLookup(config, this.addEquipType, this);
+		   },
+		   addEquipType: function(args) {
+		    var selectedItems = args.selectedRows.getItems();
+			
+			var arr = [];
+			for(var i = 0; i < this.getGridData().collection.items.length; i++){
+				arr[i] = new Object({UsrEquip: this.getGridData().collection.items[i].get("UsrEquip").value, UsrCountEquip: this.getGridData().collection.items[i].get("UsrSum"), UsrLeadType: this.getGridData().collection.items[i].get("UsrEquipType").value});
+			}
+			
+			var deleteQuery = Ext.create('Terrasoft.DeleteQuery', {rootSchemaName: 'UsrEquipInOpportunity'});
+			deleteQuery.filters.add('IdFilter', deleteQuery.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL, 'UsrLead', this.get("MasterRecordId")));
+			deleteQuery.execute(function (result) {
+				if (result.success) {
+					this.reloadGridData();
+					for(var j = 0; j < selectedItems.length; j++){
+						var entity = Ext.create("Terrasoft.EntitySchemaQuery", {
+							rootSchemaName: "UsrEquip"
+						});
+						entity.addColumn("Id");
+						entity.addColumn("UsrEquipType");
+						entity.filters.addItem(entity.createColumnFilterWithParameter(
+						this.Terrasoft.ComparisonType.EQUAL, "UsrEquipType", selectedItems[j].value));
+						entity.getEntityCollection(function(result) {
+							if (result.success) {
+								for (i = 0; i < result.collection.getCount(); i++) {
+									var value = this.isArrayContainsValue(arr, result.collection.getByIndex(i).get("Id"));
+									if(value != null || value != undefined){
+										var insert = Ext.create("Terrasoft.InsertQuery", {
+											rootSchemaName: "UsrEquipInOpportunity"
+										});
+										insert.setParameterValue("UsrLead", this.get("MasterRecordId"), Terrasoft.DataValueType.GUID);
+										insert.setParameterValue("UsrEquipType", result.collection.getByIndex(i).get("UsrEquipType").value, Terrasoft.DataValueType.GUID);
+										insert.setParameterValue("UsrEquip", result.collection.getByIndex(i).get("Id"), Terrasoft.DataValueType.GUID);
+										insert.setParameterValue("UsrSum", value.UsrCountEquip, Terrasoft.DataValueType.FLOAT);
+										insert.execute(function(result) {
+											if (result.success) {
+												this.reloadGridData();
+											}
+										}, this);
+									} else {
+										var insert = Ext.create("Terrasoft.InsertQuery", {
+											rootSchemaName: "UsrEquipInOpportunity"
+										});
+										insert.setParameterValue("UsrLead", this.get("MasterRecordId"), Terrasoft.DataValueType.GUID);
+										insert.setParameterValue("UsrEquipType", result.collection.getByIndex(i).get("UsrEquipType").value, Terrasoft.DataValueType.GUID);
+										insert.setParameterValue("UsrEquip", result.collection.getByIndex(i).get("Id"), Terrasoft.DataValueType.GUID);
+										insert.setParameterValue("UsrSum", 0, Terrasoft.DataValueType.FLOAT);
+										insert.execute(function(result) {
+											if (result.success) {
+												this.reloadGridData();
+											}
+										}, this);
+									}
+								}
+							}
+						}, this);
+					}
+				}
+			}, this);
+		  }
+		},
+		attributes: {
+			IsEditable: {
+				dataValueType: this.Terrasoft.DataValueType.BOOLEAN,
+				type: this.Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
+				value: true
+			}
+		},
+		mixins: {
+			ConfigurationGridUtilites: "Terrasoft.ConfigurationGridUtilities"
+		}
+	};
+});

@@ -1,5 +1,5 @@
-define("UsrAccountDocumentDetailV2", ["XRMConstants","ConfigurationGrid", "ConfigurationGridGenerator", "ProcessModuleUtilities", "ConfigurationGridUtilities", "ConfigurationEnums"], 
-	function(XRMConstants, ProcessModuleUtilities, ConfigurationGridUtilities, enums) {
+define("UsrAccountDocumentDetailV2", ["UsrAccountDocumentDetailV2Resources", "XRMConstants", "ProcessModuleUtilities", "ConfigurationGridUtilities", "ConfigurationEnums", "ConfigurationGrid", "ConfigurationGridGenerator"], 
+	function(Resources, XRMConstants, ProcessModuleUtilities, ConfigurationGridUtilities, enums) {
 	return {
 		entitySchemaName: "UsrAccountDocument",
 		messages: {
@@ -56,8 +56,28 @@ define("UsrAccountDocumentDetailV2", ["XRMConstants","ConfigurationGrid", "Confi
 					this.set("isPortalUser", true);
 				}
 			},
-			disableGridSorting: Ext.emptyFn,
-			sortColumn: Ext.emptyFn,
+			//disableGridSorting: Ext.emptyFn,//Den
+			//sortColumn: Ext.emptyFn,//Den
+			/**
+			 * Установка настроек колонок детали по умолчанию, если отсутствует пользовательская настройка
+			 */
+			initProfile: function() {
+				var profile = this.getProfile();
+				var dataGridName = this.getDataGridName();
+				if (!profile[dataGridName]) {
+					profile[dataGridName] = {};
+					this.set("Profile", this.Terrasoft.deepClone(profile));
+				}
+				var currentProfile = this.get("Profile");
+				if (currentProfile && currentProfile.DataGrid
+					&& ((currentProfile.DataGrid.listedConfig == '{"items":[]}' && currentProfile.DataGrid.type == 'listed')
+					|| (currentProfile.DataGrid.tiledConfig == '{"grid":{"rows":0,"columns":24},"items":[]}' && currentProfile.DataGrid.type == 'tiled')
+					|| (!currentProfile.DataGrid.listedConfig && !currentProfile.DataGrid.tiledConfig))
+				) {
+					var newProfile = JSON.parse(Resources.localizableStrings.DefaultColumnsProfileConfig);
+					this.set("Profile", newProfile);
+				}
+			},
 			init: function() {
 				this.callParent(arguments);
 				this.checkRights();
@@ -225,11 +245,11 @@ define("UsrAccountDocumentDetailV2", ["XRMConstants","ConfigurationGrid", "Confi
 				this.clearExpandHierarchyLevels();
 				this.callParent(arguments);
 			},
-			initQuerySorting: function(esq) {
+			/*initQuerySorting: function(esq) {
 				var sortedColumn = esq.columns.get("UsrPosition");
 				sortedColumn.orderPosition = 0;
 				sortedColumn.orderDirection = Terrasoft.OrderDirection.ASC;
-			},
+			},*/
 			getFilters: function() {
 				var parentItem = this.get("ExpandItemId");
 				if (parentItem) {
@@ -431,6 +451,10 @@ define("UsrAccountDocumentDetailV2", ["XRMConstants","ConfigurationGrid", "Confi
 						return false;
 					}
 				}
+			},
+			getAddTypedRecordButtonVisible: function() {
+				var editPages = this.getEditPages();
+				return (this.getToolsVisible() && (editPages.getCount() > 1) && !this.get("isPortalUser"));
 			}
 		},
 		diff: /**SCHEMA_DIFF*/[
@@ -440,7 +464,7 @@ define("UsrAccountDocumentDetailV2", ["XRMConstants","ConfigurationGrid", "Confi
 				"values": {
 					"type": "listed",
 					"hierarchical": true,
-					"sortColumnDirection": {"bindTo": "disableGridSorting"},
+					//"sortColumnDirection": {"bindTo": "disableGridSorting"},
 					"hierarchicalColumnName": "ParentId",
 					"updateExpandHierarchyLevels": {
 						"bindTo": "onExpandHierarchyLevels"
@@ -450,10 +474,10 @@ define("UsrAccountDocumentDetailV2", ["XRMConstants","ConfigurationGrid", "Confi
 					}
 				}
 			},
-			/*{
+			{
 				"operation": "remove",
 				"name": "AddRecordButton"
-			},*/
+			},
 			{
 				"operation": "insert",
 				"name": "OpenDocumentButton",
@@ -467,7 +491,7 @@ define("UsrAccountDocumentDetailV2", ["XRMConstants","ConfigurationGrid", "Confi
 					"caption": "Open"
 				},
 				"index": 0
-			},
+			}
 		]/**SCHEMA_DIFF*/
 	};
 });

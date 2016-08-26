@@ -1,0 +1,22 @@
+#t-comp0-wrap{
+	height: 550px;
+	width: 1200px;
+}
+
+#t-comp0-caption {
+    padding-bottom: 0px;
+    height: 470px;
+	width: 100%;
+	overflow-y: scroll;
+}
+
+#t-comp28-textEl {
+	padding-bottom: 5px;
+    border-bottom-width: 0px;
+    margin-bottom: 0px;
+}
+
+#t-comp29-textEl {
+	padding-bottom: 5px;
+    border-bottom-width: 0px;
+}

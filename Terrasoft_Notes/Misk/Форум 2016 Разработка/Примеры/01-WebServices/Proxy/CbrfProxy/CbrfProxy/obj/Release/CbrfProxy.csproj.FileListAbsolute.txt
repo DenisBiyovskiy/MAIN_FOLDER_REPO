@@ -1,0 +1,10 @@
+C:\Share\Skolkovo\CbrfProxy\CbrfProxy\bin\Release\CbrfProxy.dll
+C:\Share\Skolkovo\CbrfProxy\CbrfProxy\bin\Release\CbrfProxy.pdb
+C:\Share\Skolkovo\CbrfProxy\CbrfProxy\obj\Release\CbrfProxy.csprojResolveAssemblyReference.cache
+C:\Share\Skolkovo\CbrfProxy\CbrfProxy\obj\Release\CbrfProxy.dll
+C:\Share\Skolkovo\CbrfProxy\CbrfProxy\obj\Release\CbrfProxy.pdb
+C:\Share\Skolkovo\01-WebServices\Proxy\CbrfProxy\CbrfProxy\bin\Release\CbrfProxy.dll
+C:\Share\Skolkovo\01-WebServices\Proxy\CbrfProxy\CbrfProxy\bin\Release\CbrfProxy.pdb
+C:\Share\Skolkovo\01-WebServices\Proxy\CbrfProxy\CbrfProxy\obj\Release\CbrfProxy.csprojResolveAssemblyReference.cache
+C:\Share\Skolkovo\01-WebServices\Proxy\CbrfProxy\CbrfProxy\obj\Release\CbrfProxy.dll
+C:\Share\Skolkovo\01-WebServices\Proxy\CbrfProxy\CbrfProxy\obj\Release\CbrfProxy.pdb

@@ -1,0 +1,579 @@
+Message-ID: <1433031484.4298.1438066176762.JavaMail.CoreDBAdmin@TSWiki>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_4297_639206654.1438066176756"
+
+------=_Part_4297_639206654.1438066176756
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>=D0=A3=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=B0 =D1=80=D0=
+=B0=D0=B7=D0=B4=D0=B5=D0=BB=D0=BE=D0=B2 =D0=BD=D0=B0 =D0=BF=D0=BE=D1=80=D1=
+=82=D0=B0=D0=BB=D0=B5</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+#main {
+    padding-bottom: 1em !important; /* The default padding of 6em is too mu=
+ch for printouts */
+}
+
+body {
+    font-family: Arial, Helvetica, FreeSans, sans-serif;
+    font-size: 10pt;
+    line-height: 1.2;
+}
+
+body, #full-height-container, #main, #page, #content, .has-personal-sidebar=
+ #content {
+    background: #fff    !important;
+    color: #000         !important;
+    border: 0           !important;
+    width: 100%         !important;
+    height: auto        !important;
+    min-height: auto    !important;
+    margin: 0           !important;
+    padding: 0          !important;
+    display: block      !important;
+}
+
+a, a:link, a:visited, a:focus, a:hover, a:active {
+    color: #000;
+}
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
+    font-family: Arial, Helvetica, FreeSans, sans-serif;
+    page-break-after: avoid;
+}
+pre {
+    font-family: Monaco, "Courier New", monospace;
+}
+
+#header,
+.aui-header-inner,
+#navigation,
+#sidebar,
+.sidebar,
+#personal-info-sidebar,
+.ia-fixed-sidebar,
+.page-actions,
+.navmenu,
+.ajs-menu-bar,
+.noprint,
+.inline-control-link,
+.inline-control-link a,
+a.show-labels-editor,
+.global-comment-actions,
+.comment-actions,
+.quick-comment-container,
+#addcomment {
+    display: none !important;
+}
+
+.comment .date::before {
+    content: none !important; /* remove middot for print view */
+}
+
+h1.pagetitle img {
+    height: auto;
+    width: auto;
+}
+
+.print-only {
+    display: block;
+}
+#footer {
+    position: relative !important; /* CONF-17506 Place the footer at end of=
+ the content */
+    margin: 0;
+    padding: 0;
+    background: none;
+    clear: both;
+}
+
+#poweredby {
+    border-top: none;
+    background: none;
+}
+
+#poweredby li.print-only {
+    display: list-item;
+    font-style: italic;
+}
+
+#poweredby li.noprint {
+    display:none;
+}
+
+
+/* no width controls in print */
+.wiki-content .table-wrap,
+.wiki-content p,
+.panel .codeContent,
+.panel .codeContent pre,
+.image-wrap {
+    overflow: visible !important;
+}
+
+/* TODO - should this work? */
+#children-section,
+#comments-section .comment,
+#comments-section .comment .comment-body,
+#comments-section .comment .comment-content,
+#comments-section .comment p {
+    page-break-inside: avoid;
+}
+
+#page-children a {
+    text-decoration: none;
+}
+
+/**
+ hide twixies
+
+ the specificity here is a hack because print styles
+ are getting loaded before the base styles. */
+#comments-section.pageSection .section-header,
+#comments-section.pageSection .section-title,
+#children-section.pageSection .section-header,
+#children-section.pageSection .section-title,
+.children-show-hide {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.children-show-hide.icon {
+    display: none;
+}
+
+/* personal sidebar */
+.has-personal-sidebar #content {
+    margin-right: 0px;
+}
+
+.has-personal-sidebar #content .pageSection {
+    margin-right: 0px;
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>=D0=A3=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=B0 =D1=80=D0=B0=
+=D0=B7=D0=B4=D0=B5=D0=BB=D0=BE=D0=B2 =D0=BD=D0=B0 =D0=BF=D0=BE=D1=80=D1=82=
+=D0=B0=D0=BB=D0=B5</h1>
+    <div class=3D"Section1">
+        <p>=D0=9D=D0=B8=D0=B6=D0=B5 =D0=BE=D0=BF=D0=B8=D1=81=D0=B0=D0=BD=D0=
+=B0 =D0=B8=D0=BD=D1=81=D1=82=D1=80=D1=83=D0=BA=D1=86=D0=B8=D1=8F, =D0=BA=D0=
+=B0=D0=BA =D0=BF=D0=BE=D0=B4=D0=B3=D0=BE=D1=82=D0=BE=D0=B2=D0=B8=D1=82=D1=
+=8C =D0=B8 =D1=81=D0=BE=D0=B7=D0=B4=D0=B0=D1=82=D1=8C =D1=80=D0=B0=D0=B7=D0=
+=B4=D0=B5=D0=BB=D1=8B =D0=BD=D0=B0 =D0=BF=D0=BE=D1=80=D1=82=D0=B0=D0=BB=D0=
+=B5, =D0=B2 =D0=BA=D0=B0=D1=87=D0=B5=D1=81=D1=82=D0=B2=D0=B5 =D0=BF=D1=80=
+=D0=B8=D0=BC=D0=B5=D1=80=D0=B0 =D0=B1=D1=83=D0=B4=D1=83=D1=82 =D0=B8=D1=81=
+=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=D1=8B =D1=80=D0=B0=
+=D0=B7=D0=B4=D0=B5=D0=BB=D1=8B &quot;=D0=9E=D0=B1=D1=80=D0=B0=D1=89=D0=B5=
+=D0=BD=D0=B8=D0=B5&quot; =D0=B8 &quot;=D0=91=D0=B0=D0=B7=D0=B0 =D0=B7=D0=BD=
+=D0=B0=D0=BD=D0=B8=D0=B9&quot;</p>
+<ol>
+<li><strong>=D0=A1=D0=BE=D0=B7=D0=B4=D0=B0=D1=82=D1=8C =D0=BF=D0=B0=D0=BA=
+=D0=B5=D1=82, =D0=BD=D0=B0=D0=BF=D1=80=D0=B8=D0=BC=D0=B5=D1=80 =D0=BF=D0=B0=
+=D0=BA=D0=B5=D1=82 Portal</strong></li>
+<li><p><strong>=D0=9F=D0=BE=D0=B4=D0=B3=D0=BE=D1=82=D0=BE=D0=B2=D0=B8=D1=82=
+=D1=8C =D1=80=D0=B0=D0=B1=D0=BE=D1=87=D0=B5=D0=B5 =D0=BC=D0=B5=D1=81=D1=82=
+=D0=BE =D0=B4=D0=BB=D1=8F =D0=BF=D0=BE=D1=80=D1=82=D0=B0=D0=BB=D0=B0 =D0=B8=
+ =D0=B5=D0=B3=D0=BE =D1=80=D0=B0=D0=B7=D0=B4=D0=B5=D0=BB=D0=BE=D0=B2</stron=
+g></p></li>
+<li><p><strong>=D0=94=D0=BE=D0=B1=D0=B0=D0=B2=D0=B8=D1=82=D1=8C =D0=BD=D0=
+=B0 =D0=BD=D0=B5=D0=B3=D0=BE =D0=BF=D1=80=D0=B0=D0=B2=D0=B0 =D0=B4=D0=BB=D1=
+=8F =D0=B3=D1=80=D1=83=D0=BF=D0=BF=D1=8B =D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=
+=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D0=B5=D0=B9 &laquo;=D0=92=D1=81=D0=B5 =D0=
+=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D0=B8 =D0=
+=BF=D0=BE=D1=80=D1=82=D0=B0=D0=BB=D0=B0&raquo;</strong></p></li>
+<li><p><strong>=D0=94=D0=BE=D0=B1=D0=B0=D0=B2=D0=B8=D1=82=D1=8C =D0=BF=D0=
+=BE=D1=80=D1=82=D0=B0=D0=BB=D1=8C=D0=BD=D0=BE=D0=B3=D0=BE =D0=BF=D0=BE=D0=
+=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8F</strong></p></li>
+<li><p><strong>=D0=94=D0=BE=D0=B1=D0=B0=D0=B2=D0=B8=D1=82=D1=8C =D0=B2 =D0=
+=BF=D0=B0=D0=BA=D0=B5=D1=82 =D0=BD=D0=B5=D0=BE=D0=B1=D1=85=D0=BE=D0=B4=D0=
+=B8=D0=BC=D1=8B=D0=B5 =D0=BE=D0=B1=D1=8A=D0=B5=D0=BA=D1=82=D1=8B =D1=80=D0=
+=B0=D1=81=D1=88=D0=B8=D1=80=D1=8F=D1=8E=D1=89=D0=B8=D0=B5 =D0=B1=D0=B0=D0=
+=B7=D0=BE=D0=B2=D1=8B=D0=B5 (Case, KnowledgeBase)</strong></p></li>
+<li><p><strong>=D0=94=D0=BE=D0=B1=D0=B0=D0=B2=D0=B8=D1=82=D1=8C =D1=81=D0=
+=BE=D0=BE=D1=82=D0=B2=D0=B5=D1=82=D1=81=D1=82=D0=B2=D1=83=D1=8E=D1=89=D0=B8=
+=D0=B5 =D0=BE=D0=B1=D1=8A=D0=B5=D0=BA=D1=82=D0=B0=D0=BC =D1=81=D1=82=D1=80=
+=D0=B0=D0=BD=D0=B8=D1=86=D1=8B Section =D0=B8 Page</strong></p></li>
+<li><p><strong>=D0=97=D0=B0=D1=80=D0=B5=D0=B3=D0=B8=D1=81=D1=82=D1=80=D0=B8=
+=D1=80=D0=BE=D0=B2=D0=B0=D1=82=D1=8C =D0=B2=D1=80=D1=83=D1=87=D0=BD=D1=83=
+=D1=8E =D1=80=D0=B0=D0=B7=D0=B4=D0=B5=D0=BB=D1=8B Case =D0=B8 KnowledgeBase=
+:</strong></p></li>
+</ol>
+<p style=3D"margin-left: 30.0px;">7.1 insert into SysModuleEntity (SysEntit=
+ySchemaUId). <strong>=D0=92 =D0=BF=D0=BE=D0=BB=D0=B5&nbsp;SysEntitySchemaUI=
+d =D0=BE=D0=B1=D1=8C=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=D0=BE =
+=D0=BF=D0=B8=D1=81=D0=B0=D1=82=D1=8C UId =D1=81=D1=85=D0=B5=D0=BC=D1=8B =D0=
+=B8=D0=B7 =D1=81=D0=B0=D0=BC=D0=BE=D0=B3=D0=BE =D0=BF=D0=B5=D1=80=D0=B2=D0=
+=BE=D0=B3=D0=BE =D1=80=D0=BE=D0=B4=D0=B8=D1=82=D0=B5=D0=BB=D1=8F (=D0=9D=D0=
+=B0=D0=BF=D1=80=D0=B8=D0=BC=D0=B5=D1=80, UId Case =D0=B8=D0=B7 =D0=BF=D0=B0=
+=D0=BA=D0=B5=D1=82 Case, KnowledgeBase =D0=B8=D0=B7 Base)</strong><br />7.2=
+&nbsp;insert into SysModuleEdit(<br /> [SysModuleEntityId]<br /> ,[TypeColu=
+mnValue]<br /> ,[UseModuleDetails]<br /> ,[Position]<br /> ,[HelpContextId]=
+<br /> ,[ProcessListeners]<br /> ,[SysPageSchemaUId]<br /> ,[CardSchemaUId]=
+<br /> ,[ActionKindCaption]<br /> ,[ActionKindName]<br /> ,[PageCaption])<b=
+r />7.3&nbsp;insert into SysModule (<br />[Caption]<br /> ,[SysModuleEntity=
+Id]<br /> ,[Image16]<br /> ,[Image20]<br /> ,[FolderModeId]<br /> ,[GlobalS=
+earchAvailable]<br /> ,[HasAnalytics]<br /> ,[HasActions]<br /> ,[HasRecent=
+]<br /> ,[Code]<br /> ,[HelpContextId]<br /> ,[ProcessListeners]<br /> ,[Sy=
+sPageSchemaUId]<br /> ,[ModuleHeader]<br /> ,[Attribute]<br /> ,[CardSchema=
+UId]<br /> ,[SectionModuleSchemaUId]<br /> ,[SectionSchemaUId]<br /> ,[Card=
+ModuleUId]<br /> ,[TypeColumnValue]<br /> ,[Image32Id]<br /> ,[LogoId])<br =
+/>7.4 insert into SysModuleLcz(RecordId,ColumnUId,SysCultureId,Value) (RU, =
+ENG, =E2=80=A6)<br />7.5 insert into SysModuleEditLcz (RecordId,ColumnUId,S=
+ysCultureId,Value) (RU, ENG, =E2=80=A6)<br />7.6<strong>&nbsp;=D0=94=D0=BE=
+=D0=B1=D0=B0=D0=B2=D0=BB=D0=B5=D0=BD=D0=B8=D0=B5 =D0=B7=D0=B0=D0=BF=D0=B8=
+=D1=81=D0=B8 =D0=B2 =D1=82=D0=B0=D0=B1=D0=BB=D0=B8=D1=86=D1=83 =D1=80=D0=B0=
+=D0=B7=D0=B2=D1=8F=D0=B7=D0=BA=D0=B8. =D0=9D=D0=B5=D0=BE=D0=B1=D1=85=D0=BE=
+=D0=B4=D0=B8=D0=BC=D0=BE =D0=B4=D0=BB=D1=8F =D1=84=D0=BE=D1=80=D0=BC=D0=B8=
+=D1=80=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D1=8F&nbsp;ModuleStructure</strong><br=
+ />insert into&nbsp;SysModuleEntityInPortal (SysPortalId, SysModuleEntityId=
+)</p>
+<p style=3D"margin-left: 30.0px;">&nbsp;</p>
+<p style=3D"margin-left: 30.0px;">8. <strong>=D0=9F=D1=80=D0=B8=D0=B2=D1=8F=
+=D0=B7=D0=B0=D1=82=D1=8C =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D0=B5:</strong><br =
+/> SysModuleEntity<br /> SysModule<br /> SysModuleEdit<br /> SysModuleEditL=
+cz<br /> SysModuleLcz<br /> SysProfileData</p>
+<p style=3D"margin-left: 30.0px;"><br />9. <strong>=D0=92=D1=8B=D0=BF=D0=BE=
+=D0=BB=D0=BD=D0=B8=D1=82=D1=8C =D1=81=D0=BA=D1=80=D0=B8=D0=BF =D0=BF=D0=BE =
+=D0=BD=D0=B0=D1=81=D1=82=D1=80=D0=BE=D0=B9=D0=BA=D0=B5 =D0=BF=D1=80=D0=B0=
+=D0=B2:</strong><br />{<strong>=D0=A1=D0=BF=D0=B8=D1=81=D0=BE=D0=BA =D0=BE=
+=D0=B1=D1=8A=D0=B5=D0=BA=D1=82=D0=BE=D0=B2}</strong>: 'FolderType', 'SysEmp=
+ty', 'FolderFavorite', 'ESNNotification', 'ESNNotificationType', 'Case', 'C=
+aseFile', 'CaseFolder', 'CaseInFolder', 'CaseTag', 'Contact', 'Account', 'C=
+aseStatus', 'CasePriority', 'CaseOrigin', 'SysAdminUnit', 'CaseClosureCode'=
+, 'SatisfactionLevel', 'CaseCategory', 'ServicePact', 'ServiceItem', 'Servi=
+ceInServicePact', 'ServiceObject' , 'ServiceObjectType', 'RoleInServiceTeam=
+', 'RunButtonProcessList', 'SocialChannel', 'SocialMessage', 'SocialMessage=
+Entity', 'SysModule', 'SysModuleFolder', 'SysModuleFolderLcz', 'SysModuleIn=
+SysModuleFolder', 'SysModuleLcz', 'VwCommandAction', 'VwSysProcess', 'Socia=
+lSubscription', 'SocialUnsubscription', 'SocialMessageEntity', 'KnowledgeBa=
+se' , 'KnowledgeBaseFile', 'KnowledgeBaseFolder', 'KnowledgeBaseInFolder', =
+'KnowledgeBaseTag', 'KnowledgeBaseDecoupling', 'KnowledgeBaseType', 'Depart=
+ment', 'ServicePactStatus', 'ServiceStatus', 'Calendar', 'DayInCalendar', '=
+DayOfWeek', 'DayType', 'TimeUnit', 'WorkingTimeInterval', 'TimeZone', 'Soci=
+alLike', 'Like', 'SysImage'</p>
+<p style=3D"margin-left: 30.0px;">delete SysSchemaProperty where CreatedByI=
+d =3D 'DAD159F3-6C2D-446A-98D2-0F4D26662BBE'<br />and SysSchemaId in (<br /=
+> select [ss].[Id] from [dbo].[SysSchema] [ss]<br /> left join [dbo].[SysPa=
+ckage] [sp] on [ss].[SysPackageId] =3D [sp].[Id]<br /> left join [dbo].[Sys=
+Workspace] [sw] on [sp].[SysWorkspaceId] =3D [sw].[Id]<br /> where [sw].[Id=
+] =3D (select Id from SysWorkspace where IsDefault =3D '1')<br /> and [ss].=
+[ExtendParent] =3D 0<br /> and [ss].[Name] in ({<strong>=D0=A1=D0=BF=D0=B8=
+=D1=81=D0=BE=D0=BA&nbsp;=D0=BE=D0=B1=D1=8A=D0=B5=D0=BA=D1=82=D0=BE=D0=B2}</=
+strong>}))</p>
+<p style=3D"margin-left: 30.0px;">insert into [dbo].[SysSchemaProperty] ([I=
+d], [CreatedById], [Name], [Value], [SysSchemaId])<br /> select newid(),'DA=
+D159F3-6C2D-446A-98D2-0F4D26662BBE', 'AdministratedByColumns', 'false', [ss=
+].[Id] from [dbo].[SysSchema] [ss]<br /> left join [dbo].[SysPackage] [sp] =
+on [ss].[SysPackageId] =3D [sp].[Id]<br /> left join [dbo].[SysWorkspace] [=
+sw] on [sp].[SysWorkspaceId] =3D [sw].[Id]<br /> where [sw].[Id] =3D (selec=
+t Id from SysWorkspace where IsDefault =3D '1')<br /> and [ss].[ExtendParen=
+t] =3D 0<br /> and [ss].[Name] in ({<strong>=D0=A1=D0=BF=D0=B8=D1=81=D0=BE=
+=D0=BA&nbsp;=D0=BE=D0=B1=D1=8A=D0=B5=D0=BA=D1=82=D0=BE=D0=B2}</strong>})</p=
+>
+<p style=3D"margin-left: 30.0px;">insert into [dbo].[SysSchemaProperty] ([I=
+d], [CreatedById], [Name], [Value], [SysSchemaId])<br /> select newid(), 'D=
+AD159F3-6C2D-446A-98D2-0F4D26662BBE', 'AdministratedByOperations', 'true', =
+[ss].[Id] from [dbo].[SysSchema] [ss]<br /> left join [dbo].[SysPackage] [s=
+p] on [ss].[SysPackageId] =3D [sp].[Id]<br /> left join [dbo].[SysWorkspace=
+] [sw] on [sp].[SysWorkspaceId] =3D [sw].[Id]<br /> where [sw].[Id] =3D (se=
+lect Id from SysWorkspace where IsDefault =3D '1')<br /> and [ss].[ExtendPa=
+rent] =3D 0<br /> and [ss].[Name] in ({<strong>=D0=A1=D0=BF=D0=B8=D1=81=D0=
+=BE=D0=BA&nbsp;=D0=BE=D0=B1=D1=8A=D0=B5=D0=BA=D1=82=D0=BE=D0=B2}</strong>})=
+</p>
+<p style=3D"margin-left: 30.0px;">insert into [dbo].[SysSchemaProperty] ([I=
+d], [CreatedById], [Name], [Value], [SysSchemaId])<br /> select newid(), 'D=
+AD159F3-6C2D-446A-98D2-0F4D26662BBE', 'AdministratedByRecords', 'false', [s=
+s].[Id] from [dbo].[SysSchema] [ss]<br /> left join [dbo].[SysPackage] [sp]=
+ on [ss].[SysPackageId] =3D [sp].[Id]<br /> left join [dbo].[SysWorkspace] =
+[sw] on [sp].[SysWorkspaceId] =3D [sw].[Id]<br /> where [sw].[Id] =3D (sele=
+ct Id from SysWorkspace where IsDefault =3D '1')<br /> and [ss].[ExtendPare=
+nt] =3D 0<br /> and [ss].[Name] in ({<strong>=D0=A1=D0=BF=D0=B8=D1=81=D0=BE=
+=D0=BA&nbsp;=D0=BE=D0=B1=D1=8A=D0=B5=D0=BA=D1=82=D0=BE=D0=B2}</strong>})</p=
+>
+<p style=3D"margin-left: 30.0px;">delete SysEntitySchemaOperationRight wher=
+e CreatedById =3D 'DAD159F3-6C2D-446A-98D2-0F4D26662BBE'<br />and SubjectSc=
+hemaUId in (<br /> select [ss].[UId] from [dbo].[SysSchema] [ss]<br /> left=
+ join [dbo].[SysPackage] [sp] on [ss].[SysPackageId] =3D [sp].[Id]<br /> le=
+ft join [dbo].[SysWorkspace] [sw] on [sp].[SysWorkspaceId] =3D [sw].[Id]<br=
+ /> where [sw].[Id] =3D (select Id from SysWorkspace where IsDefault =3D '1=
+')<br /> and [ss].[ExtendParent] =3D 0<br /> and [ss].[Name] in ({<strong>=
+=D0=A1=D0=BF=D0=B8=D1=81=D0=BE=D0=BA&nbsp;=D0=BE=D0=B1=D1=8A=D0=B5=D0=BA=D1=
+=82=D0=BE=D0=B2}</strong>}))</p>
+<p style=3D"margin-left: 30.0px;">insert into [dbo].[SysEntitySchemaOperati=
+onRight] ([Id], [CreatedById], [SysAdminUnitId], [CanRead], [CanAppend], [C=
+anEdit], [Position], [SubjectSchemaUId])<br /> select newId(), 'DAD159F3-6C=
+2D-446A-98D2-0F4D26662BBE', '720B771C-E7A7-4F31-9CFB-52CD21C3739F', 1, 0, 0=
+, 0, [ss].[UId] from [dbo].[SysSchema] [ss]<br /> left join [dbo].[SysPacka=
+ge] [sp] on [ss].[SysPackageId] =3D [sp].[Id]<br /> left join [dbo].[SysWor=
+kspace] [sw] on [sp].[SysWorkspaceId] =3D [sw].[Id]<br /> where [sw].[Id] =
+=3D (select Id from SysWorkspace where IsDefault =3D '1')<br /> and [ss].[E=
+xtendParent] =3D 0<br /> and [ss].[Name] in ({<strong>=D0=A1=D0=BF=D0=B8=D1=
+=81=D0=BE=D0=BA&nbsp;=D0=BE=D0=B1=D1=8A=D0=B5=D0=BA=D1=82=D0=BE=D0=B2}</str=
+ong>})</p>
+<p style=3D"margin-left: 30.0px;">insert into [dbo].[SysEntitySchemaOperati=
+onRight] ([Id], [CreatedById], [SysAdminUnitId], [CanRead], [CanAppend], [C=
+anEdit], [CanDelete], [Position], [SubjectSchemaUId])<br /> select newId(),=
+ 'DAD159F3-6C2D-446A-98D2-0F4D26662BBE', 'A29A3BA5-4B0D-DE11-9A51-005056C00=
+008', 1, 1, 1, 1, 1, [ss].[UId] from [dbo].[SysSchema] [ss]<br /> left join=
+ [dbo].[SysPackage] [sp] on [ss].[SysPackageId] =3D [sp].[Id]<br /> left jo=
+in [dbo].[SysWorkspace] [sw] on [sp].[SysWorkspaceId] =3D [sw].[Id]<br /> w=
+here [sw].[Id] =3D (select Id from SysWorkspace where IsDefault =3D '1')<br=
+ /> and [ss].[ExtendParent] =3D 0<br /> and [ss].[Name] in ({<strong>=D0=A1=
+=D0=BF=D0=B8=D1=81=D0=BE=D0=BA&nbsp;=D0=BE=D0=B1=D1=8A=D0=B5=D0=BA=D1=82=D0=
+=BE=D0=B2}</strong>})</p>
+<p style=3D"margin-left: 30.0px;">delete SysSSPEntitySchemaAccessList where=
+ CreatedById =3D 'DAD159F3-6C2D-446A-98D2-0F4D26662BBE'<br />and EntitySche=
+maUId in (<br /> select [ss].[UId] from [dbo].[SysSchema] [ss]<br /> left j=
+oin [dbo].[SysPackage] [sp] on [ss].[SysPackageId] =3D [sp].[Id]<br /> left=
+ join [dbo].[SysWorkspace] [sw] on [sp].[SysWorkspaceId] =3D [sw].[Id]<br /=
+> where [sw].[Id] =3D (select Id from SysWorkspace where IsDefault =3D '1')=
+<br /> and [ss].[ExtendParent] =3D 0<br /> and [ss].[Name] in ({<strong>=D0=
+=A1=D0=BF=D0=B8=D1=81=D0=BE=D0=BA&nbsp;=D0=BE=D0=B1=D1=8A=D0=B5=D0=BA=D1=82=
+=D0=BE=D0=B2}</strong>}))</p>
+<p style=3D"margin-left: 30.0px;">insert into [dbo].[SysSSPEntitySchemaAcce=
+ssList] ([Id], [CreatedById], [EntitySchemaUId])<br />select newId(), 'DAD1=
+59F3-6C2D-446A-98D2-0F4D26662BBE', [ss].[UId] from [dbo].[SysSchema] [ss]<b=
+r /> left join [dbo].[SysPackage] [sp] on [ss].[SysPackageId] =3D [sp].[Id]=
+<br /> left join [dbo].[SysWorkspace] [sw] on [sp].[SysWorkspaceId] =3D [sw=
+].[Id]<br /> where [sw].[Id] =3D (select Id from SysWorkspace where IsDefau=
+lt =3D '1')<br /> and [ss].[ExtendParent] =3D 0<br /> and [ss].[Name] in ({=
+<strong>=D0=A1=D0=BF=D0=B8=D1=81=D0=BE=D0=BA&nbsp;=D0=BE=D0=B1=D1=8A=D0=B5=
+=D0=BA=D1=82=D0=BE=D0=B2}</strong>})</p>
+<p style=3D"margin-left: 30.0px;">delete SysEntitySchemaRecordDefRight wher=
+e CreatedById =3D 'DAD159F3-6C2D-446A-98D2-0F4D26662BBE'<br />and SubjectSc=
+hemaUId in (<br /> '0326868C-CE5E-4934-8F1F-178801BFE6C3'<br /> ,'C6C44F0A-=
+193E-4B5C-B35E-220A60C06898'<br /> ,'595DDBDA-31CE-4CCA-9BDD-862257CEAF23')=
+</p>
+<p style=3D"margin-left: 30.0px;">/*=D0=94=D0=BE=D0=B1=D0=B0=D0=B2=D0=BB=D0=
+=B5=D0=BD=D0=B8=D0=B5 =D0=BF=D1=80=D0=B0=D0=B2 =D0=BD=D0=B0 =D1=81=D1=83=D1=
+=89=D0=B5=D1=81=D1=82=D0=B2=D1=83=D1=8E=D1=89=D0=B8=D0=B5 =D0=B7=D0=B0=D0=
+=BF=D0=B8=D1=81=D0=B8 =D0=91=D0=B0=D0=B7=D1=8B =D0=B7=D0=BD=D0=B0=D0=BD=D0=
+=B8=D0=B9 =D0=B4=D0=BB=D1=8F =D0=BF=D0=BE=D1=80=D1=82=D0=B0=D0=BB=D1=8C=D0=
+=BD=D1=8B=D1=85 =D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=
+=B5=D0=BB=D0=B5=D0=B9*/<br />insert into SysEntitySchemaRecordDefRight (Cre=
+atedById, SubjectSchemaUId, AuthorSysAdminUnitId, GranteeSysAdminUnitId, Po=
+sition, Operation, RightLevel)<br />values (<br /> 'DAD159F3-6C2D-446A-98D2=
+-0F4D26662BBE',<br /> '0326868C-CE5E-4934-8F1F-178801BFE6C3',<br /> 'A29A3B=
+A5-4B0D-DE11-9A51-005056C00008',<br /> '720B771C-E7A7-4F31-9CFB-52CD21C3739=
+F',<br /> '0',<br /> '0',<br /> '1'<br />)</p>
+<p style=3D"margin-left: 30.0px;">/*=D0=94=D0=BE=D0=B1=D0=B0=D0=B2=D0=BB=D0=
+=B5=D0=BD=D0=B8=D0=B5 =D0=BF=D1=80=D0=B0=D0=B2 =D0=BD=D0=B0 =D1=81=D1=83=D1=
+=89=D0=B5=D1=81=D1=82=D0=B2=D1=83=D1=8E=D1=89=D0=B8=D0=B5 =D0=B7=D0=B0=D0=
+=BF=D0=B8=D1=81=D0=B8 =D0=A1=D0=B5=D1=80=D0=B2=D0=B8=D1=81=D0=BE=D0=B2 =D0=
+=B4=D0=BB=D1=8F =D0=BF=D0=BE=D1=80=D1=82=D0=B0=D0=BB=D1=8C=D0=BD=D1=8B=D1=
+=85 =D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D0=
+=B5=D0=B9*/<br />insert into SysEntitySchemaRecordDefRight (CreatedById, Su=
+bjectSchemaUId, AuthorSysAdminUnitId, GranteeSysAdminUnitId, Position, Oper=
+ation, RightLevel)<br />values (<br /> 'DAD159F3-6C2D-446A-98D2-0F4D26662BB=
+E',<br /> 'C6C44F0A-193E-4B5C-B35E-220A60C06898',<br /> 'A29A3BA5-4B0D-DE11=
+-9A51-005056C00008',<br /> '720B771C-E7A7-4F31-9CFB-52CD21C3739F',<br /> '0=
+',<br /> '0',<br /> '1'<br />)</p>
+<p style=3D"margin-left: 30.0px;">/*=D0=94=D0=BE=D0=B1=D0=B0=D0=B2=D0=BB=D0=
+=B5=D0=BD=D0=B8=D0=B5 =D0=BF=D1=80=D0=B0=D0=B2 =D0=BD=D0=B0 =D1=81=D1=83=D1=
+=89=D0=B5=D1=81=D1=82=D0=B2=D1=83=D1=8E=D1=89=D0=B8=D0=B5 =D0=B7=D0=B0=D0=
+=BF=D0=B8=D1=81=D0=B8 =D0=A1=D0=B5=D1=80=D0=B2=D0=B8=D1=81=D0=BD=D1=8B=D1=
+=85 =D0=B4=D0=BE=D0=B3=D0=BE=D0=B2=D0=BE=D1=80=D0=BE=D0=B2 =D0=B4=D0=BB=D1=
+=8F =D0=BF=D0=BE=D1=80=D1=82=D0=B0=D0=BB=D1=8C=D0=BD=D1=8B=D1=85 =D0=BF=D0=
+=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D0=B5=D0=B9*/<br =
+/>insert into SysEntitySchemaRecordDefRight (CreatedById, SubjectSchemaUId,=
+ AuthorSysAdminUnitId, GranteeSysAdminUnitId, Position, Operation, RightLev=
+el)<br />values (<br /> 'DAD159F3-6C2D-446A-98D2-0F4D26662BBE',<br /> '595D=
+DBDA-31CE-4CCA-9BDD-862257CEAF23',<br /> 'A29A3BA5-4B0D-DE11-9A51-005056C00=
+008',<br /> '720B771C-E7A7-4F31-9CFB-52CD21C3739F',<br /> '0',<br /> '0',<b=
+r /> '1'<br />)</p>
+<p style=3D"margin-left: 30.0px;">10. <strong>=D0=9E=D0=B1=D0=BD=D0=BE=D0=
+=B2=D0=B8=D1=82=D1=8C =D0=BE=D0=BF=D1=80=D0=B5=D0=B4=D0=B5=D0=BB=D0=B5=D0=
+=BD=D0=BD=D1=8B=D0=B5 =D0=BF=D1=80=D0=B0=D0=B2=D0=B0 =D0=B4=D0=BB=D1=8F =D0=
+=B2=D0=BE=D0=B7=D0=BC=D0=BE=D0=B6=D0=BD=D0=BE=D1=81=D1=82=D0=B8 =D0=B4=D0=
+=BE=D0=B1=D0=B0=D0=B2=D0=BB=D0=B5=D0=BD=D0=B8=D0=B5, =D1=80=D0=B5=D0=B4=D0=
+=B0=D0=BA=D1=82=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D1=8F =E2=80=A6</=
+strong><br />/*Case CanAppend CanEdit*/<br />update [dbo].[SysEntitySchemaO=
+perationRight] set CanAppend =3D '1' where SubjectSchemaUId in (select [UId=
+] from SysSchema where Name =3D 'Case') and SysAdminUnitId =3D '720B771C-E7=
+A7-4F31-9CFB-52CD21C3739F'<br />update [dbo].[SysEntitySchemaOperationRight=
+] set CanEdit =3D '1' where SubjectSchemaUId in (select [UId] from SysSchem=
+a where Name =3D 'Case') and SysAdminUnitId =3D '720B771C-E7A7-4F31-9CFB-52=
+CD21C3739F'</p>
+<p style=3D"margin-left: 30.0px;">/*SocialMessage CanAppend CanEdit CanDele=
+te*/<br />update [dbo].[SysEntitySchemaOperationRight] set CanAppend =3D '1=
+' where SubjectSchemaUId in (select [UId] from SysSchema where Name =3D 'So=
+cialMessage') and SysAdminUnitId =3D '720B771C-E7A7-4F31-9CFB-52CD21C3739F'=
+<br />update [dbo].[SysEntitySchemaOperationRight] set CanEdit =3D '1' wher=
+e SubjectSchemaUId in (select [UId] from SysSchema where Name =3D 'SocialMe=
+ssage') and SysAdminUnitId =3D '720B771C-E7A7-4F31-9CFB-52CD21C3739F'<br />=
+update [dbo].[SysEntitySchemaOperationRight] set CanDelete =3D '1' where Su=
+bjectSchemaUId in (select [UId] from SysSchema where Name =3D 'SocialMessag=
+e') and SysAdminUnitId =3D '720B771C-E7A7-4F31-9CFB-52CD21C3739F'<br />/*So=
+cialLike CanAppend CanDelete*/<br />update [dbo].[SysEntitySchemaOperationR=
+ight] set CanAppend =3D '1' where SubjectSchemaUId in (select [UId] from Sy=
+sSchema where Name =3D 'SocialLike') and SysAdminUnitId =3D '720B771C-E7A7-=
+4F31-9CFB-52CD21C3739F'<br />update [dbo].[SysEntitySchemaOperationRight] s=
+et CanDelete =3D '1' where SubjectSchemaUId in (select [UId] from SysSchema=
+ where Name =3D 'SocialLike') and SysAdminUnitId =3D '720B771C-E7A7-4F31-9C=
+FB-52CD21C3739F'<br />/*Like CanAppend CanDelete*/<br />update [dbo].[SysEn=
+titySchemaOperationRight] set CanAppend =3D '1' where SubjectSchemaUId in (=
+select [UId] from SysSchema where Name =3D 'Like') and SysAdminUnitId =3D '=
+720B771C-E7A7-4F31-9CFB-52CD21C3739F'<br />update [dbo].[SysEntitySchemaOpe=
+rationRight] set CanDelete =3D '1' where SubjectSchemaUId in (select [UId] =
+from SysSchema where Name =3D 'Like') and SysAdminUnitId =3D '720B771C-E7A7=
+-4F31-9CFB-52CD21C3739F'<br />/*SocialChannel CanAppend*/<br />update [dbo]=
+.[SysEntitySchemaOperationRight] set CanAppend =3D '1' where SubjectSchemaU=
+Id in (select [UId] from SysSchema where Name =3D 'SocialChannel') and SysA=
+dminUnitId =3D '720B771C-E7A7-4F31-9CFB-52CD21C3739F'<br />/*SocialSubscrip=
+tion CanAppend*/<br />update [dbo].[SysEntitySchemaOperationRight] set CanA=
+ppend =3D '1' where SubjectSchemaUId in (select [UId] from SysSchema where =
+Name =3D 'SocialSubscription') and SysAdminUnitId =3D '720B771C-E7A7-4F31-9=
+CFB-52CD21C3739F'</p>
+<p style=3D"margin-left: 30.0px;">/*CaseFile CanAppend CanEdit CanDelete*/<=
+br />update [dbo].[SysEntitySchemaOperationRight] set CanAppend =3D '1' whe=
+re SubjectSchemaUId in (select [UId] from SysSchema where Name =3D 'CaseFil=
+e') and SysAdminUnitId =3D '720B771C-E7A7-4F31-9CFB-52CD21C3739F'<br />upda=
+te [dbo].[SysEntitySchemaOperationRight] set CanEdit =3D '1' where SubjectS=
+chemaUId in (select [UId] from SysSchema where Name =3D 'CaseFile') and Sys=
+AdminUnitId =3D '720B771C-E7A7-4F31-9CFB-52CD21C3739F'<br />update [dbo].[S=
+ysEntitySchemaOperationRight] set CanDelete =3D '1' where SubjectSchemaUId =
+in (select [UId] from SysSchema where Name =3D 'CaseFile') and SysAdminUnit=
+Id =3D '720B771C-E7A7-4F31-9CFB-52CD21C3739F'</p>
+<p style=3D"margin-left: 30.0px;">/*ESNNotification CanEdit CanDelete*/<br =
+/>update [dbo].[SysEntitySchemaOperationRight] set CanEdit =3D '1' where Su=
+bjectSchemaUId in (select [UId] from SysSchema where Name =3D 'ESNNotificat=
+ion') and SysAdminUnitId =3D '720B771C-E7A7-4F31-9CFB-52CD21C3739F'<br />up=
+date [dbo].[SysEntitySchemaOperationRight] set CanDelete =3D '1' where Subj=
+ectSchemaUId in (select [UId] from SysSchema where Name =3D 'ESNNotificatio=
+n') and SysAdminUnitId =3D '720B771C-E7A7-4F31-9CFB-52CD21C3739F'</p>
+<p style=3D"margin-left: 30.0px;"><br />11. <strong>=D0=9F=D0=B5=D1=80=D0=
+=B5=D0=BE=D0=BF=D1=80=D0=B5=D0=B4=D0=B5=D0=BB=D0=B8=D1=82=D1=8C =D0=B0=D0=
+=B2=D1=82=D0=BE=D0=B8=D0=BD=D0=BA=D1=80=D0=B5=D0=BC=D0=B5=D0=BD=D1=82 =D0=
+=BD=D0=B0 =D0=BF=D1=80=D0=BE=D1=86=D0=B5=D0=B4=D1=83=D1=80=D1=83:</strong><=
+br />IF NOT EXISTS (SELECT * FROM sys.objects WHERE type =3D 'P' AND name =
+=3D 'tsp_GenerateSequenseNumber')<br /> EXEC('CREATE PROCEDURE [dbo].[tsp_G=
+enerateSequenseNumber] AS BEGIN SET NOCOUNT ON; END')<br />GO<br />ALTER PR=
+OCEDURE [dbo].[tsp_GenerateSequenseNumber] <br /> @entitySchemaName NVARCHA=
+R(255),<br /> @returnValue NVARCHAR(255) Out<br />AS<br />DECLARE @CodeMask=
+SettingName NVARCHAR (255)<br />DECLARE @LastNumberSettingName NVARCHAR (25=
+5)<br />DECLARE @SysSettingsId NVARCHAR (255)<br />DECLARE @IntegerValue NV=
+ARCHAR (255)<br />DECLARE @MaskValue NVARCHAR (255)<br />DECLARE @UpdateRes=
+ult table(IntegerValue int)</p>
+<p style=3D"margin-left: 30.0px;">SET @CodeMaskSettingName =3D @entitySchem=
+aName + 'CodeMask'<br />SET @LastNumberSettingName =3D @entitySchemaName + =
+'LastNumber'</p>
+<p style=3D"margin-left: 30.0px;">SELECT @MaskValue =3D TextValue<br />FROM=
+ SysSettingsValue <br />where SysSettingsId in ( SELECT Id <br /> FROM SysS=
+ettings <br /> WHERE Code =3D @CodeMaskSettingName)<br />and SysAdminUnitId=
+ =3D 'A29A3BA5-4B0D-DE11-9A51-005056C00008'</p>
+<p style=3D"margin-left: 30.0px;"><br />SELECT @SysSettingsId =3D Id FROM S=
+ysSettings<br />WHERE Code =3D @LastNumberSettingName</p>
+<p style=3D"margin-left: 30.0px;">UPDATE SysSettingsValue SET IntegerValue =
+=3D IntegerValue + 1<br />OUTPUT inserted.IntegerValue into @UpdateResult<b=
+r />WHERE SysSettingsId =3D @SysSettingsId<br />and SysAdminUnitId =3D 'A29=
+A3BA5-4B0D-DE11-9A51-005056C00008'</p>
+<p style=3D"margin-left: 30.0px;">SELECT @IntegerValue =3D IntegerValue <br=
+ />FROM @UpdateResult</p>
+<p style=3D"margin-left: 30.0px;">Set @returnValue =3D REPLACE(@MaskValue, =
+'{0}', @IntegerValue)</p>
+<p style=3D"margin-left: 30.0px;">12. <strong>=D0=9D=D0=B0=D1=81=D1=82=D1=
+=80=D0=BE=D0=B8=D1=82=D1=8C =D0=BE=D1=82=D0=BE=D0=B1=D1=80=D0=B0=D0=B6=D0=
+=B5=D0=BD=D0=B8=D1=8F =D0=BA=D0=BE=D0=BD=D1=82=D1=80=D0=BE=D0=BB=D0=BE=D0=
+=B2 =D0=BD=D0=B0 =D0=BF=D0=BE=D1=80=D1=82=D0=B0=D0=BB=D0=B5, =D1=81=D1=82=
+=D1=80=D0=B0=D0=BD=D0=B8=D1=86=D0=B0=D1=85 =D1=80=D0=B0=D0=B7=D0=B4=D0=B5=
+=D0=BB=D0=B0 =D0=B8 =D0=BA=D0=B0=D1=80=D1=82=D0=BE=D1=87=D0=BA=D0=B8:</stro=
+ng><br />12.1 =D0=A0=D0=B0=D0=B7=D0=BC=D0=B5=D1=89=D0=B5=D0=BD=D0=B8=D0=B5 =
+=D0=B8 =D0=BE=D1=82=D0=BE=D0=B1=D1=80=D0=B0=D0=B6=D0=B5=D0=BD=D0=B8=D0=B5 =
+=D0=BA=D0=BE=D0=BD=D1=82=D1=80=D0=BE=D0=BB=D0=BE=D0=B2<br />12.2 =D0=A1=D0=
+=BA=D1=80=D1=8B=D1=82=D1=8C =D1=81=D0=BF=D1=80=D0=B0=D0=B2=D0=BA=D1=83<br /=
+>12.3 =D0=A1=D0=BA=D1=80=D1=8B=D1=82=D1=8C =D1=84=D0=B8=D0=BB=D1=8C=D1=82=
+=D1=80=D0=B0=D1=86=D0=B8=D1=8F =D0=BF=D0=BE =D0=BE=D1=82=D0=B2=D0=B5=D1=82=
+=D1=81=D1=82=D0=B2=D0=B5=D0=BD=D0=BD=D0=BE=D0=BC=D1=83<br />12.4 =D0=A1=D0=
+=BA=D1=80=D1=8B=D1=82=D1=8C =D0=B4=D0=B5=D0=B9=D1=81=D1=82=D0=B2=D0=B8=D0=
+=B5 =D0=BF=D0=BE=D0=BB=D0=BD=D0=BE=D1=81=D1=82=D1=8C=D1=8E =D0=B2 =D0=BA=D0=
+=B0=D1=80=D1=82=D0=BE=D1=87=D0=BA=D0=B5 =D0=B8 =D1=87=D0=B0=D1=81=D1=82=D1=
+=8C =D0=BF=D1=83=D0=BD=D0=BA=D1=82=D0=BE=D0=B2 =D0=B2 =D1=80=D0=B5=D0=B5=D1=
+=81=D1=82=D1=80=D0=B5<br />12.5 =D0=A1=D0=BA=D1=80=D1=8B=D1=82=D1=8C =D0=B2=
+=D0=B8=D0=B4 =D0=B4=D0=B5=D0=B9=D1=81=D1=82=D0=B2=D0=B8=D0=B5 =D0=BF=D0=BE=
+=D0=BB=D0=BD=D0=BE=D1=81=D1=82=D1=8C=D1=8E =D0=B2 =D0=BA=D0=B0=D1=80=D1=82=
+=D0=BE=D1=87=D0=BA=D0=B5 =D0=B8 =D1=87=D0=B0=D1=81=D1=82=D1=8C =D0=BF=D1=83=
+=D0=BD=D0=BA=D1=82=D0=BE=D0=B2 =D0=B2 =D1=80=D0=B5=D0=B5=D1=81=D1=82=D1=80=
+=D0=B5<br />12.6 =D0=A1=D0=BA=D1=80=D1=8B=D1=82=D1=8C =D0=B2 =D0=B1=D0=B0=
+=D0=B7=D0=B5 =D0=B7=D0=BD=D0=B0=D0=BD=D0=B8=D0=B9 =D0=B4=D0=BE=D0=B1=D0=B0=
+=D0=B2=D0=BB=D0=B5=D0=BD=D0=B8=D0=B5 =D1=84=D0=B0=D0=B9=D0=BB=D0=BE=D0=B2<b=
+r />12.7 =D0=9E=D1=82=D0=BE=D0=B1=D1=80=D0=B0=D0=B7=D0=B8=D1=82=D1=8C =D0=
+=BC=D0=B5=D0=BD=D0=B5=D0=B4=D0=B6=D0=B5=D1=80 =D0=B3=D1=80=D1=83=D0=BF=D0=
+=BF<br />12.8 =D0=A1=D0=BA=D1=80=D1=8B=D1=82=D1=8C =D0=B0=D0=BD=D0=B0=D0=BB=
+=D0=B8=D1=82=D0=B8=D0=BA=D1=83<br />12.9 =D0=A1=D0=BA=D1=80=D1=8B=D1=82=D1=
+=8C =E2=80=9C=D0=97=D0=B0=D0=BF=D1=83=D1=81=D1=82=D0=B8=D1=82=D1=8C =D0=BF=
+=D1=80=D0=BE=D1=86=D0=B5=D1=81=D1=81, =D0=B4=D0=BE=D0=B1=D0=B0=D0=B2=D0=B8=
+=D1=82=D1=8C=E2=80=9D</p>
+<p style=3D"margin-left: 30.0px;">13.&nbsp;<strong>=D0=9F=D0=BE=D0=BB=D0=BD=
+=D1=8B=D0=B5 =D0=B8/=D0=B8=D0=BB=D0=B8 =D0=B0=D0=BA=D1=82=D1=83=D0=B0=D0=BB=
+=D1=8C=D0=BD=D1=8B=D0=B5 =D1=81=D0=BA=D1=80=D0=B8=D0=BF=D1=82=D1=8B, =D0=B0=
+ =D1=82=D0=B0=D0=BA=D0=B6=D0=B5 =D0=B4=D1=80=D1=83=D0=B3=D1=83=D1=8E =D0=B8=
+=D0=BD=D1=82=D0=B5=D1=80=D0=B5=D1=81=D1=83=D1=8E=D1=89=D1=83=D1=8E =D0=92=
+=D0=B0=D1=81 =D0=B8=D0=BD=D1=84=D0=BE=D1=80=D0=BC=D0=B0=D1=86=D0=B8=D1=8E, =
+=D0=92=D1=8B =D0=BC=D0=BE=D0=B6=D0=B5=D1=82=D0=B5 =D0=BF=D0=BE=D1=81=D0=BC=
+=D0=BE=D1=82=D1=80=D0=B5=D1=82=D1=8C =D0=BD=D0=B5=D0=BF=D0=BE=D1=81=D1=80=
+=D0=B5=D0=B4=D1=81=D1=82=D0=B2=D0=B5=D0=BD=D0=BD=D0=BE =D0=B2 =D0=BF=D0=B0=
+=D0=BA=D0=B5=D1=82=D0=B5 &quot;=D0=9F=D0=BE=D1=80=D1=82=D0=B0=D0=BB&quot;</=
+strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+    </div>
+</body>
+</html>
+------=_Part_4297_639206654.1438066176756--

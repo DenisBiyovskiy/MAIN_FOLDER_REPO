@@ -1,0 +1,2403 @@
+Message-ID: <1116552254.6093.1446020450302.JavaMail.CoreDBAdmin@TSWiki>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_6092_1042184398.1446020450300"
+
+------=_Part_6092_1042184398.1446020450300
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5 =D1=84=D1=83=D0=BD=D0=BA=D1=86=D0=
+=B8=D0=B8 WorkspaceConsole 7.1(7.0) - 7.x</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+#main {
+    padding-bottom: 1em !important; /* The default padding of 6em is too mu=
+ch for printouts */
+}
+
+body {
+    font-family: Arial, Helvetica, FreeSans, sans-serif;
+    font-size: 10pt;
+    line-height: 1.2;
+}
+
+body, #full-height-container, #main, #page, #content, .has-personal-sidebar=
+ #content {
+    background: #fff    !important;
+    color: #000         !important;
+    border: 0           !important;
+    width: 100%         !important;
+    height: auto        !important;
+    min-height: auto    !important;
+    margin: 0           !important;
+    padding: 0          !important;
+    display: block      !important;
+}
+
+a, a:link, a:visited, a:focus, a:hover, a:active {
+    color: #000;
+}
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
+    font-family: Arial, Helvetica, FreeSans, sans-serif;
+    page-break-after: avoid;
+}
+pre {
+    font-family: Monaco, "Courier New", monospace;
+}
+
+#header,
+.aui-header-inner,
+#navigation,
+#sidebar,
+.sidebar,
+#personal-info-sidebar,
+.ia-fixed-sidebar,
+.page-actions,
+.navmenu,
+.ajs-menu-bar,
+.noprint,
+.inline-control-link,
+.inline-control-link a,
+a.show-labels-editor,
+.global-comment-actions,
+.comment-actions,
+.quick-comment-container,
+#addcomment {
+    display: none !important;
+}
+
+.comment .date::before {
+    content: none !important; /* remove middot for print view */
+}
+
+h1.pagetitle img {
+    height: auto;
+    width: auto;
+}
+
+.print-only {
+    display: block;
+}
+#footer {
+    position: relative !important; /* CONF-17506 Place the footer at end of=
+ the content */
+    margin: 0;
+    padding: 0;
+    background: none;
+    clear: both;
+}
+
+#poweredby {
+    border-top: none;
+    background: none;
+}
+
+#poweredby li.print-only {
+    display: list-item;
+    font-style: italic;
+}
+
+#poweredby li.noprint {
+    display:none;
+}
+
+
+/* no width controls in print */
+.wiki-content .table-wrap,
+.wiki-content p,
+.panel .codeContent,
+.panel .codeContent pre,
+.image-wrap {
+    overflow: visible !important;
+}
+
+/* TODO - should this work? */
+#children-section,
+#comments-section .comment,
+#comments-section .comment .comment-body,
+#comments-section .comment .comment-content,
+#comments-section .comment p {
+    page-break-inside: avoid;
+}
+
+#page-children a {
+    text-decoration: none;
+}
+
+/**
+ hide twixies
+
+ the specificity here is a hack because print styles
+ are getting loaded before the base styles. */
+#comments-section.pageSection .section-header,
+#comments-section.pageSection .section-title,
+#children-section.pageSection .section-header,
+#children-section.pageSection .section-title,
+.children-show-hide {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.children-show-hide.icon {
+    display: none;
+}
+
+/* personal sidebar */
+.has-personal-sidebar #content {
+    margin-right: 0px;
+}
+
+.has-personal-sidebar #content .pageSection {
+    margin-right: 0px;
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5 =D1=84=D1=83=D0=BD=D0=BA=D1=86=D0=B8=
+=D0=B8 WorkspaceConsole 7.1(7.0) - 7.x</h1>
+    <div class=3D"Section1">
+        <p>&nbsp;</p>
+<p><style type=3D"text/css">/*<![CDATA[*/
+div.rbtoc1446020449842 {padding: 0px;}
+div.rbtoc1446020449842 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1446020449842 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style></p>
+<div class=3D"toc-macro rbtoc1446020449842">=20
+<ul class=3D"toc-indentation">=20
+<li><a href=3D"#id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=
+=D1=86=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=9F=D0=B0=D1=80=D0=B0=D0=
+=BC=D0=B5=D1=82=D1=80=D1=8B=D0=BA=D0=BE=D0=BC=D0=B0=D0=BD=D0=B4=D0=BD=D0=BE=
+=D0=B9=D1=81=D1=82=D1=80=D0=BE=D0=BA=D0=B8">=D0=9F=D0=B0=D1=80=D0=B0=D0=BC=
+=D0=B5=D1=82=D1=80=D1=8B =D0=BA=D0=BE=D0=BC=D0=B0=D0=BD=D0=B4=D0=BD=D0=BE=
+=D0=B9 =D1=81=D1=82=D1=80=D0=BE=D0=BA=D0=B8</a></li>=20
+<li><a href=3D"#id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=
+=D1=86=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=9F=D1=80=D0=B8=D0=BC=D0=
+=B5=D1=80=D1=8B=D0=B8=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=
+=D0=BD=D0=B8=D1=8F">=D0=9F=D1=80=D0=B8=D0=BC=D0=B5=D1=80=D1=8B =D0=B8=D1=81=
+=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D1=8F</a></li>=
+=20
+<li><a href=3D"#id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=
+=D1=86=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=98=D1=81=D0=BF=D0=BE=D0=
+=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D0=B5WorkspaceConsole=D0=B4=
+=D0=BB=D1=8F=D0=B7=D0=B0=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B8\=D0=B2=D1=8B=
+=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B8=D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=
+=BE=D0=B2=D0=BD=D0=B0=D0=BF=D1=80=D1=8F=D0=BC=D1=83=D1=8E=D0=B2SVN=D0=B1=D0=
+=B5=D0=B7=D1=81=D0=B1=D0=BE=D1=80=D0=BA=D0=B8=D0=91=D0=94">=D0=98=D1=81=D0=
+=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D0=B5 WorkspaceCo=
+nsole =D0=B4=D0=BB=D1=8F =D0=B7=D0=B0=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B8\=
+=D0=B2=D1=8B=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B8 =D1=80=D0=B5=D1=81=D1=83=
+=D1=80=D1=81=D0=BE=D0=B2 =D0=BD=D0=B0=D0=BF=D1=80=D1=8F=D0=BC=D1=83=D1=8E =
+=D0=B2 SVN =D0=B1=D0=B5=D0=B7 =D1=81=D0=B1=D0=BE=D1=80=D0=BA=D0=B8 =D0=91=
+=D0=94</a></li>=20
+<li><a href=3D"#id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=
+=D1=86=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=98=D1=81=D0=BF=D0=BE=D0=
+=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D1=8FWorkspaceConsole=D0=B4=
+=D0=BB=D1=8F=D0=BF=D1=80=D0=BE=D0=B2=D0=B5=D1=80=D0=BA=D0=B8=D0=BB=D0=BE=D0=
+=BA=D0=B0=D0=BB=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B8=D1=80=D0=B5=D1=81=D1=83=
+=D1=80=D1=81=D0=BE=D0=B2">=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=
+=D0=B2=D0=B0=D0=BD=D0=B8=D1=8F WorkspaceConsole =D0=B4=D0=BB=D1=8F =D0=BF=
+=D1=80=D0=BE=D0=B2=D0=B5=D1=80=D0=BA=D0=B8 =D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=
+=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B8 =D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=
+=D0=BE=D0=B2</a></li>=20
+</ul>=20
+</div>
+<p></p>
+<p>&nbsp;</p>=20
+<div class=3D"aui-message hint shadowed information-macro">=20
+<p class=3D"title">=D0=97=D0=B0=D0=BF=D1=83=D1=81=D0=BA WorkspaceConsole.ex=
+e</p>=20
+<span class=3D"aui-icon icon-hint">Icon</span>=20
+<div class=3D"message-content">=20
+<p>=D0=9D=D0=B0=D1=87=D0=B8=D0=BD=D0=B0=D1=8F =D1=81 =D1=81=D0=B1=D0=BE=D1=
+=80=D0=BA=D0=B8 7.0.655 <span style=3D"color: rgb(255,0,0);"><strong>Worksp=
+aceConsole =D0=BA=D0=BE=D0=BC=D0=BF=D0=B8=D0=BB=D0=B8=D1=80=D1=83=D0=B5=D1=
+=82=D1=81=D1=8F =D0=B2 =D1=80=D0=B5=D0=B6=D0=B8=D0=BC=D0=B5 AnyCPU</strong>=
+</span>. =D0=AD=D1=82=D0=BE =D0=BE=D0=B7=D0=BD=D0=B0=D1=87=D0=B0=D0=B5=D1=
+=82, =D1=87=D1=82=D0=BE =D0=BF=D1=80=D0=B8 =D0=BF=D0=BE=D0=B4=D0=BA=D0=BB=
+=D1=8E=D1=87=D0=B5=D0=BD=D0=B8=D0=B8 WorkspaceConsole =D0=BA =D0=91=D0=94 O=
+racle =D0=BD=D0=B5=D0=BE=D0=B1=D1=85=D0=BE=D0=B4=D0=B8=D0=BC=D0=BE =D1=83=
+=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=B8=D1=82=D1=8C <a rel=3D"nofollow">=
+x64 Oracle Client</a>.</p>
+<p><span>=D0=A7=D1=82=D0=BE=D0=B1 =D0=BD=D0=B5 =D1=83=D1=81=D1=82=D0=B0=D0=
+=BD=D0=B0=D0=B2=D0=BB=D0=B8=D0=B2=D0=B0=D1=82=D1=8C x64 Oracle Client =D0=
+=BC=D0=BE=D0=B6=D0=BD=D0=BE WorkspaceConsole =D0=B7=D0=B0=D0=BF=D1=83=D1=81=
+=D1=82=D0=B8=D1=82=D1=8C =D0=B2 =D1=8586 =D1=80=D0=B5=D0=B6=D0=B8=D0=BC=D0=
+=B5 =D1=81 =D0=BF=D0=BE=D0=BC=D0=BE=D1=89=D1=8C=D1=8E =D0=BA=D0=BE=D0=BC=D0=
+=B0=D0=BD=D0=B4=D1=8B &quot;</span><span class=3D"pln">corflags.exe </span>=
+<span class=3D"pun">/</span><span class=3D"lit">32bit</span><span class=3D"=
+pun">+</span><span class=3D"pln">&nbsp;</span><span class=3D"pun">&lt;=D0=
+=9F=D1=83=D1=82=D1=8C =D0=BA WorkspaceConsole</span><span class=3D"pun">&gt=
+;</span><span>&quot;</span></p>
+<p><span style=3D"color: rgb(255,0,0);"><strong>=D0=98=D0=B7 VisualStudio W=
+orkspaceConsole =D0=BF=D0=BE =D0=BF=D1=80=D0=B5=D0=B6=D0=BD=D0=B5=D0=BC=D1=
+=83 =D0=B7=D0=B0=D0=BF=D1=83=D1=81=D0=BA=D0=B0=D0=B5=D1=82=D1=81=D1=8F =D0=
+=B2 =D1=80=D0=B5=D0=B6=D0=B8=D0=BC=D0=B5 =D1=8586.</strong></span></p>=20
+</div>=20
+</div>=20
+<div class=3D"aui-message hint shadowed information-macro">=20
+<p class=3D"title">=D0=A3=D0=B4=D0=B0=D0=BB=D0=B5=D0=BD=D0=B8=D0=B5 =D0=BE=
+=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B8 SaveWorkspaceContent </p>=20
+<span class=3D"aui-icon icon-hint">Icon</span>=20
+<div class=3D"message-content">=20
+<p><span style=3D"color: rgb(0,51,102);">=D0=9D=D0=B0=D1=87=D0=B8=D0=BD=D0=
+=B0=D1=8F =D1=81 =D1=81=D0=B1=D0=BE=D1=80=D0=BA=D0=B8 7.0.717</span><span>&=
+nbsp;</span><span style=3D"color: rgb(0,51,102);">=D0=BE=D0=BF=D0=B5=D1=80=
+=D0=B0=D1=86=D0=B8=D1=8F</span><em> </em><strong><strong><em><span style=3D=
+"color: rgb(255,0,0);"><strong><em>SaveWorkspaceContent&nbsp;</em></strong>=
+&nbsp;<u>=D1=83=D0=B4=D0=B0=D0=BB=D0=B5=D0=BD=D0=B0</u></span>, </em></stro=
+ng></strong><span style=3D"color: rgb(0,51,102);">=D0=B2=D0=BC=D0=B5=D1=81=
+=D1=82=D0=BE =D0=BD=D0=B5=D0=B5 =D0=B4=D0=BE=D0=B1=D0=B0=D0=B2=D0=BB=D0=B5=
+=D0=BD=D1=8B:</span><strong><strong><em> </em></strong></strong><span style=
+=3D"color: rgb(255,0,0);"><strong><strong><em>SaveSvnContent</em></strong><=
+/strong><span style=3D"color: rgb(0,0,0);"><strong><strong><em> </em></stro=
+ng></strong>=D0=B8</span><strong><strong><em> SaveDBContent</em></strong></=
+strong></span></p>=20
+</div>=20
+</div>=20
+<div class=3D"aui-message hint shadowed information-macro">=20
+<span class=3D"aui-icon icon-hint">Icon</span>=20
+<div class=3D"message-content">=20
+<p>=D0=9F=D0=B5=D1=80=D0=B5=D0=B4 =D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D0=
+=B5=D0=BD=D0=B8=D0=B5=D0=BC =D0=BA=D0=BE=D0=BC=D0=B0=D0=BD=D0=B4=D1=8B =D1=
+=81=D0=BE=D0=B2=D0=B5=D1=82=D1=83=D0=B5=D0=BC =D1=81=D0=BE=D0=B7=D0=B4=D0=
+=B0=D1=82=D1=8C =D0=B1=D0=B5=D0=BA=D0=B0=D0=BF =D0=91=D0=94 =D0=BA=D0=BE=D1=
+=82=D0=BE=D1=80=D1=83=D1=8E =D0=BF=D0=BB=D0=B0=D0=BD=D0=B8=D1=80=D1=83=D0=
+=B5=D1=82=D1=81=D1=8F =D0=BE=D0=B1=D0=BD=D0=BE=D0=B2=D0=B8=D1=82=D1=8C!</p>=
+=20
+</div>=20
+</div>=20
+<div class=3D"aui-message hint shadowed information-macro">=20
+<p class=3D"title">=D0=90=D0=BA=D1=82=D1=83=D0=B0=D0=BB=D1=8C=D0=BD=D0=BE =
+=D0=B4=D0=BB=D1=8F 7.7</p>=20
+<span class=3D"aui-icon icon-hint">Icon</span>=20
+<div class=3D"message-content">=20
+<p><span style=3D"color: rgb(0,0,0);">=D0=94=D0=BB=D1=8F =D0=BF=D0=BE=D0=B4=
+=D0=B4=D0=B5=D1=80=D0=B6=D0=BA=D0=B8 =D0=BC=D1=83=D0=BB=D1=8C=D1=82=D0=B8=
+=D1=8F=D0=B7=D1=8B=D1=87=D0=B8=D1=8F =D0=B2 =D0=B1=D0=B0=D0=BD=D0=B4=D0=BB=
+=D0=B0=D1=85 =D1=81=D1=85=D0=B5=D0=BC =D0=B2 WorkspaceConsole.exe.Config =
+=D0=B2 =D1=81=D0=B5=D0=BA=D1=86=D0=B8=D1=8E&nbsp;<em>appSettings&nbsp;</em>=
+=D0=BD=D0=B0=D0=B4=D0=BE =D0=B4=D0=BE=D0=B1=D0=B0=D0=B2=D0=B8=D1=82=D1=8C =
+=D0=B0=D1=82=D1=80=D0=B8=D0=B1=D1=83=D1=82<em>&nbsp;UseMultilingualBundles&=
+nbsp;</em>=D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=B8=D0=B2 =D0=B5=D0=
+=B3=D0=BE</span>&nbsp;=D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D0=B5 =D0=
+=B2<em>&nbsp;true.</em></p>
+<p><em>Example: (<span style=3D"color: rgb(0,0,255);">&lt;</span><span styl=
+e=3D"color: rgb(128,0,0);">add</span>&nbsp;<span style=3D"color: rgb(255,0,=
+0);">key</span><span style=3D"color: rgb(0,0,255);">=3D&quot;UseMultilingua=
+lBundles&quot;</span>&nbsp;<span style=3D"color: rgb(255,0,0);">value</span=
+><span style=3D"color: rgb(0,0,255);">=3D&quot;true&quot; /&gt;</span>). </=
+em></p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=8C=D1=81=
+=D1=8F =D0=B4=D0=BB=D1=8F InstallBundlePackages, InstallFromRepository, Reg=
+enerateIncludeDependencySources.</p>=20
+</div>=20
+</div>=20
+<h2 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=9F=D0=B0=D1=80=D0=B0=D0=BC=D0=
+=B5=D1=82=D1=80=D1=8B=D0=BA=D0=BE=D0=BC=D0=B0=D0=BD=D0=B4=D0=BD=D0=BE=D0=B9=
+=D1=81=D1=82=D1=80=D0=BE=D0=BA=D0=B8">=D0=9F=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=
+=D1=82=D1=80=D1=8B =D0=BA=D0=BE=D0=BC=D0=B0=D0=BD=D0=B4=D0=BD=D0=BE=D0=B9 =
+=D1=81=D1=82=D1=80=D0=BE=D0=BA=D0=B8</h2>
+<p>=D0=9F=D1=80=D0=B8 =D0=B7=D0=B0=D0=BF=D1=83=D1=81=D0=BA=D0=B5 =D0=B4=D0=
+=B0=D0=BD=D0=BD=D0=BE=D0=B9 =D1=83=D1=82=D0=B8=D0=BB=D0=B8=D1=82=D1=8B =D0=
+=BD=D0=B5=D0=BE=D0=B1=D1=85=D0=BE=D0=B4=D0=B8=D0=BC=D0=BE =D1=83=D0=BA=D0=
+=B0=D0=B7=D0=B0=D1=82=D1=8C =D0=BA=D0=BE=D1=80=D1=80=D0=B5=D0=BA=D1=82=D0=
+=BD=D1=83=D1=8E =D1=81=D1=82=D1=80=D0=BE=D0=BA=D1=83 =D0=BF=D0=BE=D0=B4=D0=
+=BA=D0=BB=D1=8E=D1=87=D0=B5=D0=BD=D0=B8=D1=8F =D0=BA =D0=91=D0=94 (=D1=84=
+=D0=B0=D0=B9=D0=BB<span style=3D"color: rgb(0,0,0);"> WorkspaceConsole.exe.=
+Config, =D1=81=D0=B5=D0=BA=D1=86=D0=B8=D1=8F <em>general</em> =D0=B0=D1=82=
+=D1=80=D0=B8=D0=B1=D1=83=D1=82 <em>connectionStringName</em>).</span><em>&n=
+bsp;</em>=D0=98=D0=BC=D0=B5=D0=BD=D0=B0 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=
+=B5=D1=82=D1=80=D0=BE=D0=B2 =D0=BA=D0=BE=D0=BC=D0=B0=D0=BD=D0=B4=D0=BD=D0=
+=BE=D0=B9 =D1=81=D1=82=D1=80=D0=BE=D0=BA=D0=B8 <span style=3D"color: rgb(0,=
+51,102);">=D0=BD=D0=B5 =D1=80=D0=B5=D0=B3=D0=B8=D1=81=D1=82=D1=80=D0=BE=D1=
+=87=D1=83=D0=B2=D1=81=D1=82=D0=B2=D0=B8=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=D1=8B=
+=D0=B5</span>.&nbsp; =D0=94=D0=BE=D1=81=D1=82=D1=83=D0=BF=D0=BD=D1=8B =D1=
+=81=D0=BB=D0=B5=D0=B4=D1=83=D1=8E=D1=89=D0=B8=D0=B5 =D0=BF=D0=B0=D1=80=D0=
+=B0=D0=BC=D0=B5=D1=82=D1=80=D1=8B =D0=BA=D0=BE=D0=BC=D0=B0=D0=BD=D0=B4=D0=
+=BD=D0=BE=D0=B9 =D1=81=D1=82=D1=80=D0=BE=D0=BA=D0=B8:</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-operation"><span style=3D"color: r=
+gb(0,0,0);">operation</span></h3>
+<p>=D0=9D=D0=B0=D0=B7=D0=B2=D0=B0=D0=BD=D0=B8=D0=B5 =D0=BE=D0=BF=D0=B5=D1=
+=80=D0=B0=D1=86=D0=B8=D0=B8, =D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=83=D1=8E =D0=
+=BD=D0=B5=D0=BE=D0=B1=D1=85=D0=BE=D0=B4=D0=B8=D0=BC=D0=BE =D0=B2=D1=8B=D0=
+=BF=D0=BE=D0=BB=D0=BD=D0=B8=D1=82=D1=8C.</p>
+<p>=D0=9E=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=D1=8B=D0=B9=
+ =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80. =D0=97=D0=BD=D0=B0=D1=87=
+=D0=B5=D0=BD=D0=B8=D1=8F =D0=BC=D0=BE=D0=B3=D1=83=D1=82 =D0=B1=D1=8B=D1=82=
+=D1=8C =D1=81=D0=BB=D0=B5=D0=B4=D1=83=D1=8E=D1=89=D0=B8=D0=BC=D0=B8:</p>
+<p style=3D"margin-left: 30.0px;"><strong><em><span><span style=3D"color: r=
+gb(0,0,0);"><a href=3D"/pages/viewpage.action?pageId=3D28904379"><span styl=
+e=3D"color: rgb(0,0,0);">InstallFromSvn</span></a></span> (<span style=3D"c=
+olor: rgb(255,0,0);">=D0=BD=D0=B5 =D1=84=D1=83=D0=BD=D0=BA=D1=86=D0=B8=D0=
+=BE=D0=BD=D0=B8=D1=80=D1=83=D0=B5=D1=82 =D0=B2 7.5.0</span>) </span></em></=
+strong><em><span>-</span></em><span class=3D"apple-converted-space"><em><sp=
+an>&nbsp;</span></em></span><span>=D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D1=
+=8F=D1=8E=D1=82=D1=81=D1=8F =D1=81=D0=BB=D0=B5=D0=B4=D1=83=D1=8E=D1=89=D0=
+=B8=D0=B5 =D0=B4=D0=B5=D0=B9=D1=81=D1=82=D0=B2=D0=B8=D1=8F: =D0=97=D0=B0=D0=
+=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B0 =D0=B8=D0=B7 SVN <span>=D0=BF=D0=BE=D1=81=
+=D0=BB=D0=B5=D0=B4=D0=BD=D0=B5=D0=B9 =D0=B2=D0=B5=D1=80=D1=81=D0=B8=D0=B8 =
+=D1=81=D1=82=D1=80=D1=83=D0=BA=D1=82=D1=83=D1=80=D1=8B =D0=B8 =D0=BC=D0=B5=
+=D1=82=D0=B0=D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =D0=BF=D0=B0=D0=BA=D0=B5=
+=D1=82=D0=BE=D0=B2 =D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=D1=8C=D0=BD=D0=BE =D0=BD=
+=D0=B0 =D0=B4=D0=B8=D1=81=D0=BA;</span> =D1=81=D1=80=D0=B0=D0=B2=D0=BD=D0=
+=B5=D0=BD=D0=B8=D0=B5 =D1=81=D1=82=D1=80=D1=83=D0=BA=D1=82=D1=83=D1=80=D1=
+=8B =D1=83=D0=BA=D0=B0=D0=B7=D0=B0=D0=BD=D0=BD=D0=BE=D0=B9 =D0=BA=D0=BE=D0=
+=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B8 =D1=81 =D0=B7=D0=
+=B0=D0=B3=D1=80=D1=83=D0=B6=D0=B5=D0=BD=D0=BD=D0=BE=D0=B9 =D0=B8=D0=B7 <spa=
+n>SVN<span>&nbsp;</span></span>; =D0=BF=D0=B5=D1=80=D0=B5=D0=B4 =D1=81=D0=
+=BE=D1=85=D1=80=D0=B0=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC =D0=BF=D0=B0=D0=
+=BA=D0=B5=D1=82=D0=BE=D0=B2 =D0=B2 =D0=91=D0=94 =D0=B2=D1=8B=D0=BF=D0=BE=D0=
+=BB=D0=BD=D1=8F=D1=8E=D1=82=D1=81=D1=8F SQL =D1=81=D0=BA=D1=80=D0=B8=D0=BF=
+=D1=82=D1=8B =D0=BE=D0=BF=D1=80=D0=B5=D0=B4=D0=B5=D0=BB=D0=B5=D0=BD=D0=BD=
+=D1=8B=D0=B5 =D0=B4=D0=BB=D1=8F =D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D0=B5=
+=D0=BD=D0=B8=D1=8F =D0=BF=D0=B5=D1=80=D0=B5=D0=B4 =D1=83=D1=81=D1=82=D0=B0=
+=D0=BD=D0=BE=D0=B2=D0=BA=D0=BE=D0=B9 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=B0; =
+<span>=D0=BF=D0=BE =D1=80=D0=B5=D0=B7=D1=83=D0=BB=D1=8C=D1=82=D0=B0=D1=82=
+=D1=83 =D1=81=D1=80=D0=B0=D0=B2=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F - =D1=81=D1=
+=82=D1=80=D1=83=D0=BA=D1=82=D1=83=D1=80=D0=B0 =D0=B8 =D0=BC=D0=B5=D1=82=D0=
+=B0=D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D0=B5 =D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=
+=B5=D0=BD=D0=BD=D1=8B=D1=85 =D1=8D=D0=BB=D0=B5=D0=BC=D0=B5=D0=BD=D1=82=D0=
+=BE=D0=B2 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2 (=D1=81=D1=85=D0=B5=D0=
+=BC=D1=8B, =D1=81=D0=B1=D0=BE=D1=80=D0=BA=D0=B8, SQL =D1=81=D0=BA=D1=80=D0=
+=B8=D0=BF=D1=82=D1=8B, =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D0=B5), =D0=B0 =D1=82=
+=D0=B0=D0=BA=D0=B6=D0=B5 =D1=81=D0=B0=D0=BC=D0=B8=D1=85 =D0=BF=D0=B0=D0=BA=
+=D0=B5=D1=82=D0=BE=D0=B2, =D1=81=D0=BE=D1=85=D1=80=D0=B0=D0=BD=D1=8F=D1=8E=
+=D1=82=D1=81=D1=8F =D0=B2 =D0=91=D0=94; </span>=D0=BF=D0=BE=D1=81=D0=BB=D0=
+=B5 =D1=81=D0=BE=D1=85=D1=80=D0=B0=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F =D0=BF=D0=
+=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2 =D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D1=
+=8F=D0=B5=D1=82=D1=81=D1=8F - =D0=BF=D0=B5=D1=80=D0=B5=D0=B3=D0=B5=D0=BD=D0=
+=B5=D1=80=D0=B0=D1=86=D0=B8=D1=8F =D0=B8=D1=81=D1=85=D0=BE=D0=B4=D0=BD=D1=
+=8B=D1=85 =D0=BA=D0=BE=D0=B4=D0=BE=D0=B2, =D0=B2=D0=BD=D0=B5=D1=81=D0=B5=D0=
+=BD=D0=B8=D0=B5 =D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=B8=D0=B9 =D0=
+=B2 =D1=81=D1=82=D1=80=D1=83=D0=BA=D1=82=D1=83=D1=80=D1=83 =D0=91=D0=94, <s=
+pan>=D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5 SQL =D1=81=
+=D0=BA=D1=80=D0=B8=D0=BF=D1=82=D0=BE=D0=B2 =D0=BE=D0=BF=D1=80=D0=B5=D0=B4=
+=D0=B5=D0=BB=D0=B5=D0=BD=D0=BD=D1=8B=D1=85 =D0=B4=D0=BB=D1=8F =D0=B2=D1=8B=
+=D0=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F =D0=BF=D0=BE=D1=81=D0=BB=
+=D0=B5 =D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=B8 =D0=BF=D0=B0=
+=D0=BA=D0=B5=D1=82=D0=B0</span> =D0=B8 =D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=
+=D0=B2=D0=BA=D0=B0 =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =D0=BF=D1=80=D0=B8=
+=D0=B2=D1=8F=D0=B7=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =D0=BA =D0=BF=D0=B0=D0=BA=
+=D0=B5=D1=82=D1=83. =D0=92=D0=BE =D0=B2=D1=81=D0=B5=D1=85 =D1=81=D0=BB=D1=
+=83=D1=87=D0=B0=D1=8F=D1=85 - SQL =D1=81=D0=BA=D1=80=D0=B8=D0=BF=D1=82=D1=
+=8B, =D1=81=D1=85=D0=B5=D0=BC=D1=8B, =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D0=B5 -=
+ =D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F =D0=BF=D1=80=D0=B8=
+=D0=BC=D0=B5=D0=BD=D1=8F=D1=8E=D1=82=D1=81=D1=8F =D1=82=D0=BE=D0=BB=D1=8C=
+=D0=BA=D0=BE =D0=B4=D0=BB=D1=8F <strong>=D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=
+=B5=D0=BD=D0=BD=D1=8B=D1=85 =D0=B8=D0=BB=D0=B8 =D0=BD=D0=BE=D0=B2=D1=8B=D1=
+=85</strong> =D1=8D=D0=BB=D0=B5=D0=BC=D0=B5=D0=BD=D1=82=D0=BE=D0=B2.<br /><=
+/span></p>
+<p style=3D"margin-left: 30.0px;"><em><strong><em><span>Install</span></em>=
+</strong><strong><em><span>FromRepository </span></em></strong></em>&nbsp;-=
+<span class=3D"apple-converted-space">&nbsp;</span>=D0=B2=D1=8B=D0=BF=D0=BE=
+=D0=BB=D0=BD=D1=8F=D1=8E=D1=82=D1=81=D1=8F =D1=81=D0=BB=D0=B5=D0=B4=D1=83=
+=D1=8E=D1=89=D0=B8=D0=B5 =D0=B4=D0=B5=D0=B9=D1=81=D1=82=D0=B2=D0=B8=D1=8F: =
+=D0=97=D0=B0=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B0 zip-=D0=B0=D1=80=D1=85=D0=
+=B8=D0=B2=D0=BE=D0=B2 =D1=81 =D0=BF=D0=BE=D1=81=D0=BB=D0=B5=D0=B4=D0=BD=D0=
+=B5=D0=B9 =D0=B2=D0=B5=D1=80=D1=81=D0=B8=D0=B5=D0=B9 =D1=81=D1=82=D1=80=D1=
+=83=D0=BA=D1=82=D1=83=D1=80=D1=8B =D0=B8 =D0=BC=D0=B5=D1=82=D0=B0=D0=B4=D0=
+=B0=D0=BD=D0=BD=D1=8B=D1=85&nbsp;=D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2=
+ =D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=D1=8C=D0=BD=D0=BE =D0=BD=D0=B0 =D0=B4=D0=B8=
+=D1=81=D0=BA; =D1=81=D1=80=D0=B0=D0=B2=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5 =D1=81=
+=D1=82=D1=80=D1=83=D0=BA=D1=82=D1=83=D1=80=D1=8B =D1=83=D0=BA=D0=B0=D0=B7=
+=D0=B0=D0=BD=D0=BD=D0=BE=D0=B9 =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=
+=D1=80=D0=B0=D1=86=D0=B8=D0=B8 =D1=81 =D0=B7=D0=B0=D0=B3=D1=80=D1=83=D0=B6=
+=D0=B5=D0=BD=D0=BD=D0=BE=D0=B9 =D0=B8=D0=B7 zip-=D0=B0=D1=80=D1=85=D0=B8=D0=
+=B2=D0=BE=D0=B2; =D0=BF=D0=B5=D1=80=D0=B5=D0=B4 =D1=81=D0=BE=D1=85=D1=80=D0=
+=B0=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=
+=BE=D0=B2 =D0=B2 =D0=91=D0=94 =D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D1=8F=D1=
+=8E=D1=82=D1=81=D1=8F SQL =D1=81=D0=BA=D1=80=D0=B8=D0=BF=D1=82=D1=8B =D0=BE=
+=D0=BF=D1=80=D0=B5=D0=B4=D0=B5=D0=BB=D0=B5=D0=BD=D0=BD=D1=8B=D0=B5 =D0=B4=
+=D0=BB=D1=8F =D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F =
+=D0=BF=D0=B5=D1=80=D0=B5=D0=B4 =D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=
+=D0=BA=D0=BE=D0=B9 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=B0; =D0=BF=D0=BE =D1=
+=80=D0=B5=D0=B7=D1=83=D0=BB=D1=8C=D1=82=D0=B0=D1=82=D1=83 =D1=81=D1=80=D0=
+=B0=D0=B2=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F - =D1=81=D1=82=D1=80=D1=83=D0=BA=D1=
+=82=D1=83=D1=80=D0=B0 =D0=B8 =D0=BC=D0=B5=D1=82=D0=B0=D0=B4=D0=B0=D0=BD=D0=
+=BD=D1=8B=D0=B5 =D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=BD=D1=8B=D1=
+=85 =D1=8D=D0=BB=D0=B5=D0=BC=D0=B5=D0=BD=D1=82=D0=BE=D0=B2 =D0=BF=D0=B0=D0=
+=BA=D0=B5=D1=82=D0=BE=D0=B2 (=D1=81=D1=85=D0=B5=D0=BC=D1=8B, =D1=81=D0=B1=
+=D0=BE=D1=80=D0=BA=D0=B8, SQL =D1=81=D0=BA=D1=80=D0=B8=D0=BF=D1=82=D1=8B, =
+=D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D0=B5), =D0=B0 =D1=82=D0=B0=D0=BA=D0=B6=D0=
+=B5 =D1=81=D0=B0=D0=BC=D0=B8=D1=85 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=
+=B2, =D1=81=D0=BE=D1=85=D1=80=D0=B0=D0=BD=D1=8F=D1=8E=D1=82=D1=81=D1=8F =D0=
+=B2 =D0=91=D0=94; =D0=BF=D0=BE=D1=81=D0=BB=D0=B5 =D1=81=D0=BE=D1=85=D1=80=
+=D0=B0=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=
+=D0=B2 =D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D1=8F=D0=B5=D1=82=D1=81=D1=8F -=
+ =D0=BF=D0=B5=D1=80=D0=B5=D0=B3=D0=B5=D0=BD=D0=B5=D1=80=D0=B0=D1=86=D0=B8=
+=D1=8F =D0=B8=D1=81=D1=85=D0=BE=D0=B4=D0=BD=D1=8B=D1=85 =D0=BA=D0=BE=D0=B4=
+=D0=BE=D0=B2, =D0=B2=D0=BD=D0=B5=D1=81=D0=B5=D0=BD=D0=B8=D0=B5 =D0=B8=D0=B7=
+=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=B8=D0=B9 =D0=B2 =D1=81=D1=82=D1=80=D1=83=
+=D0=BA=D1=82=D1=83=D1=80=D1=83 =D0=91=D0=94, =D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=
+=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5 SQL =D1=81=D0=BA=D1=80=D0=B8=D0=BF=D1=82=D0=
+=BE=D0=B2 =D0=BE=D0=BF=D1=80=D0=B5=D0=B4=D0=B5=D0=BB=D0=B5=D0=BD=D0=BD=D1=
+=8B=D1=85 =D0=B4=D0=BB=D1=8F =D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=
+=BD=D0=B8=D1=8F =D0=BF=D0=BE=D1=81=D0=BB=D0=B5 =D1=83=D1=81=D1=82=D0=B0=D0=
+=BD=D0=BE=D0=B2=D0=BA=D0=B8 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=B0 =D0=B8 =D1=
+=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=B0 =D0=B4=D0=B0=D0=BD=D0=
+=BD=D1=8B=D1=85 =D0=BF=D1=80=D0=B8=D0=B2=D1=8F=D0=B7=D0=B0=D0=BD=D0=BD=D1=
+=8B=D1=85 =D0=BA =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D1=83. =D0=92=D0=BE =D0=B2=
+=D1=81=D0=B5=D1=85 =D1=81=D0=BB=D1=83=D1=87=D0=B0=D1=8F=D1=85 - SQL =D1=81=
+=D0=BA=D1=80=D0=B8=D0=BF=D1=82=D1=8B, =D1=81=D1=85=D0=B5=D0=BC=D1=8B, =D0=
+=B4=D0=B0=D0=BD=D0=BD=D1=8B=D0=B5 - =D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=B5=D0=
+=BD=D0=B8=D1=8F =D0=BF=D1=80=D0=B8=D0=BC=D0=B5=D0=BD=D1=8F=D1=8E=D1=82=D1=
+=81=D1=8F =D1=82=D0=BE=D0=BB=D1=8C=D0=BA=D0=BE =D0=B4=D0=BB=D1=8F <strong>=
+=D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=BD=D1=8B=D1=85 =D0=B8=D0=BB=
+=D0=B8 =D0=BD=D0=BE=D0=B2=D1=8B=D1=85</strong> =D1=8D=D0=BB=D0=B5=D0=BC=D0=
+=B5=D0=BD=D1=82=D0=BE=D0=B2.</p>
+<p style=3D"margin-left: 30.0px;"><span style=3D"color: rgb(255,102,0);"><s=
+trong>=D0=92=D0=B0=D0=B6=D0=BD=D0=BE!</strong> =D0=9E=D1=81=D0=BE=D0=B1=D0=
+=B5=D0=BD=D0=BD=D0=BE=D1=81=D1=82=D1=8C=D1=8E =D0=B2=D1=8B=D0=BF=D0=BE=D0=
+=BB=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=
+=B8=D0=B9 =D1=8F=D0=B2=D0=BB=D1=8F=D0=B5=D1=82=D1=81=D1=8F =D1=82=D0=BE, =
+=D1=87=D1=82=D0=BE =D0=BE=D0=BD=D0=B8 =D1=80=D0=B0=D0=B1=D0=BE=D1=82=D0=B0=
+=D1=8E=D1=82 =D1=81 <strong>=D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=
+=BD=D1=8B=D0=BC=D0=B8 =D0=B8=D0=BB=D0=B8 =D0=BD=D0=BE=D0=B2=D1=8B=D0=BC=D0=
+=B8</strong> =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=B0=D0=BC=D0=B8 =D0=B8 =D0=B8=
+=D1=85 =D1=8D=D0=BB=D0=B5=D0=BC=D0=B5=D0=BD=D1=82=D0=B0=D0=BC=D0=B8. =D0=98=
+=D0=BD=D1=84=D0=BE=D1=80=D0=BC=D0=B0=D1=86=D0=B8=D1=8F =D0=BE=D0=B1 =D0=B8=
+=D0=B7=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=BD=D1=8B=D1=85 =D1=8D=D0=BB=D0=B5=
+=D0=BC=D0=B5=D0=BD=D1=82=D0=B0=D1=85 =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B0=
+=D0=B5=D1=82=D1=81=D1=8F =D0=BD=D0=B0 =D0=BE=D1=81=D0=BD=D0=BE=D0=B2=D0=B0=
+=D0=BD=D0=B8=D0=B8 =D1=81=D1=80=D0=B0=D0=B2=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F =
+=D0=B2=D1=85=D0=BE=D0=B4=D1=8F=D1=89=D0=B5=D0=B9 =D0=B8 =D1=81=D1=83=D1=89=
+=D0=B5=D1=81=D1=82=D0=B2=D1=83=D1=8E=D1=89=D0=B5=D0=B9 =D1=81=D1=82=D1=80=
+=D1=83=D0=BA=D1=82=D1=83=D1=80 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2. =
+=D0=9F=D0=BE =D1=8D=D1=82=D0=BE=D0=B9 =D0=BF=D1=80=D0=B8=D1=87=D0=B8=D0=BD=
+=D0=B5, =D0=B5=D1=81=D0=BB=D0=B8 =D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=
+=D0=B0=D1=82=D0=B5=D0=BB=D1=8C =D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D1=8F=
+=D0=B5=D1=82 =D0=BA=D0=BE=D0=BC=D0=B0=D0=BD=D0=B4=D1=83 =D0=BD=D0=B0=D0=BF=
+=D1=80=D0=B8=D0=BC=D0=B5=D1=80 InstallFromSvn =D0=B1=D0=B5=D0=B7 =D1=83=D0=
+=BA=D0=B0=D0=B7=D0=B0=D0=BD=D0=B8=D1=8F =D0=BA=D0=BB=D1=8E=D1=87=D0=B0 cont=
+inueIfError=3Dtrue =D0=B8 =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B0=D0=B5=D1=82 =
+=D0=BE=D1=88=D0=B8=D0=B1=D0=BA=D1=83, =D1=81=D0=BA=D0=B0=D0=B6=D0=B5=D0=BC =
+=D0=BF=D1=80=D0=B8 =D0=BE=D0=B1=D0=BD=D0=BE=D0=B2=D0=BB=D0=B5=D0=BD=D0=B8=
+=D0=B8 =D1=81=D1=82=D1=80=D1=83=D0=BA=D1=82=D1=83=D1=80=D1=8B =D0=91=D0=94,=
+ =D1=82=D0=BE =D0=BF=D0=BE=D0=B2=D1=82=D0=BE=D1=80=D0=BD=D1=8B=D0=B9 =D0=B7=
+=D0=B0=D0=BF=D1=83=D1=81=D0=BA =D0=BA=D0=BE=D0=BC=D0=B0=D0=BD=D0=B4=D1=8B =
+=D0=B4=D0=BB=D1=8F =D1=82=D0=BE=D0=B9 =D0=B6=D0=B5 =D0=BA=D0=BE=D0=BD=D1=84=
+=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B8 =D0=B2=D1=8B=D0=BF=D0=BE=
+=D0=BB=D0=BD=D0=B8=D1=82=D1=81=D1=8F =D0=B1=D0=B5=D0=B7 =D0=BE=D1=88=D0=B8=
+=D0=B1=D0=BE=D0=BA, =D0=BD=D0=BE =D0=BD=D0=B5 =D0=B2=D0=BD=D0=B5=D1=81=D0=
+=B5=D1=82 =D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F =D0=B2 =D0=
+=91=D0=94. =D0=9F=D1=80=D0=B8=D1=87=D0=B8=D0=BD=D0=B0 - =D0=BF=D1=80=D0=B5=
+=D0=B4=D1=8B=D0=B4=D1=83=D1=89=D0=B0=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=
+=D1=86=D0=B8=D1=8F =D1=81=D0=B8=D0=BD=D1=85=D1=80=D0=BE=D0=BD=D0=B8=D0=B7=
+=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D0=BB=D0=B0 =D1=81=D1=82=D1=80=D1=83=D0=BA=
+=D1=82=D1=83=D1=80=D1=8B =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2 =D1=83=
+=D0=BA=D0=B0=D0=B7=D0=B0=D0=BD=D0=BD=D0=BE=D0=B9 =D0=BA=D0=BE=D0=BD=D1=84=
+=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B8 =D0=B8 =D1=85=D1=80=D0=B0=
+=D0=BD=D0=B8=D0=BB=D0=B8=D1=89=D0=B0 =D0=B8 =D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=
+=D0=B5=D0=BD=D0=BD=D1=8B=D1=85 =D1=8D=D0=BB=D0=B5=D0=BC=D0=B5=D0=BD=D1=82=
+=D0=BE=D0=B2 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2 =D0=B2 =D1=8D=D1=82=
+=D0=BE=D0=B9 =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B8 =D0=BD=D0=B5=
+=D1=82.</span></p>
+<p style=3D"margin-left: 30.0px;"><span style=3D"color: rgb(0,0,0);"><stron=
+g>InstallBundlePackages&nbsp;</strong>=E2=80=93 =D0=A3=D1=81=D1=82=D0=B0=D0=
+=BD=D0=B0=D0=B2=D0=BB=D0=B8=D0=B2=D0=B0=D0=B5=D1=82 =D0=BD=D0=B0=D0=B1=D0=
+=BE=D1=80 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2, =D0=BF=D0=B5=D1=80=D0=
+=B5=D1=87=D0=B8=D1=81=D0=BB=D0=B5=D0=BD=D0=BD=D1=8B=D1=85 =D1=87=D0=B5=D1=
+=80=D0=B5=D0=B7 =D0=B7=D0=B0=D0=BF=D1=8F=D1=82=D1=83=D1=8E =D0=B2 =D0=BF=D0=
+=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80=D0=B5&nbsp;<em>packageName&nbsp;</e=
+m>=D0=B2 =D1=80=D0=B0=D0=B1=D0=BE=D1=87=D0=B5=D0=B5 =D0=BF=D1=80=D0=BE=D1=
+=81=D1=82=D1=80=D0=B0=D0=BD=D1=81=D1=82=D0=B2=D0=BE, =D1=83=D0=BA=D0=B0=D0=
+=B7=D0=B0=D0=BD=D0=BD=D0=BE=D0=B5 =D0=B2 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=
+=B5=D1=82=D1=80=D0=B5&nbsp;&nbsp;<em>workspaceName</em></span></p>
+<p style=3D"margin-left: 30.0px;"><span style=3D"color: rgb(0,0,0);"><em><s=
+trong>DeleteWorkspaces</strong></em>&nbsp;- =D1=83=D0=B4=D0=B0=D0=BB=D0=B5=
+=D0=BD=D0=B8=D0=B5 =D1=80=D0=B0=D0=B1=D0=BE=D1=87=D0=B8=D1=85 =D0=BF=D1=80=
+=D0=BE=D1=81=D1=82=D1=80=D0=B0=D0=BD=D1=81=D1=82=D0=B2, =D0=B2=D0=BA=D0=BB=
+=D1=8E=D1=87=D0=B0=D1=8F =D1=8D=D0=BB=D0=B5=D0=BC=D0=B5=D0=BD=D1=82=D1=8B =
+=D1=80=D0=B0=D0=B1=D0=BE=D1=87=D0=B5=D0=B3=D0=BE =D0=BF=D1=80=D0=BE=D1=81=
+=D1=82=D1=80=D0=B0=D0=BD=D1=81=D1=82=D0=B2=D0=B0 =D0=B8 =D0=B7=D0=B0=D0=BF=
+=D0=B8=D1=81=D1=8C =D0=BE =D1=81=D0=B0=D0=BC=D0=BE=D0=BC =D1=80=D0=B0=D0=B1=
+=D0=BE=D1=87=D0=B5=D0=BC =D0=BF=D1=80=D0=BE=D1=81=D1=82=D1=80=D0=B0=D0=BD=
+=D1=81=D1=82=D0=B2=D0=B5</span></p>
+<p style=3D"margin-left: 30.0px;"><span style=3D"color: rgb(0,0,0);"><span =
+style=3D"color: rgb(0,0,0);"><em><strong>DeleteUnusedWorkspaces&nbsp;</stro=
+ng></em>- =D1=83=D0=B4=D0=B0=D0=BB=D0=B5=D0=BD=D0=B8=D0=B5 =D0=BD=D0=B5=D0=
+=B8=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D0=BC=D1=8B=D1=85 =D0=
+=B7=D0=B0=D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D0=B9 =D0=BF=D0=B5=D1=80=D0=B8=D0=
+=BE=D0=B4 =D1=80=D0=B0=D0=B1=D0=BE=D1=87=D0=B8=D1=85 =D0=BF=D1=80=D0=BE=D1=
+=81=D1=82=D1=80=D0=B0=D0=BD=D1=81=D1=82=D0=B2, =D0=B2=D0=BA=D0=BB=D1=8E=D1=
+=87=D0=B0=D1=8F =D1=8D=D0=BB=D0=B5=D0=BC=D0=B5=D0=BD=D1=82=D1=8B =D1=80=D0=
+=B0=D0=B1=D0=BE=D1=87=D0=B5=D0=B3=D0=BE =D0=BF=D1=80=D0=BE=D1=81=D1=82=D1=
+=80=D0=B0=D0=BD=D1=81=D1=82=D0=B2=D0=B0 =D0=B8 =D0=B7=D0=B0=D0=BF=D0=B8=D1=
+=81=D1=8C =D0=BE =D1=81=D0=B0=D0=BC=D0=BE=D0=BC =D1=80=D0=B0=D0=B1=D0=BE=D1=
+=87=D0=B5=D0=BC =D0=BF=D1=80=D0=BE=D1=81=D1=82=D1=80=D0=B0=D0=BD=D1=81=D1=
+=82=D0=B2=D0=B5. <strong>(=D0=A1 =D0=B2=D0=B5=D1=80=D1=81=D0=B8=D0=B8 7.4)<=
+/strong></span></span></p>
+<p style=3D"margin-left: 30.0px;"><span style=3D"color: rgb(0,0,0);"><span =
+style=3D"color: rgb(0,0,0);"><em><strong><span style=3D"color: rgb(0,0,0);"=
+>ClearAllWorkspaces</span></strong></em><span style=3D"color: rgb(0,0,0);">=
+&nbsp;</span><span style=3D"color: rgb(0,0,0);">-&nbsp;=D1=83=D0=B4=D0=B0=
+=D0=BB=D1=8F=D0=B5=D1=82 =D0=B2=D1=81=D0=B5 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=
+=D1=8B =D0=B8 =D0=B8=D1=85 =D1=8D=D0=BB=D0=B5=D0=BC=D0=B5=D0=BD=D1=82=D1=8B=
+ =D0=B8=D0=B7 <span style=3D"color: rgb(0,0,0);">=D1=80=D0=B0=D0=B1=D0=BE=
+=D1=87=D0=B5=D0=B3=D0=BE =D0=BF=D1=80=D0=BE=D1=81=D1=82=D1=80=D0=B0=D0=BD=
+=D1=81=D1=82=D0=B2=D0=B0</span>, =D1=82.=D0=B5. =D0=B4=D0=B5=D0=BB=D0=B0=D0=
+=B5=D1=82 =D0=B5=D0=B3=D0=BE &quot;=D1=87=D0=B8=D1=81=D1=82=D1=8B=D0=BC&quo=
+t;</span></span></span></p>
+<p style=3D"margin-left: 30.0px;"><span style=3D"color: rgb(0,0,0);"><em><s=
+trong>ConcatRepositories</strong> </em>- =D1=81=D0=BB=D0=B8=D1=8F=D0=BD=D0=
+=B8=D0=B5 =D0=BD=D0=B5=D1=81=D0=BA=D0=BE=D0=BB=D1=8C=D0=BA=D0=B8=D1=85 =D1=
+=80=D0=B5=D0=BF=D0=BE=D0=B7=D0=B8=D1=82=D0=BE=D1=80=D0=B8=D0=B5=D0=B2 =D0=
+=B2 =D0=BE=D0=B4=D0=B8=D0=BD</span></p>
+<p style=3D"margin-left: 30.0px;"><span style=3D"color: rgb(0,0,0);"><stron=
+g><em><strong><em>SaveRepositoryContent&nbsp;</em></strong></em></strong>- =
+=D0=A0=D0=B0=D0=B1=D0=BE=D1=82=D0=B0=D0=B5=D1=82 =D0=B2 =D0=BA=D0=BE=D0=BC=
+=D0=B1=D0=B8=D0=BD=D0=B0=D1=86=D0=B8=D0=B8 =D1=81 =D0=BF=D0=B0=D1=80=D0=B0=
+=D0=BC=D0=B5=D1=82=D1=80=D0=BE=D0=BC contentTypes. =D0=A1=D0=BE=D1=85=D1=80=
+=D0=B0=D0=BD=D1=8F=D0=B5=D1=82 =D0=B2 =D1=83=D0=BA=D0=B0=D0=B7=D0=B0=D0=BD=
+=D0=BD=D1=8B=D0=B9 =D0=BA=D0=B0=D1=82=D0=B0=D0=BB=D0=BE=D0=B3 (destinationP=
+ath) =D0=B2=D1=81=D0=B5 SQL =D1=81=D0=BA=D1=80=D0=B8=D0=BF=D1=82=D1=8B =D0=
+=B8=D0=B7 =D1=80=D0=B5=D0=BF=D0=BE=D0=B7=D0=B8=D1=82=D0=BE=D1=80=D0=B8=D1=
+=8F (sourcePath - =D0=BA=D0=B0=D1=82=D0=B0=D0=BB=D0=BE=D0=B3 =D1=81 =D0=BF=
+=D0=B0=D0=BA=D0=B5=D1=82=D0=B0=D0=BC=D0=B8)</span></p>
+<p style=3D"margin-left: 30.0px;"><span style=3D"color: rgb(0,0,0);"><span =
+style=3D"font-size: 10.0pt;line-height: 13.0pt;"><strong><em>SaveSvnContent=
+<strong><em>&nbsp;</em></strong></em></strong>- =D1=80=D0=B0=D0=B1=D0=BE=D1=
+=82=D0=B0=D0=B5=D1=82 =D0=B2 =D0=BA=D0=BE=D0=BC=D0=B1=D0=B8=D0=BD=D0=B0=D1=
+=86=D0=B8=D0=B8 =D1=81 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80=D0=
+=BE=D0=BC contentTypes. =D0=95=D1=81=D0=BB=D0=B8 <span style=3D"color: rgb(=
+0,0,0);">contentTypes=3D</span></span>Repository<span style=3D"font-size: 1=
+0.0pt;line-height: 13.0pt;">&nbsp;=E2=80=93&nbsp;=D0=B2 =D0=BF=D0=B0=D0=BF=
+=D0=BA=D1=83&nbsp;destinationPath =D0=B2=D1=8B=D0=B3=D1=80=D1=83=D0=B6=D0=
+=B0=D0=B5=D1=82=D1=81=D1=8F =D1=80=D0=B0=D0=B1=D0=BE=D1=87=D0=B5=D0=B5 =D0=
+=BF=D1=80=D0=BE=D1=81=D1=82=D1=80=D0=B0=D0=BD=D1=81=D1=82=D0=B2=D0=BE =D0=
+=B8=D0=B7 repositoryUri (Svn) =D0=B2 =D0=B2=D0=B8=D0=B4=D0=B5 zip =D0=B0=D1=
+=80=D1=85=D0=B8=D0=B2=D0=BE=D0=B2.&nbsp;<span style=3D"color: rgb(0,0,0);">=
+=D0=95=D1=81=D0=BB=D0=B8&nbsp;</span><span style=3D"color: rgb(0,0,0);">con=
+tentTypes=3DResources&nbsp;=E2=80=93 =D0=B2=D1=8B=D0=B3=D1=80=D1=83=D0=B6=
+=D0=B0=D1=8E=D1=82=D1=81=D1=8F =D0=B2=D1=81=D0=B5 =D1=80=D0=B5=D1=81=D1=83=
+=D1=80=D1=81=D1=8B =D0=B2 =D1=84=D0=B0=D0=B9=D0=BB&nbsp;Resources.xml</span=
+></span></span></p>
+<p style=3D"margin-left: 30.0px;"><span style=3D"font-size: 10.0pt;line-hei=
+ght: 13.0pt;"><span style=3D"color: rgb(0,0,0);"><strong>SaveVersionSvnCont=
+ent&nbsp;</strong></span>- =D0=92=D1=8B=D0=B3=D1=80=D1=83=D0=B6=D0=B0=D0=B5=
+=D1=82 =D0=B2 =D0=BF=D0=B0=D0=BF=D0=BA=D1=83&nbsp;destinationPath =D0=B8=D0=
+=B5=D1=80=D0=B0=D1=80=D1=85=D0=B8=D1=8E =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=
+=BE=D0=B2 =D0=B8=D0=B7 =D0=BD=D0=B5=D1=81=D0=BA=D0=BE=D0=BB=D1=8C=D0=BA=D0=
+=B8=D1=85 Svn =D0=B2 =D0=B2=D0=B8=D0=B4=D0=B5 zip =D0=B0=D1=80=D1=85=D0=B8=
+=D0=B2=D0=BE=D0=B2.</span></p>
+<p style=3D"margin-left: 30.0px;"><span style=3D"color: rgb(0,0,0);"><stron=
+g><em>SaveDBContent&nbsp;</em></strong></span>- =D1=80=D0=B0=D0=B1=D0=BE=D1=
+=82=D0=B0=D0=B5=D1=82 =D0=B2 =D0=BA=D0=BE=D0=BC=D0=B1=D0=B8=D0=BD=D0=B0=D1=
+=86=D0=B8=D0=B8 =D1=81 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80=D0=
+=BE=D0=BC contentTypes. =D0=95=D1=81=D0=BB=D0=B8 =D0=BE=D0=BD =D1=81=D0=BE=
+=D0=B4=D0=B5=D1=80=D0=B6=D0=B8=D1=82&nbsp;<em>Data</em>, =D1=82=D0=BE =D1=
+=81=D0=BE=D1=85=D1=80=D0=B0=D0=BD=D1=8F=D1=8E=D1=82=D1=81=D1=8F =D0=B2 =D0=
+=BF=D0=B0=D0=BF=D0=BA=D1=83 destinationPath =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=
+=D0=B5 =D0=B2=D1=81=D0=B5=D1=85 =D1=81=D1=85=D0=B5=D0=BC =D0=B2 =D1=84=D0=
+=BE=D1=80=D0=BC=D0=B0=D1=82=D0=B5 json, =D0=B5=D1=81=D0=BB=D0=B8 -&nbsp;<em=
+>LocalizableData</em>, =D1=82=D0=BE =D1=81=D0=BE=D1=85=D1=80=D0=B0=D0=BD=D1=
+=8F=D1=8E=D1=82=D1=81=D1=8F =D0=B2 =D1=84=D0=BE=D1=80=D0=BC=D0=B0=D1=82=D0=
+=B5 xml =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D0=B5 =D1=81=D1=85=D0=B5=D0=BC =D0=
+=BE=D0=B1=D1=8A=D0=B5=D0=BA=D1=82=D0=BE=D0=B2 (=D0=BD=D0=B5=D0=BE=D0=B1=D1=
+=85=D0=BE=D0=B4=D0=B8=D0=BC=D0=BE =D0=B4=D0=BB=D1=8F =D0=BB=D0=BE=D0=BA=D0=
+=B0=D0=BB=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B8 =D0=BA=D0=BE=D0=BD=D1=84=D0=
+=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B8), =D0=B5=D1=81=D0=BB=D0=B8 -&=
+nbsp;<em>Resources</em>, =D1=82=D0=BE =D0=B2=D1=8B=D0=B3=D1=80=D1=83=D0=B6=
+=D0=B0=D1=8E=D1=82=D1=81=D1=8F =D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D1=8B =
+=D1=81=D1=85=D0=B5=D0=BC =D0=B2 =D1=84=D0=BE=D1=80=D0=BC=D0=B0=D1=82=D0=B5 =
+xml (=D1=82=D0=B0=D0=BA =D0=B6=D0=B5 =D0=BD=D0=B5=D0=BE=D0=B1=D1=85=D0=BE=
+=D0=B4=D0=B8=D0=BC=D0=BE =D0=B4=D0=BB=D1=8F =D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=
+=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B8, =D0=BD=D0=BE =D1=83=D0=B6=D0=B5 =D1=
+=81=D0=B0=D0=BC=D1=8B=D1=85 =D1=81=D1=85=D0=B5=D0=BC =D0=BE=D0=B1=D1=8A=D0=
+=B5=D0=BA=D1=82=D0=BE=D0=B2), =D0=B5=D1=81=D0=BB=D0=B8 -&nbsp;<em>Repositor=
+y&nbsp;</em>=D1=82=D0=BE =D0=B2 =D0=BF=D0=B0=D0=BF=D0=BA=D1=83&nbsp;destina=
+tionPath&nbsp;=D0=B2=D1=8B=D0=B3=D1=80=D1=83=D0=B6=D0=B0=D0=B5=D1=82=D1=81=
+=D1=8F =D1=80=D0=B0=D0=B1=D0=BE=D1=87=D0=B5=D0=B5 =D0=BF=D1=80=D0=BE=D1=81=
+=D1=82=D1=80=D0=B0=D0=BD=D1=81=D1=82=D0=B2=D0=BE =D0=B8=D0=B7 =D0=91=D0=94 =
+=D0=B2 =D0=B2=D0=B8=D0=B4=D0=B5 zip =D0=B0=D1=80=D1=85=D0=B8=D0=B2=D0=BE=D0=
+=B2</p>
+<p style=3D"margin-left: 30.0px;"><em><strong>ValidateContent&nbsp;</strong=
+></em>=E2=80=93 =D0=BF=D1=80=D0=BE=D0=B2=D0=B5=D1=80=D1=8F=D0=B5=D1=82 =D0=
+=BD=D0=B0=D0=BB=D0=B8=D1=87=D0=B8=D0=B5 =D0=BD=D0=B5=D0=BB=D0=BE=D0=BA=D0=
+=B0=D0=BB=D0=B8=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =D1=81=D1=
+=82=D1=80=D0=BE=D0=BA =D0=B2 =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=
+=80=D0=B0=D1=86=D0=B8=D0=B8 =D1=81=D0=B1=D0=BE=D1=80=D0=BA=D0=B8 =D0=BD=D0=
+=B5 RUS . =D0=A0=D0=B0=D0=B1=D0=BE=D1=82=D0=B0=D0=B5=D1=82 =D0=B2 =D0=BA=D0=
+=BE=D0=BC=D0=B1=D0=B8=D0=BD=D0=B0=D1=86=D0=B8=D0=B8 =D1=81 =D0=BF=D0=B0=D1=
+=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80=D0=BE=D0=BC <em>c</em>ontentTypes. =D0=94=
+=D0=BB=D1=8F =D1=80=D0=B0=D0=B7=D0=BD=D1=8B=D1=85 =D0=B7=D0=BD=D0=B0=D1=87=
+=D0=B5=D0=BD=D0=B8=D0=B9 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80=
+=D0=B0 <em>contentTypes</em> =D0=BF=D1=80=D0=BE=D0=B2=D0=B5=D1=80=D1=8F=D1=
+=8E=D1=82=D1=81=D1=8F =D1=80=D0=B0=D0=B7=D0=BB=D0=B8=D1=87=D0=BD=D1=8B=D0=
+=B5 =D1=82=D0=B8=D0=BF=D1=8B =D1=84=D0=B0=D0=B9=D0=BB=D0=BE=D0=B2 =D1=80=D0=
+=B5=D1=81=D1=83=D1=80=D1=81=D0=BE=D0=B2 =D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=
+=8B=D0=B5 =D1=83=D0=BA=D0=B0=D0=B7=D1=8B=D0=B2=D0=B0=D1=8E=D1=82=D1=81=D1=
+=8F =D0=B2 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80=D0=B5 <em>fileN=
+ame</em></p>
+<div class=3D"table-wrap">
+<table class=3D"confluenceTable">
+<tbody>
+<tr style=3D"margin-left: 30.0px;">
+<th style=3D"margin-left: 90.0px;" class=3D"confluenceTh"><em>c</em>ontentT=
+ypes</th>
+<th style=3D"margin-left: 60.0px;" class=3D"confluenceTh"><em>fileName</em>=
+</th>
+</tr>
+<tr style=3D"margin-left: 60.0px;">
+<td style=3D"margin-left: 60.0px;" class=3D"confluenceTd">Resources</td>
+<td style=3D"margin-left: 60.0px;" class=3D"confluenceTd">Resources.xml</td=
+>
+</tr>
+<tr style=3D"margin-left: 60.0px;">
+<td style=3D"margin-left: 60.0px;" class=3D"confluenceTd">LocalizableData</=
+td>
+<td style=3D"margin-left: 60.0px;" class=3D"confluenceTd">LocalizableData.x=
+ml</td>
+</tr>
+<tr style=3D"margin-left: 60.0px;">
+<td style=3D"margin-left: 60.0px;" class=3D"confluenceTd">LocalizableSchema=
+Data</td>
+<td style=3D"margin-left: 60.0px;" class=3D"confluenceTd">SchemaLocalizable=
+Data.xml</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style=3D"margin-left: 30.0px;">=D0=92 =D0=BF=D0=B0=D0=BF=D0=BA=D1=83 <em=
+>destinationPath</em> - =D1=81=D0=BE=D1=85=D1=80=D0=B0=D0=BD=D1=8F=D0=B5=D1=
+=82=D1=81=D1=8F =D0=BF=D0=BE=D0=B4=D1=80=D0=BE=D0=B1=D0=BD=D1=8B=D0=B9 =D0=
+=BE=D1=82=D1=87=D0=B5=D1=82 =D1=81 =D0=BE=D1=88=D0=B8=D0=B1=D0=BA=D0=B0=D0=
+=BC=D0=B8 =D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=
+=B8. =D0=92 =D0=BF=D0=B0=D0=BF=D0=BA=D1=83 <em>logPath</em> - =D1=81=D0=BE=
+=D1=85=D1=80=D0=B0=D0=BD=D1=8F=D0=B5=D1=82=D1=81=D1=8F =D0=BA=D1=80=D0=B0=
+=D1=82=D0=BA=D0=B8=D0=B9 =D0=BE=D1=82=D1=87=D0=B5=D1=82 =D1=81 =D0=BE=D1=88=
+=D0=B8=D0=B1=D0=BA=D0=B0=D0=BC=D0=B8 =D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=D0=B8=
+=D0=B7=D0=B0=D1=86=D0=B8=D0=B8. =D0=9F=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=
+=D1=80 <em>cultureName</em> =D0=B8=D1=81=D0=BF=D1=80=D0=BE=D0=BB=D1=8C=D0=
+=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F =D0=B4=D0=BB=D1=8F =D1=84=D0=BE=D1=80=D0=
+=BC=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D1=8F =D0=B8=D0=BC=D0=B5=D0=
+=BD=D0=B8 =D1=84=D0=B0=D0=B9=D0=BB=D0=B0 =D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=D0=
+=B8=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =D1=80=D0=B5=D1=81=D1=
+=83=D1=80=D1=81=D0=BE=D0=B2, =D0=B5=D1=81=D0=BB=D0=B8 =D0=BE=D0=BD =D0=BD=
+=D0=B5 =D1=83=D0=BA=D0=B0=D0=B7=D0=B0=D0=BD =D0=B2 =D0=BF=D0=B0=D1=80=D0=B0=
+=D0=BC=D0=B5=D1=82=D1=80=D0=B5 <em>localizedFileName</em> =D0=B8 =D0=B4=D0=
+=BB=D1=8F =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B5=D0=BD=D0=B8=D1=8F =D1=88=D0=
+=B0=D0=B1=D0=BB=D0=BE=D0=BD=D0=B0 =D0=B4=D0=BB=D1=8F =D0=BF=D1=80=D0=BE=D0=
+=B2=D0=B5=D1=80=D0=BA=D0=B8 =D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=D0=B8=D0=B7=D0=
+=B0=D1=86=D0=B8=D0=B8 =D0=B8=D0=B7 =D1=84=D0=B0=D0=B9=D0=BB=D0=B0 =D0=BA=D0=
+=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B8, =D0=BA=D0=
+=BE=D1=82=D0=BE=D1=80=D1=8B=D0=B9 =D1=83=D0=BA=D0=B0=D0=B7=D0=B0=D0=BD =D0=
+=B2 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80=D0=B5 <em>localizedCon=
+figFileName</em>.</p>
+<p style=3D"margin-left: 30.0px;">&nbsp;</p>
+<p style=3D"margin-left: 30.0px;"><span style=3D"color: rgb(0,0,0);"><span =
+style=3D"color: rgb(0,0,0);"><em><strong>CreateCustomPackage </strong></em>=
+- =D1=81=D0=BE=D0=B7=D0=B4=D0=B0=D0=BD=D0=B8=D0=B5 =D0=BF=D0=BE=D0=BB=D1=8C=
+=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D1=81=D0=BA=D0=BE=D0=B3=D0=
+=BE =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=B0 (=D0=B1=D0=B5=D0=B7 =D0=BF=D0=B0=
+=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80=D0=BE=D0=B2)&nbsp;<br /></span></span>=
+</p>=20
+<div class=3D"aui-message hint shadowed information-macro">=20
+<span class=3D"aui-icon icon-hint">Icon</span>=20
+<div class=3D"message-content">=20
+<p><span>=D0=92=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D1=8F=D1=82=D1=8C =D0=BE=D0=
+=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D1=8E =D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=
+=BE=D0=B2=D0=BA=D0=B8 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=B0 =D0=BD=D0=B5=D0=
+=BE=D0=B1=D1=85=D0=BE=D0=B4=D0=B8=D0=BC=D0=BE =D0=BF=D0=BE=D1=81=D0=BB=D0=
+=B5 =D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B8 =D1=
+=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=BE=D0=B2 =D1=8F=D0=B4=D1=80=D0=B0, =D0=
+=B8=D0=BD=D0=B0=D1=87=D0=B5 =D0=B7=D0=B0=D0=B3=D0=BE=D0=BB=D0=BE=D0=B2=D0=
+=BE=D0=BA =D1=81=D0=B8=D1=81=D1=82=D0=B5=D0=BC=D0=BD=D0=BE=D0=B9 =D0=BD=D0=
+=B0=D1=81=D1=82=D1=80=D0=BE=D0=B9=D0=BA=D0=B8 &quot;</span><strong><span st=
+yle=3D"color: rgb(31,73,125);">=D0=98=D0=B4=D0=B5=D0=BD=D1=82=D0=B8=D1=84=
+=D0=B8=D0=BA=D0=B0=D1=82=D0=BE=D1=80 =D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=
+=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D1=81=D0=BA=D0=BE=D0=B3=D0=BE =D0=BF=
+=D0=B0=D0=BA=D0=B5=D1=82=D0=B0</span></strong><span>&quot; =D0=B1=D1=83=D0=
+=B4=D0=B5=D1=82 =D0=BD=D0=B5 =D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=D0=B8=D0=B7=D0=
+=B8=D1=80=D0=BE=D0=B2=D0=B0=D0=BD</span></p>=20
+</div>=20
+</div>=20
+<p style=3D"margin-left: 30.0px;"><strong><em>PrevalidateInstallFromReposit=
+ory </em></strong>-&nbsp;=D0=BF=D1=80=D0=BE=D0=B2=D0=B5=D1=80=D1=8F=D0=B5=
+=D1=82 =D0=B2=D0=BE=D0=B7=D0=BC=D0=BE=D0=B6=D0=BD=D0=BE=D1=81=D1=82=D1=8C =
+=D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=B8 =D0=BF=D0=B0=D0=BA=
+=D0=B5=D1=82=D0=BE=D0=B2 =D0=B8=D0=B7 zip-=D0=B0=D1=80=D1=85=D0=B8=D0=B2=D0=
+=B0</p>
+<p style=3D"margin-left: 30.0px;"><strong><em><span>RegenerateIncludeDepend=
+encySources (<span style=3D"color: rgb(255,0,0);">=D1=84=D1=83=D0=BD=D0=BA=
+=D1=86=D0=B8=D0=BE=D0=BD=D0=B8=D1=80=D1=83=D0=B5=D1=82 =D0=B2 7.6.0</span><=
+span style=3D"color: rgb(255,0,0);"> =D0=B8 =D0=B2=D1=8B=D1=88=D0=B5</span>=
+) </span></em></strong><em><span>-</span></em><span class=3D"apple-converte=
+d-space">&nbsp;</span><span>=D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D1=8F=D0=
+=B5=D1=82 =D0=BF=D0=B5=D1=80=D0=B5=D0=B3=D0=B5=D0=BD=D0=B5=D1=80=D0=B0=D1=
+=86=D0=B8=D1=8E =D0=B8 =D1=81=D0=BE=D1=85=D1=80=D0=B0=D0=BD=D1=8F=D0=B5=D1=
+=82 =D0=BA=D0=BE=D0=B4=D1=8B =D0=B7=D0=B0=D0=B2=D0=B8=D1=81=D0=B8=D0=BC=D1=
+=8B=D1=85 =D0=BA=D0=BB=D0=B8=D0=B5=D0=BD=D1=82=D1=81=D0=BA=D0=B8=D1=85 =D1=
+=81=D1=85=D0=B5=D0=BC. =D0=9F=D0=B5=D1=80=D0=B5=D0=B3=D0=B5=D0=BD=D0=B5=D1=
+=80=D0=B0=D1=86=D0=B8=D1=8F =D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D1=8F=D0=
+=B5=D1=82=D1=81=D1=8F =D0=B4=D0=BB=D1=8F =D0=B2=D1=81=D0=B5=D1=85 =D0=BA=D0=
+=BB=D0=B8=D0=B5=D0=BD=D1=82=D1=81=D0=BA=D0=B8=D1=85 =D1=81=D1=85=D0=B5=D0=
+=BC, =D1=83 =D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D1=85 =D1=83=D1=81=D1=82=
+=D0=B0=D0=BD=D0=BE=D0=B2=D0=BB=D0=B5=D0=BD =D0=BF=D1=80=D0=B8=D0=B7=D0=BD=
+=D0=B0=D0=BA &quot;=D0=92=D0=BA=D0=BB=D1=8E=D1=87=D0=B8=D1=82=D1=8C =D0=BA=
+=D0=BE=D0=B4=D1=8B =D0=B7=D0=B0=D0=B2=D0=B8=D1=81=D0=B8=D0=BC=D1=8B=D1=85 =
+=D1=81=D1=85=D0=B5=D0=BC&quot;.</span></p>
+<p style=3D"margin-left: 30.0px;"><strong><em>ExecuteProcess (<span style=
+=3D"color: rgb(255,0,0);">=D1=84=D1=83=D0=BD=D0=BA=D1=86=D0=B8=D0=BE=D0=BD=
+=D0=B8=D1=80=D1=83=D0=B5=D1=82 =D0=B2 7.6.0.1077</span><span style=3D"color=
+: rgb(255,0,0);">&nbsp;=D0=B8 =D0=B2=D1=8B=D1=88=D0=B5</span>)&nbsp;</em></=
+strong><em>-</em><span class=3D"apple-converted-space">&nbsp;</span>=D0=B2=
+=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D1=8F=D0=B5=D1=82 =D0=B7=D0=B0=D0=BF=D1=83=
+=D1=81=D0=BA =D0=B1=D0=B8=D0=B7=D0=BD=D0=B5=D1=81-=D0=BF=D1=80=D0=BE=D1=86=
+=D0=B5=D1=81=D1=81=D0=B0 =D0=B2 =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=
+=D1=80=D0=B0=D1=86=D0=B8=D0=B8, =D0=B5=D1=81=D0=BB=D0=B8 =D1=83=D0=BA=D0=B0=
+=D0=B7=D0=B0=D0=BD=D0=BD=D1=8B=D0=B9 =D0=BF=D1=80=D0=BE=D1=86=D0=B5=D1=81=
+=D1=81 =D0=B1=D1=83=D0=B4=D0=B5=D1=82 =D0=BD=D0=B0=D0=B9=D0=B4=D0=B5=D0=BD =
+=D0=B2 =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=
+=D0=B8. =D0=A0=D0=B0=D0=B1=D0=BE=D1=82=D0=B0=D0=B5=D1=82 =D1=81 =D0=BF=D0=
+=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80=D0=BE=D0=BC processName =D0=B8 excl=
+udedSchemas&nbsp;(=D0=B2=D1=80=D0=B5=D0=BC=D0=B5=D0=BD=D0=BD=D0=B0=D1=8F =
+=D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D1=8F, =D0=B1=D1=83=D0=B4=D0=B5=
+=D1=82 =D1=83=D0=B4=D0=B0=D0=BB=D0=B5=D0=BD=D0=B0 =D0=B2 =D0=B2=D0=B5=D1=80=
+=D1=81=D0=B8=D0=B8 7.7).</p>
+<p style=3D"margin-left: 30.0px;"><strong><em>InstallTestPackages&nbsp;(<sp=
+an style=3D"color: rgb(255,0,0);">=D1=84=D1=83=D0=BD=D0=BA=D1=86=D0=B8=D0=
+=BE=D0=BD=D0=B8=D1=80=D1=83=D0=B5=D1=82 =D0=B2 7.7.0.437</span><span style=
+=3D"color: rgb(255,0,0);">&nbsp;=D0=B8 =D0=B2=D1=8B=D1=88=D0=B5</span>)&nbs=
+p;</em></strong><em>-</em><span class=3D"apple-converted-space">&nbsp;=D0=
+=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D1=8F=D0=B5=D1=82 =D1=83=D1=81=D1=82=D0=
+=B0=D0=BD=D0=BE=D0=B2=D0=BA=D1=83 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=
+=B2 =D1=81 =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=
+=B8=D0=BE=D0=BD=D0=BD=D1=8B=D0=BC=D0=B8 =D1=8E=D0=BD=D0=B8=D1=82 =D1=82=D0=
+=B5=D1=81=D1=82=D0=B0=D0=BC=D0=B8. =D0=92 =D1=85=D0=BE=D0=B4=D0=B5 =D0=B2=
+=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F =D0=BE=D0=BF=D0=B5=
+=D1=80=D0=B0=D1=86=D0=B8=D0=B8 =D0=B1=D0=B5=D1=80=D1=83=D1=82=D1=81=D1=8F =
+=D0=B8=D0=BC=D0=B5=D0=BD=D0=B0 =D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=
+=D0=BB=D0=B5=D0=BD=D0=BD=D1=8B=D1=85 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=
+=D0=B2 =D0=B8=D0=B7 =D0=B1=D0=B0=D0=B7=D1=8B =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=
+=D1=85, =D0=BA =D0=BD=D0=B8=D0=BC =D0=B4=D0=BE=D0=B1=D0=B0=D0=B2=D0=BB=D1=
+=8F=D0=B5=D1=82=D1=81=D1=8F '.Tests' =D0=B8 =D0=BF=D1=80=D0=BE=D0=B8=D1=81=
+=D1=85=D0=BE=D0=B4=D0=B8=D1=82 =D0=BF=D0=BE=D0=BF=D1=8B=D1=82=D0=BA=D0=B0 =
+=D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B8=D1=82=D1=8C =D1=82=D0=B0=D0=BA=D0=B8=
+=D0=B5 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D1=8B =D0=B8=D0=B7 svn</span>. =D0=97=
+=D0=B0=D1=82=D0=B5=D0=BC =D0=BD=D0=B0=D0=B9=D0=B4=D0=B5=D0=BD=D0=BD=D1=8B=
+=D0=B5 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D1=8B =D1=83=D1=81=D1=82=D0=B0=D0=BD=
+=D0=B0=D0=B2=D0=BB=D0=B8=D0=B2=D0=B0=D1=8E=D1=82=D1=81=D1=8F =D0=BD=D0=B0 =
+=D1=81=D0=B1=D0=BE=D1=80=D0=BA=D1=83.</p>
+<p style=3D"margin-left: 30.0px;"><em><strong>ValidateResourcesByResourceMa=
+nagers </strong></em><strong><em>(<span style=3D"color: rgb(255,0,0);">=D1=
+=84=D1=83=D0=BD=D0=BA=D1=86=D0=B8=D0=BE=D0=BD=D0=B8=D1=80=D1=83=D0=B5=D1=82=
+ =D0=B2 7.7.0.1244</span><span style=3D"color: rgb(255,0,0);">&nbsp;=D0=B8 =
+=D0=B2=D1=8B=D1=88=D0=B5</span>)&nbsp;</em></strong>- =D0=BF=D1=80=D0=BE=D0=
+=B2=D0=B5=D1=80=D1=8F=D0=B5=D1=82 =D0=BD=D0=B0=D0=BB=D0=B8=D1=87=D0=B8=D0=
+=B5 =D0=BD=D0=B5=D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=D0=B8=D0=B7=D0=B8=D1=80=D0=
+=BE=D0=B2=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =D1=80=D0=B5=D1=81=D1=83=D1=80=D1=
+=81=D0=BE=D0=B2 =D0=B2 =D0=BC=D0=B5=D0=BD=D0=B5=D0=B4=D0=B6=D0=B5=D1=80=D0=
+=B0=D1=85 =D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=BE=D0=B2 =D0=B2 =D1=81=D0=
+=B1=D0=BE=D1=80=D0=BA=D0=B5 . =D0=92 =D0=BF=D0=B0=D0=BF=D0=BA=D0=B5&nbsp;<e=
+m>destinationPath</em>&nbsp;- =D1=81=D0=BE=D1=85=D1=80=D0=B0=D0=BD=D1=8F=D0=
+=B5=D1=82=D1=81=D1=8F =D0=BE=D1=82=D1=87=D0=B5=D1=82 =D1=81 =D0=BD=D0=B5=D0=
+=BB=D0=BE=D0=BA=D0=B0=D0=BB=D0=B8=D0=B7=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D0=BD=
+=D0=BD=D1=8B=D0=BC=D0=B8 =D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=B0=D0=BC=
+=D0=B8.</p>
+<p style=3D"margin-left: 30.0px;"><em><strong>ActualizeSchemaCaptions&nbsp;=
+<strong><em>(<span style=3D"color: rgb(255,0,0);">=D1=84=D1=83=D0=BD=D0=BA=
+=D1=86=D0=B8=D0=BE=D0=BD=D0=B8=D1=80=D1=83=D0=B5=D1=82 =D0=B2 7.7.0.1375</s=
+pan><span style=3D"color: rgb(255,0,0);">&nbsp;=D0=B8 =D0=B2=D1=8B=D1=88=D0=
+=B5</span>)&nbsp;</em></strong></strong></em>- =D0=B2=D1=8B=D0=BF=D0=BE=D0=
+=BB=D0=BD=D1=8F=D0=B5=D1=82 =D0=B0=D0=BA=D1=82=D1=83=D0=B0=D0=BB=D0=B8=D0=
+=B7=D0=B0=D1=86=D0=B8=D1=8E =D0=B7=D0=B0=D0=B3=D0=BE=D0=BB=D0=BE=D0=B2=D0=
+=BA=D0=BE=D0=B2 =D1=81=D1=85=D0=B5=D0=BC =D0=B2 =D0=BA=D0=BE=D0=BD=D1=84=D0=
+=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B8 =D0=BD=D0=B0 =D0=BE=D1=81=D0=
+=BD=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D0=B8 =D1=80=D0=B5=D1=81=D1=83=D1=80=D1=
+=81=D0=BE=D0=B2.</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-workspaceName"><span style=3D"colo=
+r: rgb(0,0,0);">workspaceName</span></h3>
+<p>=D0=98=D0=BC=D1=8F =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=
+=B0=D1=86=D0=B8=D0=B8.&nbsp;=D0=94=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=
+=B0=D1=86=D0=B8=D0=B9&nbsp;<em>InstallFromRepository,&nbsp;DeleteWorkspaces=
+<strong> </strong></em>=D0=BC=D0=BE=D0=B6=D0=B5=D1=82 =D0=BF=D1=80=D0=B8=D0=
+=BD=D0=B8=D0=BC=D0=B0=D1=82=D1=8C =D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=
+=B8=D0=B5 =D0=B2 =D0=B2=D0=B8=D0=B4=D0=B5 =D0=BD=D0=B5=D1=81=D0=BA=D0=BE=D0=
+=BB=D1=8C=D0=BA=D0=B8=D1=85 =D0=B8=D0=BC=D0=B5=D0=BD =D1=83=D0=BA=D0=B0=D0=
+=B7=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =D1=87=D0=B5=D1=80=D0=B5=D0=B7 =D0=B7=D0=
+=B0=D0=BF=D1=8F=D1=82=D1=83=D1=8E =D0=B8=D0=BB=D0=B8 =D1=81=D0=B8=D0=BC=D0=
+=B2=D0=BE=D0=BB &quot;*&quot;.</p>
+<p>=D0=9F=D1=80=D0=B8 =D0=B8=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=
+=B2=D0=B0=D0=BD=D0=B8=D0=B8 =D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D1=
+=8F &quot;*&quot; - =D0=B4=D0=B5=D0=B9=D1=81=D1=82=D0=B2=D0=B8=D0=B5 =D0=B2=
+=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D1=8F=D0=B5=D1=82=D1=81=D1=8F =D0=B4=D0=BB=
+=D1=8F =D0=B2=D1=81=D0=B5=D1=85 =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=
+=D1=80=D0=B0=D1=86=D0=B8=D0=B9.</p>
+<p>=D0=94=D0=BB=D1=8F <em>InstallFromRepository (<span style=3D"color: rgb(=
+255,0,0);">=D1=80=D0=B5=D0=B0=D0=BB=D0=B8=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=D0=
+=BE =D0=B4=D0=BB=D1=8F =D0=B2=D0=B5=D1=80=D1=81=D0=B8=D0=B8</span> <span st=
+yle=3D"color: rgb(255,0,0);">7.2.0.49 =D0=B8 =D0=B2=D1=8B=D1=88=D0=B5</span=
+>)</em> =D0=BF=D1=80=D0=B8 =D0=BF=D0=B5=D1=80=D0=B5=D0=B4=D0=B0=D1=87=D0=B5=
+ =D0=B8=D0=BC=D0=B5=D0=BD=D0=B8 =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=
+=D1=80=D0=B0=D1=86=D0=B8=D0=B8 =3D *, =D0=B4=D0=BB=D1=8F =D0=BF=D0=B5=D1=80=
+=D0=B2=D0=BE=D0=B9 =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=
+=D1=86=D0=B8=D0=B8 =D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D1=8F=D0=B5=D1=82=
+=D1=81=D1=8F =D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=B0 =D1=81=
+=D0=BE =D0=B2=D1=81=D0=B5=D0=BC=D0=B8 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=
+=D1=82=D1=80=D0=B0=D0=BC=D0=B8 =D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=
+=D0=BA=D0=B8 =D1=83=D0=BA=D0=B0=D0=B7=D0=B0=D0=BD=D1=8B=D0=BC=D0=B8 =D0=BF=
+=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D0=B5=D0=BC. =
+=D0=94=D0=BB=D1=8F =D0=BE=D1=81=D1=82=D0=B0=D0=BB=D1=8C=D0=BD=D1=8B=D1=85 =
+=D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B9 =
+=D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D1=8F=D0=B5=D1=82=D1=81=D1=8F =D1=83=
+=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=B0 =D0=BF=D0=B0=D0=BA=D0=B5=
+=D1=82=D0=BE=D0=B2 =D1=82=D0=BE=D0=BB=D1=8C=D0=BA=D0=BE =D1=81 =D0=BF=D0=B5=
+=D1=80=D0=B5=D0=B3=D0=B5=D0=BD=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B5=D0=B9 =
+=D0=B8=D1=81=D1=85=D0=BE=D0=B4=D0=BD=D1=8B=D1=85 =D0=BA=D0=BE=D0=B4=D0=BE=
+=D0=B2 =D0=B1=D0=B5=D0=B7 =D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=B8=
+=D1=8F =D1=81=D1=82=D1=80=D1=83=D0=BA=D1=82=D1=83=D1=80=D1=8B =D0=91=D0=94,=
+ =D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F SQL =D1=81=D0=
+=BA=D1=80=D0=B8=D0=BF=D1=82=D0=BE=D0=B2 =D0=B8 =D0=B1=D0=B5=D0=B7 =D1=83=D1=
+=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=B8 =D0=B4=D0=B0=D0=BD=D0=BD=D1=
+=8B=D1=85 (=D0=B0=D0=BD=D0=B0=D0=BB=D0=BE=D0=B3=D0=B8=D1=87=D0=BD=D0=BE =D0=
+=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D1=8E =D0=BA=D0=BE=D0=
+=BC=D0=B0=D0=BD=D0=B4=D1=8B =D1=81 =D0=BA=D0=BB=D1=8E=D1=87=D0=B0=D0=BC=D0=
+=B8: -regenerateSchemaSources=3Dtrue&nbsp;-updateDBStructure=3Dfalse -insta=
+llPackageData=3Dfalse -installPackageSqlScript=3Dfalse)</p>
+<p>=D0=9E=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=D1=8B=D0=B9=
+ =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80.</p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9: Insta=
+llFromSvn, InstallFromRepository,&nbsp;DeleteWorkspaces,&nbsp;PrevalidateIn=
+stallFromRepository</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-packageName"><span style=3D"color:=
+ rgb(0,0,0);">packageName</span></h3>
+<p>=D0=98=D0=BC=D1=8F =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=B0, =D0=B8=D0=B7 =
+=D1=83=D0=BA=D0=B0=D0=B7=D0=B0=D0=BD=D0=BD=D0=BE=D0=B9 =D0=BA=D0=BE=D0=BD=
+=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B8 (=D0=BF=D0=B0=D1=80=
+=D0=B0=D0=BC=D0=B5=D1=82=D1=80 workspaceName)<em><em>.</em></em> =D0=92=D0=
+=B0=D0=B6=D0=BD=D0=BE, =D1=87=D1=82=D0=BE =D0=B1=D1=83=D0=B4=D1=83=D1=82 =
+=D1=82=D0=B0=D0=BA =D0=B6=D0=B5 =D0=B7=D0=B0=D0=B4=D0=B5=D0=B9=D1=81=D1=82=
+=D0=B2=D0=BE=D0=B2=D0=B0=D0=BD=D1=8B =D0=B2=D1=81=D0=B5 =D0=BF=D0=B0=D0=BA=
+=D0=B5=D1=82=D1=8B, =D0=BE=D1=82 =D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D1=85=
+ =D0=B7=D0=B0=D0=B2=D0=B8=D1=81=D0=B8=D1=82 =D1=83=D0=BA=D0=B0=D0=B7=D0=B0=
+=D0=BD=D0=BD=D1=8B=D0=B9 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82.</p>
+<p>=D0=9D=D0=B5=D0=BE=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=
+=D1=8B=D0=B9 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80. =D0=95=D1=81=
+=D0=BB=D0=B8 =D0=BE=D0=BD =D0=BD=D0=B5 =D1=83=D0=BA=D0=B0=D0=B7=D0=B0=D0=BD=
+, =D1=82=D0=BE =D0=B1=D1=83=D0=B4=D1=83=D1=82 =D0=B7=D0=B0=D0=B4=D0=B5=D0=
+=B9=D1=81=D1=82=D0=B2=D0=BE=D0=B2=D0=B0=D0=BD=D1=8B =D0=B2=D1=81=D0=B5 =D0=
+=BF=D0=B0=D0=BA=D0=B5=D1=82=D1=8B =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=
+=83=D1=80=D0=B0=D1=86=D0=B8=D0=B8.</p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9: Insta=
+llFromSvn, InstallFromRepository,&nbsp;SaveVersionSvnContent,&nbsp;InstallB=
+undlePackages</p>
+<p><img class=3D"emoticon emoticon-warning" src=3D"68ad5eed0b685af55694cbff=
+41d21203" data-emoticon-name=3D"warning" alt=3D"(warning)" width=3D"16" hei=
+ght=3D"16" />&nbsp;=D0=92 =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D1=8F=
+=D1=85 SaveVersionSvnContent (=D0=BD=D0=B0=D1=87=D0=B8=D0=BD=D0=B0=D1=8F =
+=D1=81 =D0=B2=D0=B5=D1=80=D1=81=D0=B8=D0=B8 7.7.0), InstallBundlePackages =
+=D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80 =D0=BF=D1=80=D0=B8=D0=BD=
+=D0=B8=D0=BC=D0=B0=D0=B5=D1=82 =D1=81=D0=BF=D0=B8=D1=81=D0=BE=D0=BA =D0=BF=
+=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2 =D1=87=D0=B5=D1=80=D0=B5=D0=B7 =D0=B7=
+=D0=B0=D0=BF=D1=8F=D1=82=D1=83=D1=8E(&quot;,&quot;).</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-packageVersion(=D0=BD=D0=B0=D1=87=
+=D0=B8=D0=BD=D0=B0=D1=8F=D1=81=D0=B2=D0=B5=D1=80=D1=81=D0=B8=D0=B87.5.0)">p=
+ackageVersion <span style=3D"color: rgb(255,0,0);"><em>(=D0=BD=D0=B0=D1=87=
+=D0=B8=D0=BD=D0=B0=D1=8F =D1=81 =D0=B2=D0=B5=D1=80=D1=81=D0=B8=D0=B8 7.5.0)=
+</em></span></h3>
+<p>=D0=92=D0=B5=D1=80=D1=81=D0=B8=D1=8F =D0=BA=D0=BE=D1=80=D0=BD=D0=B5=D0=
+=B2=D0=BE=D0=B3=D0=BE =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=B0.</p>
+<p><img class=3D"emoticon emoticon-warning" src=3D"68ad5eed0b685af55694cbff=
+41d21203" data-emoticon-name=3D"warning" alt=3D"(warning)" width=3D"16" hei=
+ght=3D"16" /><em><u>=D0=9E=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=
+=D0=BD=D1=8B=D0=B9 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80</u></em=
+>&nbsp;<span style=3D"color: rgb(255,0,0);">(=D0=BD=D0=B0=D1=87=D0=B8=D0=BD=
+=D0=B0=D1=8F =D1=81 =D0=B2=D0=B5=D1=80=D1=81=D0=B8=D0=B8 7.6.0)</span><span=
+ style=3D"font-size: 16.0px;line-height: 1.5;">.</span></p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9: SaveV=
+ersionSvnContent</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-repositoryUri"><span style=3D"colo=
+r: rgb(0,0,0);">repositoryUri</span></h3>
+<p>=D0=90=D0=B4=D1=80=D0=B5=D1=81 =D1=80=D0=B5=D0=BF=D0=BE=D0=B7=D0=B8=D1=
+=82=D0=B0=D1=80=D0=B8=D1=8F (SVN) =D0=B4=D0=BB=D1=8F =D1=85=D1=80=D0=B0=D0=
+=BD=D0=B5=D0=BD=D0=B8=D1=8F =D1=81=D1=82=D1=80=D1=83=D0=BA=D1=82=D1=83=D1=
+=80=D1=8B =D0=B8 =D0=BC=D0=B5=D1=82=D0=B0=D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=
+=85 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2.</p>
+<p>=D0=9D=D0=B5=D0=BE=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=
+=D1=8B=D0=B9 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80. =D0=95=D1=81=
+=D0=BB=D0=B8 =D0=BE=D0=BD =D0=BD=D0=B5 =D0=BF=D1=83=D1=81=D1=82=D0=BE=D0=B9=
+, =D1=82=D0=BE =D0=BF=D0=B5=D1=80=D0=B5=D0=BA=D1=80=D1=8B=D0=B2=D0=B0=D0=B5=
+=D1=82 =D0=B0=D0=BD=D0=B0=D0=BB=D0=BE=D0=B3=D0=B8=D1=87=D0=BD=D0=BE=D0=B5 =
+=D1=81=D0=B2=D0=BE=D0=B9=D1=81=D1=82=D0=B2=D0=BE =D0=BA=D0=BE=D0=BD=D1=84=
+=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B8, =D1=83=D0=BA=D0=B0=D0=B7=
+=D0=B0=D0=BD=D0=BD=D0=BE=D0=B3=D0=BE =D0=B2 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=
+=D0=B5=D1=82=D1=80=D0=B5 workspaceName</p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9: Insta=
+llFromSvn</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-workingCopyPath"><span style=3D"co=
+lor: rgb(0,0,0);">workingCopyPath</span></h3>
+<p>=D0=9B=D0=BE=D0=BA=D0=B0=D0=BB=D1=8C=D0=BD=D0=B0=D1=8F =D0=BF=D0=B0=D0=
+=BF=D0=BA=D0=B0 =D0=B4=D0=BB=D1=8F =D1=85=D1=80=D0=B0=D0=BD=D0=B5=D0=BD=D0=
+=B8=D1=8F =D0=BC=D0=B5=D1=82=D0=B0=D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =D0=
+=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2.</p>
+<p>=D0=9D=D0=B5=D0=BE=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=
+=D1=8B=D0=B9 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80.&nbsp;=D0=95=
+=D1=81=D0=BB=D0=B8 =D0=BE=D0=BD =D0=BD=D0=B5 =D0=BF=D1=83=D1=81=D1=82=D0=BE=
+=D0=B9, =D1=82=D0=BE =D0=BF=D0=B5=D1=80=D0=B5=D0=BA=D1=80=D1=8B=D0=B2=D0=B0=
+=D0=B5=D1=82 =D0=B0=D0=BD=D0=B0=D0=BB=D0=BE=D0=B3=D0=B8=D1=87=D0=BD=D0=BE=
+=D0=B5 =D1=81=D0=B2=D0=BE=D0=B9=D1=81=D1=82=D0=B2=D0=BE =D0=BA=D0=BE=D0=BD=
+=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B8, =D1=83=D0=BA=D0=B0=
+=D0=B7=D0=B0=D0=BD=D0=BD=D0=BE=D0=B3=D0=BE =D0=B2 =D0=BF=D0=B0=D1=80=D0=B0=
+=D0=BC=D0=B5=D1=82=D1=80=D0=B5 workspaceName</p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9: Insta=
+llFromSvn</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-sourceControlLogin"><span style=3D=
+"color: rgb(0,0,0);">sourceControlLogin</span></h3>
+<p>=D0=98=D0=BC=D1=8F =D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=
+=82=D0=B5=D0=BB=D1=8F =D0=B4=D0=BB=D1=8F =D0=B4=D0=BE=D1=81=D1=82=D1=83=D0=
+=BF=D0=B0 =D0=BA SVN.</p>
+<p>=D0=9E=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=D1=8B=D0=B9=
+ =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80.</p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9: Insta=
+llFromSvn</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-sourceControlPassword"><span style=
+=3D"color: rgb(0,0,0);">sourceControlPassword</span></h3>
+<p>=D0=9F=D0=B0=D1=80=D0=BE=D0=BB=D1=8C =D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=
+=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8F =D0=B4=D0=BB=D1=8F =D0=B4=D0=BE=D1=
+=81=D1=82=D1=83=D0=BF=D0=B0 =D0=BA SVN.&nbsp;</p>
+<p>=D0=9E=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=D1=8B=D0=B9=
+ =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80.</p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9: Insta=
+llFromSvn</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-sourcePath"><span style=3D"color: =
+rgb(0,0,0);">sourcePath</span></h3>
+<p>=D0=9F=D1=83=D1=82=D1=8C =D0=BA =D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=D1=8C=D0=
+=BD=D0=BE=D0=B9 =D0=BF=D0=B0=D0=BF=D0=BA=D0=B5 =D0=BD=D0=B0 =D0=B4=D0=B8=D1=
+=81=D0=BA=D0=B5 =D0=B4=D0=BB=D1=8F =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =D0=
+=B8=D1=81=D1=82=D0=BE=D1=87=D0=BD=D0=B8=D0=BA=D0=B0.&nbsp;=D0=94=D0=BB=D1=
+=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B8&nbsp;ConcatRepositorie=
+s =D0=B8 SaveVersionSvnContent =D0=BC=D0=BE=D0=B6=D0=B5=D1=82 =D0=BF=D1=80=
+=D0=B8=D0=BD=D0=B8=D0=BC=D0=B0=D1=82=D1=8C =D0=BD=D0=B5=D1=81=D0=BA=D0=BE=
+=D0=BB=D1=8C=D0=BA=D0=BE =D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D0=B9 =
+=D1=83=D0=BA=D0=B0=D0=B7=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =D1=87=D0=B5=D1=80=
+=D0=B5=D0=B7 =D0=B7=D0=B0=D0=BF=D1=8F=D1=82=D1=83=D1=8E.</p>
+<p>=D0=9E=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=D1=8B=D0=B9=
+ =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80<em><em>.</em></em></p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9: Insta=
+llFromRepository,&nbsp;ConcatRepositories,&nbsp;SaveVersionSvnContent, Prev=
+alidateInstallFromRepository&nbsp;</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-destinationPath"><span style=3D"co=
+lor: rgb(0,0,0);">destinationPath</span></h3>
+<p>=D0=9F=D1=83=D1=82=D1=8C =D0=BA =D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=D1=8C=D0=
+=BD=D0=BE=D0=B9 =D0=BF=D0=B0=D0=BF=D0=BA=D0=B5 =D0=BD=D0=B0 =D0=B4=D0=B8=D1=
+=81=D0=BA=D0=B5 =D0=B4=D0=BB=D1=8F =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =D0=
+=BF=D1=80=D0=B8=D0=B5=D0=BC=D0=BD=D0=B8=D0=BA=D0=B0.</p>
+<p>=D0=9E=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=D1=8B=D0=B9=
+ =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80<em>.</em></p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9: Insta=
+llFromRepository,&nbsp;ConcatRepositories,&nbsp;PrevalidateInstallFromRepos=
+itory</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-clearWorkspace"><span style=3D"col=
+or: rgb(0,0,0);">clearWorkspace</span></h3>
+<p>=D0=A3=D0=BA=D0=B0=D0=B7=D1=8B=D0=B2=D0=B0=D0=B5=D1=82 =D0=BD=D0=B0 =D0=
+=BD=D0=B5=D0=BE=D0=B1=D1=85=D0=BE=D0=B4=D0=B8=D0=BC=D0=BE=D1=81=D1=82=D1=8C=
+ =D0=BE=D1=87=D0=B8=D1=81=D1=82=D0=BA=D0=B8 =D1=80=D0=B0=D0=B1=D0=BE=D1=87=
+=D0=B5=D0=B3=D0=BE =D0=BF=D1=80=D0=BE=D1=81=D1=82=D1=80=D0=B0=D0=BD=D1=81=
+=D1=82=D0=B2=D0=B0 =D0=BF=D0=B5=D1=80=D0=B5=D0=B4 =D0=BE=D0=B1=D0=BD=D0=BE=
+=D0=B2=D0=BB=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC. =D0=9F=D1=80=D0=B8=D0=BD=D0=B8=
+=D0=BC=D0=B0=D0=B5=D1=82 =D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D1=8F: =
+<em>true</em>, <em>false</em>.</p>
+<p>=D0=9D=D0=B5=D0=BE=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=
+=D1=8B=D0=B9 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80. =D0=9F=D0=BE=
+ =D1=83=D0=BC=D0=BE=D0=BB=D1=87=D0=B0=D0=BD=D0=B8=D1=8E =D0=B8=D0=BC=D0=B5=
+=D0=B5=D1=82 =D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D0=B5 <strong>false=
+</strong>.</p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9: Insta=
+llFromSvn, InstallFromRepository</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-regenerateSchemaSources"><span sty=
+le=3D"color: rgb(0,0,0);">regenerateSchemaSources</span></h3>
+<p>=D0=A3=D0=BA=D0=B0=D0=B7=D1=8B=D0=B2=D0=B0=D0=B5=D1=82 =D0=BD=D0=B0 =D0=
+=BD=D0=B5=D0=BE=D0=B1=D1=85=D0=BE=D0=B4=D0=B8=D0=BC=D0=BE=D1=81=D1=82=D1=8C=
+ =D0=BF=D0=B5=D1=80=D0=B5=D0=B3=D0=B5=D0=BD=D0=B5=D1=80=D0=B0=D1=86=D0=B8=
+=D0=B8 =D0=B8=D1=81=D1=85=D0=BE=D0=B4=D0=BD=D1=8B=D1=85 =D0=BA=D0=BE=D0=B4=
+=D0=BE=D0=B2 =D0=BF=D0=BE=D1=81=D0=BB=D0=B5 =D1=81=D0=BE=D1=85=D1=80=D0=B0=
+=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2 =
+=D0=B2 =D0=B1=D0=B0=D0=B7=D0=B5 =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85. =D0=
+=9F=D1=80=D0=B8=D0=BD=D0=B8=D0=BC=D0=B0=D0=B5=D1=82 =D0=B7=D0=BD=D0=B0=D1=
+=87=D0=B5=D0=BD=D0=B8=D1=8F: true, false.</p>
+<p>=D0=9D=D0=B5=D0=BE=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=
+=D1=8B=D0=B9 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80. =D0=9F=D0=BE=
+ =D1=83=D0=BC=D0=BE=D0=BB=D1=87=D0=B0=D0=BD=D0=B8=D1=8E =D0=B8=D0=BC=D0=B5=
+=D0=B5=D1=82 =D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D0=B5 <strong>true<=
+/strong>.</p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9: Insta=
+llFromSvn, InstallFromRepository</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-updateDBStructure"><span style=3D"=
+color: rgb(0,0,0);"><em>updateDBStructure</em></span></h3>
+<p>=D0=A3=D0=BA=D0=B0=D0=B7=D1=8B=D0=B2=D0=B0=D0=B5=D1=82 =D0=BD=D0=B0 =D0=
+=BD=D0=B5=D0=BE=D0=B1=D1=85=D0=BE=D0=B4=D0=B8=D0=BC=D0=BE=D1=81=D1=82=D1=8C=
+ =D1=81=D0=BC=D0=B5=D0=BD=D1=8B =D1=81=D1=82=D1=80=D1=83=D0=BA=D1=82=D1=83=
+=D1=80=D1=8B&nbsp;=D0=B1=D0=B0=D0=B7=D0=B5 =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=
+=D1=85 =D0=BF=D0=BE=D1=81=D0=BB=D0=B5 =D1=81=D0=BE=D1=85=D1=80=D0=B0=D0=BD=
+=D0=B5=D0=BD=D0=B8=D1=8F =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2. =D0=9F=
+=D1=80=D0=B8=D0=BD=D0=B8=D0=BC=D0=B0=D0=B5=D1=82 =D0=B7=D0=BD=D0=B0=D1=87=
+=D0=B5=D0=BD=D0=B8=D1=8F: true, false.</p>
+<p>=D0=9D=D0=B5=D0=BE=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=
+=D1=8B=D0=B9 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80. =D0=9F=D0=BE=
+ =D1=83=D0=BC=D0=BE=D0=BB=D1=87=D0=B0=D0=BD=D0=B8=D1=8E =D0=B8=D0=BC=D0=B5=
+=D0=B5=D1=82 =D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D0=B5 <strong>true<=
+/strong>.</p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9: Insta=
+llFromSvn, InstallFromRepository</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-installPackageSqlScript"><span sty=
+le=3D"color: rgb(0,0,0);"><em>installPackageSqlScript</em></span></h3>
+<p>=D0=A3=D0=BA=D0=B0=D0=B7=D1=8B=D0=B2=D0=B0=D0=B5=D1=82 =D0=BD=D0=B0 =D0=
+=BD=D0=B5=D0=BE=D0=B1=D1=85=D0=BE=D0=B4=D0=B8=D0=BC=D0=BE=D1=81=D1=82=D1=8C=
+ =D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F SQL =D1=81=D0=
+=BA=D1=80=D0=B8=D0=BF=D1=82=D0=BE=D0=B2 =D0=B4=D0=BE =D0=B8 =D0=BF=D0=BE=D1=
+=81=D0=BB=D0=B5 =D1=81=D0=BE=D1=85=D1=80=D0=B0=D0=BD=D0=B5=D0=BD=D0=B8=D1=
+=8F =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2. =D0=9F=D1=80=D0=B8=D0=BD=D0=
+=B8=D0=BC=D0=B0=D0=B5=D1=82 =D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D1=
+=8F: true, false.</p>
+<p>=D0=9D=D0=B5=D0=BE=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=
+=D1=8B=D0=B9 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80. =D0=9F=D0=BE=
+ =D1=83=D0=BC=D0=BE=D0=BB=D1=87=D0=B0=D0=BD=D0=B8=D1=8E =D0=B8=D0=BC=D0=B5=
+=D0=B5=D1=82 =D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D0=B5 <strong>true<=
+/strong>.</p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9: Insta=
+llFromSvn, InstallFromRepository</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-installPackageData"><span style=3D=
+"color: rgb(0,0,0);"><em>installPackageData</em></span></h3>
+<p>=D0=A3=D0=BA=D0=B0=D0=B7=D1=8B=D0=B2=D0=B0=D0=B5=D1=82 =D0=BD=D0=B0 =D0=
+=BD=D0=B5=D0=BE=D0=B1=D1=85=D0=BE=D0=B4=D0=B8=D0=BC=D0=BE=D1=81=D1=82=D1=8C=
+ =D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=B8 =D0=BF=D1=80=D0=B8=
+=D0=B2=D1=8F=D0=B7=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =D0=BA =D0=BF=D0=B0=D0=BA=
+=D0=B5=D1=82=D1=83 =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =D0=BF=D0=BE=D1=81=
+=D0=BB=D0=B5 =D1=81=D0=BE=D1=85=D1=80=D0=B0=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F&n=
+bsp;=D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2. =D0=9F=D1=80=D0=B8=D0=BD=D0=
+=B8=D0=BC=D0=B0=D0=B5=D1=82 =D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D1=
+=8F: true, false.</p>
+<p>=D0=9D=D0=B5=D0=BE=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=
+=D1=8B=D0=B9 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80. =D0=9F=D0=BE=
+ =D1=83=D0=BC=D0=BE=D0=BB=D1=87=D0=B0=D0=BD=D0=B8=D1=8E =D0=B8=D0=BC=D0=B5=
+=D0=B5=D1=82 =D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D0=B5 <strong>true<=
+/strong>.</p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9: Insta=
+llFromSvn, InstallFromRepository</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-continueIfError"><span style=3D"co=
+lor: rgb(0,0,0);"><em>continueIfError</em></span></h3>
+<p>=D0=A3=D0=BA=D0=B0=D0=B7=D1=8B=D0=B2=D0=B0=D0=B5=D1=82 =D0=BD=D0=B0 =D0=
+=BD=D0=B5=D0=BE=D0=B1=D1=85=D0=BE=D0=B4=D0=B8=D0=BC=D0=BE=D1=81=D1=82=D1=8C=
+ =D0=BF=D1=80=D0=B5=D1=80=D0=B2=D0=B0=D1=82=D1=8C =D0=B2=D1=8B=D0=BF=D0=BE=
+=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5 =D0=BF=D1=80=D0=BE=D1=86=D0=B5=D1=81=
+=D1=81=D0=B0 =D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=B8 =D0=BF=
+=D1=80=D0=B8 =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B5=D0=BD=D0=B8=D0=B8 =D0=BF=
+=D0=B5=D1=80=D0=B2=D0=BE=D0=B9 =D0=BE=D1=88=D0=B8=D0=B1=D0=BA=D0=B8. =D0=92=
+ =D1=81=D0=BB=D1=83=D1=87=D0=B0=D0=B5 =D0=B5=D1=81=D0=BB=D0=B8 =D0=BF=D0=B0=
+=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80 =D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=
+=D0=B2=D0=BB=D0=B5=D0=BD =D0=B2&nbsp;true - =D0=BF=D1=80=D0=BE=D1=86=D0=B5=
+=D1=81=D1=81 =D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=B8 =D0=BF=
+=D1=80=D0=BE=D0=B9=D0=B4=D0=B5=D1=82 =D0=B4=D0=BE =D0=BA=D0=BE=D0=BD=D1=86=
+=D0=B0, =D0=B0 =D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=
+=D0=BB=D1=8C =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B8=D1=82 =D1=81=D0=BF=D0=B8=
+=D1=81=D0=BE=D0=BA =D0=B2=D1=81=D0=B5=D1=85 =D0=BF=D1=80=D0=BE=D0=B8=D0=B7=
+=D0=BE=D1=88=D0=B5=D0=B4=D1=88=D0=B8=D1=85 =D0=BE=D1=88=D0=B8=D0=B1=D0=BE=
+=D0=BA. =D0=9F=D1=80=D0=B8=D0=BD=D0=B8=D0=BC=D0=B0=D0=B5=D1=82 =D0=B7=D0=BD=
+=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D1=8F: true, false.</p>
+<p>=D0=9D=D0=B5=D0=BE=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=
+=D1=8B=D0=B9 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80. =D0=9F=D0=BE=
+ =D1=83=D0=BC=D0=BE=D0=BB=D1=87=D0=B0=D0=BD=D0=B8=D1=8E =D0=B8=D0=BC=D0=B5=
+=D0=B5=D1=82 =D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D0=B5 <strong>false=
+</strong>.</p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9: Insta=
+llFromSvn, InstallFromRepository</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-logPath"><span style=3D"color: rgb=
+(0,0,0);"><em>logPath</em></span></h3>
+<p>=D0=9F=D1=83=D1=82=D1=8C =D0=BA =D0=BF=D0=B0=D0=BF=D0=BA=D0=B5 =D0=B2 =
+=D0=BA=D0=BE=D1=82=D0=BE=D1=80=D0=BE=D0=B9 =D0=B4=D0=BE=D0=BB=D0=B6=D0=B5=
+=D0=BD =D0=BD=D0=B0=D1=85=D0=BE=D0=B4=D0=B8=D1=82=D1=8C=D1=81=D1=8F =D0=BB=
+=D0=BE=D0=B3 =D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F =
+=D1=83=D0=BA=D0=B0=D0=B7=D0=B0=D0=BD=D0=BE=D0=B9 =D0=BE=D0=BF=D0=B5=D1=80=
+=D0=B0=D1=86=D0=B8=D0=B8. =D0=9D=D0=B0=D0=B7=D0=B2=D0=B0=D0=BD=D0=B8=D0=B5 =
+=D1=84=D0=B0=D0=B9=D0=BB=D0=B0 =D1=81=D0=BE=D1=81=D1=82=D0=BE=D0=B8=D1=82 =
+=D0=B8=D0=B7 =D0=B4=D0=B0=D1=82=D1=8B =D0=B8 =D0=B2=D1=80=D0=B5=D0=BC=D0=B5=
+=D0=BD=D0=B8 =D0=B7=D0=B0=D0=BF=D1=83=D1=81=D0=BA=D0=B0 =D0=BE=D0=BF=D0=B5=
+=D1=80=D0=B0=D1=86=D0=B8=D0=B8.</p>
+<p>=D0=9D=D0=B5=D0=BE=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=
+=D1=8B=D0=B9 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80. =D0=95=D1=81=
+=D0=BB=D0=B8 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80 =D0=BD=D0=B5 =
+=D1=83=D0=BA=D0=B0=D0=B7=D0=B0=D0=BD, =D1=82=D0=BE =D0=BB=D0=BE=D0=B3 =D0=
+=BF=D0=B8=D1=81=D0=B0=D1=82=D1=8C=D1=81=D1=8F =D0=BD=D0=B5 =D0=B1=D1=83=D0=
+=B4=D0=B5=D1=82<em>.</em></p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9: Insta=
+llFromSvn, InstallFromRepository</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-webApplicationPath"><span style=3D=
+"color: rgb(0,0,0);"><em>webApplicationPath</em></span></h3>
+<p>=D0=9F=D1=83=D1=82=D1=8C =D0=BA =D0=B2=D0=B5=D0=B1-=D0=BF=D1=80=D0=B8=D0=
+=BB=D0=BE=D0=B6=D0=B5=D0=BD=D0=B8=D1=8E, =D0=B8=D0=B7 =D0=BA=D0=BE=D1=82=D0=
+=BE=D1=80=D0=BE=D0=B3=D0=BE =D0=B1=D1=83=D0=B4=D0=B5=D1=82 =D0=B2=D1=8B=D1=
+=87=D0=B8=D1=82=D0=B0=D0=BD=D0=B0 =D0=B8=D0=BD=D1=84=D0=BE=D1=80=D0=BC=D0=
+=B0=D1=86=D0=B8=D1=8F =D0=BF=D0=BE =D1=81=D0=BE=D0=B5=D0=B4=D0=B8=D0=BD=D0=
+=B5=D0=BD=D0=B8=D1=8E =D1=81 =D0=91=D0=94</p>
+<p>=D0=9D=D0=B5=D0=BE=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=
+=D1=8B=D0=B9 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80. =D0=95=D1=81=
+=D0=BB=D0=B8 =D0=BD=D0=B5 =D1=83=D0=BA=D0=B0=D0=B7=D0=B0=D0=BD - =D1=81=D0=
+=BE=D0=B5=D0=B4=D0=B8=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5 =D0=B1=D1=83=D0=B4=D0=
+=B5=D1=82 =D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BB=D0=B5=D0=BD=D0=
+=BE =D1=81 =D0=B1=D0=B0=D0=B7=D0=BE=D0=B9, =D1=83=D0=BA=D0=B0=D0=B7=D0=B0=
+=D0=BD=D0=BD=D0=BE=D0=B9 =D0=B2 =D1=81=D1=82=D1=80=D0=BE=D0=BA=D0=B5 =D1=81=
+=D0=BE=D0=B5=D0=B4=D0=B8=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F =D0=B2 =D1=84=D0=B0=
+=D0=B9=D0=BB=D0=B5 App.Config =D0=BF=D1=80=D0=B8=D0=BB=D0=BE=D0=B6=D0=B5=D0=
+=BD=D0=B8=D1=8F. =D0=95=D1=81=D0=BB=D0=B8 =D1=83=D0=BA=D0=B0=D0=B7=D0=B0=D0=
+=BD - =D1=81=D0=BE=D0=B5=D0=B4=D0=B8=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5 =D0=B1=
+=D1=83=D0=B4=D0=B5=D1=82 =D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BB=
+=D0=B5=D0=BD=D0=BE =D1=81 =D0=91=D0=94 =D0=B8=D0=B7 =D1=84=D0=B0=D0=B9=D0=
+=BB=D0=B0 ConnectionStrings.config =D0=B2=D0=B5=D0=B1-=D0=BF=D1=80=D0=B8=D0=
+=BB=D0=BE=D0=B6=D0=B5=D0=BD=D0=B8=D1=8F</p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=B2=D1=81=D0=B5=D1=85 =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=
+=D1=86=D0=B8=D0=B9, =D0=B2 =D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D1=85 =D1=
+=83=D1=87=D0=B0=D1=81=D1=82=D0=B2=D1=83=D0=B5=D1=82 =D0=91=D0=94</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-updateSystemDBStructure"><span sty=
+le=3D"color: rgb(0,0,0);"><em>updateSystemDBStructure</em></span></h3>
+<p>=D0=A3=D0=BA=D0=B0=D0=B7=D1=8B=D0=B2=D0=B0=D0=B5=D1=82 =D0=BD=D0=B0 =D0=
+=BD=D0=B5=D0=BE=D0=B1=D1=85=D0=BE=D0=B4=D0=B8=D0=BC=D0=BE=D1=81=D1=82=D1=8C=
+ =D1=81=D0=BC=D0=B5=D0=BD=D1=8B =D1=81=D1=82=D1=80=D1=83=D0=BA=D1=82=D1=83=
+=D1=80=D1=8B =D0=B2 =D0=B1=D0=B0=D0=B7=D0=B5 =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=
+=D1=85 =D1=81=D0=B8=D1=81=D1=82=D0=B5=D0=BC=D0=BD=D1=8B=D1=85 =D1=81=D1=85=
+=D0=B5=D0=BC =D0=BF=D0=B5=D1=80=D0=B5=D0=B4&nbsp; =D0=B2=D1=8B=D0=BF=D0=BE=
+=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC =D1=83=D1=81=D1=82=D0=B0=D0=BD=
+=D0=BE=D0=B2=D0=BA=D0=B8 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2. =D0=9F=
+=D1=80=D0=B8=D0=BD=D0=B8=D0=BC=D0=B0=D0=B5=D1=82 =D0=B7=D0=BD=D0=B0=D1=87=
+=D0=B5=D0=BD=D0=B8=D1=8F: true, false.</p>
+<p>=D0=9D=D0=B5=D0=BE=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=
+=D1=8B=D0=B9 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80. =D0=9F=D0=BE=
+ =D1=83=D0=BC=D0=BE=D0=BB=D1=87=D0=B0=D0=BD=D0=B8=D1=8E =D0=B8=D0=BC=D0=B5=
+=D0=B5=D1=82 =D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D0=B5 false. <span =
+style=3D"color: rgb(255,0,0);">=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=
+=D1=83=D0=B5=D1=82=D1=81=D1=8F =D1=82=D0=BE=D0=BB=D1=8C=D0=BA=D0=BE =D0=BF=
+=D1=80=D0=B8 =D0=BF=D0=B5=D1=80=D0=B5=D1=85=D0=BE=D0=B4=D0=B5 =D0=BD=D0=B0 =
+=D0=B2=D0=B5=D1=80=D1=81=D0=B8=D1=8E 7.2.0.593 =D0=B8 =D0=B2=D1=8B=D1=88=D0=
+=B5. </span></p>
+<p><span style=3D"color: rgb(255,0,0);">=D0=A2=D0=B0=D0=BA =D0=B6=D0=B5 =D1=
+=81=D0=BE=D0=B7=D0=B4=D0=B0=D0=B5=D1=82 =D0=B2=D1=81=D0=B5 =D0=BE=D1=82=D1=
+=81=D1=83=D1=82=D1=81=D1=82=D0=B2=D1=83=D1=8E=D1=89=D0=B8=D0=B5 =D0=B8=D0=
+=BD=D0=B4=D0=B5=D0=BA=D1=81=D1=8B =D0=B2 =D1=81=D0=B8=D1=81=D1=82=D0=B5=D0=
+=BC=D0=BD=D1=8B=D1=85 =D1=82=D0=B0=D0=B1=D0=BB=D0=B8=D1=86=D0=B0=D1=85. =D0=
+=A0=D0=B5=D0=B0=D0=BB=D0=B8=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD =D1=82=D0=BE=D0=
+=BB=D1=8C=D0=BA=D0=BE =D0=B2 =D0=BB=D0=B8=D0=BD=D0=B5=D0=B9=D0=BA=D0=B5 7.2=
+.2.x =D0=BD=D0=B0=D1=87=D0=B8=D0=BD=D0=B0=D1=8F =D1=81 =D0=B2=D0=B5=D1=80=
+=D1=81=D0=B8=D0=B8 7.2.2.489.</span></p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9: Insta=
+llFromRepository; =D0=B2 =D0=B2=D0=B5=D1=80=D1=81=D0=B8=D0=B8 7.6.0 =D0=B4=
+=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B8&nbsp;Prevalid=
+ateInstallFromRepository (=D0=B2=D1=80=D0=B5=D0=BC=D0=B5=D0=BD=D0=BD=D0=BE=
+=D0=B5 =D1=80=D0=B5=D1=88=D0=B5=D0=BD=D0=B8=D0=B5)</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-workspaceUnusedDayCount"><em><span=
+ style=3D"color: rgb(0,0,0);">workspaceUnusedDayCount</span></em></h3>
+<p>=D0=A3=D0=BA=D0=B0=D0=B7=D1=8B=D0=B2=D0=B0=D0=B5=D1=82 =D0=BA=D0=BE=D0=
+=BB=D0=B8=D1=87=D0=B5=D1=81=D1=82=D0=B2=D0=BE =D0=B4=D0=BD=D0=B5=D0=B9, =D0=
+=BA=D0=BE=D1=82=D0=BE=D1=80=D0=BE=D0=B5 =D1=80=D0=B0=D0=B1=D0=BE=D1=87=D0=
+=B5=D0=B5 =D0=BF=D1=80=D0=BE=D1=81=D1=82=D1=80=D0=B0=D0=BD=D1=81=D1=82=D0=
+=B2=D0=BE =D0=BD=D0=B5 =D0=B8=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=
+=B2=D0=B0=D0=BB=D0=BE=D1=81=D1=8C. =D0=9F=D1=80=D0=B8=D0=BD=D0=B8=D0=BC=D0=
+=B0=D0=B5=D1=82 =D1=87=D0=B8=D1=81=D0=BB=D0=BE=D0=B2=D0=BE=D0=B5 =D0=B7=D0=
+=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D1=8F =D0=B1=D0=BE=D0=BB=D1=8C=D1=88=D0=
+=B5 0.</p>
+<p>=D0=9D=D0=B5=D0=BE=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=
+=D1=8B=D0=B9 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80. =D0=9F=D0=BE=
+ =D1=83=D0=BC=D0=BE=D0=BB=D1=87=D0=B0=D0=BD=D0=B8=D1=8E =D0=B8=D0=BC=D0=B5=
+=D0=B5=D1=82 =D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D0=B5 0.</p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9:&nbsp;=
+DeleteUnusedWorkspaces</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-fileName"><em>fileName</em></h3>
+<p>=D0=98=D0=BC=D1=8F =D1=84=D0=B0=D0=B9=D0=BB=D0=B0.&nbsp;=D0=9E=D0=B1=D1=
+=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=D1=8B=D0=B9 =D0=BF=D0=B0=D1=
+=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80 =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=
+=80=D0=B0=D1=86=D0=B8=D0=B9&nbsp;<em>LoadLicResponse</em>,&nbsp;<em>SaveWor=
+kspaceContent</em>,&nbsp;<em>LoadWorkspaceContent, ValidateContent</em></p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D1=81ultureName"><em>=D1=81ulture=
+Name</em></h3>
+<p>=D0=9A=D0=BE=D0=B4 =D0=BA=D1=83=D0=BB=D1=8C=D1=82=D1=83=D1=80=D1=8B. =D0=
+=9E=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=D1=8B=D0=B9 =D0=
+=B5=D1=81=D0=BB=D0=B8 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80 <em>=
+operation=3D</em>ValidateContent</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-localizedFileName"><em>localizedFi=
+leName</em></h3>
+<p>=D0=98=D0=BC=D1=8F =D1=84=D0=B0=D0=B9=D0=BB=D0=B0 =D1=81 =D0=BB=D0=BE=D0=
+=BA=D0=B0=D0=BB=D0=B8=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=D0=BD=D1=8B=D0=BC=D0=B8=
+ =D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=B0=D0=BC=D0=B8. =D0=9D=D0=B5=D0=B1=
+=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=D1=8B=D0=B9 =D0=BF=D0=B0=
+=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80 =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=
+=D1=80=D0=B0=D1=86=D0=B8=D0=B9 <em>ValidateContent. </em>=D0=95=D1=81=D0=BB=
+=D0=B8 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80 =D0=BD=D0=B5 =D1=83=
+=D0=BA=D0=B0=D0=B7=D0=B0=D0=BD, =D1=82=D0=BE =D0=B8=D0=BC=D1=8F =D1=84=D0=
+=BE=D1=80=D0=BC=D0=B8=D1=80=D1=83=D0=B5=D1=82=D1=81=D1=8F =D0=BF=D0=BE =D0=
+=B8=D0=BC=D0=B5=D0=BD=D0=B8 =D1=83=D0=BA=D0=B0=D0=B7=D0=B0=D0=BD=D0=BD=D0=
+=BE=D0=BC=D1=83 =D0=B2 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80=D0=
+=B5&nbsp;<em>fileName</em>, =D0=BF=D0=B5=D1=80=D0=B5=D0=B4 =D1=80=D0=B0=D1=
+=81=D1=88=D0=B8=D1=80=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC =D0=B4=D0=BE=D0=B1=D0=
+=B0=D0=B2=D0=BB=D1=8F=D0=B5=D1=82=D1=81=D1=8F =D0=B7=D0=BD=D0=B0=D1=87=D0=
+=B5=D0=BD=D0=B8=D0=B5 =D1=83=D0=BA=D0=B0=D0=B7=D0=B0=D0=BD=D0=BD=D0=BE=D0=
+=B5 =D0=B2 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80=D0=B5 <em>=D1=
+=81ultureName</em>. =D0=9D=D0=B0=D0=BF=D1=80=D0=B8=D0=BC=D0=B5=D1=80 <em>fi=
+leName</em>=3DResources.xml =D0=B8&nbsp;<em>cultureName</em>=3Den =D0=B7=D0=
+=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D0=B5 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=
+=B5=D1=80=D0=B0&nbsp; <em>localizedFileName</em>=3DResources.en.xml.</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-localizedConfigFileName"><em>local=
+izedConfigFileName</em></h3>
+<p>=D0=98=D0=BC=D1=8F =D1=84=D0=B0=D0=B9=D0=BB=D0=B0 =D1=81 =D0=BF=D0=B0=D1=
+=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80=D0=B0=D0=BC=D0=B8 =D0=BF=D1=80=D0=BE=D0=
+=B2=D0=B5=D1=80=D0=BA=D0=B8 =D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=D0=B8=D0=B7=D0=
+=B0=D1=86=D0=B8=D0=B8 =D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=BE=D0=B2, =D0=
+=B2=D0=BA=D0=BB=D1=8E=D1=87=D0=B0=D0=B5=D1=82 =D1=81=D0=B5=D0=B1=D1=8F =D0=
+=B8=D0=BD=D1=84=D0=BE=D1=80=D0=BC=D0=B0=D1=86=D0=B8=D1=8E =D0=BE =D1=88=D0=
+=B0=D0=B1=D0=BB=D0=BE=D0=BD=D0=B5 =D0=B4=D0=BB=D1=8F =D0=BF=D1=80=D0=BE=D0=
+=B2=D0=B5=D1=80=D0=BA=D0=B8 =D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=D0=B8=D0=B7=D0=
+=B0=D1=86=D0=B8=D0=B8 =D0=B8 =D0=B8=D0=BD=D1=84=D0=BE=D1=80=D0=BC=D0=B0=D1=
+=86=D0=B8=D1=8E =D0=BE =D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=B0=D1=85, =
+=D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D0=B5 =D0=B8=D0=B3=D0=BD=D0=BE=D1=80=
+=D0=B8=D1=80=D1=83=D1=8E=D1=82=D1=81=D1=8F =D0=BF=D1=80=D0=B8 =D0=BF=D1=80=
+=D0=BE=D0=B2=D0=B5=D1=80=D0=BA=D0=B5. <a href=3D"/download/attachments/2890=
+1860/ValidateResources.config?version=3D1&amp;modificationDate=3D1427191415=
+470&amp;api=3Dv2">=D0=9F=D1=80=D0=B8=D0=BC=D0=B5=D1=80 =D1=84=D0=B0=D0=B9=
+=D0=BB=D0=B0 =D1=81 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80=D0=B0=
+=D0=BC=D0=B8 =D0=BF=D1=80=D0=BE=D0=B2=D0=B5=D1=80=D0=BA=D0=B8 =D0=BB=D0=BE=
+=D0=BA=D0=B0=D0=BB=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B8 =D1=80=D0=B5=D1=81=
+=D1=83=D1=80=D1=81=D0=BE=D0=B2.</a></p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-includeDependencySources"><em>incl=
+udeDependencySources</em></h3>
+<p>=D0=A3=D0=BA=D0=B0=D0=B7=D1=8B=D0=B2=D0=B0=D0=B5=D1=82 =D0=BD=D0=B0 =D0=
+=BD=D0=B5=D0=BE=D0=B1=D1=85=D0=BE=D0=B4=D0=B8=D0=BC=D0=BE=D1=81=D1=82=D1=8C=
+ =D0=BF=D0=B5=D1=80=D0=B5=D0=B3=D0=B5=D0=BD=D0=B5=D1=80=D0=B0=D1=86=D0=B8=
+=D0=B8 =D1=81=D1=85=D0=B5=D0=BC-=D0=B1=D0=B0=D0=BD=D0=B4=D0=BB=D0=BE=D0=B2 =
+=D0=BF=D0=BE=D1=81=D0=BB=D0=B5 =D1=81=D0=BE=D1=85=D1=80=D0=B0=D0=BD=D0=B5=
+=D0=BD=D0=B8=D1=8F =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2 =D0=B2 =D0=B1=
+=D0=B0=D0=B7=D0=B5 =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85. =D0=9F=D1=80=D0=B8=
+=D0=BD=D0=B8=D0=BC=D0=B0=D0=B5=D1=82 =D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=
+=D0=B8=D1=8F: true, false.</p>
+<p>=D0=9D=D0=B5=D0=BE=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=
+=D1=8B=D0=B9 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80. =D0=9F=D0=BE=
+ =D1=83=D0=BC=D0=BE=D0=BB=D1=87=D0=B0=D0=BD=D0=B8=D1=8E =D0=B8=D0=BC=D0=B5=
+=D0=B5=D1=82 =D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D0=B5 <strong>true =
+(<span style=3D"color: rgb(255,0,0);">=D0=97=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=
+=D0=B8=D0=B5 &quot;<strong>true</strong>&quot; =D1=82=D0=BE=D0=BB=D1=8C=D0=
+=BA=D0=BE =D0=B2 =D0=B2=D0=B5=D1=80=D1=81=D0=B8=D1=8F=D1=85 =D1=81=D1=82=D0=
+=B0=D1=80=D1=88=D0=B5 7.6.0.1077, =D1=80=D0=B0=D0=BD=D0=B5=D0=B5 =D0=B7=D0=
+=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D0=B5 =D1=84=D0=BB=D0=B0=D0=B3=D0=B0 =D0=
+=BF=D0=BE =D1=83=D0=BC=D0=BE=D0=BB=D1=87=D0=B0=D0=BD=D0=B8=D1=8E &quot;fals=
+e&quot;</span>)</strong>.</p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9: Insta=
+llBundlePackages, InstallFromRepository. =D0=95=D1=81=D0=BB=D0=B8 =D0=B1=D1=
+=83=D0=B4=D0=B5=D1=82 =D0=B2=D0=BE=D0=B7=D0=B2=D1=80=D0=B0=D1=89=D0=B5=D0=
+=BD=D0=B0 =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D1=8F InstallFromSvn, =
+=D1=82=D0=BE =D0=BD=D0=B5=D0=BE=D0=B1=D1=85=D0=BE=D0=B4=D0=B8=D0=BC=D0=BE =
+=D0=B1=D1=83=D0=B4=D0=B5=D1=82 =D0=B4=D0=BE=D0=B1=D0=B0=D0=B2=D0=B8=D1=82=
+=D1=8C =D0=B8 =D1=82=D1=83=D0=B4=D0=B0.</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-processName"><em>processName</em><=
+/h3>
+<p>=D0=98=D0=BC=D1=8F =D0=BF=D1=80=D0=BE=D1=86=D0=B5=D1=81=D1=81=D0=B0 =D0=
+=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D0=B9 =D0=BD=D0=B5=D0=BE=D0=B1=D1=85=D0=
+=BE=D0=B4=D0=B8=D0=BC=D0=BE =D0=B7=D0=B0=D0=BF=D1=83=D1=81=D1=82=D0=B8=D1=
+=82=D1=8C.</p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9: Execu=
+teProcess.&nbsp;</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-excludeDependentPackages"><em>excl=
+udeDependentPackages</em></h3>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B2 =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B8&nbsp;<em>SaveVersi=
+onSvnContent</em> =D0=B4=D0=BB=D1=8F =D0=BE=D1=82=D0=BA=D0=BB=D1=8E=D1=87=
+=D0=B5=D0=BD=D0=B8=D1=8F =D0=B2=D1=8B=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B8 =
+=D0=B7=D0=B0=D0=B2=D0=B8=D1=81=D0=B8=D0=BC=D1=8B=D1=85 =D0=BF=D0=B0=D0=BA=
+=D0=B5=D1=82=D0=BE=D0=B2. =D0=97=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D0=B5 =
+=D0=BF=D0=BE =D1=83=D0=BC=D0=BE=D0=BB=D1=87=D0=B0=D0=BD=D0=B8=D1=8E <strong=
+>false</strong>.</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-excludedSchemas"><em>excludedSchem=
+as</em></h3>
+<p>=D0=94=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B8 Exec=
+uteProcess =D0=B2 =D1=8D=D1=82=D0=BE=D0=BC =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=
+=D0=B5=D1=82=D1=80=D0=B5 =D1=85=D1=80=D0=B0=D0=BD=D0=B8=D1=82=D1=81=D1=8F =
+=D1=81=D0=BF=D0=B8=D1=81=D0=BE=D0=BA =D0=BE=D0=B1=D1=8A=D0=B5=D0=BA=D1=82=
+=D0=BE=D0=B2 =D0=B4=D0=BB=D1=8F =D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D1=85 =
+=D0=9D=D0=95 =D0=91=D0=A3=D0=94=D0=A3=D0=A2 =D0=BF=D1=80=D0=B5=D0=BE=D0=B1=
+=D1=80=D0=B0=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=D1=8B =D1=81=D1=82=D0=B0=D1=82=
+=D0=B8=D1=87=D0=B5=D1=81=D0=BA=D0=B8=D0=B5 =D0=B3=D1=80=D1=83=D0=BF=D0=BF=
+=D1=8B =D0=B2 =D1=82=D0=B5=D0=B3=D0=B8. =D0=9F=D1=80=D0=B8 =D1=8D=D1=82=D0=
+=BE=D0=BC =D1=82=D0=B0=D0=B1=D0=BB=D0=B8=D1=86=D1=8B =D1=82=D0=B5=D0=B3=D0=
+=BE=D0=B2 =D0=B1=D1=83=D0=B4=D1=83=D1=82 =D1=81=D0=BE=D0=B7=D0=B4=D0=B0=D0=
+=BD=D1=8B.&nbsp;</p>
+<p>=D0=A1=D0=BF=D0=B8=D1=81=D0=BE=D0=BA =D1=81=D1=85=D0=B5=D0=BC =D1=80=D0=
+=B0=D0=B7=D0=B4=D0=B5=D0=BB=D1=8F=D0=B5=D1=82=D1=81=D1=8F =D0=B7=D0=B0=D0=
+=BF=D1=8F=D1=82=D0=BE=D0=B9, =D0=B1=D0=B5=D0=B7 =D0=BF=D1=80=D0=BE=D0=B1=D0=
+=B5=D0=BB=D0=B0.</p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9: Execu=
+teProcess.&nbsp;</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-autoUpdateConfigurationVersion">au=
+toUpdateConfigurationVersion</h3>
+<p>=D0=9E=D0=B1=D0=BD=D0=BE=D0=B2=D0=BB=D1=8F=D0=B5=D1=82 =D0=B7=D0=BD=D0=
+=B0=D1=87=D0=B5=D0=BD=D0=B8=D0=B5 =D0=B2=D0=B5=D1=80=D1=81=D0=B8=D0=B8 =D0=
+=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B8 =D0=
+=B2 =D0=B1=D0=B0=D0=B7=D0=B5 =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =D0=B4=D0=
+=BE =D0=B2=D0=B5=D1=80=D1=81=D0=B8=D0=B8 =D1=81=D0=B1=D0=BE=D1=80=D0=BA=D0=
+=B8. =D0=9F=D1=80=D0=B8=D0=BD=D0=B8=D0=BC=D0=B0=D0=B5=D1=82 =D0=B7=D0=BD=D0=
+=B0=D1=87=D0=B5=D0=BD=D0=B8=D1=8F: true, false.</p>
+<p>=D0=9D=D0=B5=D0=BE=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=
+=D1=8B=D0=B9 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80. =D0=9F=D0=BE=
+ =D1=83=D0=BC=D0=BE=D0=BB=D1=87=D0=B0=D0=BD=D0=B8=D1=8E =D0=B8=D0=BC=D0=B5=
+=D0=B5=D1=82 =D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D0=B5 false.&nbsp;<=
+span style=3D"color: rgb(255,0,0);">=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=
+=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F =D1=82=D0=BE=D0=BB=D1=8C=D0=BA=D0=BE =D0=
+=BF=D1=80=D0=B8 =D0=BF=D0=B5=D1=80=D0=B5=D1=85=D0=BE=D0=B4=D0=B5 =D0=BD=D0=
+=B0 =D0=B2=D0=B5=D1=80=D1=81=D0=B8=D1=8E 7.6.0 =D0=B8 =D0=B2=D1=8B=D1=88=D0=
+=B5.</span></p>
+<p>=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F=
+ =D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9:&nbsp;=
+<span>&nbsp;InstallFromRepository, InstallBundlePackages,&nbsp;</span><span=
+ style=3D"color: rgb(0,0,0);"><span style=3D"color: rgb(0,0,0);"><a href=3D=
+"/pages/viewpage.action?pageId=3D28904379">InstallFromSvn</a></span></span>=
+</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-executeValidateActions"><span styl=
+e=3D"color: rgb(0,0,0);">executeValidateActions</span></h3>
+<p><span style=3D"color: rgb(0,0,0);"><span style=3D"color: rgb(0,0,0);">=
+=D0=92=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D1=8F=D0=B5=D1=82 =D0=BA=D0=BE=D1=80=
+=D1=80=D0=B5=D0=BA=D1=82=D0=B8=D1=80=D1=83=D1=8E=D1=89=D0=B8=D0=B5 SQL =D1=
+=81=D0=BA=D1=80=D0=B8=D0=BF=D1=82=D1=8B =D0=B4=D0=BB=D1=8F =D0=BA=D0=BE=D1=
+=80=D1=80=D0=B5=D0=BA=D1=82=D0=BD=D0=BE=D0=B3=D0=BE =D0=B2=D1=8B=D0=BF=D0=
+=BE=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F =D1=81=D0=BA=D1=80=D0=B8=D0=BF=D1=
+=82=D0=BE=D0=B2 =D0=BF=D0=BE =D1=81=D0=BE=D0=B7=D0=B4=D0=B0=D0=BD=D0=B8=D1=
+=8E =D0=BA=D0=BE=D0=BD=D1=81=D1=82=D1=80=D0=B5=D0=B9=D0=BD=D0=BE=D0=B2 =D0=
+=B8 FK =D0=BF=D1=80=D0=B8 =D0=BE=D0=B1=D0=BD=D0=BE=D0=B2=D0=BB=D0=B5=D0=BD=
+=D0=B8=D0=B8 =D1=81=D1=82=D1=80=D1=83=D0=BA=D1=82=D1=83=D1=80=D1=8B =D0=91=
+=D0=94.&nbsp;=D0=9F=D1=80=D0=B8=D0=BD=D0=B8=D0=BC=D0=B0=D0=B5=D1=82 =D0=B7=
+=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D1=8F: true, false.</span></span></p>
+<p><span style=3D"color: rgb(0,0,0);"><span style=3D"color: rgb(0,0,0);">=
+=D0=9D=D0=B5=D0=BE=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=D1=
+=8B=D0=B9 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80. =D0=9F=D0=BE =
+=D1=83=D0=BC=D0=BE=D0=BB=D1=87=D0=B0=D0=BD=D0=B8=D1=8E =D0=B8=D0=BC=D0=B5=
+=D0=B5=D1=82 =D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D0=B5 false.</span>=
+</span></p>
+<p><span style=3D"color: rgb(0,0,0);"><span style=3D"color: rgb(0,0,0);">=
+=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F =
+=D0=B4=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9:&nbsp;&=
+nbsp;InstallFromRepository<span style=3D"color: rgb(0,0,0);">&nbsp;</span><=
+/span></span></p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-removeConfigurationComments"><stro=
+ng><span style=3D"color: rgb(0,0,0);"><span style=3D"color: rgb(0,0,0);"><s=
+pan style=3D"color: rgb(0,0,0);">removeConfigurationComments</span></span><=
+/span></strong></h3>
+<p><span style=3D"color: rgb(0,0,0);"><span style=3D"color: rgb(0,0,0);"><s=
+pan style=3D"color: rgb(0,0,0);"><span style=3D"color: rgb(0,0,0);"><span s=
+tyle=3D"color: rgb(0,0,0);">=D0=A3=D0=B4=D0=B0=D0=BB=D1=8F=D0=B5=D1=82 =D0=
+=B2 =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=
+=B8 =D0=B2=D1=81=D0=B5 =D0=BA=D0=BE=D0=BC=D0=BC=D0=B5=D0=BD=D1=82=D0=B0=D1=
+=80=D0=B8=D0=B8 =D0=B2 =D0=B8=D1=81=D1=85=D0=BE=D0=B4=D0=BD=D0=BE=D0=BC =D0=
+=BA=D0=BE=D0=B4=D0=B5. =D0=9F=D1=80=D0=B8=D0=BD=D0=B8=D0=BC=D0=B0=D0=B5=D1=
+=82 =D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D1=8F: true, false.</span></=
+span></span></span></span></p>
+<p><span style=3D"color: rgb(0,0,0);"><span style=3D"color: rgb(0,0,0);"><s=
+pan style=3D"color: rgb(0,0,0);"><span style=3D"color: rgb(0,0,0);">=D0=9D=
+=D0=B5=D0=BE=D0=B1=D1=8F=D0=B7=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=D1=8B=D0=
+=B9 =D0=BF=D0=B0=D1=80=D0=B0=D0=BC=D0=B5=D1=82=D1=80. =D0=9F=D0=BE =D1=83=
+=D0=BC=D0=BE=D0=BB=D1=87=D0=B0=D0=BD=D0=B8=D1=8E =D0=B8=D0=BC=D0=B5=D0=B5=
+=D1=82 =D0=B7=D0=BD=D0=B0=D1=87=D0=B5=D0=BD=D0=B8=D0=B5 false.</span></span=
+></span></span></p>
+<p><span style=3D"color: rgb(0,0,0);"><span style=3D"color: rgb(0,0,0);"><s=
+pan style=3D"color: rgb(0,0,0);"><span style=3D"color: rgb(0,0,0);">=D0=98=
+=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D1=83=D0=B5=D1=82=D1=81=D1=8F =D0=B4=
+=D0=BB=D1=8F =D0=BE=D0=BF=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B9: &nbsp;Instal=
+lBundlePackages</span><span style=3D"color: rgb(0,0,0);">&nbsp;</span></spa=
+n></span></span></p>
+<h2 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=9F=D1=80=D0=B8=D0=BC=D0=B5=D1=
+=80=D1=8B=D0=B8=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=
+=D0=B8=D1=8F">=D0=9F=D1=80=D0=B8=D0=BC=D0=B5=D1=80=D1=8B =D0=B8=D1=81=D0=BF=
+=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D1=8F</h2>
+<p>=D0=9F=D1=80=D0=B8=D0=BC=D0=B5=D1=80=D1=8B =D0=B8=D1=81=D0=BF=D0=BE=D0=
+=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D1=8F =D1=83=D1=82=D0=B8=D0=
+=BB=D0=B8=D1=82=D1=8B =D0=B4=D0=BB=D1=8F =D1=80=D0=B5=D1=88=D0=B5=D0=BD=D0=
+=B8=D1=8F =D0=BD=D0=B0=D0=B8=D0=B1=D0=BE=D0=BB=D0=B5=D0=B5 =D1=80=D0=B0=D1=
+=81=D0=BF=D1=80=D0=BE=D1=81=D1=82=D1=80=D0=B0=D0=BD=D0=B5=D0=BD=D0=BD=D1=8B=
+=D1=85 =D0=B7=D0=B0=D0=B4=D0=B0=D1=87</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=A3=D1=81=D1=82=D0=B0=D0=BD=D0=
+=BE=D0=B2=D0=BA=D0=B0=D0=B8=D0=B7SVN-=D1=80=D0=B5=D0=BF=D0=BE=D0=B7=D0=B8=
+=D1=82=D0=BE=D1=80=D0=B8=D1=8F=D0=B2=D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=
+=83=D1=80=D0=B0=D1=86=D0=B8=D1=8E(=D1=81=D1=83=D0=B4=D0=B0=D0=BB=D0=B5=D0=
+=BD=D0=B8=D0=B5=D0=BC=D0=B2=D1=81=D0=B5=D1=85=D0=BF=D0=B0=D0=BA=D0=B5=D1=82=
+=D0=BE=D0=B2=D0=B2=D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=
+=86=D0=B8=D0=B8=D0=B8=D0=B2=D0=BD=D0=B5=D1=81=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC=
+=D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=B8=D0=B9=D0=B2=D1=81=D1=82=D1=
+=80=D1=83=D0=BA=D1=82=D1=83=D1=80=D1=83=D0=91=D0=94,=D1=81=D0=B2=D1=8B=D0=
+=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5=D0=BCSQL=D1=81=D0=BA=D1=80=D0=
+=B8=D0=BF=D1=82=D0=BE=D0=B2,=D1=81=D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=
+=B2=D0=BA=D0=BE=D0=B9=D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85,=D0=BF=D1=80=D0=
+=B8=D0=B2=D1=8F=D0=B7=D0=B0=D0=BD=D0=BD=D1=8B=D1=85=D0=BA=D0=BF=D0=B0=D0=BA=
+=D0=B5=D1=82=D0=B0=D0=BC)"><span style=3D"color: rgb(0,0,0);"><strong>=D0=
+=A3=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=B0 </strong>=D0=B8=D0=B7 S=
+VN-=D1=80=D0=B5=D0=BF=D0=BE=D0=B7=D0=B8=D1=82=D0=BE=D1=80=D0=B8=D1=8F&nbsp;=
+</span><strong><span style=3D"color: rgb(0,0,0);">=D0=B2 =D0=BA=D0=BE=D0=BD=
+=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D1=8E (</span><span style=
+=3D"color: rgb(255,0,0);">=D1=81 =D1=83=D0=B4=D0=B0=D0=BB=D0=B5=D0=BD=D0=B8=
+=D0=B5=D0=BC =D0=B2=D1=81=D0=B5=D1=85 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=
+=D0=B2 =D0=B2 =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=
+=D0=B8=D0=B8</span> =D0=B8 =D0=B2=D0=BD=D0=B5=D1=81=D0=B5=D0=BD=D0=B8=D0=B5=
+=D0=BC =D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=B8=D0=B9 =D0=B2 =D1=81=
+=D1=82=D1=80=D1=83=D0=BA=D1=82=D1=83=D1=80=D1=83 =D0=91=D0=94, =D1=81 =D0=
+=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC SQL =D1=81=
+=D0=BA=D1=80=D0=B8=D0=BF=D1=82=D0=BE=D0=B2, =D1=81 =D1=83=D1=81=D1=82=D0=B0=
+=D0=BD=D0=BE=D0=B2=D0=BA=D0=BE=D0=B9 =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85, =
+=D0=BF=D1=80=D0=B8=D0=B2=D1=8F=D0=B7=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =D0=BA =
+=D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=B0=D0=BC)</strong></h3>
+<p>Terrasoft.Tools.WorkspaceConsole.exe -workspaceName=3DDefault -operation=
+=3DInstallFromSvn -sourceControlLogin=3D<span style=3D"color: rgb(255,0,0);=
+">[=D0=98=D0=BC=D1=8F =D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=
+=82=D0=B5=D0=BB=D1=8F =D0=B4=D0=BB=D1=8F SVN]</span>&nbsp;-sourceControlPas=
+sword=3D<span style=3D"color: rgb(255,0,0);">[=D0=9F=D0=B0=D1=80=D0=BE=D0=
+=BB=D1=8C<span>&nbsp;=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=
+=D0=B5=D0=BB=D1=8F =D0=B4=D0=BB=D1=8F SVN</span>]</span>&nbsp;-RepositoryUr=
+i=3D<a class=3D"external-link" href=3D"http://tscoredev5:8050/svn/ts5conf/P=
+roduct/trunk" rel=3D"nofollow">http://tscoredev5:8050/svn/ts5conf/Product/t=
+runk</a>&nbsp;-workingCopyPath=3DD:\WorkingCopyDirectory -clearWorkspace=3D=
+true -continueIfError=3Dtrue -logPath=3DD:\WorkspaceConsoleLog</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=A3=D1=81=D1=82=D0=B0=D0=BD=D0=
+=BE=D0=B2=D0=BA=D0=B0=D0=B8=D0=B7=D1=80=D0=B5=D0=BF=D0=BE=D0=B7=D0=B8=D1=82=
+=D0=BE=D1=80=D0=B8=D1=8F(zip-=D0=B0=D1=80=D1=85=D0=B8=D0=B2)=D0=B2=D0=BA=D0=
+=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D1=8E(=D1=81=D1=
+=83=D0=B4=D0=B0=D0=BB=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC=D0=B2=D1=81=D0=B5=D1=85=
+=D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2=D0=B2=D0=BA=D0=BE=D0=BD=D1=84=D0=
+=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B8=D0=B8=D0=B2=D0=BD=D0=B5=D1=81=
+=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC=D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=
+=B8=D0=B9=D0=B2=D1=81=D1=82=D1=80=D1=83=D0=BA=D1=82=D1=83=D1=80=D1=83=D0=91=
+=D0=94,=D1=81=D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5=
+=D0=BCSQL=D1=81=D0=BA=D1=80=D0=B8=D0=BF=D1=82=D0=BE=D0=B2,=D1=81=D1=83=D1=
+=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=BE=D0=B9=D0=B4=D0=B0=D0=BD=D0=BD=
+=D1=8B=D1=85,=D0=BF=D1=80=D0=B8=D0=B2=D1=8F=D0=B7=D0=B0=D0=BD=D0=BD=D1=8B=
+=D1=85=D0=BA=D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=B0=D0=BC)"><strong>=D0=A3=D1=
+=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=B0 </strong>=D0=B8=D0=B7 =D1=80=
+=D0=B5=D0=BF=D0=BE=D0=B7=D0=B8=D1=82=D0=BE=D1=80=D0=B8=D1=8F&nbsp;(zip-=D0=
+=B0=D1=80=D1=85=D0=B8=D0=B2)&nbsp;<span>=D0=B2 =D0=BA=D0=BE=D0=BD=D1=84=D0=
+=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D1=8E<strong> (<strong><span style=
+=3D"color: rgb(255,0,0);">=D1=81 =D1=83=D0=B4=D0=B0=D0=BB=D0=B5=D0=BD=D0=B8=
+=D0=B5=D0=BC =D0=B2=D1=81=D0=B5=D1=85 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=
+=D0=B2 =D0=B2 =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=
+=D0=B8=D0=B8</span></strong> =D0=B8 =D0=B2=D0=BD=D0=B5=D1=81=D0=B5=D0=BD=D0=
+=B8=D0=B5=D0=BC =D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=B8=D0=B9 =D0=
+=B2 <strong>=D1=81=D1=82=D1=80=D1=83=D0=BA=D1=82=D1=83=D1=80=D1=83 </strong=
+>=D0=91=D0=94, =D1=81 =D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=BD=D0=
+=B8=D0=B5=D0=BC SQL =D1=81=D0=BA=D1=80=D0=B8=D0=BF=D1=82=D0=BE=D0=B2, =D1=
+=81 =D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=BE=D0=B9 =D0=B4=D0=
+=B0=D0=BD=D0=BD=D1=8B=D1=85, =D0=BF=D1=80=D0=B8=D0=B2=D1=8F=D0=B7=D0=B0=D0=
+=BD=D0=BD=D1=8B=D1=85 =D0=BA =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=B0=D0=BC)</s=
+trong></span></h3>
+<p><span style=3D"color: rgb(0,0,0);">Terrasoft.Tools.WorkspaceConsole.exe =
+-workspaceName=3DDefault -operation=3DInstallFromRepository -sourcePath=3Dd=
+:\Temp\Repository\ -destinationPath=3DD:\Temp\Destination\</span> -clearWor=
+kspace=3Dtrue -continueIfError=3Dtrue -logPath=3DD:\WorkspaceConsoleLog</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=A3=D1=81=D1=82=D0=B0=D0=BD=D0=
+=BE=D0=B2=D0=BA=D0=B0=D0=B8=D0=B7=D1=80=D0=B5=D0=BF=D0=BE=D0=B7=D0=B8=D1=82=
+=D0=BE=D1=80=D0=B8=D1=8F(zip-=D0=B0=D1=80=D1=85=D0=B8=D0=B2)=D0=B2=D0=BA=D0=
+=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D1=8E(=D1=81=D0=
+=B2=D0=BD=D0=B5=D1=81=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC=D0=B8=D0=B7=D0=BC=D0=B5=
+=D0=BD=D0=B5=D0=BD=D0=B8=D0=B9=D0=B2=D1=81=D1=82=D1=80=D1=83=D0=BA=D1=82=D1=
+=83=D1=80=D1=83=D0=91=D0=94=D0=B8=D0=B1=D0=B5=D0=B7=D0=B2=D1=8B=D0=BF=D0=BE=
+=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5=D0=BCSQL=D1=81=D0=BA=D1=80=D0=B8=D0=BF=
+=D1=82=D0=BE=D0=B2=D0=B8=D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=
+=B8=D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85)"><strong>=D0=A3=D1=81=D1=82=D0=B0=
+=D0=BD=D0=BE=D0=B2=D0=BA=D0=B0 </strong>=D0=B8=D0=B7 =D1=80=D0=B5=D0=BF=D0=
+=BE=D0=B7=D0=B8=D1=82=D0=BE=D1=80=D0=B8=D1=8F&nbsp;(zip-=D0=B0=D1=80=D1=85=
+=D0=B8=D0=B2)&nbsp;=D0=B2 =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=
+=D0=B0=D1=86=D0=B8=D1=8E<strong> (=D1=81 =D0=B2=D0=BD=D0=B5=D1=81=D0=B5=D0=
+=BD=D0=B8=D0=B5=D0=BC =D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=B8=D0=
+=B9 =D0=B2 <strong>=D1=81=D1=82=D1=80=D1=83=D0=BA=D1=82=D1=83=D1=80=D1=83 <=
+/strong>=D0=91=D0=94 =D0=B8 =D0=B1=D0=B5=D0=B7 =D0=B2=D1=8B=D0=BF=D0=BE=D0=
+=BB=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC SQL =D1=81=D0=BA=D1=80=D0=B8=D0=BF=
+=D1=82=D0=BE=D0=B2 =D0=B8 =D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=
+=D0=B8 =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85)</strong></h3>
+<p><span style=3D"color: rgb(0,0,0);">Terrasoft.Tools.WorkspaceConsole.exe =
+-workspaceName=3DDefault -operation=3DInstallFromRepository -sourcePath=3Dd=
+:\Temp\Repository\ -destinationPath=3DD:\Temp\Destination\</span> -clearWor=
+kspace=3Dfalse -continueIfError=3Dtrue -logPath=3DD:\WorkspaceConsoleLog -i=
+nstallPackageData=3Dfalse -installPackageSqlScript=3Dfalse</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=A3=D1=81=D1=82=D0=B0=D0=BD=D0=
+=BE=D0=B2=D0=BA=D0=B0=D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2=D0=B2=D0=BE=
+=D0=B4=D0=BD=D1=83=D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=
+=86=D0=B8=D1=8E=D0=B8=D0=B7=D1=80=D0=B0=D0=B7=D0=BD=D1=8B=D1=85=D1=80=D0=B5=
+=D0=BF=D0=BE=D0=B7=D0=B8=D1=82=D0=BE=D1=80=D0=B8=D0=B5=D0=B2(=D1=80=D0=B0=
+=D0=B7=D0=BD=D1=8B=D0=B5=D0=BD=D0=B0=D0=B1=D0=BE=D1=80=D1=8Bzip-=D0=B0=D1=
+=80=D1=85=D0=B8=D0=B2=D0=BE=D0=B2)(=D1=81=D0=B2=D0=BD=D0=B5=D1=81=D0=B5=D0=
+=BD=D0=B8=D0=B5=D0=BC=D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=B8=D0=B9=
+=D0=B2=D1=81=D1=82=D1=80=D1=83=D0=BA=D1=82=D1=83=D1=80=D1=83=D0=91=D0=94,=
+=D1=81=D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5=D0=BCSQL=
+=D1=81=D0=BA=D1=80=D0=B8=D0=BF=D1=82=D0=BE=D0=B2,=D1=81=D1=83=D1=81=D1=82=
+=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=BE=D0=B9=D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=
+=85,=D0=BF=D1=80=D0=B8=D0=B2=D1=8F=D0=B7=D0=B0=D0=BD=D0=BD=D1=8B=D1=85=D0=
+=BA=D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=B0=D0=BC)-=D0=BF=D1=80=D0=B8=D0=B2=D0=
+=B5=D0=B4=D0=B5=D0=BD=D0=BD=D1=8B=D0=B9=D0=BD=D0=B8=D0=B6=D0=B5=D0=B7=D0=B0=
+=D0=BF=D1=80=D0=BE=D1=81=D0=BD=D0=B0=D0=B4=D0=BE=D0=B1=D1=83=D0=B4=D0=B5=D1=
+=82=D0=BF=D0=BE=D0=B2=D1=82=D0=BE=D1=80=D0=B8"><span style=3D"color: rgb(0,=
+0,0);"><strong>=D0=A3=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=B0 =D0=
+=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2 =D0=B2 =D0=BE=D0=B4=D0=BD=D1=83 =D0=
+=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D1=8E =D0=
+=B8=D0=B7 =D1=80=D0=B0=D0=B7=D0=BD=D1=8B=D1=85</strong>&nbsp;=D1=80=D0=B5=
+=D0=BF=D0=BE=D0=B7=D0=B8=D1=82=D0=BE=D1=80=D0=B8=D0=B5=D0=B2&nbsp;(=D1=80=
+=D0=B0=D0=B7=D0=BD=D1=8B=D0=B5 =D0=BD=D0=B0=D0=B1=D0=BE=D1=80=D1=8B zip-=D0=
+=B0=D1=80=D1=85=D0=B8=D0=B2=D0=BE=D0=B2)&nbsp;<strong>(=D1=81 =D0=B2=D0=BD=
+=D0=B5=D1=81=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC =D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=
+=D0=B5=D0=BD=D0=B8=D0=B9 =D0=B2&nbsp;<strong>=D1=81=D1=82=D1=80=D1=83=D0=BA=
+=D1=82=D1=83=D1=80=D1=83&nbsp;</strong>=D0=91=D0=94, =D1=81 =D0=B2=D1=8B=D0=
+=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC SQL =D1=81=D0=BA=D1=80=
+=D0=B8=D0=BF=D1=82=D0=BE=D0=B2, =D1=81 =D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=
+=D0=B2=D0=BA=D0=BE=D0=B9 =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85, =D0=BF=D1=80=
+=D0=B8=D0=B2=D1=8F=D0=B7=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =D0=BA =D0=BF=D0=B0=
+=D0=BA=D0=B5=D1=82=D0=B0=D0=BC) - =D0=BF=D1=80=D0=B8=D0=B2=D0=B5=D0=B4=D0=
+=B5=D0=BD=D0=BD=D1=8B=D0=B9 =D0=BD=D0=B8=D0=B6=D0=B5 =D0=B7=D0=B0=D0=BF=D1=
+=80=D0=BE=D1=81 =D0=BD=D0=B0=D0=B4=D0=BE =D0=B1=D1=83=D0=B4=D0=B5=D1=82 =D0=
+=BF=D0=BE=D0=B2=D1=82=D0=BE=D1=80=D0=B8=D1=82=D1=8C =D0=BF=D0=BE =D1=80=D0=
+=B0=D0=B7=D1=83 =D0=B4=D0=BB=D1=8F =D0=BA=D0=B0=D0=B6=D0=B4=D0=BE=D0=B3=D0=
+=BE =D1=80=D0=B5=D0=BF=D0=BE=D0=B7=D0=B8=D1=82=D0=BE=D1=80=D0=B8=D1=8F (=D0=
+=BF=D1=83=D1=82=D1=8C =D0=B7=D0=B0=D0=B4=D0=B0=D0=B5=D1=82=D1=81=D1=8F =D0=
+=B2 -sourcePath) </strong></span></h3>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=9E=D1=87=D0=B8=D1=81=D1=82=D0=
+=BA=D1=83=D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=
+=D0=B8=D0=BD=D0=B5=D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D1=8F=D1=82=D1=8C(-c=
+learWorkspace=3Dfalse)!"><span style=3D"color: rgb(0,0,0);"><strong>=D0=9E=
+=D1=87=D0=B8=D1=81=D1=82=D0=BA=D1=83 =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=
+=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B8 =D0=BD=D0=B5 =D0=B2=D1=8B=D0=BF=D0=BE=
+=D0=BB=D0=BD=D1=8F=D1=82=D1=8C(-clearWorkspace=3Dfalse)!</strong></span></h=
+3>
+<p><span style=3D"color: rgb(0,0,0);">Terrasoft.Tools.WorkspaceConsole.exe =
+-workspaceName=3DDefault -operation=3DInstallFromRepository -sourcePath=3Dd=
+:\Temp\Repository\ -destinationPath=3DD:\Temp\Destination\</span>&nbsp;-cle=
+arWorkspace=3Dfalse -continueIfError=3Dtrue -logPath=3DD:\WorkspaceConsoleL=
+og</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=A3=D0=B4=D0=B0=D0=BB=D0=B5=D0=
+=BD=D0=B8=D0=B5=D1=80=D0=B0=D0=B1=D0=BE=D1=87=D0=B8=D1=85=D0=BF=D1=80=D0=BE=
+=D1=81=D1=82=D1=80=D0=B0=D0=BD=D1=81=D1=82=D0=B2"><span style=3D"color: rgb=
+(0,0,0);"><strong style=3D"line-height: 1.6666666;">=D0=A3=D0=B4=D0=B0=D0=
+=BB=D0=B5=D0=BD=D0=B8=D0=B5 =D1=80=D0=B0=D0=B1=D0=BE=D1=87=D0=B8=D1=85 =D0=
+=BF=D1=80=D0=BE=D1=81=D1=82=D1=80=D0=B0=D0=BD=D1=81=D1=82=D0=B2</strong></s=
+pan></h3>
+<p><span style=3D"color: rgb(0,0,0);">Terrasoft.Tools.WorkspaceConsole.exe&=
+nbsp;-operation=3DDeleteWorkspaces -workspaceName=3DWorkspaceName1,<span>Wo=
+rkspaceName2</span>,<span>WorkspaceName3</span></span></p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=A1=D0=BB=D0=B8=D1=8F=D0=BD=D0=
+=B8=D0=B5=D0=BD=D0=B5=D1=81=D0=BA=D0=BE=D0=BB=D1=8C=D0=BA=D0=B8=D1=85=D1=80=
+=D0=B5=D0=BF=D0=BE=D0=B7=D0=B8=D1=82=D0=BE=D1=80=D0=B8=D0=B5=D0=B2(zip-=D0=
+=B0=D1=80=D1=85=D0=B8=D0=B2)=D0=B2=D0=BE=D0=B4=D0=B8=D0=BD=D1=80=D0=B5=D0=
+=BF=D0=BE=D0=B7=D0=B8=D1=82=D0=BE=D1=80=D0=B8=D0=B9(zip-=D0=B0=D1=80=D1=85=
+=D0=B8=D0=B2)"><strong style=3D"color: rgb(61,61,61);line-height: 1.6666666=
+;">=D0=A1=D0=BB=D0=B8=D1=8F=D0=BD=D0=B8=D0=B5 =D0=BD=D0=B5=D1=81=D0=BA=D0=
+=BE=D0=BB=D1=8C=D0=BA=D0=B8=D1=85 =D1=80=D0=B5=D0=BF=D0=BE=D0=B7=D0=B8=D1=
+=82=D0=BE=D1=80=D0=B8=D0=B5=D0=B2&nbsp;<span style=3D"font-size: 1.1em;line=
+-height: normal;">(zip-=D0=B0=D1=80=D1=85=D0=B8=D0=B2) =D0=B2 =D0=BE=D0=B4=
+=D0=B8=D0=BD =D1=80=D0=B5=D0=BF=D0=BE=D0=B7=D0=B8=D1=82=D0=BE=D1=80=D0=B8=
+=D0=B9&nbsp;</span><span style=3D"font-size: 1.1em;line-height: normal;">(z=
+ip-=D0=B0=D1=80=D1=85=D0=B8=D0=B2)</span></strong></h3>
+<p><span style=3D"color: rgb(0,0,0);">Terrasoft.Tools.WorkspaceConsole.exe&=
+nbsp;</span>-operation=3DConcatRepositories -workspaceName=3DDefault -sourc=
+ePath=3D=D0=A1:\Temp\Packages\Base,=D0=A1:\Temp\Packages\Bank,=D0=A1:\Temp\=
+Packages\External -destinationPath=3D=D0=A1:\Temp\Packages_Destination</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=A1=D0=BE=D1=85=D1=80=D0=B0=D0=
+=BD=D0=B5=D0=BD=D0=B8=D0=B5SQL=D1=81=D0=BA=D1=80=D0=B8=D0=BF=D1=82=D0=BE=D0=
+=B2"><span style=3D"color: rgb(0,0,0);">=D0=A1=D0=BE=D1=85=D1=80=D0=B0=D0=
+=BD=D0=B5=D0=BD=D0=B8=D0=B5 SQL =D1=81=D0=BA=D1=80=D0=B8=D0=BF=D1=82=D0=BE=
+=D0=B2</span></h3>
+<p><span style=3D"color: rgb(0,0,0);">Terrasoft.Tools.WorkspaceConsole.exe&=
+nbsp;</span>-operation=3D<span style=3D"color: rgb(0,0,255);">SaveRepositor=
+yContent </span>-contentTypes=3D<span style=3D"color: rgb(0,0,255);">SqlScr=
+ipts&nbsp;</span>-sourcePath=3D&quot;\\V_Novak\Share\Packages_7.0.1.500&quo=
+t; -destinationPath=3D&quot;\\V_Novak\Share\SqlScripts&quot;</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=92=D1=8B=D0=B3=D1=80=D1=83=D0=
+=B7=D0=BA=D0=B0=D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=BE=D0=B2=D1=81=D1=85=
+=D0=B5=D0=BC=D0=B4=D0=BB=D1=8F=D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=D0=B8=D0=B7=D0=
+=B0=D1=86=D0=B8=D0=B8"><span style=3D"color: rgb(0,0,0);">=D0=92=D1=8B=D0=
+=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B0 =D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=
+=BE=D0=B2 =D1=81=D1=85=D0=B5=D0=BC =D0=B4=D0=BB=D1=8F =D0=BB=D0=BE=D0=BA=D0=
+=B0=D0=BB=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B8</span></h3>
+<p>Terrasoft.Tools.WorkspaceConsole.exe -operation=3DSaveDBContent -workspa=
+ceName=3DDefault&nbsp;-destinationPath=3DD:\Temp\Resources\ -contentTypes=
+=3DResources -fileName=3DResources.xml -cultureName=3Dru-RU</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=92=D1=8B=D0=B3=D1=80=D1=83=D0=
+=B7=D0=BA=D0=B0=D0=BD=D0=B0=D0=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F=
+=D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=BE=D0=
+=BD=D0=BD=D1=8B=D1=85=D1=81=D1=85=D0=B5=D0=BC=D0=B4=D0=BB=D1=8F=D0=BB=D0=BE=
+=D0=BA=D0=B0=D0=BB=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B8"><span style=3D"colo=
+r: rgb(0,0,0);">=D0=92=D1=8B=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B0 =D0=BD=D0=
+=B0=D0=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D1=8F =D0=BA=D0=BE=D0=BD=D1=
+=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=BE=D0=BD=D0=BD=D1=8B=D1=85=
+ =D1=81=D1=85=D0=B5=D0=BC =D0=B4=D0=BB=D1=8F =D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=
+=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B8</span></h3>
+<p>Terrasoft.Tools.WorkspaceConsole.exe -operation=3DSaveDBContent&nbsp;-wo=
+rkspaceName=3DDefault -destinationPath=3DD:\Temp\Resources\ -contentTypes=
+=3DLocalizableData -fileName=3DLocalizableData.xml -cultureName=3Dru-RU</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=92=D1=8B=D0=B3=D1=80=D1=83=D0=
+=B7=D0=BA=D0=B0=D1=80=D0=B0=D0=B1=D0=BE=D1=87=D0=B5=D0=B3=D0=BE=D0=BF=D1=80=
+=D0=BE=D1=81=D1=82=D1=80=D0=B0=D0=BD=D1=81=D1=82=D0=B2=D0=B0(=D0=B8=D0=B7=
+=D0=91=D0=94)=D0=B2=D1=80=D0=B5=D0=BF=D0=BE=D0=B7=D0=B8=D1=82=D0=BE=D1=80=
+=D0=B8=D0=B9(zip-=D0=B0=D1=80=D1=85=D0=B8=D0=B2)"><span style=3D"color: rgb=
+(0,0,0);">=D0=92=D1=8B=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B0 =D1=80=D0=B0=D0=
+=B1=D0=BE=D1=87=D0=B5=D0=B3=D0=BE =D0=BF=D1=80=D0=BE=D1=81=D1=82=D1=80=D0=
+=B0=D0=BD=D1=81=D1=82=D0=B2=D0=B0 (=D0=B8=D0=B7 =D0=91=D0=94) =D0=B2 =D1=80=
+=D0=B5=D0=BF=D0=BE=D0=B7=D0=B8=D1=82=D0=BE=D1=80=D0=B8=D0=B9 (zip-=D0=B0=D1=
+=80=D1=85=D0=B8=D0=B2)</span></h3>
+<p>Terrasoft.Tools.WorkspaceConsole.exe -operation=3DSaveDBContent&nbsp;-wo=
+rkspaceName=3DDefault -destinationPath=3DD:\Temp\<span style=3D"color: rgb(=
+0,0,0);">Repository\</span>&nbsp;-contentTypes=3DRepository&nbsp;</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=92=D1=8B=D0=B3=D1=80=D1=83=D0=
+=B7=D0=BA=D0=B0=D1=80=D0=B0=D0=B1=D0=BE=D1=87=D0=B5=D0=B3=D0=BE=D0=BF=D1=80=
+=D0=BE=D1=81=D1=82=D1=80=D0=B0=D0=BD=D1=81=D1=82=D0=B2=D0=B0(=D0=B8=D0=B7Sv=
+n)=D0=B2=D1=80=D0=B5=D0=BF=D0=BE=D0=B7=D0=B8=D1=82=D0=BE=D1=80=D0=B8=D0=B9(=
+zip-=D0=B0=D1=80=D1=85=D0=B8=D0=B2)"><span style=3D"color: rgb(0,0,0);">=D0=
+=92=D1=8B=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B0 =D1=80=D0=B0=D0=B1=D0=BE=D1=
+=87=D0=B5=D0=B3=D0=BE =D0=BF=D1=80=D0=BE=D1=81=D1=82=D1=80=D0=B0=D0=BD=D1=
+=81=D1=82=D0=B2=D0=B0 (=D0=B8=D0=B7 Svn) =D0=B2 =D1=80=D0=B5=D0=BF=D0=BE=D0=
+=B7=D0=B8=D1=82=D0=BE=D1=80=D0=B8=D0=B9 (zip-=D0=B0=D1=80=D1=85=D0=B8=D0=B2=
+)</span></h3>
+<p>Terrasoft.Tools.WorkspaceConsole.exe -operation=3DSaveSvnContent -worksp=
+aceName=3DDefault&nbsp;-destinationPath=3DD:\Temp\<span style=3D"color: rgb=
+(0,0,0);">Repository\&nbsp;-contentTypes=3DRepository</span>&nbsp;-workingC=
+opyPath=3DD:\Temp\Source\ -repositoryUri=3D<a class=3D"external-link" href=
+=3D"http://tscoredev5:8050/svn/ts5conf/Product/trunk" rel=3D"nofollow">http=
+://tscoredev5:8050/svn/ts5conf/Product/trunk</a>&nbsp;&nbsp;-sourceControlL=
+ogin=3D<span style=3D"color: rgb(255,0,0);">[=D0=98=D0=BC=D1=8F =D0=BF=D0=
+=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8F =D0=B4=D0=
+=BB=D1=8F SVN]</span>&nbsp;-sourceControlPassword=3D<span style=3D"color: r=
+gb(255,0,0);">[=D0=9F=D0=B0=D1=80=D0=BE=D0=BB=D1=8C&nbsp;=D0=BF=D0=BE=D0=BB=
+=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8F =D0=B4=D0=BB=D1=8F S=
+VN]</span><span style=3D"color: rgb(255,0,0);">&nbsp;</span></p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=92=D1=8B=D0=B3=D1=80=D1=83=D0=
+=B7=D0=BA=D0=B0=D0=BA=D0=BE=D1=80=D0=BD=D0=B5=D0=B2=D0=BE=D0=B3=D0=BE=D0=BA=
+=D0=BE=D1=80=D0=BD=D0=B5=D0=B2=D0=BE=D0=B3=D0=BE=D0=BF=D0=B0=D0=BA=D0=B5=D1=
+=82=D0=B0=D0=BE=D0=BF=D1=80=D0=B5=D0=B4=D0=B5=D0=BB=D0=B5=D0=BD=D0=BD=D0=BE=
+=D0=B9=D0=B2=D0=B5=D1=80=D1=81=D0=B8=D0=B8=D0=B8=D0=B2=D1=81=D0=B5=D1=85=D0=
+=B7=D0=B0=D0=B2=D0=B8=D1=81=D0=B8=D0=BC=D1=8B=D1=85=D0=BF=D0=BE=D0=B8=D0=B5=
+=D1=80=D0=B0=D1=80=D1=85=D0=B8=D0=B8=D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=
+=B2=D0=B8=D0=B7=D0=BD=D0=B5=D1=81=D0=BA=D0=BE=D0=BB=D1=8C=D0=BA=D0=B8=D1=85=
+Svn=D0=B2=D1=80=D0=B5=D0=BF=D0=BE=D0=B7=D0=B8=D1=82=D0=BE=D1=80=D0=B8=D0=B9=
+(zip-=D0=B0=D1=80=D1=85=D0=B8=D0=B2)(=D0=BD=D0=B0=D1=87=D0=B8=D0=BD=D0=B0=
+=D1=8F=D1=81=D0=B2=D0=B5=D1=80=D1=81=D0=B8=D0=B87.5.0)"><span style=3D"colo=
+r: rgb(0,0,0);">=D0=92=D1=8B=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B0 =D0=BA=D0=
+=BE=D1=80=D0=BD=D0=B5=D0=B2=D0=BE=D0=B3=D0=BE =D0=BA=D0=BE=D1=80=D0=BD=D0=
+=B5=D0=B2=D0=BE=D0=B3=D0=BE =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=B0 =D0=BE=D0=
+=BF=D1=80=D0=B5=D0=B4=D0=B5=D0=BB=D0=B5=D0=BD=D0=BD=D0=BE=D0=B9 =D0=B2=D0=
+=B5=D1=80=D1=81=D0=B8=D0=B8 =D0=B8 =D0=B2=D1=81=D0=B5=D1=85 =D0=B7=D0=B0=D0=
+=B2=D0=B8=D1=81=D0=B8=D0=BC=D1=8B=D1=85 =D0=BF=D0=BE =D0=B8=D0=B5=D1=80=D0=
+=B0=D1=80=D1=85=D0=B8=D0=B8 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2 =D0=
+=B8=D0=B7 =D0=BD=D0=B5=D1=81=D0=BA=D0=BE=D0=BB=D1=8C=D0=BA=D0=B8=D1=85 Svn =
+=D0=B2 =D1=80=D0=B5=D0=BF=D0=BE=D0=B7=D0=B8=D1=82=D0=BE=D1=80=D0=B8=D0=B9 (=
+zip-=D0=B0=D1=80=D1=85=D0=B8=D0=B2)</span> <span style=3D"color: rgb(255,0,=
+0);">(=D0=BD=D0=B0=D1=87=D0=B8=D0=BD=D0=B0=D1=8F =D1=81 =D0=B2=D0=B5=D1=80=
+=D1=81=D0=B8=D0=B8 7.5.0)</span></h3>
+<p>Terrasoft.Tools.WorkspaceConsole.exe&nbsp;-operation=3DSaveVersionSvnCon=
+tent -destinationPath=3DD:\Temp\<span style=3D"color: rgb(0,0,0);">Reposito=
+ry\</span>&nbsp;-workingCopyPath=3DD:\Temp\Source\ -sourcePath=3D<a href=3D=
+"http://tscore-svn:8050/svn/ts5conf/Packages/Omnichannel740/trunk,http://ts=
+core-svn:8050/svn/ts5conf/Packages/SalesEnterprise/trunk,http://tscore-svn:=
+8050/svn/ts5conf/Product/trunk" class=3D"external-link" rel=3D"nofollow">ht=
+tp://tscore-svn:8050/svn/ts5conf/Packages/Omnichannel740/trunk,http://tscor=
+e-svn:8050/svn/ts5conf/Packages/SalesEnterprise/trunk,http://tscore-svn:805=
+0/svn/ts5conf/Product/trunk</a>&nbsp;-packageName=3DSalesEnterprise -packag=
+eVersion=3D<span style=3D"color: rgb(255,0,0);">[=D0=92=D0=B5=D1=80=D1=81=
+=D0=B8=D1=8F =D0=BA=D0=BE=D1=80=D0=BD=D0=B5=D0=B2=D0=BE=D0=B3=D0=BE =D0=BF=
+=D0=B0=D0=BA=D0=B5=D1=82=D0=B0]</span> -sourceControlLogin=3D<span style=3D=
+"color: rgb(255,0,0);">[=D0=98=D0=BC=D1=8F =D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=
+=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8F =D0=B4=D0=BB=D1=8F SVN]</span>&n=
+bsp;-sourceControlPassword=3D<span style=3D"color: rgb(255,0,0);">[=D0=9F=
+=D0=B0=D1=80=D0=BE=D0=BB=D1=8C&nbsp;=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=
+=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8F =D0=B4=D0=BB=D1=8F SVN]</span>&nbsp;-logP=
+ath=3DD:\Temp\WorkspaceConsoleLog</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=92=D1=8B=D0=B3=D1=80=D1=83=D0=
+=B7=D0=BA=D0=B0=D0=BD=D0=B5=D1=81=D0=BA=D0=BE=D0=BB=D1=8C=D0=BA=D0=B8=D1=85=
+=D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2=D0=BE=D0=BF=D1=80=D0=B5=D0=B4=D0=
+=B5=D0=BB=D0=B5=D0=BD=D0=BD=D0=BE=D0=B9=D0=B2=D0=B5=D1=80=D1=81=D0=B8=D0=B8=
+=D0=B1=D0=B5=D0=B7=D0=B7=D0=B0=D0=B2=D0=B8=D1=81=D0=B8=D0=BC=D1=8B=D1=85=D0=
+=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2=D0=B8=D0=B7=D0=BD=D0=B5=D1=81=D0=BA=
+=D0=BE=D0=BB=D1=8C=D0=BA=D0=B8=D1=85Svn=D0=B2=D1=80=D0=B5=D0=BF=D0=BE=D0=B7=
+=D0=B8=D1=82=D0=BE=D1=80=D0=B8=D0=B9(zip-=D0=B0=D1=80=D1=85=D0=B8=D0=B2)(=
+=D0=BD=D0=B0=D1=87=D0=B8=D0=BD=D0=B0=D1=8F=D1=81=D0=B2=D0=B5=D1=80=D1=81=D0=
+=B8=D0=B87.7.0)"><span>=D0=92=D1=8B=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B0 =D0=
+=BD=D0=B5=D1=81=D0=BA=D0=BE=D0=BB=D1=8C=D0=BA=D0=B8=D1=85 =D0=BF=D0=B0=D0=
+=BA=D0=B5=D1=82=D0=BE=D0=B2 =D0=BE=D0=BF=D1=80=D0=B5=D0=B4=D0=B5=D0=BB=D0=
+=B5=D0=BD=D0=BD=D0=BE=D0=B9 =D0=B2=D0=B5=D1=80=D1=81=D0=B8=D0=B8 =D0=B1=D0=
+=B5=D0=B7 =D0=B7=D0=B0=D0=B2=D0=B8=D1=81=D0=B8=D0=BC=D1=8B=D1=85 =D0=BF=D0=
+=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2 =D0=B8=D0=B7 =D0=BD=D0=B5=D1=81=D0=BA=D0=
+=BE=D0=BB=D1=8C=D0=BA=D0=B8=D1=85 Svn =D0=B2 =D1=80=D0=B5=D0=BF=D0=BE=D0=B7=
+=D0=B8=D1=82=D0=BE=D1=80=D0=B8=D0=B9 (zip-=D0=B0=D1=80=D1=85=D0=B8=D0=B2)</=
+span>&nbsp;<span style=3D"color: rgb(255,0,0);">(=D0=BD=D0=B0=D1=87=D0=B8=
+=D0=BD=D0=B0=D1=8F =D1=81 =D0=B2=D0=B5=D1=80=D1=81=D0=B8=D0=B8 7.7.0)</span=
+></h3>
+<p>Terrasoft.Tools.WorkspaceConsole.exe&nbsp;-operation=3DSaveVersionSvnCon=
+tent -destinationPath=3DD:\Temp\<span style=3D"color: rgb(0,0,0);">Reposito=
+ry\</span>&nbsp;-workingCopyPath=3DD:\Temp\Source\ -sourcePath=3D<a href=3D=
+"http://tscore-svn:8050/svn/ts5conf/Packages/Omnichannel740/trunk,http://ts=
+core-svn:8050/svn/ts5conf/Packages/SalesEnterprise/trunk,http://tscore-svn:=
+8050/svn/ts5conf/Product/trunk" class=3D"external-link" rel=3D"nofollow">ht=
+tp://tscore-svn:8050/svn/ts5conf/Packages/Omnichannel740/trunk,http://tscor=
+e-svn:8050/svn/ts5conf/Packages/SalesEnterprise/trunk,http://tscore-svn:805=
+0/svn/ts5conf/Product/trunk</a>&nbsp;-packageName=3DSalesEnterprise,LDAP,Pl=
+atform -packageVersion=3D<span style=3D"color: rgb(255,0,0);">[=D0=92=D0=B5=
+=D1=80=D1=81=D0=B8=D1=8F =D0=BA=D0=BE=D1=80=D0=BD=D0=B5=D0=B2=D0=BE=D0=B3=
+=D0=BE =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=B0]</span>&nbsp;-sourceControlLogi=
+n=3D<span style=3D"color: rgb(255,0,0);">[=D0=98=D0=BC=D1=8F =D0=BF=D0=BE=
+=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8F =D0=B4=D0=BB=
+=D1=8F SVN]</span>&nbsp;-sourceControlPassword=3D<span style=3D"color: rgb(=
+255,0,0);">[=D0=9F=D0=B0=D1=80=D0=BE=D0=BB=D1=8C&nbsp;=D0=BF=D0=BE=D0=BB=D1=
+=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8F =D0=B4=D0=BB=D1=8F SVN]=
+</span>&nbsp;-logPath=3DD:\Temp\WorkspaceConsoleLog -excludeDependentPackag=
+es=3Dtrue</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=9F=D0=B5=D1=80=D0=B5=D0=B2=D0=
+=BE=D0=B4=D0=BA=D0=BB=D0=B8=D0=B5=D0=BD=D1=82=D0=B0=D1=817.0.=D0=A5=D0=BD=
+=D0=B07.2.0.593=D0=B8=D0=B2=D1=8B=D1=88=D0=B5(=D1=81=D0=B0=D0=BA=D1=82=D1=
+=83=D0=B0=D0=BB=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B5=D0=B9=D1=81=D0=B8=D1=81=
+=D1=82=D0=B5=D0=BC=D0=BD=D1=8B=D1=85=D1=82=D0=B0=D0=B1=D0=BB=D0=B8=D1=86,=
+=D0=B2=D0=BD=D0=B5=D1=81=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC=D0=B8=D0=B7=D0=BC=D0=
+=B5=D0=BD=D0=B5=D0=BD=D0=B8=D0=B9=D0=B2=D1=81=D1=82=D1=80=D1=83=D0=BA=D1=82=
+=D1=83=D1=80=D1=83=D0=91=D0=94,=D1=81=D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=
+=D0=B5=D0=BD=D0=B8=D0=B5=D0=BCSQL=D1=81=D0=BA=D1=80=D0=B8=D0=BF=D1=82=D0=BE=
+=D0=B2,=D1=81=D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=BE=D0=B9=
+=D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85,=D0=BF=D1=80=D0=B8=D0=B2=D1=8F=D0=B7=
+=D0=B0=D0=BD=D0=BD=D1=8B=D1=85=D0=BA=D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=B0=D0=
+=BC)"><span style=3D"color: rgb(0,0,0);"><strong style=3D"line-height: 1.66=
+66666;">=D0=9F=D0=B5=D1=80=D0=B5=D0=B2=D0=BE=D0=B4 =D0=BA=D0=BB=D0=B8=D0=B5=
+=D0=BD=D1=82=D0=B0 =D1=81 7.0.=D0=A5 =D0=BD=D0=B0 7.2</strong><strong style=
+=3D"line-height: 1.6666666;">.0.593 =D0=B8 =D0=B2=D1=8B=D1=88=D0=B5 (=D1=81=
+ =D0=B0=D0=BA=D1=82=D1=83=D0=B0=D0=BB=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B5=
+=D0=B9 =D1=81=D0=B8=D1=81=D1=82=D0=B5=D0=BC=D0=BD=D1=8B=D1=85 =D1=82=D0=B0=
+=D0=B1=D0=BB=D0=B8=D1=86, =D0=B2=D0=BD=D0=B5=D1=81=D0=B5=D0=BD=D0=B8=D0=B5=
+=D0=BC =D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=B8=D0=B9 =D0=B2 =D1=81=
+=D1=82=D1=80=D1=83=D0=BA=D1=82=D1=83=D1=80=D1=83 =D0=91=D0=94, =D1=81 =D0=
+=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC SQL =D1=81=
+=D0=BA=D1=80=D0=B8=D0=BF=D1=82=D0=BE=D0=B2, =D1=81 =D1=83=D1=81=D1=82=D0=B0=
+=D0=BD=D0=BE=D0=B2=D0=BA=D0=BE=D0=B9 =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85, =
+=D0=BF=D1=80=D0=B8=D0=B2=D1=8F=D0=B7=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =D0=BA =
+=D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=B0=D0=BC)</strong></span></h3>
+<p><span style=3D"color: rgb(255,0,0);">&nbsp;</span>Terrasoft.Tools.Worksp=
+aceConsole.exe -workspaceName=3DDefault -operation=3DInstallFromSvn -update=
+SystemDBStructure=3Dtrue -sourceControlLogin=3D<span style=3D"color: rgb(25=
+5,0,0);">[=D0=98=D0=BC=D1=8F =D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=
+=B0=D1=82=D0=B5=D0=BB=D1=8F =D0=B4=D0=BB=D1=8F SVN]</span>&nbsp;-sourceCont=
+rolPassword=3D<span style=3D"color: rgb(255,0,0);">[=D0=9F=D0=B0=D1=80=D0=
+=BE=D0=BB=D1=8C<span>&nbsp;=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=
+=D1=82=D0=B5=D0=BB=D1=8F =D0=B4=D0=BB=D1=8F SVN</span>]</span>&nbsp;-Reposi=
+toryUri=3D<a class=3D"external-link" href=3D"http://tscoredev5:8050/svn/ts5=
+conf/Product/trunk" rel=3D"nofollow">http://tscoredev5:8050/svn/ts5conf/Pro=
+duct/trunk</a>&nbsp;-workingCopyPath=3DD:\WorkingCopyDirectory -clearWorksp=
+ace=3Dtrue -continueIfError=3Dtrue -logPath=3DD:\WorkspaceConsoleLog<span s=
+tyle=3D"color: rgb(255,0,0);">&nbsp;</span></p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=A3=D1=81=D1=82=D0=B0=D0=BD=D0=
+=BE=D0=B2=D0=BA=D0=B0=D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2=D0=B8=D0=B7=
+=D1=80=D0=B5=D0=BF=D0=BE=D0=B7=D0=B8=D1=82=D0=BE=D1=80=D0=B8=D1=8F(zip-=D0=
+=B0=D1=80=D1=85=D0=B8=D0=B2)=D0=B2=D0=BE=D0=B2=D1=81=D0=B5=D0=BA=D0=BE=D0=
+=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B8=D0=B2=D0=91=D0=94=
+(=D1=81=D0=B2=D0=BD=D0=B5=D1=81=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC=D0=B8=D0=B7=
+=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=B8=D0=B9=D0=B2=D1=81=D1=82=D1=80=D1=83=D0=
+=BA=D1=82=D1=83=D1=80=D1=83=D0=91=D0=94,=D1=81=D0=B2=D1=8B=D0=BF=D0=BE=D0=
+=BB=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5=D0=BCSQL=D1=81=D0=BA=D1=80=D0=B8=D0=BF=D1=
+=82=D0=BE=D0=B2,=D1=81=D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=
+=BE=D0=B9=D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85,=D0=BF=D1=80=D0=B8=D0=B2=D1=
+=8F=D0=B7=D0=B0=D0=BD=D0=BD=D1=8B=D1=85=D0=BA=D0=BF=D0=B0=D0=BA=D0=B5=D1=82=
+=D0=B0=D0=BC=D0=B4=D0=BB=D1=8F=D0=BF=D0=B5=D1=80=D0=B2=D0=BE=D0=B9=D0=BA=D0=
+=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B8=D0=B8=D0=BE=
+=D0=B1=D0=BD=D0=BE=D0=B2=D0=BB=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC=D0=BF=D0=B0=D0=
+=BA=D0=B5=D1=82=D0=BE=D0=B2=D0=B8=D0=BF=D0=B5=D1=80=D0=B5=D0=B3=D0=B5=D0=BD=
+=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B5=D0=B9=D0=B8=D1=81"><span style=3D"colo=
+r: rgb(0,0,0);"><strong>=D0=A3=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=
+=B0 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2 </strong>=D0=B8=D0=B7 =D1=80=
+=D0=B5=D0=BF=D0=BE=D0=B7=D0=B8=D1=82=D0=BE=D1=80=D0=B8=D1=8F&nbsp;(zip-=D0=
+=B0=D1=80=D1=85=D0=B8=D0=B2)&nbsp;</span><span><span style=3D"color: rgb(0,=
+0,0);">=D0=B2=D0=BE =D0=B2=D1=81=D0=B5 =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=
+=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B8 =D0=B2 =D0=91=D0=94</span><strong><spa=
+n style=3D"color: rgb(0,0,0);"> (=D1=81 =D0=B2=D0=BD=D0=B5=D1=81=D0=B5=D0=
+=BD=D0=B8=D0=B5=D0=BC =D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=B8=D0=
+=B9 =D0=B2 <strong>=D1=81=D1=82=D1=80=D1=83=D0=BA=D1=82=D1=83=D1=80=D1=83 <=
+/strong>=D0=91=D0=94, =D1=81 =D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=
+=BD=D0=B8=D0=B5=D0=BC SQL =D1=81=D0=BA=D1=80=D0=B8=D0=BF=D1=82=D0=BE=D0=B2,=
+ =D1=81 =D1=83=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=BE=D0=B9 =D0=B4=
+=D0=B0=D0=BD=D0=BD=D1=8B=D1=85, =D0=BF=D1=80=D0=B8=D0=B2=D1=8F=D0=B7=D0=B0=
+=D0=BD=D0=BD=D1=8B=D1=85 =D0=BA =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=B0=D0=BC =
+=D0=B4=D0=BB=D1=8F =D0=BF=D0=B5=D1=80=D0=B2=D0=BE=D0=B9 =D0=BA=D0=BE=D0=BD=
+=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B8 =D0=B8 =D0=BE=D0=B1=
+=D0=BD=D0=BE=D0=B2=D0=BB=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC =D0=BF=D0=B0=D0=BA=
+=D0=B5=D1=82=D0=BE=D0=B2 =D0=B8 =D0=BF=D0=B5=D1=80=D0=B5=D0=B3=D0=B5=D0=BD=
+=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D0=B5=D0=B9 =D0=B8=D1=81=D1=85=D0=BE=D0=B4=
+=D0=BD=D1=8B=D1=85 =D0=BA=D0=BE=D0=B4=D0=BE=D0=B2 =D0=B4=D0=BB=D1=8F =D0=B2=
+=D1=81=D0=B5=D1=85 =D0=BE=D1=81=D1=82=D0=B0=D0=BB=D1=8C=D0=BD=D1=8B=D1=85)<=
+/span><em>(<span style=3D"color: rgb(255,0,0);">=D1=80=D0=B5=D0=B0=D0=BB=D0=
+=B8=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=D0=BE =D0=B4=D0=BB=D1=8F =D0=B2=D0=B5=D1=
+=80=D1=81=D0=B8=D0=B8</span> <span style=3D"color: rgb(255,0,0);">7.2.0.49 =
+=D0=B8 =D0=B2=D1=8B=D1=88=D0=B5</span>)</em></strong></span><span style=3D"=
+color: rgb(255,0,0);">&nbsp;</span></h3>
+<p>Terrasoft.Tools.WorkspaceConsole.exe -workspaceName=3D* -operation=3DIns=
+tallFromRepository -sourcePath=3Dd:\Temp\Repository\ -destinationPath=3DD:\=
+Temp\Destination\ -continueIfError=3Dtrue -logPath=3DD:\WorkspaceConsoleLog=
+</p>
+<p>=D0=94=D0=BB=D1=8F =D0=BF=D1=80=D0=B8=D0=BC=D0=B5=D1=80=D0=B0, =D0=BF=D1=
+=80=D0=B8=D0=B2=D0=B5=D0=B4=D0=B5=D0=BD=D0=BD=D1=8B=D0=B9 =D0=B2=D1=8B=D1=
+=88=D0=B5 =D0=B7=D0=B0=D0=BF=D1=80=D0=BE=D1=81 =D0=B1=D1=8B=D0=BB =D0=B2=D1=
+=8B=D0=BF=D0=BE=D0=BB=D0=BD=D0=B5=D0=BD =D0=BD=D0=B0 =D0=91=D0=94 =D0=B2 =
+=D0=BA=D0=BE=D1=82=D0=BE=D1=80=D0=BE=D0=B9 =D1=81=D1=83=D1=89=D0=B5=D1=81=
+=D1=82=D0=B2=D1=83=D0=B5=D1=82 =D1=82=D1=80=D0=B8 =D0=BA=D0=BE=D0=BD=D1=84=
+=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B8 Default, MyWorkspace1 =D0=
+=B8 MyWorkspace2.</p>
+<p>=D0=92 =D1=8D=D1=82=D0=BE=D0=BC =D1=81=D0=BB=D1=83=D1=87=D0=B0=D0=B5, =
+=D1=81=D0=B8=D1=81=D1=82=D0=B5=D0=BC=D0=B0 =D0=BF=D0=BE=D0=BB=D1=83=D1=87=
+=D0=B8=D1=82 =D1=81=D0=BF=D0=B8=D1=81=D0=BE=D0=BA =D0=BA=D0=BE=D0=BD=D1=84=
+=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B9 =D0=B8=D0=B7 =D0=91=D0=94,=
+ =D0=B8 =D0=B4=D0=BB=D1=8F =D0=BF=D0=B5=D1=80=D0=B2=D0=BE=D0=B9 =D0=B8=D0=
+=B7 =D1=81=D0=BF=D0=B8=D1=81=D0=BA=D0=B0 (=D0=BD=D0=B0=D0=BF=D1=80=D0=B8=D0=
+=BC=D0=B5=D1=80 Default) =D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D0=B8=D1=82 =
+=D0=BA=D0=BE=D0=BC=D0=B0=D0=BD=D0=B4=D1=83 =D1=81 =D1=83=D0=BA=D0=B0=D0=B7=
+=D0=B0=D0=BD=D1=8B=D0=BC=D0=B8 =D0=BA=D0=BB=D1=8E=D1=87=D0=B0=D0=BC=D0=B8 (=
+=D0=BF=D0=BE =D1=83=D0=BC=D0=BE=D0=BB=D1=87=D0=B0=D0=BD=D0=B8=D1=8E - =D0=
+=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5 =D1=81=D1=82=D1=80=D1=
+=83=D0=BA=D1=82=D1=83=D1=80=D1=8B =D0=91=D0=94, =D0=B2=D1=8B=D0=BF=D0=BE=D0=
+=BB=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5 SQL =D1=81=D0=BA=D1=80=D0=B8=D0=BF=D1=82=
+=D0=BE=D0=B2, =D0=BF=D1=80=D0=B8=D0=B2=D1=8F=D0=B7=D0=BA=D0=B0 =D0=B4=D0=B0=
+=D0=BD=D0=BD=D1=8B=D1=85):</p>
+<p style=3D"margin-left: 30.0px;">Terrasoft.Tools.WorkspaceConsole.exe -wor=
+kspaceName=3DDefault -operation=3DInstallFromRepository -sourcePath=3Dd:\Te=
+mp\Repository\ -destinationPath=3DD:\Temp\Destination\ -continueIfError=3Dt=
+rue -logPath=3DD:\WorkspaceConsoleLog -regenerateSchemaSources=3Dtrue&nbsp;=
+-updateDBStructure=3Dtrue -installPackageData=3Dtrue -installPackageSqlScri=
+pt=3Dtrue</p>
+<p>=D0=94=D0=BB=D1=8F =D0=B4=D0=B2=D1=83=D1=85 =D0=B4=D1=80=D1=83=D0=B3=D0=
+=B8=D1=85 =D0=B0=D0=B2=D1=82=D0=BE=D0=BC=D0=B0=D1=82=D0=B8=D1=87=D0=B5=D1=
+=81=D0=BA=D0=B8 =D0=B1=D1=83=D0=B4=D1=83=D1=82 =D0=B2=D1=8B=D0=BF=D0=BE=D0=
+=BB=D0=BD=D1=8F=D1=82=D1=8C=D1=81=D1=8F =D0=BA=D0=BE=D0=BC=D0=B0=D0=BD=D0=
+=B4=D1=8B:</p>
+<p style=3D"margin-left: 30.0px;">Terrasoft.Tools.WorkspaceConsole.exe -wor=
+kspaceName=3DMyWorkspace1 -operation=3DInstallFromRepository -sourcePath=3D=
+d:\Temp\Repository\ -destinationPath=3DD:\Temp\Destination\ -continueIfErro=
+r=3Dtrue -logPath=3DD:\WorkspaceConsoleLog -regenerateSchemaSources=3Dtrue&=
+nbsp;-updateDBStructure=3Dfalse -installPackageData=3Dfalse -installPackage=
+SqlScript=3Dfalse</p>
+<p style=3D"margin-left: 30.0px;">Terrasoft.Tools.WorkspaceConsole.exe -wor=
+kspaceName=3DMyWorkspace2 -operation=3DInstallFromRepository -sourcePath=3D=
+d:\Temp\Repository\ -destinationPath=3DD:\Temp\Destination\ -continueIfErro=
+r=3Dtrue -logPath=3DD:\WorkspaceConsoleLog -regenerateSchemaSources=3Dtrue&=
+nbsp;-updateDBStructure=3Dfalse -installPackageData=3Dfalse -installPackage=
+SqlScript=3Dfalse</p>
+<p>=D1=82=D0=B0=D0=BA=D0=B0=D1=8F =D0=BF=D0=BE=D1=81=D0=BB=D0=B5=D0=B4=D0=
+=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8C=D0=BD=D0=BE=D1=81=D1=82=D1=8C =D0=
+=BA=D0=BE=D0=BC=D0=B0=D0=BD=D0=B4 =D0=B3=D0=B0=D1=80=D0=B0=D0=BD=D1=82=D0=
+=B8=D1=80=D1=83=D0=B5=D1=82, =D1=87=D1=82=D0=BE =D0=B2 =D1=81=D0=B8=D1=81=
+=D1=82=D0=B5=D0=BC=D0=B5 =D1=82=D0=BE=D0=BB=D1=8C=D0=BA=D0=BE =D0=BE=D0=B4=
+=D0=B8=D0=BD =D1=80=D0=B0=D0=B7 =D0=B1=D1=83=D0=B4=D0=B5=D1=82 =D0=B2=D1=8B=
+=D0=BF=D0=BE=D0=BB=D0=BD=D1=8F=D1=82=D1=8C=D1=81=D1=8F =D0=B8=D0=B7=D0=BC=
+=D0=B5=D0=BD=D0=B5=D0=BD=D0=B8=D0=B5 =D1=81=D1=82=D1=80=D1=83=D0=BA=D1=82=
+=D1=83=D1=80=D1=8B =D0=B8 =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 (=D0=BE=D0=
+=B1=D1=89=D0=B8=D0=B5 =D0=B4=D0=BB=D1=8F =D0=B2=D1=81=D0=B5=D1=85 =D0=BA=D0=
+=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B9), =D0=B8 =
+=D0=B4=D0=BB=D1=8F =D0=B2=D1=81=D0=B5=D1=85 =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=
+=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B9 =D0=B1=D1=83=D0=B4=D1=83=D1=82 =
+=D0=BF=D1=80=D0=B8=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D1=8B =D0=B8=D0=B7=D0=BC=
+=D0=B5=D0=BD=D0=B5=D0=B8=D1=8F =D0=B8=D0=B7 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=
+=D0=BE=D0=B2.</p>
+<p>&nbsp;</p>
+<p><strong>=D0=A3=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=BA=D0=B0 =D0=BD=D0=
+=B5=D1=81=D0=BA=D0=BE=D0=BB=D1=8C=D0=BA=D0=B8=D1=85 =D0=BF=D0=B0=D0=BA=D0=
+=B5=D1=82=D0=BE=D0=B2 =D0=B8=D0=B7 SVN&nbsp;=D0=B2 =D1=80=D0=B0=D0=B1=D0=BE=
+=D1=87=D0=B5=D0=B5 =D0=BF=D1=80=D0=BE=D1=81=D1=82=D1=80=D0=B0=D0=BD=D1=81=
+=D1=82=D0=B2=D0=BE:</strong></p>
+<div class=3D"leaf  ch_6225 ch_6222 ch_6221 ch_6219 ch_6217 ch_6216 ch_6214=
+ ch_6112 ch_82 ch_80 ch_45 ch_44 ch_36">
+<div class=3D"msg l14">
+<span class=3D"mark error_msg  "><br /></span>
+</div>
+<div class=3D"msg l14">
+<span class=3D"mark error_msg  ">Terrasoft.Tools.WorkspaceConsole.exe -work=
+spaceName=3D<strong>Default</strong> -operation=3D<strong>InstallBundlePack=
+ages</strong> -sourceControlLogin=3D[=D0=B8=D0=BC=D1=8F_=D0=BF=D0=BE=D0=BB=
+=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8F] -sourceControlPassw=
+ord=3D[=D0=BF=D0=B0=D1=80=D0=BE=D0=BB=D1=8C] &quot;-workingCopyPath=3D=D0=
+=A1:\Packages&quot; &quot;-sourcePath=3D<a href=3D"http://tscore-svn:8050/s=
+vn/ts5conf/PackageStore" class=3D"external-link" rel=3D"nofollow">http://ts=
+core-svn:8050/svn/ts5conf/PackageStore</a>&quot; &quot;-destinationPath=3D=
+=D0=A1:\Packages\\temp&quot; -packageName=3DOmnichannelSoftkey_ENU -skipCon=
+straints=3Dfalse -skipValidateActions=3Dtrue -regenerateSchemaSources=3Dtru=
+e -updateDBStructure=3Dtrue -updateSystemDBStructure=3Dtrue -installPackage=
+SqlScript=3Dtrue -installPackageData=3Dtrue -packageVersion=3D7.5.0 &quot;-=
+logPath=3D=D0=A1:\Log&quot;</span>
+</div>
+<div class=3D"msg l14">
+<span class=3D"mark error_msg  "><br /></span>
+</div>
+<div class=3D"msg l14">
+<span class=3D"mark error_msg  "><br /></span>
+</div>
+<div class=3D"msg l14">
+<p><strong><span>=D0=9F=D0=B5=D1=80=D0=B5=D0=B3=D0=B5=D0=BD=D0=B5=D1=80=D0=
+=B8=D1=80=D0=BE=D0=B2=D0=B0=D1=82=D1=8C =D0=BA=D0=BE=D0=B4=D1=8B =D0=B7=D0=
+=B0=D0=B2=D0=B8=D1=81=D0=B8=D0=BC=D1=8B=D1=85 =D0=BA=D0=BB=D0=B8=D0=B5=D0=
+=BD=D1=82=D1=81=D0=BA=D0=B8=D1=85 =D1=81=D1=85=D0=B5=D0=BC =D0=B4=D0=BB=D1=
+=8F =D0=B2=D1=81=D0=B5=D1=85 =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=
+=80=D0=B0=D1=86=D0=B8=D0=B9</span>:</strong></p>
+<div class=3D"leaf  ch_6225 ch_6222 ch_6221 ch_6219 ch_6217 ch_6216 ch_6214=
+ ch_6112 ch_82 ch_80 ch_45 ch_44 ch_36">
+<div class=3D"msg l14">
+<span class=3D"mark error_msg  "><br /></span>
+</div>
+<div class=3D"msg l14">
+<span class=3D"mark error_msg  ">Terrasoft.Tools.WorkspaceConsole.exe -work=
+spaceName=3D<strong>*</strong> -operation=3D<strong>RegenerateIncludeDepend=
+encySources</strong></span>
+</div>
+<div class=3D"msg l14">
+<span class=3D"mark error_msg  "><br /></span>
+</div>
+<div class=3D"msg l14">
+<p><strong>=D0=97=D0=B0=D0=BF=D1=83=D1=81=D1=82=D0=B8=D1=82=D1=8C =D0=BF=D1=
+=80=D0=BE=D1=86=D0=B5=D1=81=D1=81 =D0=B2 =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=
+=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B8:</strong></p>
+<div class=3D"leaf  ch_6225 ch_6222 ch_6221 ch_6219 ch_6217 ch_6216 ch_6214=
+ ch_6112 ch_82 ch_80 ch_45 ch_44 ch_36">
+<div class=3D"msg l14">
+<span class=3D"mark error_msg  "><br /></span>
+</div>
+<div class=3D"msg l14">
+<span class=3D"mark error_msg  ">Terrasoft.Tools.WorkspaceConsole.exe -work=
+spaceName=3D<strong>Default</strong>&nbsp;-operation=3D<strong>ExecuteProce=
+ss&nbsp;</strong>-processName<strong>=3D<span>CreateTagTablesAndConvertFold=
+ersProcess</span><strong>&nbsp;</strong></strong></span>
+</div>
+<div class=3D"msg l14">
+<span class=3D"mark error_msg  ">(=D0=94=D0=9B=D0=AF =D0=9C=D0=90=D0=A0=D0=
+=9A=D0=95=D0=A2=D0=98=D0=9D=D0=93=D0=90) Terrasoft.Tools.WorkspaceConsole.e=
+xe -workspaceName=3D<strong>Default</strong>&nbsp;-operation=3D<strong>Exec=
+uteProcess&nbsp;</strong>-processName<strong>=3DCreateTagTablesAndConvertFo=
+ldersProcess -excludedSchemas=3DContact,Account<strong>&nbsp;</strong></str=
+ong></span>
+</div>
+<div class=3D"msg l14">
+<span class=3D"mark error_msg  "><strong><strong><br /></strong></strong></=
+span>
+</div>
+<div class=3D"msg l14">
+<span class=3D"mark error_msg  "><strong><strong>=D0=A3=D1=81=D1=82=D0=B0=
+=D0=BD=D0=BE=D0=B2=D0=B8=D1=82=D1=8C =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D1=8B =
+=D1=81 =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=
+=D0=BE=D0=BD=D0=BD=D1=8B=D0=BC=D0=B8 =D1=8E=D0=BD=D0=B8=D1=82 =D1=82=D0=B5=
+=D1=81=D1=82=D0=B0=D0=BC=D0=B8:</strong></strong></span>
+</div>
+<div class=3D"msg l14">
+<span class=3D"mark error_msg  ">Terrasoft.Tools.WorkspaceConsole.exe&nbsp;=
+-workspaceName=3DDefault -operation=3D<strong>InstallTestPackages</strong> =
+-sourceControlLogin=3D[=D0=B8=D0=BC=D1=8F_=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=
+=BE=D0=B2=D0=B0=D1=82=D0=B5=D0=BB=D1=8F] -sourceControlPassword=3D[=D0=BF=
+=D0=B0=D1=80=D0=BE=D0=BB=D1=8C] &quot;-workingCopyPath=3DC:\Packages&quot; =
+&quot;-sourcePath=3D<a href=3D"http://tscore-svn:8050/svn/ts5conf/PackageSt=
+ore" class=3D"external-link" rel=3D"nofollow">http://tscore-svn:8050/svn/ts=
+5conf/PackageStore</a>&quot; &quot;-destinationPath=3DC:\Packages\temp&quot=
+; -packageVersion=3D7.7.0</span>
+</div>
+<div class=3D"msg l14">
+<span class=3D"mark error_msg  "><br /></span>
+</div>
+<div class=3D"msg l14">
+<strong>=D0=9F=D1=80=D0=BE=D0=B2=D0=B5=D1=80=D0=B8=D1=82=D1=8C =D0=BD=D0=B0=
+=D0=BB=D0=B8=D1=87=D0=B8=D0=B5 =D0=BD=D0=B5=D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=
+=D0=B8=D0=B7=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =D1=80=
+=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=BE=D0=B2 =D0=BD=D0=B0 =D0=BE=D1=81=D0=BD=
+=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D0=B8 =D0=BC=D0=B5=D0=BD=D0=B5=D0=B4=D0=B6=
+=D0=B5=D1=80=D0=BE=D0=B2 =D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=BE=D0=B2:<=
+/strong>
+</div>
+<div class=3D"msg l14">
+<span class=3D"mark error_msg  ">Terrasoft.Tools.WorkspaceConsole.exe -work=
+spaceName=3DDefault -operation=3D<strong>ValidateResourcesByResourceManager=
+s</strong> &quot;-destinationPath=3Dc:\wc\ValidationResult&quot; -cultureNa=
+me=3Den-US &quot;-logPath=3Dc:\wc\log&quot;</span>
+</div>
+<div class=3D"msg l14">
+<span class=3D"mark error_msg  "><br /></span>
+</div>
+<div class=3D"msg l14">
+<strong><span class=3D"mark error_msg  ">=D0=90=D0=BA=D1=82=D1=83=D0=B0=D0=
+=BB=D0=B8=D0=B7=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D1=82=D1=8C =D0=B7=D0=B0=D0=
+=B3=D0=BE=D0=BB=D0=BE=D0=B2=D0=BA=D0=B8 =D1=81=D1=85=D0=B5=D0=BC =D0=B2 =D0=
+=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D0=B8:</spa=
+n></strong>
+</div>
+<div class=3D"msg l14">
+<span class=3D"mark error_msg  ">Terrasoft.Tools.WorkspaceConsole.exe -work=
+spaceName=3DDefault -operation=3D<strong>ActualizeSchemaCaptions</strong> &=
+quot;-logPath=3DC:\wc\log&quot;</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h2 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=
+=8C=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D0=B5WorkspaceConsole=D0=B4=D0=BB=
+=D1=8F=D0=B7=D0=B0=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B8\=D0=B2=D1=8B=D0=B3=
+=D1=80=D1=83=D0=B7=D0=BA=D0=B8=D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=BE=D0=
+=B2=D0=BD=D0=B0=D0=BF=D1=80=D1=8F=D0=BC=D1=83=D1=8E=D0=B2SVN=D0=B1=D0=B5=D0=
+=B7=D1=81=D0=B1=D0=BE=D1=80=D0=BA=D0=B8=D0=91=D0=94"><span style=3D"color: =
+rgb(0,0,0);">=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=
+=D0=BD=D0=B8=D0=B5 WorkspaceConsole =D0=B4=D0=BB=D1=8F =D0=B7=D0=B0=D0=B3=
+=D1=80=D1=83=D0=B7=D0=BA=D0=B8\=D0=B2=D1=8B=D0=B3=D1=80=D1=83=D0=B7=D0=BA=
+=D0=B8 =D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=BE=D0=B2 =D0=BD=D0=B0=D0=BF=
+=D1=80=D1=8F=D0=BC=D1=83=D1=8E =D0=B2 SVN =D0=B1=D0=B5=D0=B7 =D1=81=D0=B1=
+=D0=BE=D1=80=D0=BA=D0=B8 =D0=91=D0=94</span></h2>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=92=D0=BD=D0=B0=D1=87=D0=B0=D0=
+=BB=D0=B5"><span style=3D"color: rgb(0,0,0);">=D0=92 =D0=BD=D0=B0=D1=87=D0=
+=B0=D0=BB=D0=B5</span></h3>
+<ul>
+<li><span style=3D"color: rgb(0,0,0);">=D0=92 =D0=BF=D0=B0=D0=BF=D0=BA=D1=
+=83 D:\Svn\Content&nbsp;=D0=B2=D1=8B=D0=B3=D1=80=D1=83=D0=B6=D0=B0=D0=B5=D0=
+=BC =D1=80=D0=B5=D0=BF=D0=BE=D0=B7=D0=B8=D1=82=D0=BE=D1=80=D0=B8=D0=B9:&nbs=
+p;<a href=3D"http://tscore-svn:8050/svn/ts5conf/PackageStore" class=3D"exte=
+rnal-link" rel=3D"nofollow">http://tscore-svn:8050/svn/ts5conf/PackageStore=
+</a></span></li>
+</ul>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=9F=D0=BE=D0=BB=D1=83=D1=87=D0=
+=B5=D0=BD=D0=B8=D0=B5=D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=BE=D0=B2=D1=81=
+=D1=85=D0=B5=D0=BC:Resources.xml">=D0=9F=D0=BE=D0=BB=D1=83=D1=87=D0=B5=D0=
+=BD=D0=B8=D0=B5 =D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=BE=D0=B2 =D1=81=D1=
+=85=D0=B5=D0=BC: Resources.xml</h3>
+<ul>
+<li>=D0=92=D1=8B=D0=B3=D1=80=D1=83=D0=B6=D0=B0=D0=B5=D0=BC =D0=B2 =D0=BF=D0=
+=B0=D0=BF=D0=BA=D1=83 =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=
+=B0=D1=86=D0=B8=D1=8E&nbsp;=D0=B8=D0=B7 SVN (checkout =D0=B8=D0=BB=D0=B8 up=
+date). =D0=9D=D0=B0=D0=BF=D1=80=D0=B8=D0=BC=D0=B5=D1=80 =D0=B2 =D0=BF=D0=B0=
+=D0=BF=D0=BA=D1=83:&nbsp;D:\Svn\Content&nbsp;</li>
+<li>=D0=97=D0=B0=D0=BF=D1=83=D1=81=D0=BA=D0=B0=D0=B5=D0=BC WorkspaceConsole=
+:&nbsp;<br /><span style=3D"line-height: 1.4285715;">Terrasoft.Tools.Worksp=
+aceConsole.exe&nbsp;-operation=3D<span style=3D"color: rgb(0,0,255);">SaveS=
+vnContent</span> -contentTypes=3D<span style=3D"color: rgb(0,0,255);">Resou=
+rces</span> -sourcePath=3DD:\Svn\Content -destinationPath=3DD:\Svn\Resource=
+s -fileName=3DResources.xml -cultureName=3Dru-RU -logPath=3DD:\Svn\Log</spa=
+n></li>
+<li>=D0=9F=D0=BE=D1=81=D0=BB=D0=B5 =D1=87=D0=B5=D0=B3=D0=BE =D0=B2 =D0=BF=
+=D0=B0=D0=BF=D0=BA=D0=B5&nbsp;D:\Svn\Resources =D0=B1=D1=83=D0=B4=D0=B5=D1=
+=82 =D1=81=D0=BE=D0=B7=D0=B4=D0=B0=D0=BD =D1=84=D0=B0=D0=B9=D0=BB&nbsp;Reso=
+urces.xml.</li>
+</ul>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=97=D0=B0=D0=B3=D1=80=D1=83=D0=
+=B7=D0=BA=D0=B0=D0=BF=D0=B5=D1=80=D0=B5=D0=B2=D0=B5=D0=B4=D0=B5=D0=BD=D0=BD=
+=D1=8B=D1=85=D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=BE=D0=B2:Resources.en.x=
+ml&gt;&gt;resource.en-GB.json">=D0=97=D0=B0=D0=B3=D1=80=D1=83=D0=B7=D0=BA=
+=D0=B0 =D0=BF=D0=B5=D1=80=D0=B5=D0=B2=D0=B5=D0=B4=D0=B5=D0=BD=D0=BD=D1=8B=
+=D1=85 =D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=BE=D0=B2: Resources.en.xml &=
+gt;&gt;&nbsp;resource.en-GB.json</h3>
+<ul>
+<li>=D0=92 =D0=BF=D0=B0=D0=BF=D0=BA=D0=B5 D:\Svn\Content =D1=83=D0=B6=D0=B5=
+ =D0=B8=D0=BC=D0=B5=D0=B5=D0=BC =D0=B2=D1=8B=D0=B3=D1=80=D1=83=D0=B6=D0=B5=
+=D0=BD=D0=BD=D1=83=D1=8E =D0=B8=D0=B7 SVN =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=
+=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D1=8E, =D0=B8=D0=B7 =D0=BA=D0=BE=D1=82=D0=
+=BE=D1=80=D0=BE=D0=B9 =D1=80=D0=B0=D0=BD=D1=8C=D1=88=D0=B5 =D0=BF=D0=BE=D0=
+=BB=D1=83=D1=87=D0=B0=D0=BB=D0=B8 =D1=84=D0=B0=D0=B9=D0=BB =D1=81 =D1=80=D1=
+=83=D1=81=D1=81=D0=BA=D0=BE=D0=B9 =D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=D0=B8=D0=
+=B7=D0=B0=D1=86=D0=B8=D0=B5=D0=B9 (Resources.xml)</li>
+<li>=D0=92 =D0=BF=D0=B0=D0=BF=D0=BA=D1=83&nbsp;D:\Svn\Resources =D0=BF=D0=
+=BE=D0=BC=D0=B5=D1=89=D0=B0=D0=B5=D0=BC =D1=84=D0=B0=D0=B9=D0=BB =D1=81 =D0=
+=BF=D0=B5=D1=80=D0=B5=D0=B2=D0=B5=D0=B4=D0=B5=D0=BD=D0=BD=D1=8B=D0=BC=D0=B8=
+ =D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=B0=D0=BC=D0=B8&nbsp;Resources.en.x=
+ml&nbsp;</li>
+<li>=D0=97=D0=B0=D0=BF=D1=83=D1=81=D0=BA=D0=B0=D0=B5=D0=BC WorkspaceConsole=
+:&nbsp;<br />Terrasoft.Tools.WorkspaceConsole.exe&nbsp;-operation=3D<span s=
+tyle=3D"color: rgb(0,0,255);">LoadSvnContent</span> -contentTypes=3D<span s=
+tyle=3D"color: rgb(0,0,255);">Resources</span> -sourcePath=3DD:\Svn\Resourc=
+es -destinationPath=3DD:\Svn\Content -fileName=3DResources.en.xml -cultureN=
+ame=3Den-GB -logPath=3DD:\Svn\Log</li>
+<li>=D0=9F=D0=BE=D1=8F=D0=B2=D0=B8=D0=B2=D1=88=D0=B8=D0=B5=D1=81=D1=8F =D0=
+=B8=D0=BB=D0=B8 =D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=BD=D1=8B=D0=
+=B5 =D1=84=D0=B0=D0=B9=D0=BB=D1=8B&nbsp;<span style=3D"color: rgb(0,0,0);">=
+resource.en-GB.json <span style=3D"color: rgb(0,0,0);">=D0=B4=D0=BE=D0=B1=
+=D0=B0=D0=B2=D0=BB=D1=8F=D0=B5=D0=BC/=D0=BE=D0=B1=D0=BD=D0=BE=D0=B2=D0=BB=
+=D1=8F=D0=B5=D0=BC&nbsp;</span>=D0=B2 SVN</span></li>
+</ul>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=92=D1=8B=D0=B3=D1=80=D1=83=D0=
+=B7=D0=BA=D0=B0=D0=BF=D1=80=D0=B8=D0=B2=D1=8F=D0=B7=D0=B0=D0=BD=D0=BD=D1=8B=
+=D1=85=D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85=D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=
+=BE=D0=B2:SchemaLocalizableData.xml"><span style=3D"color: rgb(0,0,0);">=D0=
+=92=D1=8B=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B0 =D0=BF=D1=80=D0=B8=D0=B2=D1=
+=8F=D0=B7=D0=B0=D0=BD=D0=BD=D1=8B=D1=85 =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=
+=85 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=D0=BE=D0=B2:&nbsp;SchemaLocalizableData.=
+xml</span>&nbsp;</h3>
+<ul>
+<li>=D0=92=D1=8B=D0=B3=D1=80=D1=83=D0=B6=D0=B0=D0=B5=D0=BC =D0=B2 =D0=BF=D0=
+=B0=D0=BF=D0=BA=D1=83 =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B3=D1=83=D1=80=D0=
+=B0=D1=86=D0=B8=D1=8E&nbsp;=D0=B8=D0=B7 SVN (checkout =D0=B8=D0=BB=D0=B8 up=
+date). =D0=9D=D0=B0=D0=BF=D1=80=D0=B8=D0=BC=D0=B5=D1=80 =D0=B2 =D0=BF=D0=B0=
+=D0=BF=D0=BA=D1=83:&nbsp;D:\Svn\Content&nbsp;</li>
+<li>=D0=97=D0=B0=D0=BF=D1=83=D1=81=D0=BA=D0=B0=D0=B5=D0=BC WorkspaceConsole=
+:&nbsp;<br /><span>Terrasoft.Tools.WorkspaceConsole.exe&nbsp;&nbsp;-operati=
+on=3D<span style=3D"color: rgb(0,0,255);">SaveSvnContent</span> -contentTyp=
+es=3D<span style=3D"color: rgb(0,0,255);">LocalizableSchemaData</span> -sou=
+rcePath=3DD:\Svn\Content -destinationPath=3DD:\Svn\Resources -contentTypes=
+=3DLocalizableSchemaData -fileName=3DSchemaLocalizableData.xml -logPath=3DD=
+:\Svn\Log</span></li>
+<li>=D0=9F=D0=BE=D1=81=D0=BB=D0=B5 =D1=87=D0=B5=D0=B3=D0=BE =D0=B2 =D0=BF=
+=D0=B0=D0=BF=D0=BA=D0=B5&nbsp;D:\Svn\Resources =D0=B1=D1=83=D0=B4=D0=B5=D1=
+=82 =D1=81=D0=BE=D0=B7=D0=B4=D0=B0=D0=BD =D1=84=D0=B0=D0=B9=D0=BB SchemaLoc=
+alizableData.xml.<span style=3D"color: rgb(0,0,0);">&nbsp;</span></li>
+</ul>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=97=D0=B0=D0=B3=D1=80=D1=83=D0=
+=B7=D0=BA=D0=B0=D0=BF=D0=B5=D1=80=D0=B5=D0=B2=D0=B5=D0=B4=D0=B5=D0=BD=D0=BD=
+=D1=8B=D1=85=D0=BF=D1=80=D0=B8=D0=B2=D1=8F=D0=B7=D0=BE=D0=BA=D0=B4=D0=B0=D0=
+=BD=D0=BD=D1=8B=D1=85:SchemaLocalizableData.en.xml&gt;&gt;data.en-GB.json">=
+=D0=97=D0=B0=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B0 =D0=BF=D0=B5=D1=80=D0=B5=
+=D0=B2=D0=B5=D0=B4=D0=B5=D0=BD=D0=BD=D1=8B=D1=85 =D0=BF=D1=80=D0=B8=D0=B2=
+=D1=8F=D0=B7=D0=BE=D0=BA =D0=B4=D0=B0=D0=BD=D0=BD=D1=8B=D1=85:&nbsp;SchemaL=
+ocalizableData.en.xml &gt;&gt; data.en-GB.json</h3>
+<ul>
+<li>=D0=92 =D0=BF=D0=B0=D0=BF=D0=BA=D0=B5 D:\Svn\Content =D1=83=D0=B6=D0=B5=
+ =D0=B8=D0=BC=D0=B5=D0=B5=D0=BC =D0=B2=D1=8B=D0=B3=D1=80=D1=83=D0=B6=D0=B5=
+=D0=BD=D0=BD=D1=83=D1=8E =D0=B8=D0=B7 SVN =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=
+=B3=D1=83=D1=80=D0=B0=D1=86=D0=B8=D1=8E, =D0=B8=D0=B7 =D0=BA=D0=BE=D1=82=D0=
+=BE=D1=80=D0=BE=D0=B9 =D1=80=D0=B0=D0=BD=D1=8C=D1=88=D0=B5 =D0=BF=D0=BE=D0=
+=BB=D1=83=D1=87=D0=B0=D0=BB=D0=B8 =D1=84=D0=B0=D0=B9=D0=BB =D0=B4=D0=BB=D1=
+=8F =D0=BF=D0=B5=D1=80=D0=B5=D0=B2=D0=BE=D0=B4=D0=B0 (SchemaLocalizableData=
+.xml)</li>
+<li>=D0=92 =D0=BF=D0=B0=D0=BF=D0=BA=D1=83&nbsp;D:\Svn\Resources =D0=BF=D0=
+=BE=D0=BC=D0=B5=D1=89=D0=B0=D0=B5=D0=BC =D1=84=D0=B0=D0=B9=D0=BB =D1=81 =D0=
+=BF=D0=B5=D1=80=D0=B5=D0=B2=D0=B5=D0=B4=D0=B5=D0=BD=D0=BD=D1=8B=D0=BC=D0=B8=
+ =D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=B0=D0=BC=D0=B8 SchemaLocalizableDa=
+ta.en.xml&nbsp;</li>
+<li>=D0=97=D0=B0=D0=BF=D1=83=D1=81=D0=BA=D0=B0=D0=B5=D0=BC WorkspaceConsole=
+:&nbsp;<br />Terrasoft.Tools.WorkspaceConsole.exe&nbsp;-operation=3D<span s=
+tyle=3D"color: rgb(0,0,255);">LoadSvnContent</span> -contentTypes=3D<span s=
+tyle=3D"color: rgb(0,0,255);">LocalizableSchemaData</span> -sourcePath=3DD:=
+\Svn\Resources -destinationPath=3DD:\Svn\Content -fileName=3DSchemaLocaliza=
+bleData.en.xml -cultureName=3Den-GB -logPath=3DD:\Svn\Log</li>
+<li><span>=D0=9F=D0=BE=D1=8F=D0=B2=D0=B8=D0=B2=D1=88=D0=B8=D0=B5=D1=81=D1=
+=8F =D0=B8=D0=BB=D0=B8 =D0=B8=D0=B7=D0=BC=D0=B5=D0=BD=D0=B5=D0=BD=D0=BD=D1=
+=8B=D0=B5 =D1=84=D0=B0=D0=B9=D0=BB=D1=8B&nbsp;data.en-GB.json</span><span s=
+tyle=3D"color: rgb(0,0,0);">&nbsp;=D0=B4=D0=BE=D0=B1=D0=B0=D0=B2=D0=BB=D1=
+=8F=D0=B5=D0=BC/=D0=BE=D0=B1=D0=BD=D0=BE=D0=B2=D0=BB=D1=8F=D0=B5=D0=BC =D0=
+=B2 SVN</span></li>
+<li><span style=3D"color: rgb(0,0,0);">=D0=94=D0=BB=D1=8F =D1=82=D0=BE=D0=
+=B3=D0=BE =D1=87=D1=82=D0=BE=D0=B1=D1=8B =D0=BF=D0=B5=D1=80=D0=B5=D0=B2=D0=
+=B5=D0=B4=D0=B5=D0=BD=D0=BD=D1=8B=D0=B5 =D1=84=D0=B0=D0=B9=D0=BB=D1=8B =D0=
+=BF=D0=BE=D1=8F=D0=B2=D0=B8=D0=BB=D0=B8=D1=81=D1=8C =D0=B2 =D0=B8=D1=82=D0=
+=BE=D0=B3=D0=B5 =D0=B2 =D1=81=D0=B1=D0=BE=D1=80=D0=BA=D0=B5&nbsp;=E2=80=93 =
+=D0=BD=D1=83=D0=B6=D0=BD=D0=BE =D1=81=D0=B4=D0=B5=D0=BB=D0=B0=D1=82=D1=8C =
+=D0=BD=D0=B5=D0=B1=D0=BE=D0=BB=D1=8C=D1=88=D0=BE=D0=B9 <strong>=D1=85=D0=B0=
+=D0=BA</strong>: =D0=B2 =D0=BF=D1=80=D0=BE=D1=86=D0=B5=D1=81=D1=81=D0=B5 =
+=D1=81=D0=B1=D0=BE=D1=80=D0=BA=D0=B8 =D0=BF=D1=80=D0=BE=D0=B4=D1=83=D0=BA=
+=D1=82=D0=B0 =D0=BD=D1=83=D0=B6=D0=BD=D0=BE =D0=B2=D1=81=D0=B5 =D0=B2=D1=8B=
+=D0=B3=D1=80=D1=83=D0=B6=D0=B5=D0=BD=D0=BD=D1=8B=D0=B5 =D0=B8=D0=B7 SVN =D1=
+=84=D0=B0=D0=B9=D0=BB=D1=8B&nbsp;data.en-GB.json =D0=BF=D0=B5=D1=80=D0=B5=
+=D0=B8=D0=BC=D0=B5=D0=BD=D0=BE=D0=B2=D0=B0=D1=82=D1=8C =D0=B2&nbsp;data.jso=
+n, =D0=BF=D0=BE=D0=B2=D0=B5=D1=80=D1=85 =D1=83=D0=B6=D0=B5 =D1=81=D1=83=D1=
+=89=D0=B5=D1=81=D1=82=D0=B2=D1=83=D1=8E=D1=89=D0=B8=D1=85, =D0=B8 =D1=83=D0=
+=B6=D0=B5 =D0=BF=D0=BE=D1=81=D0=BB=D0=B5 =D1=8D=D1=82=D0=BE=D0=B3=D0=BE =D0=
+=BF=D0=B5=D1=80=D0=B5=D0=B4=D0=B0=D0=B2=D0=B0=D1=82=D1=8C =D0=B8=D1=85 =D0=
+=B0=D0=B2=D1=82=D0=BE=D1=81=D0=B1=D0=BE=D1=80=D0=BA=D0=B5 =D0=B4=D0=BB=D1=
+=8F =D0=B7=D0=B0=D0=B3=D1=80=D1=83=D0=B7=D0=BA=D0=B8 =D0=B2 =D0=B1=D0=B0=D0=
+=B7=D1=83</span></li>
+</ul>
+<h2 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=98=D1=81=D0=BF=D0=BE=D0=BB=D1=
+=8C=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D1=8FWorkspaceConsole=D0=B4=D0=BB=
+=D1=8F=D0=BF=D1=80=D0=BE=D0=B2=D0=B5=D1=80=D0=BA=D0=B8=D0=BB=D0=BE=D0=BA=D0=
+=B0=D0=BB=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B8=D1=80=D0=B5=D1=81=D1=83=D1=80=
+=D1=81=D0=BE=D0=B2"><span style=3D"color: rgb(0,0,0);">=D0=98=D1=81=D0=BF=
+=D0=BE=D0=BB=D1=8C=D0=B7=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D1=8F WorkspaceConso=
+le =D0=B4=D0=BB=D1=8F =D0=BF=D1=80=D0=BE=D0=B2=D0=B5=D1=80=D0=BA=D0=B8 =D0=
+=BB=D0=BE=D0=BA=D0=B0=D0=BB=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B8 =D1=80=D0=
+=B5=D1=81=D1=83=D1=80=D1=81=D0=BE=D0=B2</span></h2>
+<p><span style=3D"color: rgb(0,0,0);">=D0=A4=D0=B0=D0=B9=D0=BB=D1=8B =D1=81=
+ =D0=BF=D1=80=D0=BE=D0=B2=D0=B5=D1=80=D1=8F=D0=B5=D0=BC=D1=8B=D0=BC=D0=B8 =
+=D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=B0=D0=BC=D0=B8 =D0=BD=D0=B0=D1=85=
+=D0=BE=D0=B4=D1=8F=D1=82=D1=81=D1=8F =D0=B2 =D0=BF=D0=B0=D0=BF=D0=BA=D0=B5 =
+Resources.<br /></span></p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=9F=D1=80=D0=BE=D0=B2=D0=B5=D1=
+=80=D0=BA=D0=B0=D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=
+=D0=B8=D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=BE=D0=B2=D1=81=D1=85=D0=B5=D0=
+=BC=D0=B2=D1=84=D0=B0=D0=B9=D0=BB=D0=B5Resources.xml">=D0=9F=D1=80=D0=BE=D0=
+=B2=D0=B5=D1=80=D0=BA=D0=B0 =D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=D0=B8=D0=B7=D0=
+=B0=D1=86=D0=B8=D0=B8 =D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=BE=D0=B2 =D1=
+=81=D1=85=D0=B5=D0=BC =D0=B2 =D1=84=D0=B0=D0=B9=D0=BB=D0=B5 Resources.xml</=
+h3>
+<p>Terrasoft.Tools.WorkspaceConsole.exe -operation=3DValidateContent -conte=
+ntTypes=3DResources -fileName=3DResources.xml -localizedFileName=3DResource=
+s\Resources.en.xml -destinationPath=3DC:\Temp\Destination\ -cultureName=3De=
+n -localizedConfigFileName=3DValidateResources.config -logPath=3DC:\Temp\Lo=
+g\</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=9F=D1=80=D0=BE=D0=B2=D0=B5=D1=
+=80=D0=BA=D0=B0=D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=
+=D0=B8=D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=BE=D0=B2=D1=81=D1=85=D0=B5=D0=
+=BC=D0=B2=D1=84=D0=B0=D0=B9=D0=BB=D0=B5LocalizableData.xml">=D0=9F=D1=80=D0=
+=BE=D0=B2=D0=B5=D1=80=D0=BA=D0=B0 =D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=D0=B8=D0=
+=B7=D0=B0=D1=86=D0=B8=D0=B8 =D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=BE=D0=
+=B2 =D1=81=D1=85=D0=B5=D0=BC =D0=B2 =D1=84=D0=B0=D0=B9=D0=BB=D0=B5 Localiza=
+bleData.xml</h3>
+<p>Terrasoft.Tools.WorkspaceConsole.exe -operation=3DValidateContent -conte=
+ntTypes=3DLocalizableData -fileName=3DLocalizableData.xml -destinationPath=
+=3DC:\Temp\Destination\ -cultureName=3Den -localizedConfigFileName=3DValida=
+teResources.config -logPath=3DC:\Temp\Log\</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=9F=D1=80=D0=BE=D0=B2=D0=B5=D1=
+=80=D0=BA=D0=B0=D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=
+=D0=B8=D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=BE=D0=B2=D1=81=D1=85=D0=B5=D0=
+=BC=D0=B2=D1=84=D0=B0=D0=B9=D0=BB=D0=B5SchemaLocalizableData.xml">=D0=9F=D1=
+=80=D0=BE=D0=B2=D0=B5=D1=80=D0=BA=D0=B0 =D0=BB=D0=BE=D0=BA=D0=B0=D0=BB=D0=
+=B8=D0=B7=D0=B0=D1=86=D0=B8=D0=B8 =D1=80=D0=B5=D1=81=D1=83=D1=80=D1=81=D0=
+=BE=D0=B2 =D1=81=D1=85=D0=B5=D0=BC =D0=B2 =D1=84=D0=B0=D0=B9=D0=BB=D0=B5 Sc=
+hemaLocalizableData.xml</h3>
+<p>Terrasoft.Tools.WorkspaceConsole.exe -operation=3DValidateContent -conte=
+ntTypes=3DLocalizableSchemaData -fileName=3DSchemaLocalizableData.xml -dest=
+inationPath=3DC:\Temp\Destination\ -cultureName=3Den -localizedConfigFileNa=
+me=3DValidateResources.config -logPath=3DC:\Temp\Log\</p>
+<h3 id=3D"id-=D0=9D=D0=BE=D0=B2=D1=8B=D0=B5=D1=84=D1=83=D0=BD=D0=BA=D1=86=
+=D0=B8=D0=B8WorkspaceConsole7.1(7.0)-7.x-=D0=94=D1=80=D1=83=D0=B3=D0=B8=D0=
+=B5=D1=81=D1=82=D0=B0=D1=82=D1=8C=D0=B8=D0=BF=D0=BE=D1=83=D1=82=D0=B8=D0=BB=
+=D0=B8=D1=82=D0=B5WokspaceConsole:">=D0=94=D1=80=D1=83=D0=B3=D0=B8=D0=B5 =
+=D1=81=D1=82=D0=B0=D1=82=D1=8C=D0=B8 =D0=BF=D0=BE =D1=83=D1=82=D0=B8=D0=BB=
+=D0=B8=D1=82=D0=B5 WokspaceConsole:</h3>
+<ul>
+<li><a href=3D"/pages/viewpage.action?pageId=3D25592896">=D0=A3=D1=82=D0=B8=
+=D0=BB=D0=B8=D1=82=D1=8B</a>&nbsp;(=D1=84=D1=83=D0=BD=D0=BA=D1=86=D0=B8=D0=
+=B8 WorkspaceConsole 7.0.0)</li>
+<li><a href=3D"/pages/viewpage.action?pageId=3D28903371">=D0=9D=D0=B0=D1=81=
+=D1=82=D1=80=D0=BE=D0=B9=D0=BA=D0=B0 =D1=83=D1=82=D0=B8=D0=BB=D0=B8=D1=82=
+=D1=8B WorkspaceConsole</a></li>
+<li><a href=3D"/pages/viewpage.action?pageId=3D28901904">=D0=9E=D0=B1=D0=BD=
+=D0=BE=D0=B2=D0=BB=D0=B5=D0=BD=D0=B8=D0=B5 =D1=8F=D0=B4=D1=80=D0=B0 =D0=B8 =
+=D0=B1=D0=B0=D0=B7=D0=BE=D0=B2=D1=8B=D1=85 =D0=BF=D0=B0=D0=BA=D0=B5=D1=82=
+=D0=BE=D0=B2 =D1=81 =D0=BF=D0=BE=D0=BC=D0=BE=D1=89=D1=8C=D1=8E Terrasoft.To=
+ols.WorkspaceConsole.exe</a></li>
+</ul>
+<p>&nbsp;</p>
+    </div>
+</body>
+</html>
+------=_Part_6092_1042184398.1446020450300
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/68ad5eed0b685af55694cbff41d21203
+
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAA3NCSVQICAjb4U/gAAAAY1BMVEX/
+///ht0zds0vds0vds0vds0vds0vds0vbsUrZr0rZr0rZr0rXrUr/01H90VH7z1D5zVD3y0/1yk/z
+x0/wxE7swU7rwE3pvk3nvE3nu0zlukzjuUzftUvds0vZr0rXrUqBWzo+M1gKAAAAIXRSTlMAESJE
+VWZ3maq7zO7u//////////////////////////9zCPjNAAAACXBIWXMAAAsSAAALEgHS3X78AAAA
+HHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABR0RVh0Q3JlYXRpb24gVGlt
+ZQA2LzEvMTM4qUXQAAAAe0lEQVQYlV2N2RaDIAwFo6LWNhdsrV1wif//lUUownHeMmeSEHkqZkUZ
+BVvLZSZaMVi6NJf8BB6SlroFjul2BDJg29BL8xfXGbvAlws/K7kHoaUNwYQgMPqklj4Kve4JWxy8
+XNKsBrGAcYm/EAXe7H7qtGI+Qool50Jnfgc2C3zDPO17AAAAAElFTkSuQmCC
+------=_Part_6092_1042184398.1446020450300--

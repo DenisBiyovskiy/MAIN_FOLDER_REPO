@@ -15,7 +15,7 @@ define("UsrInvestmentDetailV2", ["UsrInvestmentDetailV2Resources", "Configuratio
 		methods: {
 			onRender: function () {
 				this.callParent(arguments);
-				this.reloadGridData();
+				//this.reloadGridData();
 			},
 			addColumnLink: function(item, column) {
 				var columnPath = column.columnPath;
@@ -58,6 +58,10 @@ define("UsrInvestmentDetailV2", ["UsrInvestmentDetailV2Resources", "Configuratio
 					}, this);
 				}
 
+			},
+			addGridDataColumns: function(esq) {
+				this.callParent(arguments);
+				esq.addColumn("UsrInvestorName");
 			},
 			/**
 			 * Установка настроек колонок детали по умолчанию, если отсутствует пользовательская настройка
