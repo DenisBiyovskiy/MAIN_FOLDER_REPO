@@ -46,3 +46,13 @@ return {
 "Product.Name": {path: "Product.Name"}
 };
 },
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+--update SysProfileData set ContactId = null where [Key] = 'UsrPortfolioPageV2UsrInvestmentDetailV2' and id = '95b92777-638e-46f2-9ed8-9aa571c425a2'
+
+select * from SysProfileData where [Key] = 'UsrPortfolioPageV2UsrInvestmentDetailV2'
+
+--delete from SysProfileData where [Key] = 'UsrPortfolioPageV2UsrInvestmentDetailV2' and ContactId is not null
+
+
+--select top 10 * from SysProfileData order by ModifiedOn desc

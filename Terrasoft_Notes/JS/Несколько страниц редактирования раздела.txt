@@ -1,0 +1,2 @@
+--update SysModule set Attribute = 'Category' where code = 'Product'
+Для создания нескольких страниц редактирования в поле Attribute хранится имя колонки, по которой выбираются страницы редактирования.
