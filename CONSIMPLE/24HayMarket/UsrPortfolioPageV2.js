@@ -231,10 +231,10 @@ define("UsrPortfolioPageV2", [],
 					"operation": "remove",
 					"name": "UsrAmountIndicated"
 				},
-				{
+				/*{
 					"operation": "remove",
 					"name": "UsrAmountCommitted"
-				},
+				},*/
 				{
 					"operation": "remove",
 					"name": "Type"
@@ -242,6 +242,10 @@ define("UsrPortfolioPageV2", [],
 				{
 					"operation": "remove",
 					"name": "Owner"
+				},
+				{
+					"operation": "remove",
+					"name": "AccountCompletenessContainer"
 				},
 				{
 					"operation": "merge",
@@ -320,6 +324,13 @@ define("UsrPortfolioPageV2", [],
 							"rowSpan": 1
 						},*/
 						//"enabled": {"bindTo": "isIPUserRoles"}//Den
+						"enabled": false
+					}
+				},
+				{
+					"operation": "merge",
+					"name": "UsrAmountCommitted",
+					"values": {
 						"enabled": false
 					}
 				}

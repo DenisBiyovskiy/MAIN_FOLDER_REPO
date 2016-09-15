@@ -2,13 +2,22 @@ define("UsrInvestmentPageV2", [],
 	function() {
 		return {
 			entitySchemaName: "UsrInvestment",
-			messages: {},
+			messages: {
+				"UsrInvestmentPageSaved": {
+					mode: this.Terrasoft.MessageMode.PTP,
+					direction: this.Terrasoft.MessageDirectionType.PUBLISH
+				}
+			},
 			attributes: {
 				"isVisibleMinAndMax": {
 					"dataValueType": Terrasoft.DataValueType.BOOLEAN,
 					"value":  false
 				},
 				"UsrKeepInvestmentPrivateVisible": {
+					"dataValueType": Terrasoft.DataValueType.BOOLEAN,
+					"value":  true
+				},
+				"UsrKeepInvestmentPrivateEnabled": {
 					"dataValueType": Terrasoft.DataValueType.BOOLEAN,
 					"value":  true
 				},
@@ -40,14 +49,14 @@ define("UsrInvestmentPageV2", [],
 						}
 					]
 				},
-				"UsrConfirmed": {
+				/*"UsrConfirmed": {
 					dependencies: [
 						{
 							columns: ["UsrConfirmed"],
 							methodName: "setEnabled"
 						}
 					]
-				},
+				},*/
 				"UsrInvestorName": {
 					dataValueType: Terrasoft.DataValueType.LOOKUP,
 					lookupListConfig: {
@@ -139,21 +148,31 @@ define("UsrInvestmentPageV2", [],
 				onEntityInitialized: function() {
 					this.callParent(arguments);
 					this.set("isVisibleMinAndMax", this.get("UsrOptIn"));
-					if (this.get("IsPortalUser")) {
-						if (this.get("UsrConfirmed")) {
-							this.set("isEnabledConfirm", false);
+					if (this.get("UsrConfirmed") === true) {
+						this.set("isEnabledConfirm", false);
+						this.set("isEnabled", false);
+						this.get("IsPortalUser") && this.set("UsrKeepInvestmentPrivateEnabled", false);
+					} else {
+						if (this.get("IsPortalUser")) {
+							this.checkInvestor();//Den
 						}
 					}
-					if (this.get("IsPortalUser")) this.checkInvestor();//Den
 				},
 				checkInvestor: function() {//Den
 					if(this.get("UsrInvestorName") && Terrasoft.SysValue.CURRENT_USER_CONTACT.value != this.get("UsrInvestorName").value) {
 						this.set("isEnabled", false);
+						this.set("isEnabledConfirm", false);
 						this.set("UsrKeepInvestmentPrivateVisible", false);
 					} else {
+						
 						this.set("isEnabled", true);
+						if (!this.get("UsrConfirmed")) this.set("isEnabledConfirm", true);
 						this.set("UsrKeepInvestmentPrivateVisible", true);
 					}
+				},
+				onSaved: function() {
+					this.callParent(arguments);
+					this.sandbox.publish("UsrInvestmentPageSaved", null, 'UsrInvestmentPageSaved');
 				},
 				customSave: function () {
 					if (this.get("IsPortalUser")) {
@@ -482,7 +501,7 @@ define("UsrInvestmentPageV2", [],
 				"layoutName": "Header"
 			},
 			"bindTo": "UsrKeepInvestmentPrivate",
-			"enabled": {"bindTo": "isEnabled"},
+			"enabled": {"bindTo": "isEnabled"},//Den
 			"visible": {"bindTo": "UsrKeepInvestmentPrivateVisible"}//Den
 		},
 		"parentName": "Header",

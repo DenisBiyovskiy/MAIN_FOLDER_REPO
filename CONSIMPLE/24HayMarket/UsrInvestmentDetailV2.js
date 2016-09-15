@@ -23,7 +23,7 @@ define("UsrInvestmentDetailV2", ["UsrInvestmentDetailV2Resources", "Configuratio
 					var name = item.values.ilayName;
 					var id = item.values.Id;
 					var target = "_self";
-					var link = Terrasoft.workspaceBaseUrl + "/Nui/ViewModule.aspx#" + "/CardModuleV2/UsrInvestmentPageV2/edit/" + id;
+					var link = Terrasoft.workspaceBaseUrl + "/Nui/ViewModule.aspx#" + "CardModuleV2/UsrInvestmentPageV2/edit/" + id;
 					item["on" + column.columnPath + "LinkClick"] = function() {
 						return {
 							caption: name,

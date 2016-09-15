@@ -218,6 +218,10 @@ define("UsrInvestmentOppPageV2", [],
 					"name": "Owner"
 				},
 				{
+					"operation": "remove",
+					"name": "AccountCompletenessContainer"
+				},
+				{
 					"operation": "merge",
 					"name": "Name",
 					"values": {
@@ -248,9 +252,9 @@ define("UsrInvestmentOppPageV2", [],
 					"name": "UsrStage",
 					"values": {
 						"layout": {
-							"column": 4,
+							"column": 0,
 							"row": 2,
-							"colSpan": 19,
+							"colSpan": 24,
 							"rowSpan": 1
 						},
 						"enabled": {"bindTo": "isIPUserRoles"}
