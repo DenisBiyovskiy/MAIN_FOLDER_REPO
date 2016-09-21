@@ -1829,8 +1829,9 @@ function(resources, GeneralDetails, ilayConfigurationConstants, BusinessRuleModu
 			//Теперь метод insertReminding - универсальный метод добавления уведомления.
 			//Уведомление о конце визита теперь добавляется в insertEndVisitReminding.
 			insertEndVisitReminding: function(next) {
-				var dueDate = this.get("DueDate");
-				var status = this.get("ilayVisitStatus");
+				var dueDate = this.get("DueDate"),
+					status = this.get("ilayVisitStatus"),
+					doctor = this.get("Owner");
 				if(dueDate && dueDate.getTime() > new Date().getTime() && doctor && 
 					status && status.value == "6627b0f3-bc5f-44dd-923d-59565b8ceead") {
 					var dueDateCopy = Terrasoft.deepClone(dueDate);
@@ -1899,9 +1900,9 @@ function(resources, GeneralDetails, ilayConfigurationConstants, BusinessRuleModu
 
 			createReminding: function() {
 				Terrasoft.chain(
-					function (next) {
+					/*function (next) {
 						this.deleteReminding(next);
-					},
+					},*/
 					function (next) {
 						this.insertEndVisitReminding(next);
 					},
@@ -2087,6 +2088,7 @@ function(resources, GeneralDetails, ilayConfigurationConstants, BusinessRuleModu
 			},
 			onPacientInHospitalButtonClick: function() {
 				this.loadLookupDisplayValue("ilayVisitStatus", "46137577-b168-4836-a5e0-0f785885d83c");
+				this.insertPacientInHospitalReminding();
 				this.save({
 					isCustomSilent: false,
 					needClose: true
@@ -2260,7 +2262,7 @@ function(resources, GeneralDetails, ilayConfigurationConstants, BusinessRuleModu
 			init: function() {
 				this.callParent(arguments);
 				this.sandbox.subscribe("CustomButtonClick",
-					this.getStatusFromCustomButtonClicked, this,
+					this.onCustomButtonClicked, this,
 					[this.sandbox.id]
 				);
 				this.sandbox.subscribe("FilterButtonClick",
@@ -2301,19 +2303,9 @@ function(resources, GeneralDetails, ilayConfigurationConstants, BusinessRuleModu
 				//console.log("subs recieved");
 				this.updateDetails();
 			},
-			getStatusFromCustomButtonClicked: function(statusId) {
-				this.loadLookupDisplayValue("ilayVisitStatus", statusId);
-				//if confirmed, pacientInHospital
-				if(statusId === "6e1798c3-77e3-467b-93f7-4dcc7e336dfa" || statusId === "46137577-b168-4836-a5e0-0f785885d83c") {
-					this.save({
-						isCustomSilent: false,
-						needClose: true
-					});
-				}else if(statusId === "6627b0f3-bc5f-44dd-923d-59565b8ceead"){
-					this.save({
-						isCustomSilent: false
-					});
-				}
+			onCustomButtonClicked: function(tag) {
+				var action = arguments[0] || arguments[3];
+				this[action]();
 			},
 			
 			onEntityInitialized: function() {

@@ -318,17 +318,9 @@ define("ActivitySectionV2", ["ExchangeNUIConstants", "ConfigurationConstants",  
 				getVisitToDoctorSandoxId: function() {
 					return "SectionModuleV2_ActivitySectionV2_CardModuleV2";
 				},
-				onBaseClick: function(statusId) {
-					this.sandbox.publish("CustomButtonClick", statusId, [this.getVisitToDoctorSandoxId()]);
-				},
-				onPacientInHospitalButtonClick: function() {
-					this.onBaseClick("46137577-b168-4836-a5e0-0f785885d83c");
-				},
-				onReceptionButtonClick:function() {
-					this.onBaseClick("6627b0f3-bc5f-44dd-923d-59565b8ceead");
-				},
-				onConfirmButtonClick: function() {
-					this.onBaseClick("6e1798c3-77e3-467b-93f7-4dcc7e336dfa");
+				onBaseClick: function() {
+					var tag = arguments[0] || arguments[3];
+					this.sandbox.publish("CustomButtonClick", tag, [this.getVisitToDoctorSandoxId()]);
 				},
 				isReceptionButtonVisibled: function() {
 					if(this.get("ShowReceptionButton") && this.isVisitToDoctor()) {
@@ -343,36 +335,6 @@ define("ActivitySectionV2", ["ExchangeNUIConstants", "ConfigurationConstants",  
 					} else {
 						return false;
 					}
-				},
-				onCancelVisitButtonClick: function() {
-					var scope = this;
-					var config = {};
-					Terrasoft.utils.showMessage({
-						caption: "Ви дійсно бажаєте скасувати візит?",
-						buttons: [{
-							className: "Terrasoft.Button",
-							returnCode: "Yes",
-							style: Terrasoft.controls.ButtonEnums.style.GREEN,
-							caption: "Так",
-							id: "CancelVisitYesButton"
-						}, {
-							className: "Terrasoft.Button",
-							returnCode: "No",
-							style: Terrasoft.controls.ButtonEnums.style.GREEN,
-							caption: "Ні",
-							id: "CancelVisitNoButton"
-						}],
-						handler: function(buttonCode) {
-							if (buttonCode === "No") {
-								
-							}
-							if (buttonCode === "Yes") {
-								config.entitySchemaName = "ilayReasonCancelVisit";
-								config.columns = ["Name"];
-								LookupUtilities.Open(scope.sandbox, config, scope.callbackSelectedReason, scope, null, false, false);
-							}
-						}
-					});
 				},
 				callbackSelectedReason: function(args) {
 					if (args && args.selectedRows && args.selectedRows.collection.getCount() > 0) {
@@ -401,12 +363,6 @@ define("ActivitySectionV2", ["ExchangeNUIConstants", "ConfigurationConstants",  
 					var tag = "onCloseClick";
 					var cardModuleSandboxId = this.getCardModuleSandboxId();
 					this.sandbox.publish("OnCardAction", tag, [cardModuleSandboxId]);
-				},
-				onMoveVisitButtonClick: function() {
-					
-				},
-				onFinishVisitButtonClick: function () {
-					
 				}
 			},
 			diff: /**SCHEMA_DIFF*/[
@@ -558,7 +514,8 @@ define("ActivitySectionV2", ["ExchangeNUIConstants", "ConfigurationConstants",  
 							"wrapperClass": "ActivitySectionV2CancelVisitButtonButton-textEl"
 						},
 						"visible": {"bindTo": "isCancelVisitButtonVisibled"},
-						"click": {"bindTo": "onCancelVisitButtonClick"},
+						"click": {"bindTo": "onBaseClick"},
+						"tag": "onCancelVisitButtonClick",
 						"enabled": /*{"bindTo": "ShowCancelVisitButton"}*/true
 					},
 					"index": 13
@@ -576,7 +533,8 @@ define("ActivitySectionV2", ["ExchangeNUIConstants", "ConfigurationConstants",  
 							"wrapperClass": "ActivitySectionV2MoveVisitButtonButton-textEl"
 						},
 						"visible": {"bindTo": "isCancelVisitButtonVisibled"},
-						"click": {"bindTo": "onMoveVisitButtonClick"},
+						"click": {"bindTo": "onBaseClick"},
+						"tag": "onMoveVisitButtonClick",
 						"enabled": /*{"bindTo": "ShowCancelVisitButton"}*/true
 					},
 					"index": 12
@@ -594,7 +552,8 @@ define("ActivitySectionV2", ["ExchangeNUIConstants", "ConfigurationConstants",  
 							"wrapperClass": "ActivitySectionV2MoveVisitButtonButton-textEl"
 						},
 						"visible": /*{"bindTo": "isCancelVisitButtonVisibled"}*/ false,
-						"click": {"bindTo": "onFinishVisitButtonClick"},
+						"click": {"bindTo": "onBaseClick"},
+						"tag": "onFinishVisitButtonClick",
 						"enabled": /*{"bindTo": "ShowCancelVisitButton"}*/ true
 					},
 					"index": 11
@@ -612,7 +571,8 @@ define("ActivitySectionV2", ["ExchangeNUIConstants", "ConfigurationConstants",  
 							"wrapperClass": "ActivitySectionV2ConfirmButtonButton-textEl"
 						},
 						"visible": {"bindTo": "isConfirmButtonVisibled"},
-						"click": {"bindTo": "onConfirmButtonClick"},
+						"click": {"bindTo": "onBaseClick"},
+						"tag": "onConfirmButtonClick",
 						"enabled": /*{"bindTo": "ShowCancelVisitButton"}*/true
 					},
 					"index": 8
@@ -630,7 +590,8 @@ define("ActivitySectionV2", ["ExchangeNUIConstants", "ConfigurationConstants",  
 							"wrapperClass": "ActivitySectionV2PacientInHospitalButtonButton-textEl"
 						},
 						"visible": {"bindTo": "isPacientInHospitalButtonVisibled"},
-						"click": {"bindTo": "onPacientInHospitalButtonClick"},
+						"click": {"bindTo": "onBaseClick"},
+						"tag": "onPacientInHospitalButtonClick",
 						"enabled": /*{"bindTo": "ShowCancelVisitButton"}*/true
 					},
 					"index": 9
@@ -648,7 +609,8 @@ define("ActivitySectionV2", ["ExchangeNUIConstants", "ConfigurationConstants",  
 							"wrapperClass": "ActivitySectionV2ReceptionButtonButton-textEl"
 						},
 						"visible": {"bindTo": "isReceptionButtonVisibled"},
-						"click": {"bindTo": "onReceptionButtonClick"},
+						"click": {"bindTo": "onBaseClick"},
+						"tag" : "onReceptionButtonClick",
 						"enabled": /*{"bindTo": "ShowCancelVisitButton"}*/true
 					},
 					"index": 10
