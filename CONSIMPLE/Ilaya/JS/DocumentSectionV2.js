@@ -13,7 +13,7 @@ define("DocumentSectionV2", ["VisaHelper", "BaseFiltersGenerateModule",	"Documen
 					});
 					esq.addColumn("ilayFactValueForEditableGrid");
 					esq.filters.addItem(esq.createColumnFilterWithParameter(
-						this.Terrasoft.ComparisonType.EQUAL, "ilayMedDoc", this.get("Id")));
+						this.Terrasoft.ComparisonType.EQUAL, "ilayMedDoc", this.get("ActiveRow")));
 					esq.filters.addItem(esq.createColumnFilterWithParameter(
 						this.Terrasoft.ComparisonType.EQUAL, "ilayIsRequired", true));
 					esq.getEntityCollection(function(result) {
@@ -78,7 +78,8 @@ define("DocumentSectionV2", ["VisaHelper", "BaseFiltersGenerateModule",	"Documen
 								convertInPDF: printForm.get("ConvertInPDF")
 							};
 							var serviceConfig = {
-								serviceName: "ReportService",
+								serviceName: "ilayReportService",
+								//serviceName: "ilaySourceCode1",
 								methodName: "CreateReport",
 								data: data,
 								timeout: 20 * 60 * 1000
@@ -112,6 +113,23 @@ define("DocumentSectionV2", ["VisaHelper", "BaseFiltersGenerateModule",	"Documen
 					this
 					);
 					//Den<
+				},
+				
+				/**
+				 * Загружает отчет.
+				 * @protected
+				 * @param {String} caption Заголовок.
+				 * @param {String} key Идентификатор отчета.
+				 */
+				downloadReport: function(caption, key) {
+					var report = document.createElement("a");
+					report.href = "../rest/ilayReportService/ilayGetReportFile/" + key;
+					//report.download = caption; открываем сразу в браузере.
+					//так же для этого в классе ReportService в методе GetReportFile установлено "Content-Disposition", "inline;
+					document.body.appendChild(report);
+					//report.click();
+					window.open(report.href);
+					document.body.removeChild(report);
 				},
 				
 				/**

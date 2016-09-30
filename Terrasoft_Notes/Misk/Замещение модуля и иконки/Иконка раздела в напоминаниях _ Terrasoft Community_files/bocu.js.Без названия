@@ -1,0 +1,141 @@
+
+Drupal.behaviors.bocu = function(context)
+{
+    if (Drupal.settings.bocu.bocuLoaded || typeof(BUE) == 'undefined')
+    {
+        return;
+    }
+    
+    //preload img
+    $('<img />').attr('src', Drupal.settings.bocu.buttonImg);
+    $('<img />').attr('src', Drupal.settings.bocu.uploadifyPath + 'cancel.png');
+
+    var iteration = 0;
+    Drupal.settings.bocu.bocuLoaded = true;
+    
+    var intervalId = setInterval(function(){
+        
+        var $btnWrapper = $('.bue-ui');
+        
+        if ($btnWrapper.size())
+        {
+            clearInterval(intervalId);
+            
+            $btnWrapper.each(function(btnNumber){
+                
+                var $curBtnWrapper = $(this);
+                var bocuId = '#bocu' + btnNumber;
+                var insertText = '';
+                var selectedFiles = []; // имена выбранных файлов
+            
+                $curBtnWrapper.append(
+                    '<span class="bocuWrapper bue-button bue-image-button editor-image-button" style="background:url(' + Drupal.settings.bocu.buttonImg + ') no-repeat center center;" title="Прикрепить изображение/файл">' + 
+                        '<input type="file" id="bocu' + btnNumber + '" />' +
+                    '</span>' +
+                    '<span id="bocuProgress' + btnNumber + '"></span>'
+                );
+                
+                $(bocuId).uploadify({
+                    'uploader'     : Drupal.settings.bocu.uploadifyPath + 'uploadify.swf',
+                    'cancelImg'    : Drupal.settings.bocu.uploadifyPath + 'cancel.png',
+                    'width'        : Drupal.settings.bocu.buttonImgWidth - 1,
+                    'height'       : Drupal.settings.bocu.buttonImgHeight,
+                    'sizeLimit'    : Drupal.settings.bocu.sizeLimit,
+                    'script'       : Drupal.settings.basePath + 'bocu/upload/' + btnNumber,
+                    'fileDataName' : 'files[bocu' + btnNumber + ']',
+                    'queueID'      : 'bocuProgress' + btnNumber,
+                    'auto'         : true,
+                    'multi'        : true,
+                    'hideButton'   : true,
+                    'wmode'        : 'transparent',
+                    'folder'       : '/temp',
+                    'scriptData'   : {'phpsessid': Drupal.settings.bocu.phpsessid},
+                    
+                    // Вызывается на каждый выбранный файл
+                    'onSelect': function(event, queueID, fileObj){
+                        
+                        selectedFiles.push(fileObj.name);
+                        
+                    },
+                    
+                    // Вызывается один раз после выбора файлов
+                    'onSelectOnce': function(event, data){
+                        
+                        var textSelected = (BUE.active.getSelection().length > 0) ? 1 : 0;
+                        var thumbCount = 0;
+                        
+                        if (data.fileCount == 2)
+                        {
+                            for (var fileNumber = 0; fileNumber < selectedFiles.length; fileNumber++)
+                            {
+                                if (selectedFiles[fileNumber].search(/-thumb\.(jpe?g|gif|png)$/) != -1)
+                                {
+                                    thumbCount++;
+                                }
+                            }
+                        }
+                        
+                        $(bocuId).uploadifySettings('scriptData', {
+                            'textSelected': textSelected,
+                            'isThumbLink': thumbCount == 1 ? 1 : 0
+                        });
+                        
+                    },
+                    
+                    // Ошибка при загрузке файла
+                    'onError': function(event, ID, fileObj, errorObj){
+                        
+                        if (errorObj.type != 'File Size')
+                        {
+                            alert('Ошибка: ' + errorObj.type + ', ' + errorObj.info);
+                        }
+                        
+                    },
+                    
+                    // Окончена загрузка одного файла
+                    'onComplete': function(event, ID, fileObj, response, data){
+                        
+                        responseObject = Drupal.parseJson(response);
+
+                        if (responseObject.status)
+                        {
+                            insertText += responseObject.data ? responseObject.data + "\n" : '';
+                        }
+                        else
+                        {
+                            alert(responseObject.data);
+                        }
+                        
+                    },
+                    
+                    // Окончена загрузка всех файлов
+                    'onAllComplete': function(event, uploadObj){
+                        
+                        if (BUE.active.getSelection().length == 0)
+                        {
+                            BUE.active.replaceSelection(insertText, 'end');
+                        }
+                        else
+                        {
+                            insertText = insertText.replace(/!text/gi, BUE.active.getSelection());
+                            insertText = $.trim(insertText);
+                            BUE.active.replaceSelection(insertText);
+                        }
+                        
+                        BUE.active.focus();
+                        insertText = '';
+                        $('#edit-bocu-added-files').val(1);
+                        selectedFiles.splice(0, selectedFiles.length);
+                        
+                    }
+                });
+                
+            });
+        }
+
+        if (iteration > 100) clearInterval(intervalId);
+        iteration++;
+
+    }, 60);
+
+};

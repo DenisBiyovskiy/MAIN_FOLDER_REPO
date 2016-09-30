@@ -99,13 +99,6 @@ function(resources, GeneralDetails, ilayConfigurationConstants, BusinessRuleModu
 		diff: /**SCHEMA_DIFF*/[
 			{
 				"operation": "merge",
-				"name": "Lead",
-				"values": {
-					"layout": { "column": 12, "row": 2, "colSpan": 12 }
-				}
-			},
-			{
-				"operation": "merge",
 				"parentName": "LeftContainer",
 				"propertyName": "items",
 				"name": "ChangeQueueItemDateButton",
@@ -580,6 +573,25 @@ function(resources, GeneralDetails, ilayConfigurationConstants, BusinessRuleModu
 				"parentName": "groupe0379499335c_gridLayout",
 				"propertyName": "items",
 				"index": 7
+			},
+			{
+				"operation": "insert",
+				"name": "Lead",
+				"values": {
+					"layout": {
+						"column": 0,
+						"row": 5,
+						"colSpan": 12,
+						"rowSpan": 1
+					},
+					"bindTo": "Lead",
+					"caption": {
+						"bindTo": "Resources.Strings.ilayLeadCaption"
+					},
+					"enabled": true
+				},
+				"parentName": "groupe0379499335c_gridLayout",
+				"propertyName": "items",
 			},
 			{
 				"operation": "insert",
@@ -1437,11 +1449,13 @@ function(resources, GeneralDetails, ilayConfigurationConstants, BusinessRuleModu
 				var doctor = (Ext.isEmpty(this.get("Owner")))? undefined : this.get("Owner");
 				var startDate = (Ext.isEmpty(this.get("StartDate")))? undefined : this.get("StartDate");
 				var medDirection = (Ext.isEmpty(this.get("ilayMedDirection")))? undefined : this.get("ilayMedDirection");
+				var lead = (Ext.isEmpty(this.get("Lead")))? undefined : this.get("Lead");// Den
 				var defaultDataFromVisit = {
 					"patient" : patient,
 					"doctor" : doctor,
 					"startDate" : startDate,
-					"medDirection" : medDirection
+					"medDirection" : medDirection,
+					"lead": lead//Den
 				};
 				sessionStorage.setItem("defaultDataFromVisit", JSON.stringify(defaultDataFromVisit));
 			},
@@ -1810,40 +1824,81 @@ function(resources, GeneralDetails, ilayConfigurationConstants, BusinessRuleModu
 					return false;
 				}
 			},
-			deleteReminding: function(next) {
+			//Den> [IL-193] 
+			/**
+			 * Удаляет указанное в параметрах уведомление по данной активности.
+			 * В таблице Reminding поле Description
+			 * "1" - "Через 5 хвилин завершення візиту".
+			 * "2" - "Пацієнт підтвердив візит".
+			 * "3" - "Пацієнт уже в клініці/Через 5 хвилин початок візиту".
+			 * "4" - "Візит скасовано".
+			 * @param {Array} Description wich reminding to delete.
+			 */
+			deleteReminding: function(description) {
 				var deleteQuery = Ext.create('Terrasoft.DeleteQuery', 
 					{rootSchemaName: 'Reminding'}
 				);
 				deleteQuery.filters.add('SubjectId', 
 					deleteQuery.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL, 'SubjectId', this.get("Id")));
+				if (description) {
+					var filterGroup = new this.Terrasoft.createFilterGroup();
+						filterGroup.logicalOperation = this.Terrasoft.LogicalOperatorType.OR;
+					description.forEach(function(item, i) {
+						filterGroup.add('Description' + i, 
+							deleteQuery.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL, 'Description', item));
+					});
+					deleteQuery.filters.add("DescriptionFilterGroup", filterGroup);
+				}
 				deleteQuery.execute(function (response) { 
 					if(response.success) {
-						next();
+						
 					}
 				}, this);
 			},
-
+			//Den< [IL-193]
 			//Den> [IL-193] Візит до лікаря: напоминание о том, что пациент уже в клинике
 			//-------------------------------------------------------------------------------
 			//Заменен метод insertReminding который ранее добавлял уведомление о конце визита.
 			//Теперь метод insertReminding - универсальный метод добавления уведомления.
 			//Уведомление о конце визита теперь добавляется в insertEndVisitReminding.
-			insertEndVisitReminding: function(next) {
+			/**
+			 * Добавляет напоминание о том, что через 5 мин. конец визита.
+			 */
+			insertEndVisitReminding: function() {
 				var dueDate = this.get("DueDate"),
 					status = this.get("ilayVisitStatus"),
 					doctor = this.get("Owner");
 				if(dueDate && dueDate.getTime() > new Date().getTime() && doctor && 
-					status && status.value == "6627b0f3-bc5f-44dd-923d-59565b8ceead") {
+					status && status.value == "6627b0f3-bc5f-44dd-923d-59565b8ceead") {//йде прийом
 					var dueDateCopy = Terrasoft.deepClone(dueDate);
 					dueDateCopy.setMinutes(dueDateCopy.getMinutes() - 5);
-					var dateTimeStr = dueDate.toLocaleString();
-					var dateStr = dateTimeStr.substring(0, dateTimeStr.indexOf(','));
-					var timeStr = dateTimeStr.substring(dateTimeStr.indexOf(',') + 1, dateTimeStr.length);
-					var subjectCaption = "Через 5 хвилин, " + dateStr + " РІ"+ timeStr + " візит буде завершено";
-					this.insertReminding(subjectCaption, dueDateCopy, next);
+					var subjectCaption = "Через 5 хвилин візит пацієнта " + patient.displayValue + " буде завершено";
+					this.insertReminding(subjectCaption, dueDateCopy, "1");
 				}
 			},
-
+			
+			/**
+			* Добавляет напоминание о том, что пациент подтвердил визит.
+			*/
+			insertConfirmedVisitReminding: function() {
+				var currentDate = new Date(),
+					patient = this.get("ilayPatient"),
+					subjectCaption = '';
+				subjectCaption = "Візит пацієнта " + patient.displayValue + " підтверджено";
+				this.insertReminding(subjectCaption, currentDate, "2");
+			},
+			
+			/**
+			* Добавляет напоминание о том, что визит отменен.
+			*/
+			insertCanceledVisitReminding: function() {
+				var currentDate = new Date(),
+					patient = this.get("ilayPatient"),
+					subjectCaption = '';
+				subjectCaption = "Візит пацієнта " + patient.displayValue + " скасовано";
+				this.insertReminding(subjectCaption, currentDate, "4");
+			},
+			
 			/**
 			* Добавляет напоминание о том, что пациент уже в клинике
 			*/
@@ -1851,39 +1906,35 @@ function(resources, GeneralDetails, ilayConfigurationConstants, BusinessRuleModu
 				var startDate = this.get("StartDate"),
 					startDateCopy = Terrasoft.deepClone(startDate),
 					currentDate = new Date(),
-					startDateTimeString = startDate.toLocaleString(),
-					//startDateStr = startDateTimeString.substring(0, startDateTimeString.indexOf(',')),
-					startTimeStr = startDateTimeString.substring(startDateTimeString.indexOf(',') + 1, startDateTimeString.length),
-					patient = this.get("ilayPatient");
+					patient = this.get("ilayPatient"),
 					subjectCaption = '';
 
 				startDateCopy.setMinutes(startDateCopy.getMinutes() - 5)
 
 				if (startDateCopy.getTime() > currentDate.getTime() && patient) {
-					subjectCaption = "Через 5 хвилин, о " + startTimeStr + 
-						" має бути розпочато візит пацієнта " + patient.displayValue +". Пацієнт вже знаходиться в клініці.";
-					this.insertReminding(subjectCaption, startDateCopy);
+					subjectCaption = "Візит пацієнта " + patient.displayValue + " розпочнеться через 5 хвилин.";
+					this.insertReminding(subjectCaption, startDateCopy, "3");
 				} else {
-					subjectCaption = "Пацієнт " + patient.displayValue + 
-						" вже знаходиться в клініці. Його візит має розпочатись менше ніж через 5 хвилин, о " + startTimeStr + ".";
-					currentDate.setMinutes(currentDate.getMinutes() + 1);
-					this.insertReminding(subjectCaption, currentDate);
+					subjectCaption = "Візит пацієнта " + patient.displayValue + " розпочнеться менше ніж через 5 хвилин.";
+					currentDate.setMinutes(currentDate.getMinutes());
+					this.insertReminding(subjectCaption, currentDate, "3");
 				}
 			},
-
+			
 			/**
 			* Метод для добавления уведомления.
 			* @param {String} Сообщение уведомления.
 			* @param {Date} Время уведомления.
 			* @param {Function} callback 
 			*/
-			insertReminding: function(subjectCaption, remindTime, next) {
+			insertReminding: function(subjectCaption, remindTime, description) {
 				var doctor = this.get("Owner");
 				var insert = Ext.create('Terrasoft.InsertQuery', {
 					rootSchemaName: 'Reminding'
 				});
 				insert.setParameterValue('NotificationType', "9ee66abe-ec9d-4667-8995-29e8765de2d5", Terrasoft.DataValueType.GUID);
 				insert.setParameterValue('SubjectCaption', subjectCaption, Terrasoft.DataValueType.TEXT);
+				insert.setParameterValue('Description', description, Terrasoft.DataValueType.TEXT);
 				insert.setParameterValue('SubjectId', this.get("Id"), Terrasoft.DataValueType.GUID);
 				insert.setParameterValue('Contact', doctor.value, Terrasoft.DataValueType.GUID);
 				insert.setParameterValue('RemindTime', remindTime, Terrasoft.DataValueType.DATE);
@@ -1891,23 +1942,22 @@ function(resources, GeneralDetails, ilayConfigurationConstants, BusinessRuleModu
 				insert.setParameterValue('Author', "410006e1-ca4e-4502-a9ec-e54d922d2c00", Terrasoft.DataValueType.GUID);
 				insert.setParameterValue('SysEntitySchema', "c449d832-a4cc-4b01-b9d5-8a12c42a9f89", Terrasoft.DataValueType.GUID);
 				insert.execute(function(result) {
-					if(result.success){
-						typeof next === "function" && next();
-					}
+					
 				}, this);
 			},
 			//Den< [IL-193]
-
-			createReminding: function() {
+			//Den> [IL-193] commented
+			/*createReminding: function() {
 				Terrasoft.chain(
-					/*function (next) {
+					function (next) {
 						this.deleteReminding(next);
-					},*/
+					},
 					function (next) {
 						this.insertEndVisitReminding(next);
 					},
 				this);
-			},
+			},*/
+			//Den< [IL-193]
 			getPhotoImage: function() {
 				var primaryImageColumnValue = this.get("ilayPhoto");
 				if(primaryImageColumnValue) {
@@ -2057,7 +2107,9 @@ function(resources, GeneralDetails, ilayConfigurationConstants, BusinessRuleModu
 					}
 				} else {
 					this.callParent(arguments);
-					this.createReminding();
+					//Den> [IL-193] Теперь создается по нажатию на кнопку "Йде прийом".
+					//this.createReminding();
+					//Den< [IL-193] 
 					if (statusId.value && config && config.needClose) {
 						this.onCloseCardButtonClick();
 					}
@@ -2080,22 +2132,34 @@ function(resources, GeneralDetails, ilayConfigurationConstants, BusinessRuleModu
 				}
 			},
 			onConfirmButtonClick: function() {
-				this.loadLookupDisplayValue("ilayVisitStatus", "6e1798c3-77e3-467b-93f7-4dcc7e336dfa");
-				this.save({
-					isCustomSilent: false,
-					needClose: true
-				});
+				if (this.get("ilayPatient")) {
+					this.loadLookupDisplayValue("ilayVisitStatus", "6e1798c3-77e3-467b-93f7-4dcc7e336dfa");
+					this.insertConfirmedVisitReminding();
+					this.save({
+						isCustomSilent: false,
+						needClose: true
+					});
+				} else {
+					Terrasoft.utils.showMessage({
+						caption: "Будь ласка, оберіть пацієнта.",
+						buttons: ["cancel"],
+						style: Terrasoft.MessageBoxStyles.BLUE
+					});
+
+				}
 			},
 			onPacientInHospitalButtonClick: function() {
 				this.loadLookupDisplayValue("ilayVisitStatus", "46137577-b168-4836-a5e0-0f785885d83c");
 				this.insertPacientInHospitalReminding();
+				this.deleteReminding(["2"]);
 				this.save({
 					isCustomSilent: false,
 					needClose: true
 				});
 			},
 			onReceptionButtonClick: function() {
-				this.loadLookupDisplayValue("ilayVisitStatus", "6627b0f3-bc5f-44dd-923d-59565b8ceead");
+				this.loadLookupDisplayValue("ilayVisitStatus", "6627b0f3-bc5f-44dd-923d-59565b8ceead", this.insertEndVisitReminding, this);
+				this.deleteReminding(["3"]);
 				this.save({
 					isCustomSilent: false
 				});
@@ -2126,6 +2190,7 @@ function(resources, GeneralDetails, ilayConfigurationConstants, BusinessRuleModu
 							config.entitySchemaName = "ilayReasonCancelVisit";
 							config.columns = ["Name"];
 							LookupUtilities.Open(scope.sandbox, config, scope.callbackSelectedReason, scope, null, false, false);
+							scope.insertCanceledVisitReminding();
 						}
 					}
 				});
@@ -2177,6 +2242,13 @@ function(resources, GeneralDetails, ilayConfigurationConstants, BusinessRuleModu
 				}, this);
 			},
 			statusChanged: function() {
+				//Den> [IL-193] Визит завершен или отменен, удаляем все уведомления по нему.
+				var status = this.get("ilayVisitStatus");
+				if (status && (status.value === "4bdbb88f-58e6-df11-971b-001d60e938c6"
+					|| status.value === "201cfba8-58e6-df11-971b-001d60e938c6")) {
+					this.deleteReminding(["1", "2", "3"]);
+				}
+				//Den< [IL-193]
 				/** 
 				* id									name
 				* 384D4B84-58E6-DF11-971B-001D60E938C6	Не розпочато
@@ -2279,7 +2351,9 @@ function(resources, GeneralDetails, ilayConfigurationConstants, BusinessRuleModu
 				);
 			},
 			setServiceCode: function(code){
-				if(this.getServiceVisibility()){
+				// принимаем и устанавливаем код только если текущий шаг это выбор сервисов
+				var processStep = this.get("ilayProcessStep");
+				if(processStep && processStep.value.toUpperCase() === "221D1E9C-E0BD-4A38-BABF-0ED169F422FD"){
 					this.set("CurrentServiceCode", code);
 					// 1 - GREY
 					// 2 - GREEN

@@ -1,0 +1,8 @@
+klBIZ.prts = (("https:" == document.location.protocol) ? "https://" : "http://"); 
+var klbTrackParams = { wroot:"http://ok.kolobiz.com", servl:klBIZ.prts+"track.kolobiz.com/", servchat:klBIZ.prts+"ok.kolobiz.com/client/?style=terra&group=41", userid:"11da4d4e81c3ca9ae3", browid:"a61e3a0", frequency: "2", requestkey: "bc1c3c73770fd2834333608c55d693d7", agid: "23", groupid: "41", el_content:'ok.kolobiz_content', el_track:'ok.kolobiz_tracking', wr_width: 302, wr_height: 220, title_step: 0, document_head: document.getElementsByTagName("head")[0], parent: document.getElementsByTagName('head').item(0) || document.documentElement,
+  tagTracking: '<div id="ok.kolobiz_content" style="display: none; visibility: hidden; position: absolute; z-index: 1001;  width: 302px; height: 220px; top: 50px; left: 150px; border: 0;"></div><div id="ok.kolobiz_tracking" style="display: none" ></div>'
+};  
+setTimeout(function(){ klbTrackParams.ok_js_dcode = document.createElement("script"); klbTrackParams.ok_js_dcode.src='http://static.kolobiz.com/js/work20160818/dcode.js' ;klbTrackParams.parent.appendChild(klbTrackParams.ok_js_dcode); klbTrackParams.ok_js_track = document.createElement("script"); klbTrackParams.ok_js_track.src='http://static.kolobiz.com/js/work20160818/klb-api-track.js?0.0427';klbTrackParams.parent.appendChild(klbTrackParams.ok_js_track); }, 10);
+
+
+/*---RT:0.0004921 WH:0.0041590 --act: request --- key: 0 --- */ 
