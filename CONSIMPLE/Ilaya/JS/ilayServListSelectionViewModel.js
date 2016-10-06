@@ -838,26 +838,30 @@ define("ilayServListSelectionViewModel", ["ilayServListSelectionViewModelResourc
 							*/
 							//Den> [IL-436] Создание сервисов
 							var itemName = item.get("Name") || item.get("ilayProduct.Name");
-							if (item.get("Name")) {
+							if (itemName) {
 								insert.setParameterValue("ilayName",
-									item.get("Name"), Terrasoft.DataValueType.TEXT);
+									itemName, Terrasoft.DataValueType.TEXT);
 							}
-							
-							if (item.get("Id")) {
+							var itemId = item.get("ilayProduct") && item.get("ilayProduct").value || item.get("Id");
+							if (itemId) {
 								insert.setParameterValue("ilayService",
-									item.get("Id"), Terrasoft.DataValueType.GUID);
+									itemId, Terrasoft.DataValueType.GUID);
 							}
-							
-							if (item.get("Code")) {
+							var itemCode = item.get("Code") || item.get("ilayProduct.Code");
+							if (itemCode) {
 								insert.setParameterValue("ilayServiceCode",
-									item.get("Code"), Terrasoft.DataValueType.TEXT);
+									itemCode, Terrasoft.DataValueType.TEXT);
 							}
-							
-							if (item.get("Price")) {
+							var itemPrice = item.get("Price") || item.get("ilayProduct.Price");
+							if (itemPrice) {
 								insert.setParameterValue("ilayBaseCost",
-									item.get("Price"), Terrasoft.DataValueType.FLOAT);
+									itemPrice, Terrasoft.DataValueType.FLOAT);
 							}
-							
+							var itemPackage = item.get("ilayPackage") && item.get("ilayPackage").value;
+							if (itemPackage) {
+								insert.setParameterValue("ilayPackage",
+									itemPackage, Terrasoft.DataValueType.GUID);
+							}
 							if(this.get("DetailColumnName") == "ilayVisittoDoctor") {
 								if(this.get("MasterEntity") && this.get("MasterEntity").get("ilayPatient")) {
 									insert.setParameterValue("ilayPatient",
@@ -975,7 +979,7 @@ define("ilayServListSelectionViewModel", ["ilayServListSelectionViewModelResourc
 						//this.saveSelectedProducts();
 					},
 					
-					//Den>
+					//Den> [IL-436]
 					/**
 					 * @param {Array} packetIds - Id Пакетов выбраных в корзину
 					 * @param {Function} callback метод обработки результирующей колекции
@@ -992,11 +996,15 @@ define("ilayServListSelectionViewModel", ["ilayServListSelectionViewModelResourc
 						selectQuery.addColumn("ilayProduct.ilayDirection.Name");
 						selectQuery.addColumn("ilayProduct.ilayProductsInPackage");
 						selectQuery.addColumn("ilayProduct.Category");
+						selectQuery.addColumn("ilayProduct.Name");
 						selectQuery.addColumn("ilayProduct");
+						selectQuery.addColumn("ilayPackage");
 						selectQuery.addColumn("ilayProdNumber");
 						//Добавляем фильтры.
 						selectQuery.filters.addItem(Terrasoft.createColumnFilterWithParameter(
 							Terrasoft.ComparisonType.EQUAL, "ilayIsArchive", false));
+						selectQuery.filters.addItem(Terrasoft.createColumnFilterWithParameter(
+							Terrasoft.ComparisonType.EQUAL, "ilayProduct.IsArchive", false));
 						
 						selectQuery.filters.addItem(Terrasoft.createColumnInFilterWithParameters("ilayPackage", packetIds, Terrasoft.DataValueType.GUID));
 						
@@ -1006,7 +1014,7 @@ define("ilayServListSelectionViewModel", ["ilayServListSelectionViewModelResourc
 							}
 						}, this);
 					},
-					//Den<
+					//Den< [IL-436]
 					
 					
 					
