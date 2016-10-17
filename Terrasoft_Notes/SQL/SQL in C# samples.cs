@@ -190,4 +190,12 @@ var insert = new Insert(userConnection).Into("Contact")
 //не проверено на работоспособность, инфа с сайта академии.
 
  https://www.terrasoft.ru/bpmonlinesdk/
-
+____________________________________________________________________________________________________________________
+   .Top(1)
+   .Column("t1", "ContactId") 
+   .Column("t1", "CreatedOn")
+   .Column("t2", "CreatedOn")
+   .From("Activity").As("t1")
+   .Join(JoinType.Inner, "UsrPayments").As("t2")
+   .On("t1", "ContactId").IsEqual("t2", "UsrDebtorId")
+   .Where("t1", "CreatedOn").IsLess("t2", "CreatedOn").OrderByAsc("t1", "id") as Select;
