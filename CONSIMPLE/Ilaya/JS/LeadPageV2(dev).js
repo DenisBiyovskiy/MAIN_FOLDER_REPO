@@ -51,6 +51,10 @@ define('LeadPageV2', ['LeadPageV2Resources', 'GeneralDetails', 'ilayConfiguratio
 				"DistributeButtonChange": {
 					mode: Terrasoft.MessageMode.PTP,
 					direction: Terrasoft.MessageDirectionType.PUBLISH
+				},
+				"CallCustomer": {
+					mode: Terrasoft.MessageMode.PTP,
+					direction: Terrasoft.MessageDirectionType.PUBLISH
 				}
 			},
 			diff: /**SCHEMA_DIFF*/[
@@ -353,7 +357,7 @@ define('LeadPageV2', ['LeadPageV2Resources', 'GeneralDetails', 'ilayConfiguratio
 		},
 		"parentName": "NeedInfoTabContainer",
 		"propertyName": "items",
-		"index": 2
+		"index": 3
 	},
 				{
 		"operation": "merge",
@@ -661,15 +665,15 @@ define('LeadPageV2', ['LeadPageV2Resources', 'GeneralDetails', 'ilayConfiguratio
 				
 				{
 					"operation": "insert",
-					"parentName": "LeadPageRegisterInfoBlock",
+					"parentName": "Header",
 					"propertyName": "items",
 					"name": "CallButton",
 					"values": {
 						"layout": {"column": 12, "row": 2, "colSpan": 1, "rowSpan": 1},
 						"itemType": 5,
-						//"click": {
-						//	"bindTo": "makeCall"
-						//},
+						"click": {
+							"bindTo": "makeCall"
+						},
 						"hint": {
 							"bindTo": "Resources.Strings.CallButtonCaption"
 						},
@@ -691,7 +695,7 @@ define('LeadPageV2', ['LeadPageV2Resources', 'GeneralDetails', 'ilayConfiguratio
 					"values": {
 						"layout": {"column": 13, "row": 2, "colSpan": 11}
 					}
-				}
+				},
 				
 			]/**SCHEMA_DIFF*/,
 			attributes: {
@@ -728,10 +732,30 @@ define('LeadPageV2', ['LeadPageV2Resources', 'GeneralDetails', 'ilayConfiguratio
 				"IsCreateEMKButtonClicked": {
 					dataValueType: Terrasoft.DataValueType.BOOLEAN,
 					value: false
+				},
+				"IsCallLeadLaterButtonClicked": {
+					dataValueType: Terrasoft.DataValueType.BOOLEAN,
+					value: false
+				},
+				"IsNoNeedButtonClicked": {
+					dataValueType: Terrasoft.DataValueType.BOOLEAN,
+					value: false
 				}
 				//Den<
 			},
 			methods: {
+				makeCall: function() {
+					var number = this.get("MobilePhone");
+					var contact = this.get("QualifiedContact").value;
+					var entitySchemaName = "Contact";
+					var ilayCallLeadId = this.get("Id");
+					this.sandbox.publish("CallCustomer", {
+						number: number,
+						customerId: contact,
+						entitySchemaName: entitySchemaName,
+						ilayCallLeadId: ilayCallLeadId
+					});
+				},
 				getServListSandboxId: function() {
 					return this.sandbox.id + "_detail_ilayServListInLeadilayServList";
 				},
@@ -764,13 +788,21 @@ define('LeadPageV2', ['LeadPageV2Resources', 'GeneralDetails', 'ilayConfiguratio
 				onQualifiedContactChanged: function() {
 					this.callParent(arguments);
 					//auto fill phone
-					if(this.get("MobilePhone") && (this.get("QualifiedContact"))){
-						this.set("CallButtonVisible", true);
-					}else{
+					//Den> Чтобы телефон подтягивалсся каждый раз по изменению контакта.
+					// if(this.get("MobilePhone") && (this.get("QualifiedContact"))){
+					// 	this.set("CallButtonVisible", true);
+					// }else{
+					this.changeContactName();
 						this.tryGetPhone();
-					}
+					// }
 				},
 				
+				changeContactName: function() {
+					var qualifiedContact = this.get("QualifiedContact"),
+						contact = this.get("Contact");
+					if( contact && qualifiedContact && qualifiedContact.displayValue == contact) return;
+					this.set("Contact", qualifiedContact.displayValue);
+				},
 				openCardInChain: function(config) {
 					if (config && !config.hasOwnProperty("OpenProductSelectionModule")) {
 						return this.callParent(arguments);
@@ -839,13 +871,13 @@ define('LeadPageV2', ['LeadPageV2Resources', 'GeneralDetails', 'ilayConfiguratio
 					}));
 					//Den<
 					distributeButtonMenuItems.addItem(this.getButtonMenuItem({
-						"Caption": {"bindTo": "Resources.Strings.NoNeedCaption"},
-						"Click": {"bindTo": "noNeedClick"},
+						"Caption": {"bindTo": "Resources.Strings.callbackLaterButtonCaption"},
+						"Click": {"bindTo": "callbackLaterButtonClick"},
 						"Visible": true
 					}));
 					distributeButtonMenuItems.addItem(this.getButtonMenuItem({
-						"Caption": {"bindTo": "Resources.Strings.callbackLaterButtonCaption"},
-						"Click": {"bindTo": "callbackLaterButtonClick"},
+						"Caption": {"bindTo": "Resources.Strings.NoNeedCaption"},
+						"Click": {"bindTo": "noNeedClick"},
 						"Visible": true
 					}));
 					this.set("DistributeButtonMenuItems", distributeButtonMenuItems);
@@ -872,7 +904,8 @@ define('LeadPageV2', ['LeadPageV2Resources', 'GeneralDetails', 'ilayConfiguratio
 					this.set("IsCreateEMKButtonClicked", true);
 					this.save();
 				},
-				runCreateEMKProcess: function(leadID) {
+				runCreateEMKProcess: function() {
+					var leadID = this.getPrimaryColumnValue();
 					var processArgs = {
 						sysProcessName: 'ilayEMKCreationFromLead',
 						parameters: {
@@ -881,6 +914,28 @@ define('LeadPageV2', ['LeadPageV2Resources', 'GeneralDetails', 'ilayConfiguratio
 					};
 					ProcessModuleUtilities.runProcess(processArgs.sysProcessName, processArgs.parameters, this);
 				},
+					//Den>[IL-480]
+				runCallLeadLaterProcess: function() {
+					var leadID = this.get("Id");
+					var processArgs = {
+						sysProcessName: 'CallLeadLater',
+						parameters: {
+							LeadID: leadID
+						}
+					};
+					ProcessModuleUtilities.runProcess(processArgs.sysProcessName, processArgs.parameters, this);
+				},
+				runNoInterestFromLeadProcess: function() {
+					var leadID = this.get("Id");
+					var processArgs = {
+						sysProcessName: 'NoInterestFromLead',
+						parameters: {
+							LeadId: leadID
+						}
+					};
+					ProcessModuleUtilities.runProcess(processArgs.sysProcessName, processArgs.parameters, this);
+				},
+					//Den<[IL-480]
 				//Den<
 				appointVisitClick: function() {
 					this.loadLookupDisplayValue("QualifyStatus", "2f82e402-1dba-48a0-b4cb-fbe828a1c554");
@@ -951,29 +1006,24 @@ define('LeadPageV2', ['LeadPageV2Resources', 'GeneralDetails', 'ilayConfiguratio
 				// - vlad
 				
 				noNeedClick: function() {
-					this.loadLookupDisplayValue("QualifyStatus", "51adc3ec-3503-4b10-a00b-8be3b0e11f08");
-					var cfg = {
-						isSilent: false
-					}
-					this.save(cfg);
+					this.set("IsNoNeedButtonClicked", true);
+					this.save();
 				},
 				callbackLaterButtonClick: function() {
-					this.loadLookupDisplayValue("QualifyStatus", "8501579b-0f64-4b31-8ce8-adb8fafc3849");
-					var cfg = {
-						isSilent: false
-					}
-					this.save(cfg);
+					this.set("IsCallLeadLaterButtonClicked", true);
+					this.save();
 				},
 				onEntityInitialized: function() {
 					this.callParent(arguments);
 					this.getDistributeButtonMenuItems();
 					this.distributeButtonsVisible();
 					//auto fill phone
-					if(this.get("MobilePhone") && (this.get("QualifiedContact"))){
+					if (this.get("MobilePhone")/* && (this.get("QualifiedContact"))*/) {
 						this.set("CallButtonVisible", true);
-					}else{
+					} else {
 						this.tryGetPhone();
 					}
+					this.changeContactName();
 				},
 				onSaved: function(response, config) {
 					// + vlad
@@ -982,10 +1032,19 @@ define('LeadPageV2', ['LeadPageV2Resources', 'GeneralDetails', 'ilayConfiguratio
 					}
 					// - vlad
 					if(this.get("IsCreateEMKButtonClicked")) {
-						var leadID = this.getPrimaryColumnValue();
-						this.runCreateEMKProcess(leadID);
+						this.runCreateEMKProcess();
 						this.set("IsCreateEMKButtonClicked", false);
 					}
+					//Den>[IL-480]
+					if(this.get("IsCallLeadLaterButtonClicked")) {
+						this.runCallLeadLaterProcess();
+						this.set("IsCallLeadLaterButtonClicked", false);
+					}
+					if(this.get("IsNoNeedButtonClicked")) {
+						this.runNoInterestFromLeadProcess();
+						this.set("IsNoNeedButtonClicked", false);
+					}
+					//Den<[IL-480]
 					this.callParent(arguments);
 					this.distributeButtonsVisible();
 				}
