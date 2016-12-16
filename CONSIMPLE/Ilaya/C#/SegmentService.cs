@@ -11,6 +11,7 @@ namespace Terrasoft.Configuration {
 	using System.Diagnostics;
 	using System.Web;
 	using System.Data;
+	using System.Threading.Tasks;
 	//using Terrasoft.Configuration.SegmentUtils;
 
 	#region Class: SegmentService
@@ -42,7 +43,7 @@ namespace Terrasoft.Configuration {
 
 		private Guid operationId;
 		private UserConnection _userConnection;
-
+		private Guid requieresUpdatingId = new Guid("dfb4e827-1b9b-4ea7-b4eb-898f592451f9");
 		
 		private void Authenticate() {
 			if (UserConnection == null) {
@@ -54,11 +55,61 @@ namespace Terrasoft.Configuration {
 		[WebInvoke(Method = "POST", UriTemplate = "FillDetailTarget", BodyStyle = WebMessageBodyStyle.Wrapped,
 			RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
 		public void FillDetailTarget(string entityName, Guid entityId, string segmentName, string targetSchemaName) {
+
 			Authenticate();
+			
 			System.Threading.Tasks.Task.Factory.StartNew(
 				() => ExecuteUpdateTargetAudience(UserConnection, entityName, entityId, segmentName, targetSchemaName)
 			);
 		}
+
+		//Den>
+		[OperationContract]
+		[WebInvoke(Method = "POST", UriTemplate = "ResreshPricePlansAudience", BodyStyle = WebMessageBodyStyle.Wrapped,
+			RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
+		public void ResreshPricePlansAudience() {
+
+			var select = new Select(UserConnection)
+						.Column("ilayPatientAccFolderId")
+						.Column("ilayPricePlanId")
+						.From("ilayContFolderInPriceP") as Select;
+
+			using (var dbExecutor = UserConnection.EnsureDBConnection())
+			{
+				using (var dataReader = select.ExecuteReader(dbExecutor))
+				{
+					string entityName = "ilayPricePlan";
+					string segmentName = "ilayPatientAcc";
+					string targetSchemaName = "ilayPriceForAccount";
+					Guid entityId = Guid.Empty;
+					Guid segmentId = Guid.Empty;
+					HashSet <Guid> entities = new HashSet<Guid>();
+					while (dataReader.Read())
+					{
+						entityId = Guid.Parse(dataReader["ilayPricePlanId"].ToString());
+						segmentId = Guid.Parse(dataReader["ilayPatientAccFolderId"].ToString());
+
+						var insert = new Insert(UserConnection).Into("SegmentEntity")
+							.Set("EntityId", Column.Parameter(entityId))
+							.Set("SegmentId", Column.Parameter(segmentId))
+							.Set("StateId", Column.Parameter(requieresUpdatingId))
+							.Set("EntityName", Column.Parameter(entityName))
+							.Set("SegmentName", Column.Parameter(segmentName));
+							insert.Execute(dbExecutor);
+						entities.Add(entityId);
+						//FillDetailTarget(entityName, entityId, segmentName, targetSchemaName);
+					}
+					foreach (var ent in entities)
+					{
+						var task = Task.Factory.StartNew(
+							() => ExecuteUpdateTargetAudience(UserConnection, entityName, entityId, segmentName, targetSchemaName));
+						task.Wait();
+					}
+					
+				}
+			}
+		}
+		//Den<
 
 		private void ExecuteUpdateTargetAudience(UserConnection UserConnection, string entityName, Guid entityId, string segmentName, string targetSchemaName) {
 			/*bool needStartProcess;
