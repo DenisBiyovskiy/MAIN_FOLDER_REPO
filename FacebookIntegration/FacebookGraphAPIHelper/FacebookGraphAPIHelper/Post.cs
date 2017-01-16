@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FacebookGraphAPIHelper
 {
-    public class WallMessage
+    public class Post
     {
         public DateTime created_time;
         public string message;

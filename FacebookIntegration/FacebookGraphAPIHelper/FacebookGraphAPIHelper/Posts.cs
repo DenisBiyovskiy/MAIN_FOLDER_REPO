@@ -8,6 +8,6 @@ namespace FacebookGraphAPIHelper
 {
     public class Posts
     {
-        public List<WallMessage> data;
+        public List<Post> data;
     }
 }
