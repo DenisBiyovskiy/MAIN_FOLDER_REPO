@@ -1,0 +1,10 @@
+D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\GAPITEST\GAPITEST\bin\Debug\GAPITEST.exe.config
+D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\GAPITEST\GAPITEST\bin\Debug\GAPITEST.exe
+D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\GAPITEST\GAPITEST\bin\Debug\GAPITEST.pdb
+D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\GAPITEST\GAPITEST\obj\Debug\GAPITEST.exe
+D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\GAPITEST\GAPITEST\obj\Debug\GAPITEST.pdb
+D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\GAPITEST\GAPITEST\bin\Debug\Newtonsoft.Json.dll
+D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\GAPITEST\GAPITEST\bin\Debug\Newtonsoft.Json.xml
+D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\GAPITEST\GAPITEST\obj\Debug\GAPITEST.csprojResolveAssemblyReference.cache
+D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\GAPITEST\GAPITEST\bin\Debug\FacebookGraphAPIHelper.dll
+D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\GAPITEST\GAPITEST\bin\Debug\FacebookGraphAPIHelper.pdb
