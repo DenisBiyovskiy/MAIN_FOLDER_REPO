@@ -1,10 +1,13 @@
-namespace Terrasoft.Configuration
+namespace Terrasoft.Configuration.ConsimpleFBHelper
 {
 	using System;
 	using System.Collections.Generic;
+	using System.Collections.Specialized;
 	using System.Linq;
 	using System.Text;
 	using System.Web;
+	using System.Net;
+	using System.IO;
 	using Terrasoft.Common;
 	using Terrasoft.Core;
 	using Terrasoft.Core.DB;
@@ -17,34 +20,112 @@ namespace Terrasoft.Configuration
 	
 	[ServiceContract]
 	[AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Required)]
-	class ServListHelper
+	class FacebookHelper
 	{
 		private static UserConnection userConnection = (UserConnection)HttpContext.Current.Session["UserConnection"];
-		private int ilayPriority = 0;
 		
 		[OperationContract]
 		[WebInvoke(Method = "POST", BodyStyle = WebMessageBodyStyle.Wrapped,
 			RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
-		public string updateAddedServListFromModule (List<Guid> servLists) {
-			if(servLists.Count > 0) {
-				// Так как пациент у всех добавляемых записей один и тот же, то и значение колонок "ilayPatientAccount",
-				// "ilayPrice" у всех добавляемых записей одно и тоже
-				//Den а вот и нет, Тариф (ilayPrice) может быть разный.
-				var patientId = getPatientIdFromServList(servLists[0]);
-				if (patientId != Guid.Empty) {
-					updatePatientAccountAndPrice(getPatientAccs(patientId), servLists);
-				} else {
-					updateAccountAndPrice(servLists);
-				}
-				//setCoast(servLists);
-				//setSpecialTariff(servLists);
+		public string GetAccessToken (string fbExchangeToken, string pageId) {
+			string clientId = "";
+			string clientSecret = "";
+			Guid recordId = Guid.Empty;
+			var FBinfoESQ = new EntitySchemaQuery(userConnection.EntitySchemaManager, "uphFBTestingEnt");
+			FBinfoESQ.AddAllSchemaColumns();
+			var FBinfoESQresults = FBinfoESQ.GetEntityCollection(userConnection);
+			foreach(var ent in FBinfoESQresults)
+			{
+				clientId = ent.GetTypedColumnValue<string>("uphAppId");;
+				clientSecret = ent.GetTypedColumnValue<string>("uphAppSecret");
+				recordId = ent.GetTypedColumnValue<Guid>("Id");
+				break;
+			}
+			string urlGetAccessToken = "https://graph.facebook.com/v2.8/oauth/access_token" +
+										"?grant_type=fb_exchange_token" +
+										"&client_id=" + clientId + 
+										"&client_secret=" + clientSecret +
+										"&fb_exchange_token=" + fbExchangeToken;
+			string responseData = RequestResponse(urlGetAccessToken); 
+			if (responseData == "")
+			{
+				return "";
+			}
+			string access_token = GetResponseValueByKey(responseData, "access_token");
+			// NameValueCollection qs = System.Web.HttpUtility.ParseQueryString(responseData);
+			// string access_token = qs["access_token"] == null ? "" : qs["access_token"];
+			if(recordId != Guid.Empty)
+			{
+				var fbEnt =  FBinfoESQ.GetEntity(userConnection, recordId);
+				fbEnt.SetColumnValue("uphPageToken", access_token);
+				fbEnt.SetColumnValue("uphPageId", pageId);
+				fbEnt.Save();
+			}
+			
+			return GetPagePosts(pageId, access_token);
+		}
+		
+		private string GetPagePosts(string pageId, string access_token)
+		{
+			string urlGetAccessToken = "https://graph.facebook.com/v2.8/" + pageId + "/feed" +
+										"?access_token=" + access_token;
+			string responseData = RequestResponse(urlGetAccessToken); 
+			if (responseData == "")
+			{
+				return "";
+			}
+			return responseData;
+		}
+		
+		private string GetResponseValueByKey(string s, string key)
+		{
+			s = s.Replace(" ", "");
+			if(s.Contains(key))
+			{
+				s = s.Remove(0, s.IndexOf(key) + key.Length + 3);
+				int i = s.IndexOf("\",");
+				i = i != -1 ? i : s.IndexOf("\"}");
+				s = s.Remove(i, s.Length - i);
+				return s;
 			}
 			return "";
 		}
+		
+		private string RequestResponse(string pUrl)
+		{
+			HttpWebRequest webRequest = System.Net.WebRequest.Create(pUrl) as HttpWebRequest;
+			webRequest.Method = "GET";
+			webRequest.ServicePoint.Expect100Continue = false;
+			webRequest.Timeout = 20000;
+
+			Stream responseStream = null;
+			StreamReader responseReader = null;
+			string responseData = "";
+			try
+			{
+				WebResponse webResponse = webRequest.GetResponse();
+				responseStream = webResponse.GetResponseStream();
+				responseReader = new StreamReader(responseStream);
+				responseData = responseReader.ReadToEnd();
+			}
+			catch (Exception exc)
+			{
+			}
+			finally
+			{
+				if (responseStream != null)
+				{
+					responseStream.Close();
+					responseReader.Close();
+				}
+			}
+			return responseData;
+		}
+		//**************************************************************************************************************
 		//Den>
 		//Если у созданного сервиса нет пациента(он создан не с визита) - добавляет базовый тариф с типом
 		//"накопичувальний" и "нижня межа" = 0.
-		private void updateAccountAndPrice(List<Guid> servLists) {
+		/*private void updateAccountAndPrice(List<Guid> servLists) {
 			foreach(Guid servListId in servLists) {
 				var ilayServListESQ = new EntitySchemaQuery(userConnection.EntitySchemaManager, "ilayServList");
 				ilayServListESQ.AddAllSchemaColumns();
@@ -299,6 +380,6 @@ namespace Terrasoft.Configuration
 				}
 			}
 			//Den<
-		}
+		}*/
 	}
 }
