@@ -12,36 +12,62 @@ namespace FacebookGraphAPIHelper
 {
     public class GraphAPIHelper
     {
-        public string _defaultGraphAPIVersion = "v2.8/";
+        private string _defaultGraphAPIVersion = "v2.8";
+        private string _graphAPIVersion;
         private string appID;
         private string appSecret;
         private const string ERROR_MSG = "Unknown error. Request URL: ";
         private const string graphBaseURL = "https://graph.facebook.com/";
         private string graphURLAndVersion;
-        
 
-        /**
-         * GraphAPI version in format "vX.X/"
-         */
-        public string defaultGraphAPIVersion
+
+         /// <summary>
+         /// Updates base url on API version change.
+         /// </summary>
+         private string onGraphVersionChange(string value)
         {
-            get { return _defaultGraphAPIVersion; }
-            set { _defaultGraphAPIVersion = onGraphVersionChange(value); }
-        }
-        
-        private string onGraphVersionChange(string value)
-        {
-            graphURLAndVersion = graphBaseURL + _defaultGraphAPIVersion;
+            graphURLAndVersion = graphBaseURL + value + "/";
             return value;
         }
+
+         /// <summary>
+         /// GraphAPI version in format "vX.X" (v2.8 by default)
+         /// </summary>
+        public string GraphAPIVersion
+        {
+            get { return _graphAPIVersion; }
+            set { _graphAPIVersion = onGraphVersionChange(value); }
+        }
+        
+        /// <summary>
+        /// Initializes a new instance of class GraphAPIHelper
+        /// </summary>
+        /// <param name="appID"></param>
+        /// <param name="appSecret"></param>
         public GraphAPIHelper(string appID, string appSecret)
         {
+            new GraphAPIHelper("", "");
             this.appID = appID;
             this.appSecret = appSecret;
             graphURLAndVersion = graphBaseURL + _defaultGraphAPIVersion;
         }
 
-        public bool GetLongLiveAccessToken (string userExchangeToken, out string accessToken)
+        /// <summary>
+        /// Initializes a new instance of class GraphAPIHelper
+        /// </summary>
+        /// <param name="appID"></param>
+        /// <param name="appSecret"></param>
+        /// <param name="APIversion"></param>
+        public GraphAPIHelper(string appID, string appSecret, string APIversion)
+        {
+            this.appID = appID;
+            this.appSecret = appSecret;
+            this.GraphAPIVersion = APIversion;
+            graphURLAndVersion = graphBaseURL + GraphAPIVersion;
+        }
+        
+
+        public bool GetLongLivedAccessToken (string userExchangeToken, out string accessToken)
         {
             string pUrl = graphURLAndVersion +
                             "oauth/access_token" + "?grant_type=fb_exchange_token" +
@@ -71,14 +97,11 @@ namespace FacebookGraphAPIHelper
             return false;
         }
 
-        /**
-         * get posts of the page.
-         */
         public bool GetPosts(string pageId, string access_token, out Posts posts)
         {
-            string pUrl = graphURLAndVersion + 
-                            pageId + "/posts" +
-                            "?access_token=" + access_token;
+            string pUrl = graphURLAndVersion +
+                            pageId + "/posts?fields=likes,message" +
+                            "&access_token=" + access_token;
             string responseData;
             if(ExecuteGetRequest(pUrl, out responseData))
             {
@@ -89,9 +112,7 @@ namespace FacebookGraphAPIHelper
             return false;
         }
 
-        /**
-         * post new message on page.
-         */
+        
         public bool PostMessage(string pageId, string accessToken, string message, out string result)
         {
             string pUrl = graphURLAndVersion + 
@@ -101,9 +122,16 @@ namespace FacebookGraphAPIHelper
             return ExecutePostRequest(pUrl, postData, out result);
         }
 
-        /**
-         * execute POST request
-         */
+        /// <summary>
+        /// Executes POST request.
+        /// </summary>
+        /// <param name="pUrl">Base request URL.</param>
+        /// <param name="postData">POST parmeters.</param>
+        /// <param name="result">Result or exception message of request.</param>
+        /// <returns>
+        /// true on success and result in "out result" parametr
+        /// false and exception message in "out result" parametr
+        /// </returns>
         public bool ExecutePostRequest(string pUrl, string postData, out string result)
         {
             var request = WebRequest.Create(pUrl) as HttpWebRequest;
@@ -123,9 +151,16 @@ namespace FacebookGraphAPIHelper
             result = new StreamReader(response.GetResponseStream()).ReadToEnd();
             return true;
         }
-        /**
-         * execute GET request
-         */
+        
+        /// <summary>
+        /// Executes GET request.
+        /// </summary>
+        /// <param name="pUrl">Base request URL.</param>
+        /// <param name="response">Result or exception message of request.</param>
+        /// <returns>
+        /// true on success and result in "out result" parametr
+        /// false and exception message in "out result" parametr
+        /// </returns>
         public bool ExecuteGetRequest(string pUrl, out string response)
 		{
             var wc = new WebClient();

@@ -44,8 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessTokenResponse.cs" />
+    <Compile Include="Likes.cs" />
     <Compile Include="Posts.cs" />
-    <Compile Include="WallMessage.cs" />
+    <Compile Include="Post.cs" />
     <Compile Include="Like.cs" />
     <Compile Include="GraphAPIHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

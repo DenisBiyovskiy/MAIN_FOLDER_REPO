@@ -11,7 +11,7 @@ namespace FacebookGraphAPIHelper
         public DateTime created_time;
         public string message;
         public string id;
-        public List<Like> likes;
+        public Likes likes;
         //public List<Like> likes;
     }
 }
