@@ -44,10 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessTokenResponse.cs" />
-    <Compile Include="Likes.cs" />
-    <Compile Include="Posts.cs" />
-    <Compile Include="Post.cs" />
-    <Compile Include="Like.cs" />
+    <Compile Include="Objects\Likes.cs" />
+    <Compile Include="Objects\Posts.cs" />
+    <Compile Include="Objects\Post.cs" />
+    <Compile Include="Objects\Like.cs" />
     <Compile Include="GraphAPIHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

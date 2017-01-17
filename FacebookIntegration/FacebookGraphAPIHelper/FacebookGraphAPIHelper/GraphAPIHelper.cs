@@ -44,26 +44,13 @@ namespace FacebookGraphAPIHelper
         /// </summary>
         /// <param name="appID"></param>
         /// <param name="appSecret"></param>
-        public GraphAPIHelper(string appID, string appSecret)
-        {
-            new GraphAPIHelper("", "");
-            this.appID = appID;
-            this.appSecret = appSecret;
-            graphURLAndVersion = graphBaseURL + _defaultGraphAPIVersion;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of class GraphAPIHelper
-        /// </summary>
-        /// <param name="appID"></param>
-        /// <param name="appSecret"></param>
         /// <param name="APIversion"></param>
-        public GraphAPIHelper(string appID, string appSecret, string APIversion)
+        public GraphAPIHelper(string appID, string appSecret, string APIversion = _defaultGraphAPIVersion)
         {
             this.appID = appID;
             this.appSecret = appSecret;
             this.GraphAPIVersion = APIversion;
-            graphURLAndVersion = graphBaseURL + GraphAPIVersion;
+            graphURLAndVersion = graphBaseURL + GraphAPIVersion + "/";
         }
         
 
@@ -97,10 +84,10 @@ namespace FacebookGraphAPIHelper
             return false;
         }
 
-        public bool GetPosts(string pageId, string access_token, out Posts posts)
+        public bool GetPosts(string pageId, string access_token, out Posts posts, string fields = "likes,message,created_time")
         {
             string pUrl = graphURLAndVersion +
-                            pageId + "/posts?fields=likes,message" +
+                            pageId + "/posts?fields=" + fields +
                             "&access_token=" + access_token;
             string responseData;
             if(ExecuteGetRequest(pUrl, out responseData))

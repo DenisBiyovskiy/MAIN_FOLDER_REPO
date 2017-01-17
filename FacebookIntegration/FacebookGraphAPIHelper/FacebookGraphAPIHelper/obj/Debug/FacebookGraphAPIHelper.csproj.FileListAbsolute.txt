@@ -5,3 +5,10 @@ D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\FacebookGraphAPIHelper\FacebookGraphA
 D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\FacebookGraphAPIHelper\FacebookGraphAPIHelper\obj\Debug\FacebookGraphAPIHelper.dll
 D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\FacebookGraphAPIHelper\FacebookGraphAPIHelper\obj\Debug\FacebookGraphAPIHelper.pdb
 D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\FacebookGraphAPIHelper\FacebookGraphAPIHelper\obj\Debug\FacebookGraphAPIHelper.csprojResolveAssemblyReference.cache
+C:\Users\User\MAIN_FOLDER_REPO\FacebookIntegration\FacebookGraphAPIHelper\FacebookGraphAPIHelper\bin\Debug\FacebookGraphAPIHelper.dll
+C:\Users\User\MAIN_FOLDER_REPO\FacebookIntegration\FacebookGraphAPIHelper\FacebookGraphAPIHelper\bin\Debug\FacebookGraphAPIHelper.pdb
+C:\Users\User\MAIN_FOLDER_REPO\FacebookIntegration\FacebookGraphAPIHelper\FacebookGraphAPIHelper\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\MAIN_FOLDER_REPO\FacebookIntegration\FacebookGraphAPIHelper\FacebookGraphAPIHelper\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\MAIN_FOLDER_REPO\FacebookIntegration\FacebookGraphAPIHelper\FacebookGraphAPIHelper\obj\Debug\FacebookGraphAPIHelper.csprojResolveAssemblyReference.cache
+C:\Users\User\MAIN_FOLDER_REPO\FacebookIntegration\FacebookGraphAPIHelper\FacebookGraphAPIHelper\obj\Debug\FacebookGraphAPIHelper.dll
+C:\Users\User\MAIN_FOLDER_REPO\FacebookIntegration\FacebookGraphAPIHelper\FacebookGraphAPIHelper\obj\Debug\FacebookGraphAPIHelper.pdb
