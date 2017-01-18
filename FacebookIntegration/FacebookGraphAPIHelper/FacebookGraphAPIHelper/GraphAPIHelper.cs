@@ -7,12 +7,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Collections.Specialized;
+using FacebookGraphAPIHelper.Objects;
 
 namespace FacebookGraphAPIHelper
 {
     public class GraphAPIHelper
     {
-        private string _defaultGraphAPIVersion = "v2.8";
+        private const string DEFAULT_GRAPH_API_VERSION = "v2.8";
         private string _graphAPIVersion;
         private string appID;
         private string appSecret;
@@ -45,7 +46,7 @@ namespace FacebookGraphAPIHelper
         /// <param name="appID"></param>
         /// <param name="appSecret"></param>
         /// <param name="APIversion"></param>
-        public GraphAPIHelper(string appID, string appSecret, string APIversion = _defaultGraphAPIVersion)
+        public GraphAPIHelper(string appID, string appSecret, string APIversion = DEFAULT_GRAPH_API_VERSION)
         {
             this.appID = appID;
             this.appSecret = appSecret;
@@ -54,59 +55,89 @@ namespace FacebookGraphAPIHelper
         }
         
 
-        public bool GetLongLivedAccessToken (string userExchangeToken, out string accessToken)
+        public BaseResponse GetLongLivedAccessToken (string userExchangeToken, out string accessToken)
         {
             string pUrl = graphURLAndVersion +
                             "oauth/access_token" + "?grant_type=fb_exchange_token" +
 							"&client_id=" + appID + 
 							"&client_secret=" + appSecret +
 							"&fb_exchange_token=" + userExchangeToken;
-            if (ExecuteGetRequest(pUrl, out accessToken))
+            BaseResponse br = ExecuteGetRequest(pUrl);
+            accessToken = null;
+            if (br.success)
             {
-                accessToken = JsonConvert.DeserializeObject<AccessTokenResponse>(accessToken).access_token;
-                return true;
+                accessToken = JsonConvert.DeserializeObject<AccessTokenResponse>(br.responseData).access_token;
             }
-            return false;
+            return br;
         }
 
-        public bool GetPageAccessToken(string userAccessToken, out string pageToken)
+        public BaseResponse GetUserAccounts(string userAccessToken, out Accounts accounts)
+        {
+            string pUrl = graphURLAndVersion + "me/accounts?access_token=" + userAccessToken;
+            BaseResponse br = ExecuteGetRequest(pUrl);
+            accounts = null;
+            if (br.success)
+            {
+                accounts = JsonConvert.DeserializeObject<Accounts>(br.responseData);
+            }
+            return br;
+        }
+
+        /// <summary>
+        /// Searches in Accounts object for Account by Account.name filed.
+        /// Returns Account instance.
+        /// </summary>
+        /// <param name="name">Searching key value</param>
+        /// <param name="accs">Accounts object for search.</param>
+        /// <returns>Returns first Account where Account.name = name.</returns>
+        public Account FindUserAccount(string name, Accounts accs)
+        {
+            foreach (var a in accs.data)
+            {
+                if (a.name == name) return a;
+            }
+            return null;
+        }
+
+        public BaseResponse GetPageAccessToken(string userAccessToken, out string pageToken)
         {
             string pUrl = graphURLAndVersion +
                             "oauth/access_token" + "?grant_type=fb_exchange_token" +
                             "&client_id=" + appID +
                             "&client_secret=" + appSecret +
                             "&fb_exchange_token=" + userAccessToken;
-            if (ExecuteGetRequest(pUrl, out pageToken))
+            var br = ExecuteGetRequest(pUrl);
+            pageToken = null;
+            if (br.success)
             {
-                pageToken = JsonConvert.DeserializeObject<AccessTokenResponse>(pageToken).access_token;
-                return true;
+                pageToken = JsonConvert.DeserializeObject<AccessTokenResponse>(br.responseData).access_token;
             }
-            return false;
+            return br;
         }
 
-        public bool GetPosts(string pageId, string access_token, out Posts posts, string fields = "likes,message,created_time")
+
+        public BaseResponse GetPosts(string pageId, string access_token, out Posts posts, string fields = "likes,message,created_time")
         {
             string pUrl = graphURLAndVersion +
                             pageId + "/posts?fields=" + fields +
                             "&access_token=" + access_token;
-            string responseData;
-            if(ExecuteGetRequest(pUrl, out responseData))
+            var br = ExecuteGetRequest(pUrl);
+            posts = null;
+            if(br.success)
             {
-                posts = JsonConvert.DeserializeObject<Posts>(responseData);
-                return true;
+                posts = JsonConvert.DeserializeObject<Posts>(br.responseData);
             }
-            posts = new Posts();
-            return false;
+            return br;
         }
 
         
-        public bool PostMessage(string pageId, string accessToken, string message, out string result)
+        public BaseResponse PostMessage(string pageId, string accessToken, string message)
         {
             string pUrl = graphURLAndVersion + 
                                 pageId + "/feed" + 
                                 "?access_token=" + accessToken;
             string postData = "message=" + message;
-            return ExecutePostRequest(pUrl, postData, out result);
+            return ExecutePostRequest(pUrl, postData);
         }
 
         /// <summary>
@@ -119,25 +150,43 @@ namespace FacebookGraphAPIHelper
         /// true on success and result in "out result" parametr
         /// false and exception message in "out result" parametr
         /// </returns>
-        public bool ExecutePostRequest(string pUrl, string postData, out string result)
+        public BaseResponse ExecutePostRequest(string pUrl, string postData)
         {
-            var request = WebRequest.Create(pUrl) as HttpWebRequest;
+            HttpWebRequest webRequest = WebRequest.Create(pUrl) as HttpWebRequest;
             var data = Encoding.ASCII.GetBytes(postData);
 
-            request.Method = "POST";
-            request.ContentType = "application/x-www-form-urlencoded";
-            request.ContentLength = data.Length;
+            webRequest.Method = "POST";
+            webRequest.ContentType = "application/x-www-form-urlencoded";
+            webRequest.ContentLength = data.Length;
 
-            using (var stream = request.GetRequestStream())
+            try
             {
-                stream.Write(data, 0, data.Length);
+                using (var requestStream = webRequest.GetRequestStream())
+                {
+                    requestStream.Write(data, 0, data.Length);
+                }
+                WebResponse webResponse = webRequest.GetResponse();
+                using (var responseStream = webResponse.GetResponseStream())
+                {
+                    using (var responseReader = new StreamReader(responseStream))
+                    {
+                        var responseData = responseReader.ReadToEnd();
+                        return new BaseResponse()
+                        {
+                            responseData = responseData
+                        };
+                    }
+                }
             }
-
-            var response = (HttpWebResponse)request.GetResponse();
-
-            result = new StreamReader(response.GetResponseStream()).ReadToEnd();
-            return true;
+            catch (Exception exc)
+            {
+                return new BaseResponse()
+                {
+                    Exception = exc
+                };
+            }
         }
+        
         
         /// <summary>
         /// Executes GET request.
@@ -148,15 +197,15 @@ namespace FacebookGraphAPIHelper
         /// true on success and result in "out result" parametr
         /// false and exception message in "out result" parametr
         /// </returns>
-        public bool ExecuteGetRequest(string pUrl, out string response)
+        public BaseResponse ExecuteGetRequest(string pUrl)
 		{
-            var wc = new WebClient();
-
 			HttpWebRequest webRequest = System.Net.WebRequest.Create(pUrl) as HttpWebRequest;
             if (webRequest == null)
             {
-                response = ERROR_MSG + pUrl;
-                return false;
+                return new BaseResponse()
+                {
+                    Exception = new Exception(ERROR_MSG + pUrl)
+                };
             }
 			webRequest.Method = "GET";
 			webRequest.ServicePoint.Expect100Continue = false;
@@ -174,8 +223,10 @@ namespace FacebookGraphAPIHelper
 			}
 			catch (Exception exc)
 			{
-                response = exc.ToString();
-                return false;
+                return new BaseResponse()
+                {
+                    Exception = exc
+                };
 			}
 			finally
 			{
@@ -185,8 +236,10 @@ namespace FacebookGraphAPIHelper
 					responseReader.Close();
 				}
 			}
-            response = responseData;
-			return true;
+            return new BaseResponse()
+            {
+                responseData = responseData
+            };
 		}
     }
 }

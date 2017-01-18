@@ -4,20 +4,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace GAPITEST
 {
     class Tools
     {
-        public static void WriteToFile(string s, bool append)
+        private static string  filePath = "C:\\Users\\Public\\Documents\\testOut.txt"; 
+
+        public static void WriteToFile(string s, bool append = true)
         {
-            string path = "C:\\Users\\Public\\Documents\\testOut.txt";
             string divider = "\n--------------------------------------------";
-            var sw = new StreamWriter(path, append);
-            sw.WriteLine(s + divider);
-            sw.Close();
+            using (var sw = new StreamWriter(filePath, append))
+            {
+                sw.WriteLine(s + divider);
+            }
 
         }
+
+        public static void WriteStringToFile(Object o, bool append = true)
+        {
+            WriteToFile(o != null ? o.ToString() : "null passed in o parameter.");
+        }
+
+        public static void WriteToFile(Object o, bool append = true)
+        {
+            WriteToFile(FormatJSON(o));
+        }
+
+        public static void ClearFile()
+        {
+            WriteToFile("", false);
+        }
+        public static string FormatJSON(Object o)
+        {
+            return FormatJSON(JsonConvert.SerializeObject(o));
+        }
+
         public static string FormatJSON(string s)
         {
             string tab = " ";

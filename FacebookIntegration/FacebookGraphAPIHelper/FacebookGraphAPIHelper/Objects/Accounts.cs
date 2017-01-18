@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace FacebookGraphAPIHelper.Objects
 {
-    public class Like
+    public class Accounts
     {
-        public string id;
-        public string name;
+        public List<Account> data;
     }
 }
