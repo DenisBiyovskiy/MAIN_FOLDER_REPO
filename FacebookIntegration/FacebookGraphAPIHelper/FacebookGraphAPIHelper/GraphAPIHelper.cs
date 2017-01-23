@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Collections.Specialized;
+using System.Security.Cryptography;
 using FacebookGraphAPIHelper.Objects;
 
 namespace FacebookGraphAPIHelper
@@ -14,14 +15,39 @@ namespace FacebookGraphAPIHelper
     public class GraphAPIHelper
     {
         private const string DEFAULT_GRAPH_API_VERSION = "v2.8";
+        private const string DEFAULT_POSTS_FILEDS = "likes.limit(1000),message,created_time,link";
+        private string _appSecretProof;
         private string _graphAPIVersion;
         private string appID;
         private string appSecret;
+        private string _accessToken;
         private const string ERROR_MSG = "Unknown error. Request URL: ";
         private const string graphBaseURL = "https://graph.facebook.com/";
         private string graphURLAndVersion;
 
 
+        private string AppSecretProof
+        {
+            get
+            {
+                if (!string.IsNullOrEmpty(_appSecretProof))
+                    return _appSecretProof;
+
+                if (string.IsNullOrEmpty(_accessToken))
+                    throw new Exception("accessToken");
+                if (string.IsNullOrEmpty(appSecret))
+                    throw new Exception("appSecret");
+
+                AppSecretProof = GenerateFacebookSecretProof(_accessToken, appSecret);
+                if (string.IsNullOrEmpty(_appSecretProof))
+                    throw new Exception("appSecretProff");
+                return _appSecretProof;
+            }
+            set
+            {
+                _appSecretProof = value;
+            }
+        }
          /// <summary>
          /// Updates base url on API version change.
          /// </summary>
@@ -53,7 +79,29 @@ namespace FacebookGraphAPIHelper
             this.GraphAPIVersion = APIversion;
             graphURLAndVersion = graphBaseURL + GraphAPIVersion + "/";
         }
-        
+
+        /// <summary>
+        /// Generate a facebook secret proof
+        /// <seealso cref="http://stackoverflow.com/questions/20572523/c-sharp-help-required-to-create-facebook-appsecret-proof-hmacsha256"/>
+        /// </summary>
+        /// <param name="facebookAccessToken"></param>
+        /// <param name="facebookAuthAppSecret"></param>
+        /// <returns></returns>
+        private static string GenerateFacebookSecretProof(string facebookAccessToken, string facebookAuthAppSecret)
+        {
+            byte[] keyBytes = Encoding.UTF8.GetBytes(facebookAuthAppSecret);
+            byte[] messageBytes = Encoding.UTF8.GetBytes(facebookAccessToken);
+            HMACSHA256 hmacsha256 = new HMACSHA256(keyBytes);
+            byte[] hash = hmacsha256.ComputeHash(messageBytes);
+            StringBuilder sbHash = new StringBuilder();
+
+            for (int i = 0; i < hash.Length; i++)
+            {
+                sbHash.Append(hash[i].ToString("x2"));
+            }
+
+            return sbHash.ToString();
+        }
 
         public BaseResponse GetLongLivedAccessToken (string userExchangeToken, out string accessToken)
         {
@@ -68,12 +116,14 @@ namespace FacebookGraphAPIHelper
             {
                 accessToken = JsonConvert.DeserializeObject<AccessTokenResponse>(br.responseData).access_token;
             }
+            if (br.success) this._accessToken = accessToken;
             return br;
         }
 
         public BaseResponse GetUserAccounts(string userAccessToken, out Accounts accounts)
         {
-            string pUrl = graphURLAndVersion + "me/accounts?access_token=" + userAccessToken;
+            string pUrl = graphURLAndVersion + "me/accounts?access_token=" + userAccessToken +
+                            "&appsecret_proof=" + AppSecretProof;
             BaseResponse br = ExecuteGetRequest(pUrl);
             accounts = null;
             if (br.success)
@@ -105,7 +155,8 @@ namespace FacebookGraphAPIHelper
                             "oauth/access_token" + "?grant_type=fb_exchange_token" +
                             "&client_id=" + appID +
                             "&client_secret=" + appSecret +
-                            "&fb_exchange_token=" + userAccessToken;
+                            "&fb_exchange_token=" + userAccessToken +
+                            "&appsecret_proof=" + AppSecretProof;
             var br = ExecuteGetRequest(pUrl);
             pageToken = null;
             if (br.success)
@@ -116,11 +167,13 @@ namespace FacebookGraphAPIHelper
         }
 
 
-        public BaseResponse GetPosts(string pageId, string access_token, out Posts posts, string fields = "likes,message,created_time")
+        public BaseResponse GetTopPosts(string pageId, string access_token, out Posts posts, string fields = DEFAULT_POSTS_FILEDS, int limit = 100)
         {
             string pUrl = graphURLAndVersion +
                             pageId + "/posts?fields=" + fields +
-                            "&access_token=" + access_token;
+                            "&access_token=" + access_token + 
+                            "&appsecret_proof=" + AppSecretProof +
+                            "&limit=" + limit;
             var br = ExecuteGetRequest(pUrl);
             posts = null;
             if(br.success)
@@ -130,12 +183,38 @@ namespace FacebookGraphAPIHelper
             return br;
         }
 
+        public BaseResponse GetAllPosts(string pageId, string access_token, out Posts posts, string fields = DEFAULT_POSTS_FILEDS)
+        {
+            Posts nextPosts = null;
+            Posts _posts = new Posts() {data = new List<Post>()};
+            var br = GetTopPosts(pageId, access_token, out nextPosts, fields);
+            while(br.success)
+            {
+                string nextUrl = null;
+                if (nextPosts != null && nextPosts.paging != null)
+                {
+                    nextUrl = nextPosts.paging.next;
+                }
+                if (string.IsNullOrEmpty(nextUrl))
+                {
+                    posts = _posts;
+                    return br;
+                }
+                br = ExecuteGetRequest(nextUrl + "&appsecret_proof=" + AppSecretProof);
+                nextPosts = JsonConvert.DeserializeObject<Posts>(br.responseData);
+                _posts.data.AddRange(nextPosts.data);
+            }
+            posts = nextPosts;
+            return br;
+        }
+
         
         public BaseResponse PostMessage(string pageId, string accessToken, string message)
         {
             string pUrl = graphURLAndVersion + 
                                 pageId + "/feed" + 
-                                "?access_token=" + accessToken;
+                                "?access_token=" + accessToken + 
+                                "&appsecret_proof=" + AppSecretProof;
             string postData = "message=" + message;
             return ExecutePostRequest(pUrl, postData);
         }

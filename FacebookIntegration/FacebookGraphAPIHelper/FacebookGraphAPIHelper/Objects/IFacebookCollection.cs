@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace FacebookGraphAPIHelper.Objects
 {
-    public class Posts : Paging
+    interface IFacebookCollection
     {
-        public List<Post> data;
+        IFacebookCollection ConcatFBObjects<IFacebookCollection>();
+
+        IFacebookCollection GetObjectData();
     }
 }

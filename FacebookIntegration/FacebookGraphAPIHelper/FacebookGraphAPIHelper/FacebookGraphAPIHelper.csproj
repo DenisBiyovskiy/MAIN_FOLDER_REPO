@@ -47,7 +47,11 @@
     <Compile Include="Objects\AccessTokenResponse.cs" />
     <Compile Include="Objects\Account.cs" />
     <Compile Include="Objects\Accounts.cs" />
+    <Compile Include="Objects\Cursors.cs" />
+    <Compile Include="Objects\IFacebookCollection.cs" />
     <Compile Include="Objects\Likes.cs" />
+    <Compile Include="Objects\Paging.cs" />
+    <Compile Include="Objects\PagingEntity.cs" />
     <Compile Include="Objects\Posts.cs" />
     <Compile Include="Objects\Post.cs" />
     <Compile Include="Objects\Like.cs" />

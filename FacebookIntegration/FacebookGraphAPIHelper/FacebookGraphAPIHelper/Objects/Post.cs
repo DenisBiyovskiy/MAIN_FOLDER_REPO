@@ -12,5 +12,6 @@ namespace FacebookGraphAPIHelper.Objects
         public string message;
         public string id;
         public Likes likes;
+        public string link;
     }
 }

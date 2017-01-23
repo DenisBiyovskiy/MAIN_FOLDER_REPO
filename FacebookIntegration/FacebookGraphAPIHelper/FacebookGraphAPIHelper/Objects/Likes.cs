@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FacebookGraphAPIHelper.Objects
 {
-    public class Likes
+    public class Likes : Paging
     {
         public List<Like> data;
     }

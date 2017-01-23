@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace FacebookGraphAPIHelper.Objects
 {
-    public class Posts : Paging
+    public class PagingEntity
     {
-        public List<Post> data;
+        public string previous;
+        public string next;
+        public Cursors cursors;
     }
 }
