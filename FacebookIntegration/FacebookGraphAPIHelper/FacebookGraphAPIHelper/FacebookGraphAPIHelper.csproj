@@ -45,17 +45,21 @@
   <ItemGroup>
     <Compile Include="BaseResponse.cs" />
     <Compile Include="Objects\AccessTokenResponse.cs" />
-    <Compile Include="Objects\Account.cs" />
-    <Compile Include="Objects\Accounts.cs" />
+    <Compile Include="Objects\FBPage.cs" />
+    <Compile Include="Objects\FBPages.cs" />
     <Compile Include="Objects\Cursors.cs" />
     <Compile Include="Objects\IFacebookCollection.cs" />
-    <Compile Include="Objects\Likes.cs" />
+    <Compile Include="Objects\Picture.cs" />
+    <Compile Include="Objects\Reactions.cs" />
     <Compile Include="Objects\Paging.cs" />
     <Compile Include="Objects\PagingEntity.cs" />
     <Compile Include="Objects\Posts.cs" />
     <Compile Include="Objects\Post.cs" />
-    <Compile Include="Objects\Like.cs" />
+    <Compile Include="Objects\Reaction.cs" />
     <Compile Include="GraphAPIHelper.cs" />
+    <Compile Include="Objects\SharedPost.cs" />
+    <Compile Include="Objects\SharedPosts.cs" />
+    <Compile Include="Objects\Shares.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

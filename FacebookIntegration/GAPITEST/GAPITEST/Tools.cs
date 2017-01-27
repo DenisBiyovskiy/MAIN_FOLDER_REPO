@@ -12,9 +12,20 @@ namespace GAPITEST
     {
         private static string  filePath = "C:\\Users\\Public\\Documents\\testOut.txt"; 
 
+        public static string CharsCodedStringToString(string s)
+        {
+            var ca = s.ToCharArray();
+            var newS = "";
+            foreach (var c in ca)
+            {
+                newS += c;
+            }
+            return newS;
+        }
+
         public static void WriteToFile(string s, bool append = true)
         {
-            string divider = "\n--------------------------------------------";
+            string divider = "\n-----------------------------------------------------";
             using (var sw = new StreamWriter(filePath, append))
             {
                 sw.WriteLine(s + divider);

@@ -15,7 +15,7 @@ namespace FacebookGraphAPIHelper
     public class GraphAPIHelper
     {
         private const string DEFAULT_GRAPH_API_VERSION = "v2.8";
-        private const string DEFAULT_POSTS_FILEDS = "likes.limit(1000),message,created_time,link";
+        private const string DEFAULT_POSTS_FILEDS = "reactions.limit(1000),message,created_time,link,sharedposts,shares,permalink_url";
         private string _appSecretProof;
         private string _graphAPIVersion;
         private string appID;
@@ -120,7 +120,7 @@ namespace FacebookGraphAPIHelper
             return br;
         }
 
-        public BaseResponse GetUserAccounts(string userAccessToken, out Accounts accounts)
+        public BaseResponse GetUserAccounts(string userAccessToken, out FBPages accounts)
         {
             string pUrl = graphURLAndVersion + "me/accounts?access_token=" + userAccessToken +
                             "&appsecret_proof=" + AppSecretProof;
@@ -128,7 +128,7 @@ namespace FacebookGraphAPIHelper
             accounts = null;
             if (br.success)
             {
-                accounts = JsonConvert.DeserializeObject<Accounts>(br.responseData);
+                accounts = JsonConvert.DeserializeObject<FBPages>(br.responseData);
             }
             return br;
         }
@@ -140,13 +140,52 @@ namespace FacebookGraphAPIHelper
         /// <param name="name">Searching key value</param>
         /// <param name="accs">Accounts object for search.</param>
         /// <returns>Returns first Account where Account.name = name.</returns>
-        public Account FindUserAccount(string name, Accounts accs)
+        public FBPage FindUserAccount(string name, FBPages accs)
         {
             foreach (var a in accs.data)
             {
                 if (a.name == name) return a;
             }
             return null;
+        }
+
+        /// <summary>
+        /// Searches for a Page by its Url string via GraphAPI.
+        /// </summary>
+        /// <param name="uri">Url adress of Page</param>
+        /// <returns>Account object representing Page</returns>
+        public FBPage GetPageByUrl(string uri)
+        {
+            var ind = uri.IndexOf("?");
+            if (ind > 0) uri = uri.Substring(0, ind);
+            string pUrl = graphBaseURL + uri + "?fields=picture,name" + 
+                            "&access_token=" + _accessToken +
+                            "&appsecret_proof=" + AppSecretProof;
+            var br = ExecuteGetRequest(pUrl);
+            if (br.success)
+            {
+                return JsonConvert.DeserializeObject<FBPage>(br.responseData);
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Loads picture from Uri as byte[]
+        /// </summary>
+        /// <param name="url">url image adress</param>
+        /// <returns>byte[] representing loaded data</returns>
+        public byte[] LoadPictureFromUrl(string url)
+        {
+            byte[] data = null;
+            using (var webClient = new WebClient())
+            {
+                try
+                {
+                    data = webClient.DownloadData(url);
+                }
+                catch (Exception e){}
+            }
+            return data;
         }
 
         public BaseResponse GetPageAccessToken(string userAccessToken, out string pageToken)
@@ -289,7 +328,7 @@ namespace FacebookGraphAPIHelper
 			webRequest.Method = "GET";
 			webRequest.ServicePoint.Expect100Continue = false;
 			webRequest.Timeout = 20000;
-
+            
 			Stream responseStream = null;
 			StreamReader responseReader = null;
 			string responseData = "";

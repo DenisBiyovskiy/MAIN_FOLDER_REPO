@@ -11,7 +11,9 @@ namespace FacebookGraphAPIHelper.Objects
         public DateTime created_time;
         public string message;
         public string id;
-        public Likes likes;
+        public Reactions reactions;
         public string link;
+        public SharedPosts sharedposts;
+        public Shares shares;
     }
 }

@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace FacebookGraphAPIHelper.Objects
 {
-     public class Account
+    public class Reaction
     {
-        public string access_token;
         public string id;
         public string name;
-        public string category;
-        public List<string> perms;
+        public string type;
     }
 }

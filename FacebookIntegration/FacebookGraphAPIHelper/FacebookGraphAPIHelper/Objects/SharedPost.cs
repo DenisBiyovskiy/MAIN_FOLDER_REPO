@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace FacebookGraphAPIHelper.Objects
 {
-    public class Like
+    public class SharedPost
     {
+        public DateTime created_time;
+        public string story;
         public string id;
-        public string name;
     }
 }
