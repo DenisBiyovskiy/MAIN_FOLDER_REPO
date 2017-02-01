@@ -72,11 +72,12 @@ namespace FacebookGraphAPIHelper
         /// <param name="appID"></param>
         /// <param name="appSecret"></param>
         /// <param name="APIversion"></param>
-        public GraphAPIHelper(string appID, string appSecret, string APIversion = DEFAULT_GRAPH_API_VERSION)
+        public GraphAPIHelper(string appID, string appSecret, string access_token = null, string APIversion = DEFAULT_GRAPH_API_VERSION)
         {
             this.appID = appID;
             this.appSecret = appSecret;
             this.GraphAPIVersion = APIversion;
+            this._accessToken = access_token;
             graphURLAndVersion = graphBaseURL + GraphAPIVersion + "/";
         }
 
@@ -115,8 +116,9 @@ namespace FacebookGraphAPIHelper
             if (br.success)
             {
                 accessToken = JsonConvert.DeserializeObject<AccessTokenResponse>(br.responseData).access_token;
+                this._accessToken = accessToken;
+                this.AppSecretProof = null;
             }
-            if (br.success) this._accessToken = accessToken;
             return br;
         }
 
