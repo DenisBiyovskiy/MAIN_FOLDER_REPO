@@ -122,9 +122,9 @@ namespace FacebookGraphAPIHelper
             return br;
         }
 
-        public BaseResponse GetUserAccounts(string userAccessToken, out FBPages accounts)
+        public BaseResponse GetUserAccounts(out FBPages accounts)
         {
-            string pUrl = graphURLAndVersion + "me/accounts?access_token=" + userAccessToken +
+            string pUrl = graphURLAndVersion + "me/accounts?access_token=" + _accessToken +
                             "&appsecret_proof=" + AppSecretProof;
             BaseResponse br = ExecuteGetRequest(pUrl);
             accounts = null;
@@ -190,13 +190,13 @@ namespace FacebookGraphAPIHelper
             return data;
         }
 
-        public BaseResponse GetPageAccessToken(string userAccessToken, out string pageToken)
+        public BaseResponse GetPageAccessToken(out string pageToken)
         {
             string pUrl = graphURLAndVersion +
                             "oauth/access_token" + "?grant_type=fb_exchange_token" +
                             "&client_id=" + appID +
                             "&client_secret=" + appSecret +
-                            "&fb_exchange_token=" + userAccessToken +
+                            "&fb_exchange_token=" + _accessToken +
                             "&appsecret_proof=" + AppSecretProof;
             var br = ExecuteGetRequest(pUrl);
             pageToken = null;
@@ -208,11 +208,11 @@ namespace FacebookGraphAPIHelper
         }
 
 
-        public BaseResponse GetTopPosts(string pageId, string access_token, out Posts posts, string fields = DEFAULT_POSTS_FILEDS, int limit = 100)
+        public BaseResponse GetTopPosts(string pageId, out Posts posts, string fields = DEFAULT_POSTS_FILEDS, int limit = 100)
         {
             string pUrl = graphURLAndVersion +
                             pageId + "/posts?fields=" + fields +
-                            "&access_token=" + access_token + 
+                            "&access_token=" + _accessToken + 
                             "&appsecret_proof=" + AppSecretProof +
                             "&limit=" + limit;
             var br = ExecuteGetRequest(pUrl);
@@ -224,11 +224,11 @@ namespace FacebookGraphAPIHelper
             return br;
         }
 
-        public BaseResponse GetAllPosts(string pageId, string access_token, out Posts posts, string fields = DEFAULT_POSTS_FILEDS)
+        public BaseResponse GetAllPosts(string pageId, out Posts posts, string fields = DEFAULT_POSTS_FILEDS)
         {
             Posts nextPosts = null;
             Posts _posts = new Posts() {data = new List<Post>()};
-            var br = GetTopPosts(pageId, access_token, out nextPosts, fields);
+            var br = GetTopPosts(pageId, out nextPosts, fields);
             while(br.success)
             {
                 string nextUrl = null;
@@ -250,11 +250,11 @@ namespace FacebookGraphAPIHelper
         }
 
         
-        public BaseResponse PostMessage(string pageId, string accessToken, string message)
+        public BaseResponse PostMessage(string pageId, string message)
         {
             string pUrl = graphURLAndVersion + 
                                 pageId + "/feed" + 
-                                "?access_token=" + accessToken + 
+                                "?access_token=" + _accessToken + 
                                 "&appsecret_proof=" + AppSecretProof;
             string postData = "message=" + message;
             return ExecutePostRequest(pUrl, postData);
