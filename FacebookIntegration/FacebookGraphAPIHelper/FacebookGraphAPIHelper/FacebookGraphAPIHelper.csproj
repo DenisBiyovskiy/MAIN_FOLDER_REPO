@@ -59,6 +59,7 @@
     <Compile Include="GraphAPIHelper.cs" />
     <Compile Include="Objects\SharedPost.cs" />
     <Compile Include="Objects\SharedPosts.cs" />
+    <Compile Include="Objects\ShareFrom.cs" />
     <Compile Include="Objects\Shares.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

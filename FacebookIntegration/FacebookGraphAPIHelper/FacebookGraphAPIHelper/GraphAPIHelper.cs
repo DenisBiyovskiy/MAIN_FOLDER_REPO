@@ -14,8 +14,9 @@ namespace FacebookGraphAPIHelper
 {
     public class GraphAPIHelper
     {
+        private string curUrl = "";
         private const string DEFAULT_GRAPH_API_VERSION = "v2.8";
-        private const string DEFAULT_POSTS_FILEDS = "reactions.limit(1000),message,created_time,link,sharedposts,shares,permalink_url";
+        private const string DEFAULT_POSTS_FILEDS = "reactions.limit(1000),message,created_time,link,sharedposts.limit(1000){from,created_time,story,id},shares,permalink_url";
         private string _appSecretProof;
         private string _graphAPIVersion;
         private string appID;
@@ -25,6 +26,18 @@ namespace FacebookGraphAPIHelper
         private const string graphBaseURL = "https://graph.facebook.com/";
         private string graphURLAndVersion;
 
+        string accessToken 
+        { 
+            get
+            {
+                if(string.IsNullOrEmpty(_accessToken)) throw new Exception("access token requred");
+                return _accessToken;
+            }
+            set
+            {
+                _accessToken = value;
+            } 
+        }
 
         private string AppSecretProof
         {
@@ -33,14 +46,12 @@ namespace FacebookGraphAPIHelper
                 if (!string.IsNullOrEmpty(_appSecretProof))
                     return _appSecretProof;
 
-                if (string.IsNullOrEmpty(_accessToken))
-                    throw new Exception("accessToken");
                 if (string.IsNullOrEmpty(appSecret))
                     throw new Exception("appSecret");
 
-                AppSecretProof = GenerateFacebookSecretProof(_accessToken, appSecret);
+                AppSecretProof = GenerateFacebookSecretProof(accessToken, appSecret);
                 if (string.IsNullOrEmpty(_appSecretProof))
-                    throw new Exception("appSecretProff");
+                    throw new Exception("appSecretProof");
                 return _appSecretProof;
             }
             set
@@ -77,7 +88,7 @@ namespace FacebookGraphAPIHelper
             this.appID = appID;
             this.appSecret = appSecret;
             this.GraphAPIVersion = APIversion;
-            this._accessToken = access_token;
+            this.accessToken = access_token;
             graphURLAndVersion = graphBaseURL + GraphAPIVersion + "/";
         }
 
@@ -116,7 +127,7 @@ namespace FacebookGraphAPIHelper
             if (br.success)
             {
                 accessToken = JsonConvert.DeserializeObject<AccessTokenResponse>(br.responseData).access_token;
-                this._accessToken = accessToken;
+                this.accessToken = accessToken;
                 this.AppSecretProof = null;
             }
             return br;
@@ -124,7 +135,7 @@ namespace FacebookGraphAPIHelper
 
         public BaseResponse GetUserAccounts(out FBPages accounts)
         {
-            string pUrl = graphURLAndVersion + "me/accounts?access_token=" + _accessToken +
+            string pUrl = graphURLAndVersion + "me/accounts?access_token=" + accessToken +
                             "&appsecret_proof=" + AppSecretProof;
             BaseResponse br = ExecuteGetRequest(pUrl);
             accounts = null;
@@ -161,7 +172,7 @@ namespace FacebookGraphAPIHelper
             var ind = uri.IndexOf("?");
             if (ind > 0) uri = uri.Substring(0, ind);
             string pUrl = graphBaseURL + uri + "?fields=picture,name" + 
-                            "&access_token=" + _accessToken +
+                            "&access_token=" + accessToken +
                             "&appsecret_proof=" + AppSecretProof;
             var br = ExecuteGetRequest(pUrl);
             if (br.success)
@@ -196,7 +207,7 @@ namespace FacebookGraphAPIHelper
                             "oauth/access_token" + "?grant_type=fb_exchange_token" +
                             "&client_id=" + appID +
                             "&client_secret=" + appSecret +
-                            "&fb_exchange_token=" + _accessToken +
+                            "&fb_exchange_token=" + accessToken +
                             "&appsecret_proof=" + AppSecretProof;
             var br = ExecuteGetRequest(pUrl);
             pageToken = null;
@@ -212,7 +223,7 @@ namespace FacebookGraphAPIHelper
         {
             string pUrl = graphURLAndVersion +
                             pageId + "/posts?fields=" + fields +
-                            "&access_token=" + _accessToken + 
+                            "&access_token=" + accessToken + 
                             "&appsecret_proof=" + AppSecretProof +
                             "&limit=" + limit;
             var br = ExecuteGetRequest(pUrl);
@@ -227,8 +238,8 @@ namespace FacebookGraphAPIHelper
         public BaseResponse GetAllPosts(string pageId, out Posts posts, string fields = DEFAULT_POSTS_FILEDS)
         {
             Posts nextPosts = null;
-            Posts _posts = new Posts() {data = new List<Post>()};
-            var br = GetTopPosts(pageId, out nextPosts, fields);
+            Posts _posts = null;
+            var br = GetTopPosts(pageId, out _posts, fields);
             while(br.success)
             {
                 string nextUrl = null;
@@ -245,7 +256,7 @@ namespace FacebookGraphAPIHelper
                 nextPosts = JsonConvert.DeserializeObject<Posts>(br.responseData);
                 _posts.data.AddRange(nextPosts.data);
             }
-            posts = nextPosts;
+            posts = _posts;
             return br;
         }
 
@@ -254,7 +265,7 @@ namespace FacebookGraphAPIHelper
         {
             string pUrl = graphURLAndVersion + 
                                 pageId + "/feed" + 
-                                "?access_token=" + _accessToken + 
+                                "?access_token=" + accessToken + 
                                 "&appsecret_proof=" + AppSecretProof;
             string postData = "message=" + message;
             return ExecutePostRequest(pUrl, postData);
@@ -319,6 +330,7 @@ namespace FacebookGraphAPIHelper
         /// </returns>
         public BaseResponse ExecuteGetRequest(string pUrl)
 		{
+            curUrl = pUrl;
 			HttpWebRequest webRequest = System.Net.WebRequest.Create(pUrl) as HttpWebRequest;
             if (webRequest == null)
             {
@@ -329,7 +341,7 @@ namespace FacebookGraphAPIHelper
             }
 			webRequest.Method = "GET";
 			webRequest.ServicePoint.Expect100Continue = false;
-			webRequest.Timeout = 20000;
+			webRequest.Timeout = 800000;
             
 			Stream responseStream = null;
 			StreamReader responseReader = null;
