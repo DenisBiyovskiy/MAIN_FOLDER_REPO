@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FacebookGraphAPIHelper.Objects;
 using Newtonsoft.Json;
-using System.Collections.Specialized;
+using System;
+using System.IO;
+using System.Net;
 using System.Security.Cryptography;
-using FacebookGraphAPIHelper.Objects;
+using System.Text;
 
 namespace FacebookGraphAPIHelper
 {
     public class GraphAPIHelper
     {
-        private string curUrl = "";
         private const string DEFAULT_GRAPH_API_VERSION = "v2.8";
         private const string DEFAULT_POSTS_FILEDS = "reactions.limit(1000),message,created_time,link,sharedposts.limit(1000){from,created_time,story,id},shares,permalink_url";
         private string _appSecretProof;
@@ -196,7 +191,7 @@ namespace FacebookGraphAPIHelper
                 {
                     data = webClient.DownloadData(url);
                 }
-                catch (Exception e){}
+                catch (Exception){}
             }
             return data;
         }
@@ -330,7 +325,6 @@ namespace FacebookGraphAPIHelper
         /// </returns>
         public BaseResponse ExecuteGetRequest(string pUrl)
 		{
-            curUrl = pUrl;
 			HttpWebRequest webRequest = System.Net.WebRequest.Create(pUrl) as HttpWebRequest;
             if (webRequest == null)
             {

@@ -14,7 +14,7 @@ namespace GAPITEST
     {
         static void Main(string[] args)
         {
-            
+            /*
             //uphUserId	uphPageToken	uphAppSecret	uphAppId	uphPageId
             //1091321741005034	EAAFFru3lRl0BAO8M52suZA1bDDuU4Sofsl85QZAVB3erojkZCTYBhnH6WXIQYl8gdxrbT57xZBrq1ZBOyiyUprYu1ERq1BMwmVKicDoUehDNkp66n6NSihqsZBjMV7eLV7yNZAZCwniekMYut2c8u12B9Dyb7z8X4HKIxp9gmPLZAmQZDZD	81f78efeb40c979e3c029d9f8c533212	358092594562653	1369352673095644
             Tools.ClearFile();
@@ -45,6 +45,10 @@ namespace GAPITEST
             var br = gepiHelper.GetAllPosts("1369352673095644", out posts);
             //Tools.WriteStringToFile(posts.data.Count);
             Tools.WriteToFile(posts);
+             */
+            Tools.ClearFile();
+            Tools.WriteStringToFile(new ArithmeticException("asdsad", new Exception("Some message")));
+
 
         }
     }

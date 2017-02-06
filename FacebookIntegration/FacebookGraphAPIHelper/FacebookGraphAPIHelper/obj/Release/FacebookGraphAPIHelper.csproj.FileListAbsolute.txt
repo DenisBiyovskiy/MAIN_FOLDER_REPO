@@ -1,0 +1,6 @@
+D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\FacebookGraphAPIHelper\FacebookGraphAPIHelper\bin\Release\FacebookGraphAPIHelper.dll
+D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\FacebookGraphAPIHelper\FacebookGraphAPIHelper\bin\Release\FacebookGraphAPIHelper.pdb
+D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\FacebookGraphAPIHelper\FacebookGraphAPIHelper\bin\Release\Newtonsoft.Json.dll
+D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\FacebookGraphAPIHelper\FacebookGraphAPIHelper\bin\Release\Newtonsoft.Json.xml
+D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\FacebookGraphAPIHelper\FacebookGraphAPIHelper\obj\Release\FacebookGraphAPIHelper.dll
+D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\FacebookGraphAPIHelper\FacebookGraphAPIHelper\obj\Release\FacebookGraphAPIHelper.pdb

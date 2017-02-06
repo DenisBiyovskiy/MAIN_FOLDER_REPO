@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FacebookGraphAPIHelper</name>
+    </assembly>
+    <members>
+        <member name="F:FacebookGraphAPIHelper.BaseResponse.success">
+            <summary>
+            Indicates whether the response succed or not.
+            </summary>
+        </member>
+        <member name="F:FacebookGraphAPIHelper.BaseResponse.responseData">
+            <summary>
+            Response data in JSON format.
+            </summary>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.BaseResponse.#ctor">
+            <summary>
+            Default constructors, returns new instance of BaseResponse
+            sets success field to true.
+            </summary>
+        </member>
+        <member name="P:FacebookGraphAPIHelper.BaseResponse.Exception">
+            <summary>
+            Contains information about response error. Sets success to false with set action.
+            </summary>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.onGraphVersionChange(System.String)">
+            <summary>
+            Updates base url on API version change.
+            </summary>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of class GraphAPIHelper
+            </summary>
+            <param name="appID"></param>
+            <param name="appSecret"></param>
+            <param name="APIversion"></param>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GenerateFacebookSecretProof(System.String,System.String)">
+            <summary>
+            Generate a facebook secret proof
+            <seealso cref="!:http://stackoverflow.com/questions/20572523/c-sharp-help-required-to-create-facebook-appsecret-proof-hmacsha256"/>
+            </summary>
+            <param name="facebookAccessToken"></param>
+            <param name="facebookAuthAppSecret"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.FindUserAccount(System.String,FacebookGraphAPIHelper.Objects.FBPages)">
+            <summary>
+            Searches in Accounts object for Account by Account.name filed.
+            Returns Account instance.
+            </summary>
+            <param name="name">Searching key value</param>
+            <param name="accs">Accounts object for search.</param>
+            <returns>Returns first Account where Account.name = name.</returns>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetPageByUrl(System.String)">
+            <summary>
+            Searches for a Page by its Url string via GraphAPI.
+            </summary>
+            <param name="uri">Url adress of Page</param>
+            <returns>Account object representing Page</returns>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.LoadPictureFromUrl(System.String)">
+            <summary>
+            Loads picture from Uri as byte[]
+            </summary>
+            <param name="url">url image adress</param>
+            <returns>byte[] representing loaded data</returns>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.ExecutePostRequest(System.String,System.String)">
+            <summary>
+            Executes POST request.
+            </summary>
+            <param name="pUrl">Base request URL.</param>
+            <param name="postData">POST parmeters.</param>
+            <param name="result">Result or exception message of request.</param>
+            <returns>
+            true on success and result in "out result" parametr
+            false and exception message in "out result" parametr
+            </returns>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.ExecuteGetRequest(System.String)">
+            <summary>
+            Executes GET request.
+            </summary>
+            <param name="pUrl">Base request URL.</param>
+            <param name="response">Result or exception message of request.</param>
+            <returns>
+            true on success and result in "out result" parametr
+            false and exception message in "out result" parametr
+            </returns>
+        </member>
+        <member name="P:FacebookGraphAPIHelper.GraphAPIHelper.GraphAPIVersion">
+            <summary>
+            GraphAPI version in format "vX.X" (v2.8 by default)
+            </summary>
+        </member>
+    </members>
+</doc>

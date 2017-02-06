@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Specialized;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.Serialization;
 namespace FacebookGraphAPIHelper
 {
+    [DataContract]
     public class BaseResponse
     {
         private Exception _Exception { get; set; }
@@ -11,14 +10,17 @@ namespace FacebookGraphAPIHelper
         /// <summary>
         /// Indicates whether the response succed or not.
         /// </summary>
+        [DataMember]
         public bool success;
         /// <summary>
         /// Response data in JSON format.
         /// </summary>
+        [DataMember]
         public string responseData;
         /// <summary>
         /// Contains information about response error. Sets success to false with set action.
         /// </summary>
+        [DataMember]
         public Exception Exception
         {
             get

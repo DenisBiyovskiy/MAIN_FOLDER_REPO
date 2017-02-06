@@ -4,7 +4,7 @@ DECLARE
 -- Заголовок детали.
 @DetailCaption NCHAR(100) = 'Действия пользователя в посте',
 --Название схемы объекта, к которому привязывается деталь.
-@EntitySchemaName NCHAR(100) = 'uphVwFBActionInPost'
+@EntitySchemaName NCHAR(100) = 'uphFBAction'
 
 INSERT INTO SysDetail(
     ProcessListeners,
@@ -27,7 +27,7 @@ DECLARE
 -- Название схемы страницы детали.
 @CardSchemaName NCHAR(100) = 'uphFBActionInPostPage',
 -- Название схемы объекта, к которому привязывается деталь.
-@EntitySchemaName NCHAR(100) = 'uphVwFBActionInPost',
+@EntitySchemaName NCHAR(100) = 'uphFBAction',
 -- Заголовок страницы детали.
 @PageCaption NCHAR(100) = 'Схема страницы "Действия пользователя в посте"',
 -- Пустая строка.
