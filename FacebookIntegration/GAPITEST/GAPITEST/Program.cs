@@ -46,8 +46,9 @@ namespace GAPITEST
             //Tools.WriteStringToFile(posts.data.Count);
             Tools.WriteToFile(posts);
              */
+            string s = "Опа {0}, Опа {1}";
             Tools.ClearFile();
-            Tools.WriteStringToFile(new ArithmeticException("asdsad", new Exception("Some message")));
+            Tools.WriteStringToFile(string.Format(s, "Раз", "Два"));
 
 
         }
