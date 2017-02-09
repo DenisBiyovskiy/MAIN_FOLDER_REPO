@@ -14,20 +14,20 @@ namespace GAPITEST
     {
         static void Main(string[] args)
         {
-            /*
+            
             //uphUserId	uphPageToken	uphAppSecret	uphAppId	uphPageId
             //1091321741005034	EAAFFru3lRl0BAO8M52suZA1bDDuU4Sofsl85QZAVB3erojkZCTYBhnH6WXIQYl8gdxrbT57xZBrq1ZBOyiyUprYu1ERq1BMwmVKicDoUehDNkp66n6NSihqsZBjMV7eLV7yNZAZCwniekMYut2c8u12B9Dyb7z8X4HKIxp9gmPLZAmQZDZD	81f78efeb40c979e3c029d9f8c533212	358092594562653	1369352673095644
             Tools.ClearFile();
             //connection params
             string appID = "358092594562653";
             string appSecret = "81f78efeb40c979e3c029d9f8c533212";
-            string exToken = "EAAFFru3lRl0BANSOGzC0HKZAR0gDveZBPZA5EP2q47iMPPEZAncbhZAD9Q5p7nSJQ2J3JDJXt9jWkg3q40ttjiSFKqslFGYDa0me8lYqKlieuHHp6PaTNDkqUwvjC99G23xCKBuXv4YLNiPthouJmaGRXIHGAK0QZD";
+            string exToken = "EAAFFru3lRl0BALMlbVwAtZCmH4HWxOZBddP7aNmS6pkuQvmxSj2uQSSXLdezWHOgtOZBGEsNKTEhXQLsLMp4fCqbx3WGZB9XcCVTK8OWBx7sUPZC9qAjbtCTKxve8TN0CoE4YOHV3Q55WfH0JDaqHFR9cXw1YoI4ZD";
             string pageId = "1369352673095644";
             string accToken = "";
             string pageToken = "";
-            GraphAPIHelper gepiHelper = new GraphAPIHelper(appID, appSecret);
+            GraphAPIHelper gepiHelper = new GraphAPIHelper(appID, appSecret, exToken);
 
-            BaseResponse res = gepiHelper.GetLongLivedAccessToken(exToken, out accToken);
+            //BaseResponse res = gepiHelper.GetLongLivedAccessToken(exToken, out accToken);
             //Accounts accs;
             //res = gepiHelper.GetUserAccounts(accToken, out accs);
             //Tools.WriteToFile(accs);
@@ -42,13 +42,12 @@ namespace GAPITEST
             //var pic = gepiHelper.LoadPictureFromUrl(a.picture.data.url);
             //Tools.WriteToFile(a);
             //Tools.WriteToFile(pic);
-            var br = gepiHelper.GetAllPosts("1369352673095644", out posts);
+            var br = gepiHelper.GetAllPosts("1396379433974581", out posts);
             //Tools.WriteStringToFile(posts.data.Count);
-            Tools.WriteToFile(posts);
-             */
-            string s = "Опа {0}, Опа {1}";
-            Tools.ClearFile();
-            Tools.WriteStringToFile(string.Format(s, "Раз", "Два"));
+            Tools.WriteToFile(posts.data.Count);
+            
+             
+ 
 
 
         }

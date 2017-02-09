@@ -235,6 +235,7 @@ namespace FacebookGraphAPIHelper
             Posts nextPosts = null;
             Posts _posts = null;
             var br = GetTopPosts(pageId, out _posts, fields);
+            nextPosts = _posts;
             while(br.success)
             {
                 string nextUrl = null;
@@ -271,7 +272,6 @@ namespace FacebookGraphAPIHelper
         /// </summary>
         /// <param name="pUrl">Base request URL.</param>
         /// <param name="postData">POST parmeters.</param>
-        /// <param name="result">Result or exception message of request.</param>
         /// <returns>
         /// true on success and result in "out result" parametr
         /// false and exception message in "out result" parametr
@@ -318,7 +318,6 @@ namespace FacebookGraphAPIHelper
         /// Executes GET request.
         /// </summary>
         /// <param name="pUrl">Base request URL.</param>
-        /// <param name="response">Result or exception message of request.</param>
         /// <returns>
         /// true on success and result in "out result" parametr
         /// false and exception message in "out result" parametr
