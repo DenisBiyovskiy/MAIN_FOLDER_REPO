@@ -7,6 +7,7 @@ using FacebookGraphAPIHelper;
 using FacebookGraphAPIHelper.Objects;
 using System.Drawing;
 using Newtonsoft.Json;
+using System.IO;
 
 namespace GAPITEST
 {
@@ -14,7 +15,7 @@ namespace GAPITEST
     {
         static void Main(string[] args)
         {
-            
+            /*
             //uphUserId	uphPageToken	uphAppSecret	uphAppId	uphPageId
             //1091321741005034	EAAFFru3lRl0BAO8M52suZA1bDDuU4Sofsl85QZAVB3erojkZCTYBhnH6WXIQYl8gdxrbT57xZBrq1ZBOyiyUprYu1ERq1BMwmVKicDoUehDNkp66n6NSihqsZBjMV7eLV7yNZAZCwniekMYut2c8u12B9Dyb7z8X4HKIxp9gmPLZAmQZDZD	81f78efeb40c979e3c029d9f8c533212	358092594562653	1369352673095644
             Tools.ClearFile();
@@ -42,9 +43,18 @@ namespace GAPITEST
             //var pic = gepiHelper.LoadPictureFromUrl(a.picture.data.url);
             //Tools.WriteToFile(a);
             //Tools.WriteToFile(pic);
-            var br = gepiHelper.GetAllPosts("1396379433974581", out posts);
+            var br = gepiHelper.GetAllPosts("131189920262167", out posts);
             //Tools.WriteStringToFile(posts.data.Count);
             Tools.WriteToFile(posts.data.Count);
+            Tools.WriteToFile(posts.data);
+            */
+            var s = "";
+            using (StreamReader sr = new StreamReader(File.Open("D:\\ms.txt", FileMode.Open)))
+            {
+                s = (sr.ReadToEnd());
+            }
+            Posts p = JsonConvert.DeserializeObject<Posts>(s);
+
             
              
  

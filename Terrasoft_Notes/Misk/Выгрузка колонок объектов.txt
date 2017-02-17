@@ -1,0 +1,34 @@
+	string bl = " ";
+    string div = "------------------------------------------";
+    string n = "\n";
+
+    UserConnection u = Get<UserConnection>("UserConnection");
+    var man = u.EntitySchemaManager;
+    var esq = new EntitySchemaQuery(man, "SysSchema");
+    esq.IsDistinct = true;
+    esq.AddColumn("Name");
+    esq.Filters.Add(esq.CreateFilterWithParameters(FilterComparisonType.Equal, "SysPackage", new Guid("828A0114-7B4B-47AE-A179-B8B0DB50548A")));
+    esq.Filters.Add(esq.CreateFilterWithParameters(FilterComparisonType.Equal, "ManagerName", "EntitySchemaManager"));
+    var res = esq.GetEntityCollection(u);
+    var sb = "";
+    foreach (var r in res)
+    {
+    	try{
+	        var entSchemaName = r.GetTypedColumnValue<string>("Name");
+	        sb += div + n + entSchemaName + n;
+	        var ent = man.GetInstanceByName(entSchemaName);
+	        foreach (var col in ent.Columns)
+	        {
+	            sb += col.Name + bl + col.Caption + n;
+	        }
+    	}
+    	catch(Exception){}
+    }
+    using (var sw = new StreamWriter("C:\\Users\\Public\\Documents\\OutloadedESQNameCaption.txt"))
+    {
+        sw.WriteLine(sb.ToString());
+    }
+    return true;
+    -----------------------
+    select (select w.Name from SysWorkspace w where w.Id = p.SysWorkspaceId),* from SysPackage p where p.Name like 'ilay%'
+    select distinct Name from SysSchema where SysPackageId = '828A0114-7B4B-47AE-A179-B8B0DB50548A' and ManagerName = 'EntitySchemaManager'

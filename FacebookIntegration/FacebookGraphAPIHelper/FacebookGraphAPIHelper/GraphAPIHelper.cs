@@ -214,7 +214,7 @@ namespace FacebookGraphAPIHelper
         }
 
 
-        public BaseResponse GetTopPosts(string pageId, out Posts posts, string fields = DEFAULT_POSTS_FILEDS, int limit = 100)
+        public BaseResponse GetTopPosts(string pageId, out Posts posts, string fields = DEFAULT_POSTS_FILEDS, int limit = 20)
         {
             string pUrl = graphURLAndVersion +
                             pageId + "/posts?fields=" + fields +
@@ -348,10 +348,25 @@ namespace FacebookGraphAPIHelper
 			}
 			catch (Exception exc)
 			{
-                return new BaseResponse()
+                try
                 {
-                    Exception = exc
-                };
+                    var we = (((System.Net.WebException)(exc)).Response);
+                    responseStream = we.GetResponseStream();
+                    responseReader = new StreamReader(responseStream);
+                    responseData = responseReader.ReadToEnd();
+                    return new BaseResponse()
+                    {
+                        Exception = new Exception(responseData, exc)
+                    };
+                }
+                catch (Exception inExc)
+                {
+                    return new BaseResponse()
+                    {
+                        Exception = inExc
+                    };
+                }
+               
 			}
 			finally
 			{

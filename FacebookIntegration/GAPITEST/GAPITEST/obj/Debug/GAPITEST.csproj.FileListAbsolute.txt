@@ -19,3 +19,4 @@ C:\Users\User\MAIN_FOLDER_REPO\FacebookIntegration\GAPITEST\GAPITEST\bin\Debug\N
 C:\Users\User\MAIN_FOLDER_REPO\FacebookIntegration\GAPITEST\GAPITEST\obj\Debug\GAPITEST.csprojResolveAssemblyReference.cache
 C:\Users\User\MAIN_FOLDER_REPO\FacebookIntegration\GAPITEST\GAPITEST\obj\Debug\GAPITEST.exe
 C:\Users\User\MAIN_FOLDER_REPO\FacebookIntegration\GAPITEST\GAPITEST\obj\Debug\GAPITEST.pdb
+D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\GAPITEST\GAPITEST\bin\Debug\FacebookGraphAPIHelper.xml
