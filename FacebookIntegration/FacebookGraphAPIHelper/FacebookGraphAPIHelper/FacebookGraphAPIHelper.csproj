@@ -47,6 +47,8 @@
   <ItemGroup>
     <Compile Include="BaseResponse.cs" />
     <Compile Include="Objects\AccessTokenResponse.cs" />
+    <Compile Include="Objects\FBGraphAPIException.cs" />
+    <Compile Include="Objects\FBGraphAPIExceptionWrapper.cs" />
     <Compile Include="Objects\FBPage.cs" />
     <Compile Include="Objects\FBPages.cs" />
     <Compile Include="Objects\Cursors.cs" />

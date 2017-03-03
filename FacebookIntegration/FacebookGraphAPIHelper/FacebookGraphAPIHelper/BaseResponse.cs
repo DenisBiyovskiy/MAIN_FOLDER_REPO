@@ -2,6 +2,9 @@
 using System.Runtime.Serialization;
 namespace FacebookGraphAPIHelper
 {
+    /// <summary>
+    /// The response object to return the result of request to GraphAPI.
+    /// </summary>
     [DataContract]
     public class BaseResponse
     {
@@ -18,7 +21,7 @@ namespace FacebookGraphAPIHelper
         [DataMember]
         public string responseData;
         /// <summary>
-        /// Contains information about response error. Sets success to false with set action.
+        /// Gets or sets response Exception. Sets success to false with <c>set</c> action.
         /// </summary>
         [DataMember]
         public Exception Exception
@@ -33,10 +36,9 @@ namespace FacebookGraphAPIHelper
                 _Exception = value;
             }
         }
-
         /// <summary>
-        /// Default constructors, returns new instance of BaseResponse
-        /// sets success field to true.
+        /// Default constructor, returns new instance of BaseResponse.
+        /// Sets <c>success</c> field to true.
         /// </summary>
         public BaseResponse()
         {

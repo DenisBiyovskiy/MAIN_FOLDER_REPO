@@ -5,27 +5,34 @@ using System.IO;
 using System.Net;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 
 namespace FacebookGraphAPIHelper
 {
+    /// <summary>
+    /// Provides methods for GraphAPI calls.
+    /// </summary>
     public class GraphAPIHelper
     {
         private const string DEFAULT_GRAPH_API_VERSION = "v2.8";
-        private const string DEFAULT_POSTS_FILEDS = "reactions.limit(1000),message,created_time,link,sharedposts.limit(1000){from,created_time,story,id},shares,permalink_url";
+        private const string ERROR_MSG = "Unknown error. Request URL: ";
+        private const string graphBaseURL = "https://graph.facebook.com/";
+        private const string DEFAULT_POSTS_FIELDS = "message,created_time,link,sharedposts.limit(1000){from,created_time,story,id},shares,permalink_url";
+        private const int DEFAULT_REACTIONS_LIMIT = 900;
+        private const int DEFAULT_POSTS_LIMIT = 20;
+        private const string DEFAULT_REACTIONS_FIELDS = "/reactions?limit=";
         private string _appSecretProof;
         private string _graphAPIVersion;
         private string appID;
         private string appSecret;
         private string _accessToken;
-        private const string ERROR_MSG = "Unknown error. Request URL: ";
-        private const string graphBaseURL = "https://graph.facebook.com/";
         private string graphURLAndVersion;
 
         string accessToken 
         { 
             get
             {
-                if(string.IsNullOrEmpty(_accessToken)) throw new Exception("access token requred");
+                if (string.IsNullOrEmpty(_accessToken)) throw new Exception("access token required");
                 return _accessToken;
             }
             set
@@ -93,7 +100,7 @@ namespace FacebookGraphAPIHelper
         /// </summary>
         /// <param name="facebookAccessToken"></param>
         /// <param name="facebookAuthAppSecret"></param>
-        /// <returns></returns>
+        /// <returns>App secret proof.</returns>
         private static string GenerateFacebookSecretProof(string facebookAccessToken, string facebookAuthAppSecret)
         {
             byte[] keyBytes = Encoding.UTF8.GetBytes(facebookAuthAppSecret);
@@ -110,6 +117,12 @@ namespace FacebookGraphAPIHelper
             return sbHash.ToString();
         }
 
+        /// <summary>
+        /// Obtains long-lived user access token (expires in about 60 days).
+        /// </summary>
+        /// <param name="userExchangeToken">Short-lived user access token.</param>
+        /// <param name="accessToken">Out parameter to return generated long-lived token.</param>
+        /// <returns>Instance of BaseResponse class.</returns>
         public BaseResponse GetLongLivedAccessToken (string userExchangeToken, out string accessToken)
         {
             string pUrl = graphURLAndVersion +
@@ -166,17 +179,43 @@ namespace FacebookGraphAPIHelper
         {
             var ind = uri.IndexOf("?");
             if (ind > 0) uri = uri.Substring(0, ind);
-            string pUrl = graphBaseURL + uri + "?fields=picture,name" + 
+            string pUrl = graphBaseURL + uri + "?fields=name" + 
                             "&access_token=" + accessToken +
                             "&appsecret_proof=" + AppSecretProof;
             var br = ExecuteGetRequest(pUrl);
+            FBPage fbPage;
             if (br.success)
             {
-                return JsonConvert.DeserializeObject<FBPage>(br.responseData);
+                fbPage = JsonConvert.DeserializeObject<FBPage>(br.responseData);
+                fbPage.picture = GetPagePicture(fbPage.id);
+                return fbPage;
             }
             return null;
         }
 
+        /// <summary>
+        /// Requests for page picture.
+        /// </summary>
+        /// <param name="pageId">Page Id.</param>
+        /// <param name="type">The size of this picture. 
+        /// It can be one of the following values: <example>small, normal, large, square.</example>
+        /// </param>
+        /// <returns>
+        /// FBPagePicture instance wich includes picture url. 
+        /// Use <code>LoadPictureFromUrl</code> method to load picture.
+        /// </returns>
+        public Picture GetPagePicture(string pageId, string type = "large")
+        {
+            string pUrl = graphURLAndVersion + pageId + "/picture?redirect=0&type=" + type +
+                              "&access_token=" + accessToken +
+                              "&appsecret_proof=" + AppSecretProof;
+            var br = ExecuteGetRequest(pUrl);
+            if (br.success)
+            {
+                return JsonConvert.DeserializeObject<Picture>(br.responseData);
+            }
+            return null;
+        }
         /// <summary>
         /// Loads picture from Uri as byte[]
         /// </summary>
@@ -196,25 +235,20 @@ namespace FacebookGraphAPIHelper
             return data;
         }
 
-        public BaseResponse GetPageAccessToken(out string pageToken)
-        {
-            string pUrl = graphURLAndVersion +
-                            "oauth/access_token" + "?grant_type=fb_exchange_token" +
-                            "&client_id=" + appID +
-                            "&client_secret=" + appSecret +
-                            "&fb_exchange_token=" + accessToken +
-                            "&appsecret_proof=" + AppSecretProof;
-            var br = ExecuteGetRequest(pUrl);
-            pageToken = null;
-            if (br.success)
-            {
-                pageToken = JsonConvert.DeserializeObject<AccessTokenResponse>(br.responseData).access_token;
-            }
-            return br;
-        }
+        //TODO: implement a method for obtaining the page access token.
+        //public BaseResponse GetPageAccessToken(out string pageToken) 
+        //{
+        //}
 
-
-        public BaseResponse GetTopPosts(string pageId, out Posts posts, string fields = DEFAULT_POSTS_FILEDS, int limit = 20)
+        /// <summary>
+        /// Requests GraphAPI for top <paramref name="limit"/> posts of the Page.
+        /// </summary>
+        /// <param name="pageId">Id of the Page.</param>
+        /// <param name="posts">Out parameter to receive the data.</param>
+        /// <param name="fields">List of fields to include into request. Defaults to <paramref name="DEFAULT_POSTS_FIELDS"/></param>
+        /// <param name="limit">Number of posts to get. Defaults to <paramref name="DEFAULT_POSTS_LIMIT"/></param>
+        /// <returns>Instance of BaseResponse class.</returns>
+        public BaseResponse GetTopPosts(string pageId, out Posts posts, string fields = DEFAULT_POSTS_FIELDS, int limit = DEFAULT_POSTS_LIMIT)
         {
             string pUrl = graphURLAndVersion +
                             pageId + "/posts?fields=" + fields +
@@ -226,12 +260,26 @@ namespace FacebookGraphAPIHelper
             if(br.success)
             {
                 posts = JsonConvert.DeserializeObject<Posts>(br.responseData);
+                for (int i = 0; i < posts.data.Count; i++)
+                {
+                    var p = posts.data[i];
+                    br = GetPostReactions(ref p);
+                    if (!br.success) throw br.Exception;
+                }
             }
             return br;
         }
 
-        public BaseResponse GetAllPosts(string pageId, out Posts posts, string fields = DEFAULT_POSTS_FILEDS)
+        /// <summary>
+        /// Requests GraphAPI for all posts of the Page.
+        /// </summary>
+        /// <param name="pageId">Id of the Page.</param>
+        /// <param name="posts">Out parameter to receive the data.</param>
+        /// <param name="fields">List of fields to include into request. Defaults to <paramref name="DEFAULT_POSTS_FIELDS"/></param>
+        /// <returns>Instance of BaseResponse class.</returns>
+        public BaseResponse GetAllPosts(string pageId, out Posts posts, string fields = DEFAULT_POSTS_FIELDS)
         {
+            int sameRequestsCount = 0;
             Posts nextPosts = null;
             Posts _posts = null;
             var br = GetTopPosts(pageId, out _posts, fields);
@@ -245,17 +293,68 @@ namespace FacebookGraphAPIHelper
                 }
                 if (string.IsNullOrEmpty(nextUrl))
                 {
-                    posts = _posts;
-                    return br;
+                    break;
                 }
                 br = ExecuteGetRequest(nextUrl + "&appsecret_proof=" + AppSecretProof);
-                nextPosts = JsonConvert.DeserializeObject<Posts>(br.responseData);
-                _posts.data.AddRange(nextPosts.data);
+                //When graphAPI request returns: error code==1 && subcode==99 
+                //try send request again.
+                //https://developers.facebook.com/docs/graph-api/using-graph-api/ search for "Error Codes" topic for more info.
+                if (!br.success)
+                {
+                    sameRequestsCount++;
+                    var e = JsonConvert.DeserializeObject<FBGraphAPIException>(br.responseData);
+                    br.success = true;
+                    if (sameRequestsCount >= 10) throw br.Exception;
+                    if (e != null && e.error.code == 1 && e.error.error_subcode == 99) Thread.Sleep(10000);
+                }
+                else
+                {
+                    nextPosts = JsonConvert.DeserializeObject<Posts>(br.responseData);
+                    _posts.data.AddRange(nextPosts.data);
+                    sameRequestsCount = 0;
+                }
             }
             posts = _posts;
+            for (int i = DEFAULT_POSTS_LIMIT; i < posts.data.Count; i++)
+            {
+                var p = posts.data[i];
+                br = GetPostReactions(ref p);
+                if (!br.success) throw br.Exception;
+            }
             return br;
         }
 
+        /// <summary>
+        /// Requests GraphAPI for reactions of the post.
+        /// </summary>
+        /// <param name="post">Ref parameter to receive the data.</param>
+        /// <param name="rLimit">Number of reactions to get per request. Defaults to <paramref name="DEFAULT_REACTIONS_LIMIT"/></param>
+        /// <returns></returns>
+        public BaseResponse GetPostReactions(ref Post post, int rLimit = DEFAULT_REACTIONS_LIMIT)
+        {
+            var baseURL = graphURLAndVersion + post.id + DEFAULT_REACTIONS_FIELDS + rLimit +
+                            "&access_token=" + accessToken +
+                            "&appsecret_proof=" + AppSecretProof;
+            var br = ExecuteGetRequest(baseURL);
+            if (!br.success) throw br.Exception;
+            Reactions r = JsonConvert.DeserializeObject<Reactions>(br.responseData);
+            Reactions nextR = r;
+            while (br.success && nextR != null && nextR.data.Count >= rLimit
+                       && nextR.paging != null && nextR.paging.cursors != null)
+            {
+                string url = nextR.paging.next;
+                if (string.IsNullOrEmpty(url))
+                {
+                    url = baseURL + "&after=" + nextR.paging.cursors.after;
+                }
+                br = ExecuteGetRequest(url);
+                if (!br.success) throw br.Exception;
+                nextR = JsonConvert.DeserializeObject<Reactions>(br.responseData);
+                r.data.AddRange(nextR.data);
+            }
+            post.reactions = r;
+            return br;
+        }
         
         public BaseResponse PostMessage(string pageId, string message)
         {
@@ -273,8 +372,7 @@ namespace FacebookGraphAPIHelper
         /// <param name="pUrl">Base request URL.</param>
         /// <param name="postData">POST parmeters.</param>
         /// <returns>
-        /// true on success and result in "out result" parametr
-        /// false and exception message in "out result" parametr
+        /// Instance of BaseResponse class.
         /// </returns>
         public BaseResponse ExecutePostRequest(string pUrl, string postData)
         {
@@ -299,7 +397,7 @@ namespace FacebookGraphAPIHelper
                         var responseData = responseReader.ReadToEnd();
                         return new BaseResponse()
                         {
-                            responseData = responseData
+                            responseData = responseData,
                         };
                     }
                 }
@@ -319,8 +417,7 @@ namespace FacebookGraphAPIHelper
         /// </summary>
         /// <param name="pUrl">Base request URL.</param>
         /// <returns>
-        /// true on success and result in "out result" parametr
-        /// false and exception message in "out result" parametr
+        /// Instance of BaseResponse class.
         /// </returns>
         public BaseResponse ExecuteGetRequest(string pUrl)
 		{
@@ -356,7 +453,8 @@ namespace FacebookGraphAPIHelper
                     responseData = responseReader.ReadToEnd();
                     return new BaseResponse()
                     {
-                        Exception = new Exception(responseData, exc)
+                        Exception = new Exception(responseData, exc),
+                        responseData = responseData
                     };
                 }
                 catch (Exception inExc)

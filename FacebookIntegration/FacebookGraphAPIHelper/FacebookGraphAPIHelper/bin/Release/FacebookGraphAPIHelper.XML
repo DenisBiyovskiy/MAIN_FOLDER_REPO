@@ -4,6 +4,11 @@
         <name>FacebookGraphAPIHelper</name>
     </assembly>
     <members>
+        <member name="T:FacebookGraphAPIHelper.BaseResponse">
+            <summary>
+            The response object to return the result of request to GraphAPI.
+            </summary>
+        </member>
         <member name="F:FacebookGraphAPIHelper.BaseResponse.success">
             <summary>
             Indicates whether the response succed or not.
@@ -16,13 +21,18 @@
         </member>
         <member name="M:FacebookGraphAPIHelper.BaseResponse.#ctor">
             <summary>
-            Default constructors, returns new instance of BaseResponse
-            sets success field to true.
+            Default constructor, returns new instance of BaseResponse.
+            Sets <c>success</c> field to true.
             </summary>
         </member>
         <member name="P:FacebookGraphAPIHelper.BaseResponse.Exception">
             <summary>
-            Contains information about response error. Sets success to false with set action.
+            Gets or sets response Exception. Sets success to false with <c>set</c> action.
+            </summary>
+        </member>
+        <member name="T:FacebookGraphAPIHelper.GraphAPIHelper">
+            <summary>
+            Provides methods for GraphAPI calls.
             </summary>
         </member>
         <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.onGraphVersionChange(System.String)">
@@ -45,7 +55,15 @@
             </summary>
             <param name="facebookAccessToken"></param>
             <param name="facebookAuthAppSecret"></param>
-            <returns></returns>
+            <returns>App secret proof.</returns>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetLongLivedAccessToken(System.String,System.String@)">
+            <summary>
+            Obtains long-lived user access token (expires in about 60 days).
+            </summary>
+            <param name="userExchangeToken">Short-lived user access token.</param>
+            <param name="accessToken">Out parameter to return generated long-lived token.</param>
+            <returns>Instance of BaseResponse class.</returns>
         </member>
         <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.FindUserAccount(System.String,FacebookGraphAPIHelper.Objects.FBPages)">
             <summary>
@@ -63,12 +81,52 @@
             <param name="uri">Url adress of Page</param>
             <returns>Account object representing Page</returns>
         </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetPagePicture(System.String,System.String)">
+            <summary>
+            Requests for page picture.
+            </summary>
+            <param name="pageId">Page Id.</param>
+            <param name="type">The size of this picture. 
+            It can be one of the following values: <example>small, normal, large, square.</example>
+            </param>
+            <returns>
+            FBPagePicture instance wich includes picture url. 
+            Use <code>LoadPictureFromUrl</code> method to load picture.
+            </returns>
+        </member>
         <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.LoadPictureFromUrl(System.String)">
             <summary>
             Loads picture from Uri as byte[]
             </summary>
             <param name="url">url image adress</param>
             <returns>byte[] representing loaded data</returns>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetTopPosts(System.String,FacebookGraphAPIHelper.Objects.Posts@,System.String,System.Int32)">
+            <summary>
+            Requests GraphAPI for top <paramref name="limit"/> posts of the Page.
+            </summary>
+            <param name="pageId">Id of the Page.</param>
+            <param name="posts">Out parameter to receive the data.</param>
+            <param name="fields">List of fields to include into request. Defaults to <paramref name="DEFAULT_POSTS_FIELDS"/></param>
+            <param name="limit">Number of posts to get. Defaults to <paramref name="DEFAULT_POSTS_LIMIT"/></param>
+            <returns>Instance of BaseResponse class.</returns>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetAllPosts(System.String,FacebookGraphAPIHelper.Objects.Posts@,System.String)">
+            <summary>
+            Requests GraphAPI for all posts of the Page.
+            </summary>
+            <param name="pageId">Id of the Page.</param>
+            <param name="posts">Out parameter to receive the data.</param>
+            <param name="fields">List of fields to include into request. Defaults to <paramref name="DEFAULT_POSTS_FIELDS"/></param>
+            <returns>Instance of BaseResponse class.</returns>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetPostReactions(FacebookGraphAPIHelper.Objects.Post@,System.Int32)">
+            <summary>
+            Requests GraphAPI for reactions of the post.
+            </summary>
+            <param name="post">Ref parameter to receive the data.</param>
+            <param name="rLimit">Number of reactions to get per request. Defaults to <paramref name="DEFAULT_REACTIONS_LIMIT"/></param>
+            <returns></returns>
         </member>
         <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.ExecutePostRequest(System.String,System.String)">
             <summary>
@@ -77,8 +135,7 @@
             <param name="pUrl">Base request URL.</param>
             <param name="postData">POST parmeters.</param>
             <returns>
-            true on success and result in "out result" parametr
-            false and exception message in "out result" parametr
+            Instance of BaseResponse class.
             </returns>
         </member>
         <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.ExecuteGetRequest(System.String)">
@@ -87,8 +144,7 @@
             </summary>
             <param name="pUrl">Base request URL.</param>
             <returns>
-            true on success and result in "out result" parametr
-            false and exception message in "out result" parametr
+            Instance of BaseResponse class.
             </returns>
         </member>
         <member name="P:FacebookGraphAPIHelper.GraphAPIHelper.GraphAPIVersion">
