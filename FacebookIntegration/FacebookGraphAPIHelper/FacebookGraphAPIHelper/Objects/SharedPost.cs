@@ -7,6 +7,6 @@ namespace FacebookGraphAPIHelper.Objects
         public DateTime created_time;
         public string story;
         public string id;
-        public ShareFrom from;
+        public From from;
     }
 }

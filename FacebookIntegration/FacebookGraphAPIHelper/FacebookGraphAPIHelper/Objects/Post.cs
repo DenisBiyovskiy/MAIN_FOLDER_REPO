@@ -12,5 +12,6 @@ namespace FacebookGraphAPIHelper.Objects
         public SharedPosts sharedposts;
         public Shares shares;
         public string permalink_url;
+        public From from;
     }
 }

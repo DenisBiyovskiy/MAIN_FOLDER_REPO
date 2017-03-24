@@ -1,6 +1,6 @@
 ﻿namespace FacebookGraphAPIHelper.Objects
 {
-    public class ShareFrom
+    public class From
     {
         public string id;
         public string name;

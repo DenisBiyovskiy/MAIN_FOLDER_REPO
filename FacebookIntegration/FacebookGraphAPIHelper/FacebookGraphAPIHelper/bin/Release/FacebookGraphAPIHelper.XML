@@ -46,31 +46,45 @@
             </summary>
             <param name="appID"></param>
             <param name="appSecret"></param>
+            <param name="access_token"></param>
             <param name="APIversion"></param>
         </member>
         <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GenerateFacebookSecretProof(System.String,System.String)">
             <summary>
             Generate a facebook secret proof
-            <seealso cref="!:http://stackoverflow.com/questions/20572523/c-sharp-help-required-to-create-facebook-appsecret-proof-hmacsha256"/>
+            <see cref="!:http://stackoverflow.com/questions/20572523/c-sharp-help-required-to-create-facebook-appsecret-proof-hmacsha256"/>
             </summary>
             <param name="facebookAccessToken"></param>
             <param name="facebookAuthAppSecret"></param>
             <returns>App secret proof.</returns>
         </member>
-        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetLongLivedAccessToken(System.String,System.String@)">
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetLongLivedAccessToken(System.String,System.String@,System.Boolean)">
             <summary>
             Obtains long-lived user access token (expires in about 60 days).
             </summary>
             <param name="userExchangeToken">Short-lived user access token.</param>
             <param name="accessToken">Out parameter to return generated long-lived token.</param>
+            <param name="isPageToken">
+            Indicates the need to replace the token.
+            If <c>true</c> the accessToken field of current GraphAPIHelper will be replaced.
+            Defaults to <c>false</c>.
+            </param>
             <returns>Instance of BaseResponse class.</returns>
         </member>
-        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.FindUserAccount(System.String,FacebookGraphAPIHelper.Objects.FBPages)">
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetUserAccounts(FacebookGraphAPIHelper.Objects.FBPages@)">
+            <summary>
+            Obtains FB Pages admined by current User(by current UserAccessToken).
+            </summary>
+            <param name="accounts">Out parameter instance of FBPages.</param>
+            <returns>Instance of BaseResponse class.</returns>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.FindUserAccount(System.String,System.String,FacebookGraphAPIHelper.Objects.FBPages)">
             <summary>
             Searches in Accounts object for Account by Account.name filed.
             Returns Account instance.
             </summary>
-            <param name="name">Searching key value</param>
+            <param name="name">Searching by name key value.</param>
+            <param name="id">Searching by id key value.</param>
             <param name="accs">Accounts object for search.</param>
             <returns>Returns first Account where Account.name = name.</returns>
         </member>
@@ -101,31 +115,44 @@
             <param name="url">url image adress</param>
             <returns>byte[] representing loaded data</returns>
         </member>
-        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetTopPosts(System.String,FacebookGraphAPIHelper.Objects.Posts@,System.String,System.Int32)">
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetTopPosts(System.String,System.String,FacebookGraphAPIHelper.Objects.Posts@,System.String,System.Int32,System.String)">
             <summary>
-            Requests GraphAPI for top <paramref name="limit"/> posts of the Page.
+            Requests GraphAPI for top <paramref name="limit"/> posts of the Page
+            or posts tagged this Page dependent on "nodePath" parameter./>.
             </summary>
             <param name="pageId">Id of the Page.</param>
+            <param name="AccessToken">
+            AccessToken that will be used in graphApi request.
+            For Page specific calls pass PageAccessToken as argument.
+            Pass null as argument to use default user token. Default token - UserAccessToken.
+            </param>
             <param name="posts">Out parameter to receive the data.</param>
-            <param name="fields">List of fields to include into request. Defaults to <paramref name="DEFAULT_POSTS_FIELDS"/></param>
-            <param name="limit">Number of posts to get. Defaults to <paramref name="DEFAULT_POSTS_LIMIT"/></param>
+            <param name="fields">List of fields to include into request.</param>
+            <param name="limit">Number of posts to get.</param>
+            <param name="nodePath">Graph API node path: /tagged or /posts</param>
             <returns>Instance of BaseResponse class.</returns>
         </member>
-        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetAllPosts(System.String,FacebookGraphAPIHelper.Objects.Posts@,System.String)">
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetAllPosts(System.String,System.String,FacebookGraphAPIHelper.Objects.Posts@,System.String,System.String)">
             <summary>
             Requests GraphAPI for all posts of the Page.
             </summary>
             <param name="pageId">Id of the Page.</param>
+            /// <param name="AccessToken">
+            AccessToken that will be used in graphApi request.
+            For Page specific calls pass PageAccessToken as argument.
+            Pass null as argument to use default user token. Default token - UserAccessToken.
+            </param>
             <param name="posts">Out parameter to receive the data.</param>
-            <param name="fields">List of fields to include into request. Defaults to <paramref name="DEFAULT_POSTS_FIELDS"/></param>
+            <param name="fields">List of fields to include into request.</param>
+            <param name="nodePath">Graph API node path: /tagged or /posts</param>
             <returns>Instance of BaseResponse class.</returns>
         </member>
-        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetPostReactions(FacebookGraphAPIHelper.Objects.Post@,System.Int32)">
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetPostReactions``1(``0@,System.Int32)">
             <summary>
             Requests GraphAPI for reactions of the post.
             </summary>
             <param name="post">Ref parameter to receive the data.</param>
-            <param name="rLimit">Number of reactions to get per request. Defaults to <paramref name="DEFAULT_REACTIONS_LIMIT"/></param>
+            <param name="rLimit">Number of reactions to get per request.</param>
             <returns></returns>
         </member>
         <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.ExecutePostRequest(System.String,System.String)">

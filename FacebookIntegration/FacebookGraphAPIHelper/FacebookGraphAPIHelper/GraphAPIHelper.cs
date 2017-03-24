@@ -16,8 +16,12 @@ namespace FacebookGraphAPIHelper
     {
         private const string DEFAULT_GRAPH_API_VERSION = "v2.8";
         private const string ERROR_MSG = "Unknown error. Request URL: ";
+        private const string PAGE_TOKEN_EMPTY_MSG = "Page access token is required. Can not be null.";
         private const string graphBaseURL = "https://graph.facebook.com/";
         private const string DEFAULT_POSTS_FIELDS = "message,created_time,link,sharedposts.limit(1000){from,created_time,story,id},shares,permalink_url";
+        private const string DEFAULT_TAGGED_POSTS_FIELDS = "message,created_time,link,sharedposts.limit(1000){from,created_time,story,id},shares,permalink_url,from";
+        private const string POSTS_NODE_PATH = "/posts";
+        private const string TAGGED_NODE_PATH = "/tagged";
         private const int DEFAULT_REACTIONS_LIMIT = 900;
         private const int DEFAULT_POSTS_LIMIT = 20;
         private const string DEFAULT_REACTIONS_FIELDS = "/reactions?limit=";
@@ -84,6 +88,7 @@ namespace FacebookGraphAPIHelper
         /// </summary>
         /// <param name="appID"></param>
         /// <param name="appSecret"></param>
+        /// <param name="access_token"></param>
         /// <param name="APIversion"></param>
         public GraphAPIHelper(string appID, string appSecret, string access_token = null, string APIversion = DEFAULT_GRAPH_API_VERSION)
         {
@@ -96,7 +101,7 @@ namespace FacebookGraphAPIHelper
 
         /// <summary>
         /// Generate a facebook secret proof
-        /// <seealso cref="http://stackoverflow.com/questions/20572523/c-sharp-help-required-to-create-facebook-appsecret-proof-hmacsha256"/>
+        /// <see cref="http://stackoverflow.com/questions/20572523/c-sharp-help-required-to-create-facebook-appsecret-proof-hmacsha256"/>
         /// </summary>
         /// <param name="facebookAccessToken"></param>
         /// <param name="facebookAuthAppSecret"></param>
@@ -122,8 +127,13 @@ namespace FacebookGraphAPIHelper
         /// </summary>
         /// <param name="userExchangeToken">Short-lived user access token.</param>
         /// <param name="accessToken">Out parameter to return generated long-lived token.</param>
+        /// <param name="isPageToken">
+        /// Indicates the need to replace the token.
+        /// If <c>true</c> the accessToken field of current GraphAPIHelper will be replaced.
+        /// Defaults to <c>false</c>.
+        /// </param>
         /// <returns>Instance of BaseResponse class.</returns>
-        public BaseResponse GetLongLivedAccessToken (string userExchangeToken, out string accessToken)
+        public BaseResponse GetLongLivedAccessToken (string userExchangeToken, out string accessToken, bool isPageToken = false)
         {
             string pUrl = graphURLAndVersion +
                             "oauth/access_token" + "?grant_type=fb_exchange_token" +
@@ -135,12 +145,17 @@ namespace FacebookGraphAPIHelper
             if (br.success)
             {
                 accessToken = JsonConvert.DeserializeObject<AccessTokenResponse>(br.responseData).access_token;
-                this.accessToken = accessToken;
+                if (!isPageToken) this.accessToken = accessToken;
                 this.AppSecretProof = null;
             }
             return br;
         }
 
+        /// <summary>
+        /// Obtains FB Pages admined by current User(by current UserAccessToken).
+        /// </summary>
+        /// <param name="accounts">Out parameter instance of FBPages.</param>
+        /// <returns>Instance of BaseResponse class.</returns>
         public BaseResponse GetUserAccounts(out FBPages accounts)
         {
             string pUrl = graphURLAndVersion + "me/accounts?access_token=" + accessToken +
@@ -158,14 +173,25 @@ namespace FacebookGraphAPIHelper
         /// Searches in Accounts object for Account by Account.name filed.
         /// Returns Account instance.
         /// </summary>
-        /// <param name="name">Searching key value</param>
+        /// <param name="name">Searching by name key value.</param>
+        /// <param name="id">Searching by id key value.</param>
         /// <param name="accs">Accounts object for search.</param>
         /// <returns>Returns first Account where Account.name = name.</returns>
-        public FBPage FindUserAccount(string name, FBPages accs)
+        public FBPage FindUserAccount(string name, string id, FBPages accs)
         {
-            foreach (var a in accs.data)
+            if (!string.IsNullOrEmpty(id))
             {
-                if (a.name == name) return a;
+                foreach (var a in accs.data)
+                {
+                    if (a.id == id) return a;
+                }
+            }
+            if (!string.IsNullOrEmpty(name))
+            {
+                foreach (var a in accs.data)
+                {
+                    if (a.name == name) return a;
+                }
             }
             return null;
         }
@@ -235,24 +261,27 @@ namespace FacebookGraphAPIHelper
             return data;
         }
 
-        //TODO: implement a method for obtaining the page access token.
-        //public BaseResponse GetPageAccessToken(out string pageToken) 
-        //{
-        //}
-
         /// <summary>
-        /// Requests GraphAPI for top <paramref name="limit"/> posts of the Page.
+        /// Requests GraphAPI for top <paramref name="limit"/> posts of the Page
+        /// or posts tagged this Page dependent on "nodePath" parameter./>.
         /// </summary>
         /// <param name="pageId">Id of the Page.</param>
+        /// <param name="AccessToken">
+        /// AccessToken that will be used in graphApi request.
+        /// For Page specific calls pass PageAccessToken as argument.
+        /// Pass null as argument to use default user token. Default token - UserAccessToken.
+        /// </param>
         /// <param name="posts">Out parameter to receive the data.</param>
-        /// <param name="fields">List of fields to include into request. Defaults to <paramref name="DEFAULT_POSTS_FIELDS"/></param>
-        /// <param name="limit">Number of posts to get. Defaults to <paramref name="DEFAULT_POSTS_LIMIT"/></param>
+        /// <param name="fields">List of fields to include into request.</param>
+        /// <param name="limit">Number of posts to get.</param>
+        /// <param name="nodePath">Graph API node path: /tagged or /posts</param>
         /// <returns>Instance of BaseResponse class.</returns>
-        public BaseResponse GetTopPosts(string pageId, out Posts posts, string fields = DEFAULT_POSTS_FIELDS, int limit = DEFAULT_POSTS_LIMIT)
+        public BaseResponse GetTopPosts(string pageId, string AccessToken, out Posts posts, string fields = DEFAULT_POSTS_FIELDS, int limit = DEFAULT_POSTS_LIMIT, string nodePath = POSTS_NODE_PATH)
         {
+            if (string.IsNullOrEmpty(AccessToken)) AccessToken = accessToken;
             string pUrl = graphURLAndVersion +
-                            pageId + "/posts?fields=" + fields +
-                            "&access_token=" + accessToken + 
+                            pageId + nodePath + "?fields=" + fields +
+                            "&access_token=" + AccessToken + 
                             "&appsecret_proof=" + AppSecretProof +
                             "&limit=" + limit;
             var br = ExecuteGetRequest(pUrl);
@@ -268,21 +297,27 @@ namespace FacebookGraphAPIHelper
                 }
             }
             return br;
-        }
+        } 
 
         /// <summary>
         /// Requests GraphAPI for all posts of the Page.
         /// </summary>
         /// <param name="pageId">Id of the Page.</param>
+        /// /// <param name="AccessToken">
+        /// AccessToken that will be used in graphApi request.
+        /// For Page specific calls pass PageAccessToken as argument.
+        /// Pass null as argument to use default user token. Default token - UserAccessToken.
+        /// </param>
         /// <param name="posts">Out parameter to receive the data.</param>
-        /// <param name="fields">List of fields to include into request. Defaults to <paramref name="DEFAULT_POSTS_FIELDS"/></param>
+        /// <param name="fields">List of fields to include into request.</param>
+        /// <param name="nodePath">Graph API node path: /tagged or /posts</param>
         /// <returns>Instance of BaseResponse class.</returns>
-        public BaseResponse GetAllPosts(string pageId, out Posts posts, string fields = DEFAULT_POSTS_FIELDS)
+        public BaseResponse GetAllPosts(string pageId, string AccessToken, out Posts posts, string fields = DEFAULT_POSTS_FIELDS, string nodePath = POSTS_NODE_PATH)
         {
             int sameRequestsCount = 0;
             Posts nextPosts = null;
             Posts _posts = null;
-            var br = GetTopPosts(pageId, out _posts, fields);
+            var br = GetTopPosts(pageId, AccessToken, out _posts, fields, nodePath: nodePath);
             nextPosts = _posts;
             while(br.success)
             {
@@ -328,9 +363,9 @@ namespace FacebookGraphAPIHelper
         /// Requests GraphAPI for reactions of the post.
         /// </summary>
         /// <param name="post">Ref parameter to receive the data.</param>
-        /// <param name="rLimit">Number of reactions to get per request. Defaults to <paramref name="DEFAULT_REACTIONS_LIMIT"/></param>
+        /// <param name="rLimit">Number of reactions to get per request.</param>
         /// <returns></returns>
-        public BaseResponse GetPostReactions(ref Post post, int rLimit = DEFAULT_REACTIONS_LIMIT)
+        public BaseResponse GetPostReactions<T>(ref T post, int rLimit = DEFAULT_REACTIONS_LIMIT) where T : Post
         {
             var baseURL = graphURLAndVersion + post.id + DEFAULT_REACTIONS_FIELDS + rLimit +
                             "&access_token=" + accessToken +
