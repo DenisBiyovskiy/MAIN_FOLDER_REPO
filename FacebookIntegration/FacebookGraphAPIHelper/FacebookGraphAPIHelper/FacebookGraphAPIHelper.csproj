@@ -52,7 +52,6 @@
     <Compile Include="Objects\FBPage.cs" />
     <Compile Include="Objects\FBPages.cs" />
     <Compile Include="Objects\Cursors.cs" />
-    <Compile Include="Objects\IFacebookCollection.cs" />
     <Compile Include="Objects\Picture.cs" />
     <Compile Include="Objects\Reactions.cs" />
     <Compile Include="Objects\Paging.cs" />
@@ -65,7 +64,6 @@
     <Compile Include="Objects\SharedPosts.cs" />
     <Compile Include="Objects\From.cs" />
     <Compile Include="Objects\Shares.cs" />
-    <Compile Include="Objects\TaggedPost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

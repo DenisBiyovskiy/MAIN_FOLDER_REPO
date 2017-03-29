@@ -23,7 +23,7 @@ namespace GAPITEST
             //connection params
             string appID = "391897567851647";
             string appSecret = "52d25a29757683b9e490cb0608cdc0c2";
-            string exToken = "EAAFkbcNR9H8BAOhLQCMVU7D2TJ8kVRGFNxHBAPBiMa0aaXktK3avWCeYo8DJFu7tCf4H5XCLrqG5THXAZCtiZCqg1QmdkkV6N5XbpYYJy7bZCbvnLw0gZCC569dKHZBM08Pw7xZCvo0YN8BUqUCZB4dbKuDQdwgOtPs8WZCWENEDYOdQU0QyPxmWgAG7UEEy7BAZD";
+            string exToken = "EAAFkbcNR9H8BANpUjvpgZCypOGObKdrXrP1xWYZAW2wpRZAVGyZA9PKhyyIWs9ObHYQgGJOCFTkupip3l5SO8D573VOaHil6vsySSvk35ZCU7wPem9g1my4GcNN8TERP5FTvqSuaNAs17uZAxWNhx2BC3ZAjBbjpSIZD";
             string pageId = "1863819113839065";
             string accToken = "";
             string pageToken = "";
@@ -33,7 +33,7 @@ namespace GAPITEST
             //Accounts accs;
             //res = gepiHelper.GetUserAccounts(accToken, out accs);
             //Tools.WriteToFile(accs);
-            Posts<Post> posts;
+            Posts posts;
             //gepiHelper.GetTopPosts(pageId, accToken, out posts);
             //Tools.WriteToFile(posts);
             //res = gepiHelper.GetPageAccessToken(out pageToken);
@@ -47,8 +47,8 @@ namespace GAPITEST
             //Tools.WriteToFile(pic);
             //var br = gepiHelper.GetPageByUrl("https://www.facebook.com/TestIra-1491247927554351/");
             //Tools.WriteStringToFile(br);
-            
-            var br = gepiHelper.GetAllPosts("1369352673095644", out posts);
+
+            var br = gepiHelper.GetAllPosts("1369352673095644", exToken, out posts, nodePath: "/tagged");
             /*Tools.WriteStringToFile(posts.data.Count);
             string postsRCount = "";
             var flag = true;

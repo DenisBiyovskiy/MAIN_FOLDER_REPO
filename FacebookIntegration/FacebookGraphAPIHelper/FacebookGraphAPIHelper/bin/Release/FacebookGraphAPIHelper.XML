@@ -49,15 +49,6 @@
             <param name="access_token"></param>
             <param name="APIversion"></param>
         </member>
-        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GenerateFacebookSecretProof(System.String,System.String)">
-            <summary>
-            Generate a facebook secret proof
-            <see cref="!:http://stackoverflow.com/questions/20572523/c-sharp-help-required-to-create-facebook-appsecret-proof-hmacsha256"/>
-            </summary>
-            <param name="facebookAccessToken"></param>
-            <param name="facebookAuthAppSecret"></param>
-            <returns>App secret proof.</returns>
-        </member>
         <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetLongLivedAccessToken(System.String,System.String@,System.Boolean)">
             <summary>
             Obtains long-lived user access token (expires in about 60 days).
@@ -147,7 +138,7 @@
             <param name="nodePath">Graph API node path: /tagged or /posts</param>
             <returns>Instance of BaseResponse class.</returns>
         </member>
-        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetPostReactions``1(``0@,System.Int32)">
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetPostReactions(FacebookGraphAPIHelper.Objects.Post@,System.String,System.Int32)">
             <summary>
             Requests GraphAPI for reactions of the post.
             </summary>
