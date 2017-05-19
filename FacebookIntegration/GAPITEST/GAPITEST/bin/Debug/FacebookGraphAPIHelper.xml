@@ -138,7 +138,7 @@
             <param name="nodePath">Graph API node path: /tagged or /posts</param>
             <returns>Instance of BaseResponse class.</returns>
         </member>
-        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetPostReactions(FacebookGraphAPIHelper.Objects.Post@,System.Int32)">
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetPostReactions(FacebookGraphAPIHelper.Objects.Post@,System.String,System.Int32)">
             <summary>
             Requests GraphAPI for reactions of the post.
             </summary>

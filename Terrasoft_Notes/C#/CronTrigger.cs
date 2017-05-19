@@ -17,8 +17,8 @@ var triggerName = "UsrSendingGreetings";
 var triggerGroup = "TriggersGroup";
 var processName = "UsrSendingGreetings";
 var userName = "Supervisor";
-string solutionName = "Default";
-var job = AppScheduler.CreateProcessJob(jobName, jobGroupName, processName, solutionName, userName);
+string workspaceName = "Default";
+var job = AppScheduler.CreateProcessJob(jobName, jobGroupName, processName, workspaceName, userName);
 
 trigger.Name = triggerName;
 trigger.Group = triggerGroup;

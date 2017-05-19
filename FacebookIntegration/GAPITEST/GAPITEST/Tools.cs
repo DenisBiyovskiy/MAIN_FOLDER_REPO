@@ -25,7 +25,7 @@ namespace GAPITEST
 
         public static void WriteToFile(string s, bool append = true)
         {
-            string divider = "\n-----------------------------------------------------";
+            string divider = "\n//-----------------------------------------------------";
             using (var sw = new StreamWriter(filePath, append))
             {
                 sw.WriteLine(s + divider);
@@ -40,7 +40,7 @@ namespace GAPITEST
 
         public static void WriteToFile(Object o, bool append = true)
         {
-            WriteToFile(FormatJSON(o));
+            WriteToFile(FormatJSON(o), append);
         }
 
         public static void ClearFile()

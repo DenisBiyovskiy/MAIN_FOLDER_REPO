@@ -1,0 +1,2 @@
+AllCombinedFactory.exe  "D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\FacebookGraphAPIHelper\FacebookGraphAPIHelper" "D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\FacebookGraphAPIHelper\FacebookGraphAPIHelper\Objects" "D:\MF\MAIN_FOLDER_REPO\FacebookIntegration\all_combined_out.cs"
+pause
