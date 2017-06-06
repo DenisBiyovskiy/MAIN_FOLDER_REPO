@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FacebookGraphAPIHelper</name>
+    </assembly>
+    <members>
+        <member name="T:FacebookGraphAPIHelper.BaseResponse">
+            <summary>
+            The response object to return the result of request to GraphAPI.
+            </summary>
+        </member>
+        <member name="F:FacebookGraphAPIHelper.BaseResponse.success">
+            <summary>
+            Indicates whether the response succed or not.
+            </summary>
+        </member>
+        <member name="F:FacebookGraphAPIHelper.BaseResponse.responseData">
+            <summary>
+            Response data in JSON format.
+            </summary>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.BaseResponse.#ctor">
+            <summary>
+            Default constructor, returns new instance of BaseResponse.
+            Sets <c>success</c> field to true.
+            </summary>
+        </member>
+        <member name="P:FacebookGraphAPIHelper.BaseResponse.Exception">
+            <summary>
+            Gets or sets response Exception. Sets success to false with <c>set</c> action.
+            </summary>
+        </member>
+        <member name="T:FacebookGraphAPIHelper.GraphAPIHelper">
+            <summary>
+            Provides methods for GraphAPI calls.
+            </summary>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.onGraphVersionChange(System.String)">
+            <summary>
+            Updates base url on API version change.
+            </summary>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of class GraphAPIHelper
+            </summary>
+            <param name="appID"></param>
+            <param name="appSecret"></param>
+            <param name="access_token"></param>
+            <param name="APIversion"></param>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetLongLivedAccessToken(System.String,System.String@,System.Boolean)">
+            <summary>
+            Obtains long-lived user access token (expires in about 60 days).
+            </summary>
+            <param name="userExchangeToken">Short-lived user access token.</param>
+            <param name="accessToken">Out parameter to return generated long-lived token.</param>
+            <param name="isPageToken">
+            Indicates the need to replace the token.
+            If <c>true</c> the accessToken field of current GraphAPIHelper will be replaced.
+            Defaults to <c>false</c>.
+            </param>
+            <returns>Instance of BaseResponse class.</returns>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetUserAccounts(FacebookGraphAPIHelper.Objects.FBPages@)">
+            <summary>
+            Obtains FB Pages admined by current User(by current UserAccessToken).
+            </summary>
+            <param name="accounts">Out parameter instance of FBPages.</param>
+            <returns>Instance of BaseResponse class.</returns>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.FindUserAccount(System.String,System.String,FacebookGraphAPIHelper.Objects.FBPages)">
+            <summary>
+            Searches in Accounts object for Account by Account.name filed.
+            Returns Account instance.
+            </summary>
+            <param name="name">Searching by name key value.</param>
+            <param name="id">Searching by id key value.</param>
+            <param name="accs">Accounts object for search.</param>
+            <returns>Returns first Account where Account.name = name.</returns>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetPageByUrl(System.String)">
+            <summary>
+            Searches for a Page by its Url string via GraphAPI.
+            </summary>
+            <param name="uri">Url adress of Page</param>
+            <returns>Account object representing Page</returns>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetPagePicture(System.String,System.String)">
+            <summary>
+            Requests for page picture.
+            </summary>
+            <param name="pageId">Page Id.</param>
+            <param name="type">The size of this picture. 
+            It can be one of the following values: <example>small, normal, large, square.</example>
+            </param>
+            <returns>
+            FBPagePicture instance wich includes picture url. 
+            Use <code>LoadPictureFromUrl</code> method to load picture.
+            </returns>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.LoadPictureFromUrl(System.String)">
+            <summary>
+            Loads picture from Uri as byte[]
+            </summary>
+            <param name="url">url image adress</param>
+            <returns>byte[] representing loaded data</returns>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetTopPosts(System.String,System.String,FacebookGraphAPIHelper.Objects.Posts@,System.String,System.Int32,System.String)">
+            <summary>
+            Requests GraphAPI for top <paramref name="limit"/> posts of the Page
+            or posts tagged this Page dependent on "nodePath" parameter./>.
+            </summary>
+            <param name="pageId">Id of the Page.</param>
+            <param name="AccessToken">
+            AccessToken that will be used in graphApi request.
+            For Page specific calls pass PageAccessToken as argument.
+            Pass null as argument to use default user token. Default token - UserAccessToken.
+            </param>
+            <param name="posts">Out parameter to receive the data.</param>
+            <param name="fields">List of fields to include into request.</param>
+            <param name="limit">Number of posts to get.</param>
+            <param name="nodePath">Graph API node path: /tagged or /posts</param>
+            <returns>Instance of BaseResponse class.</returns>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetAllPosts(System.String,System.String,FacebookGraphAPIHelper.Objects.Posts@,System.String,System.String)">
+            <summary>
+            Requests GraphAPI for all posts of the Page.
+            </summary>
+            <param name="pageId">Id of the Page.</param>
+            /// <param name="AccessToken">
+            AccessToken that will be used in graphApi request.
+            For Page specific calls pass PageAccessToken as argument.
+            Pass null as argument to use default user token. Default token - UserAccessToken.
+            </param>
+            <param name="posts">Out parameter to receive the data.</param>
+            <param name="fields">List of fields to include into request.</param>
+            <param name="nodePath">Graph API node path: /tagged or /posts</param>
+            <returns>Instance of BaseResponse class.</returns>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.GetPostReactions(FacebookGraphAPIHelper.Objects.Post@,System.String,System.Int32)">
+            <summary>
+            Requests GraphAPI for reactions of the post.
+            </summary>
+            <param name="post">Ref parameter to receive the data.</param>
+            <param name="rLimit">Number of reactions to get per request.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.ExecutePostRequest(System.String,System.String)">
+            <summary>
+            Executes POST request.
+            </summary>
+            <param name="pUrl">Base request URL.</param>
+            <param name="postData">POST parmeters.</param>
+            <returns>
+            Instance of BaseResponse class.
+            </returns>
+        </member>
+        <member name="M:FacebookGraphAPIHelper.GraphAPIHelper.ExecuteGetRequest(System.String)">
+            <summary>
+            Executes GET request.
+            </summary>
+            <param name="pUrl">Base request URL.</param>
+            <returns>
+            Instance of BaseResponse class.
+            </returns>
+        </member>
+        <member name="P:FacebookGraphAPIHelper.GraphAPIHelper.GraphAPIVersion">
+            <summary>
+            GraphAPI version in format "vX.X" (v2.8 by default)
+            </summary>
+        </member>
+    </members>
+</doc>

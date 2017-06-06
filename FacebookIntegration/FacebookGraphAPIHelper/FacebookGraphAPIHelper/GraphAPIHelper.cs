@@ -19,8 +19,8 @@ namespace FacebookGraphAPIHelper
         private const string ERROR_ACCESS_TOKEN_REQUIRED_MSG = "Access token required";
         private const string ERROR_PAGE_TOKEN_EMPTY_MSG = "Page access token is required.";
         private const string graphBaseURL = "https://graph.facebook.com/";
-        private const string DEFAULT_POSTS_FIELDS = "message,created_time,link,sharedposts.limit(1000){from,created_time,story,id},shares,permalink_url";
-        private const string DEFAULT_TAGGED_POSTS_FIELDS = "message,created_time,link,sharedposts.limit(1000){from,created_time,story,id},shares,permalink_url,from";
+        private const string DEFAULT_POSTS_FIELDS = "message,created_time,link,sharedposts.limit(100){from,created_time,story,id},shares,permalink_url";
+        private const string DEFAULT_TAGGED_POSTS_FIELDS = "message,created_time,link,sharedposts.limit(100){from,created_time,story,id},shares,permalink_url,from";
         private const string POSTS_NODE_PATH = "/posts";
         private const string TAGGED_NODE_PATH = "/tagged";
         private const int DEFAULT_REACTIONS_LIMIT = 900;
